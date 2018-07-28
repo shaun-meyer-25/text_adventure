@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Go.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Go.cs" Line="15" Column="1" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="30" Column="1" />
+      <File FileName="Assets/Scripts/Exit.cs" Line="6" Column="19" />
+      <File FileName="Assets/Scripts/RoomNavigation.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/TextInput.cs" Line="17" Column="43" />
+      <File FileName="Assets/Scripts/InputAction.cs" Line="8" Column="96" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
