@@ -30,16 +30,15 @@ public class GameController : MonoBehaviour {
 		UpdateRoomChoices (roomNavigation.currentRoom.roomActions);
 	}
 
-	public void UpdateRoomChoices(Choice[] inputActions)
+	public void UpdateRoomChoices(Choice[] choices)
 	{
-		roomActions = roomNavigation.currentRoom.roomActions;
-		for (int i = 0; i < roomNavigation.currentRoom.roomActions.Length; i++) {
-			InputAction inputAction = roomNavigation.currentRoom.roomActions [i];
-
+        roomActions = roomNavigation.currentRoom.roomActions;
+		for (int i = 0; i < choices.Length; i++) {
+            Choice choice = choices [i];
             GameObject button = GameObject.Find("Option" + (i + 1));
             Text textObject = button.GetComponentInChildren<Text>();
-			if (inputAction != null) {
-				textObject.text = inputAction.keyword;				
+			if (choice != null) {
+				textObject.text = choice.keyword;				
 			}
 		}
 	}

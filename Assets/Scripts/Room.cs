@@ -11,4 +11,14 @@ public class Room : ScriptableObject {
 	public string roomName;
 	public Exit[] exits;
 	public InputAction[] roomActions;
+
+	public List<string> roomActionNames()
+	{
+		List<string> roomActionNames = new List<string>();
+		for (int i = 0; i < roomActions.Length; i++) {
+			roomActionNames.Add(roomActions[i].keyword);
+		}
+
+		return roomActionNames;
+	}
 }

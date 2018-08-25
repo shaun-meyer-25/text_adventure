@@ -13,7 +13,7 @@ public class OptionButton : MonoBehaviour {
 		button.onClick.AddListener(TaskOnClick);
 	}
 
-	void TaskOnClick() {
+	void TaskOnClick() {		
 		Text textObject = button.GetComponentInChildren<Text>();
 		string text = textObject.text;
 		
@@ -24,8 +24,8 @@ public class OptionButton : MonoBehaviour {
 				if (choice.GetType().IsSubclassOf(typeof(InputAction))) {
 					InputAction inputAction = (InputAction) choice; 
 					inputAction.RespondToInput (controller, new string[] { "go", "outside" });
-				//} else if (choice.GetType().IsSubclassOf(typeof(Exit))) {
-				//	ScriptableObject.CreateInstance<Go>().RespondToInput(controller, new string[] { "go", choice });
+				} else if (choice.GetType().IsSubclassOf(typeof(Exit))) {
+					ScriptableObject.CreateInstance<Go>().RespondToInput(controller, new string[] { "go", choice.keyword });
 				}
 			}
 		}

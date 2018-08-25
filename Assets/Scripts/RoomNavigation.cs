@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RoomNavigation : MonoBehaviour {
+	
+	// RoomNavigation keeps track of the current room and its properties, like its exits
+	
 	public Room currentRoom;
 
 	private GameController controller;
