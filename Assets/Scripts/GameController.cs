@@ -10,7 +10,8 @@ public class GameController : MonoBehaviour {
 	 * - maybe make an exit Choice type, that can be used alongside the current Exit class?
 	 * 
 	 */
-	
+
+	private bool going;
 	public Text displayText;
 	public Choice[] roomActions;
 
