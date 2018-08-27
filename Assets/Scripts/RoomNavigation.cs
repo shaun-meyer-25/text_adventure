@@ -27,6 +27,7 @@ public class RoomNavigation : MonoBehaviour {
 			currentRoom = exitDictionary[directionNoun];
 			controller.LogStringWithReturn("You head off to the " + directionNoun);
 			controller.DisplayRoomText();
+			controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.roomActions);
 			return true;
 		} else {
 			controller.LogStringWithReturn("There is no path to the " + directionNoun);

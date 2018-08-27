@@ -15,6 +15,9 @@ public class GameController : MonoBehaviour {
 	public Text displayText;
 	public Choice[] roomActions;
 
+	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
+	[HideInInspector] public List<string> exitNames = new List<string>();
+	[HideInInspector] public List<string> roomActionNames = new List<string>();
 	[HideInInspector] public RoomNavigation roomNavigation;
 	[HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string> ();
 
@@ -32,7 +35,7 @@ public class GameController : MonoBehaviour {
 
 	public void UpdateRoomChoices(Choice[] choices)
 	{
-        roomActions = roomNavigation.currentRoom.roomActions;
+        roomActions = choices;
 		for (int i = 0; i < choices.Length; i++) {
             Choice choice = choices [i];
             GameObject button = GameObject.Find("Option" + (i + 1));
@@ -41,6 +44,11 @@ public class GameController : MonoBehaviour {
 				textObject.text = choice.keyword;				
 			}
 		}
+
+		// We want the game controller to be the source of truth on what the player's options are
+		exitChoices = roomNavigation.currentRoom.exitChoices();
+		exitNames = roomNavigation.currentRoom.exitNames();
+		roomActionNames = roomNavigation.currentRoom.roomActionNames();
 	}
 
 	public void DisplayLoggedText () {
