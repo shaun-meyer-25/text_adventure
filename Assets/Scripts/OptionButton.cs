@@ -13,28 +13,33 @@ public class OptionButton : MonoBehaviour {
 		button.onClick.AddListener(TaskOnClick);
 	}
 
-	void TaskOnClick() {
+	void TaskOnClick() {		
 		Text textObject = button.GetComponentInChildren<Text>();
 		string text = textObject.text;
-		
-		for (int i = 0; i < controller.roomActions.Length; i++) {
-			Choice choice = controller.roomActions [i];
-			// If the button's text matches a choice's keyword, DO that Choice
-			if (choice.keyword == text) {
-				if (choice.GetType().IsSubclassOf(typeof(InputAction))) {
+
+		if (controller.roomActionNames.Contains(text)) {
+			for (int i = 0; i < controller.roomActions.Length; i++) {
+				Choice choice = controller.roomActions [i];
+				Debug.Log("the choice - " + choice.keyword);
+				// Right now we're only matching on room actions - exits not included. need to include them. 
+			
+				// If the button's text matches a choice's keyword, DO that Choice
+				if (choice.keyword == text) {
 					InputAction inputAction = (InputAction) choice; 
-					inputAction.RespondToInput (controller, new string[] { "go", "outside" });
-				//} else if (choice.GetType().IsSubclassOf(typeof(Exit))) {
-				//	ScriptableObject.CreateInstance<Go>().RespondToInput(controller, new string[] { "go", choice });
+					inputAction.RespondToInput (controller, new string[] { "go" });
+				}
+			}			
+		} else if (controller.exitNames.Contains(text)) {
+			for (int i = 0; i < controller.exitNames.Count; i++) {
+				Choice choice = controller.exitChoices [i];
+			
+				if (choice.keyword == text) {
+					ScriptableObject.CreateInstance<Go>().RespondToInput(controller, new string[] { "go", choice.keyword });
 				}
 			}
 		}
+	
 		
 		controller.DisplayLoggedText ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
