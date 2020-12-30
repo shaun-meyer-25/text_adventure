@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RoomNavigation : MonoBehaviour {
+	
+	// RoomNavigation keeps track of the current room and its properties, like its exits
+	
 	public Room currentRoom;
 
 	private GameController controller;
@@ -24,6 +27,7 @@ public class RoomNavigation : MonoBehaviour {
 			currentRoom = exitDictionary[directionNoun];
 			controller.LogStringWithReturn("You head off to the " + directionNoun);
 			controller.DisplayRoomText();
+			controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.roomActions);
 			return true;
 		} else {
 			controller.LogStringWithReturn("There is no path to the " + directionNoun);

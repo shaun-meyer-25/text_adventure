@@ -12,9 +12,13 @@ public class GameController : MonoBehaviour {
 	 */
 
 	private bool going;
+	private static int NUMBER_OF_OPTIONS = 4;
 	public Text displayText;
 	public Choice[] roomActions;
 
+	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
+	[HideInInspector] public List<string> exitNames = new List<string>();
+	[HideInInspector] public List<string> roomActionNames = new List<string>();
 	[HideInInspector] public RoomNavigation roomNavigation;
 	[HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string> ();
 
@@ -30,18 +34,34 @@ public class GameController : MonoBehaviour {
 		UpdateRoomChoices (roomNavigation.currentRoom.roomActions);
 	}
 
-	public void UpdateRoomChoices(Choice[] inputActions)
+	public void UpdateRoomChoices(Choice[] choices)
 	{
-		roomActions = roomNavigation.currentRoom.roomActions;
-		for (int i = 0; i < roomNavigation.currentRoom.roomActions.Length; i++) {
-			InputAction inputAction = roomNavigation.currentRoom.roomActions [i];
+		
+		// todo - if there was an existing CHOICE but there isn't now, remove that choice
+        roomActions = choices;
+		for (int i = 0; i < NUMBER_OF_OPTIONS; i++) {
+			GameObject button = GameObject.Find("Option" + (i + 1));
+			Text textObject = button.GetComponentInChildren<Text>();
+			
+			if (i < choices.Length)
+			{
+				Choice choice = choices [i];
 
-            GameObject button = GameObject.Find("Option" + (i + 1));
-            Text textObject = button.GetComponentInChildren<Text>();
-			if (inputAction != null) {
-				textObject.text = inputAction.keyword;				
+				if (choice != null) {
+					textObject.text = choice.keyword;				
+				}
 			}
+			else
+			{
+				textObject.text = null;
+			}
+
 		}
+
+		// We want the game controller to be the source of truth on what the player's options are
+		exitChoices = roomNavigation.currentRoom.exitChoices();
+		exitNames = roomNavigation.currentRoom.exitNames();
+		roomActionNames = roomNavigation.currentRoom.roomActionNames();
 	}
 
 	public void DisplayLoggedText () {
