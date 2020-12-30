@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour {
 	 */
 
 	private bool going;
+	private static int NUMBER_OF_OPTIONS = 4;
 	public Text displayText;
 	public Choice[] roomActions;
 
@@ -35,14 +36,26 @@ public class GameController : MonoBehaviour {
 
 	public void UpdateRoomChoices(Choice[] choices)
 	{
+		
+		// todo - if there was an existing CHOICE but there isn't now, remove that choice
         roomActions = choices;
-		for (int i = 0; i < choices.Length; i++) {
-            Choice choice = choices [i];
-            GameObject button = GameObject.Find("Option" + (i + 1));
-            Text textObject = button.GetComponentInChildren<Text>();
-			if (choice != null) {
-				textObject.text = choice.keyword;				
+		for (int i = 0; i < NUMBER_OF_OPTIONS; i++) {
+			GameObject button = GameObject.Find("Option" + (i + 1));
+			Text textObject = button.GetComponentInChildren<Text>();
+			
+			if (i < choices.Length)
+			{
+				Choice choice = choices [i];
+
+				if (choice != null) {
+					textObject.text = choice.keyword;				
+				}
 			}
+			else
+			{
+				textObject.text = null;
+			}
+
 		}
 
 		// We want the game controller to be the source of truth on what the player's options are
