@@ -6,6 +6,9 @@
     <e p="C:\Users\Shaun\AppData\Roaming\JetBrains\Rider2020.2\scratches" t="IncludeRecursive" />
     <e p="C:\Users\Shaun\Projects\text_adventure" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets\Resources" t="Include">
+        <e p="commandPreferredButtons.txt" t="Include" />
+      </e>
       <e p="Assets\Scripts" t="Include">
         <e p="Choice.cs" t="Include" />
         <e p="Exit.cs" t="Include" />

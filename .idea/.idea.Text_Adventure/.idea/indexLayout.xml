@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelUserStore">
-    <attachedFolders>
-      <Path>../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8</Path>
-    </attachedFolders>
+    <attachedFolders />
     <explicitIncludes>
       <Path>../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8</Path>
       <Path>Assets</Path>
@@ -15,7 +13,6 @@
       <Path>.idea</Path>
       <Path>Library</Path>
       <Path>Temp</Path>
-      <Path>demo_Data</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

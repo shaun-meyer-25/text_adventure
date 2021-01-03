@@ -4,13 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
-
-	/*
-	 * Things to do: make a 'exiting' flag to keep track of what the button option types are
-	 * - maybe make an exit Choice type, that can be used alongside the current Exit class?
-	 * 
-	 */
-
+	
 	private bool going;
 	private static int NUMBER_OF_OPTIONS = 4;
 	public Text displayText;
@@ -28,7 +22,9 @@ public class GameController : MonoBehaviour {
 		roomNavigation = GetComponent<RoomNavigation> ();
 	}
 
-	void Start () {
+	void Start ()
+	{
+		LoadPreferredButtonsForOptions();
 		DisplayRoomText ();
 		DisplayLoggedText (); 
 		UpdateRoomChoices (roomNavigation.currentRoom.roomActions);
@@ -37,8 +33,7 @@ public class GameController : MonoBehaviour {
 	public void UpdateRoomChoices(Choice[] choices)
 	{
 		
-		// todo - if there was an existing CHOICE but there isn't now, remove that choice
-        roomActions = choices;
+		roomActions = choices;
 		for (int i = 0; i < NUMBER_OF_OPTIONS; i++) {
 			GameObject button = GameObject.Find("Option" + (i + 1));
 			Text textObject = button.GetComponentInChildren<Text>();
@@ -86,6 +81,13 @@ public class GameController : MonoBehaviour {
 	void ClearCollectionsForNewRoom() {
 		interactionDescriptionsInRoom.Clear ();
 		roomNavigation.ClearExits ();
+	}
+
+	void LoadPreferredButtonsForOptions()
+	{
+		TextAsset data = (TextAsset) Resources.Load("commandPreferredButtons");
+		data.ToString();
+		Debug.Log(data.ToString());
 	}
 
 	public void LogStringWithReturn(string stringToAdd) {
