@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Shaun\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Shaun\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_text_adventure.-256127778.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Shaun\AppData\Roaming\JetBrains\Rider2020.2\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\Shaun\AppData\local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Shaun\AppData\local\JetBrains\Rider2020.3\resharper-host\local\Transient\Rider\v203\SolutionCaches\_text_adventure.-256127778.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Shaun\AppData\Roaming\JetBrains\Rider2020.3\scratches" t="IncludeRecursive" />
     <e p="C:\Users\Shaun\Projects\text_adventure" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
-      <e p="Assets\Resources" t="Include">
-        <e p="commandPreferredButtons.txt" t="Include" />
-      </e>
-      <e p="Assets\Scripts" t="Include">
-        <e p="Choice.cs" t="Include" />
-        <e p="Exit.cs" t="Include" />
-        <e p="ExitChoice.cs" t="Include" />
-        <e p="GameController.cs" t="Include" />
-        <e p="Go.cs" t="Include" />
-        <e p="InputAction.cs" t="Include" />
-        <e p="Look.cs" t="Include" />
-        <e p="OptionButton.cs" t="Include" />
-        <e p="Room.cs" t="Include" />
-        <e p="RoomNavigation.cs" t="Include" />
-        <e p="TextInput.cs" t="Include" />
+      <e p="Assets" t="Include">
+        <e p="Resources" t="Include">
+          <e p="commandPreferredButtons.txt" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Choice.cs" t="Include" />
+          <e p="Exit.cs" t="Include" />
+          <e p="ExitChoice.cs" t="Include" />
+          <e p="GameController.cs" t="Include" />
+          <e p="Go.cs" t="Include" />
+          <e p="InputAction.cs" t="Include" />
+          <e p="Look.cs" t="Include" />
+          <e p="OptionButton.cs" t="Include" />
+          <e p="Room.cs" t="Include" />
+          <e p="RoomNavigation.cs" t="Include" />
+        </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />

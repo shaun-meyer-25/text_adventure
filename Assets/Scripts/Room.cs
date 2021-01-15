@@ -10,19 +10,8 @@ public class Room : ScriptableObject {
 	public string roomInvestigationDescription;
 	public string roomName;
 	public Exit[] exits;
-	public InputAction[] roomActions;
 
 	// The use case of the following methods depends on the name lists to be in the same order as the object lists
-	
-	public List<string> roomActionNames()
-	{
-		List<string> roomActionNames = new List<string>();
-		for (int i = 0; i < roomActions.Length; i++) {
-			roomActionNames.Add(roomActions[i].keyword);
-		}
-
-		return roomActionNames;
-	}
 
 	public List<string> exitNames()
 	{

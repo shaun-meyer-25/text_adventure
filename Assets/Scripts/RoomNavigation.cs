@@ -22,12 +22,14 @@ public class RoomNavigation : MonoBehaviour {
 		}
 	}
 
+	// todo - before we were using the next room's options to update our choices. we will now have to figure out a way to do that with global actions
 	public bool AttemptToChangeRooms(string directionNoun) {
 		if (exitDictionary.ContainsKey(directionNoun)) {
 			currentRoom = exitDictionary[directionNoun];
 			controller.LogStringWithReturn("You head off to the " + directionNoun);
 			controller.DisplayRoomText();
-			controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.roomActions);
+			
+			controller.UpdateRoomChoices(controller.startingActions);
 			return true;
 		} else {
 			controller.LogStringWithReturn("There is no path to the " + directionNoun);
