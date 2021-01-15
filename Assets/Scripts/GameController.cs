@@ -40,8 +40,8 @@ public class GameController : MonoBehaviour {
 
 	public void UpdateRoomChoices(Choice[] choices)
 	{
-		
 		actions = choices;
+
 		Dictionary<string, string> preferencesForCurrentChoices =
 			allPreferences.Where(kvp => choices.Select(c => c.keyword).Contains(kvp.Key))
 				.ToDictionary(pair => pair.Key, pair => pair.Value);
@@ -50,13 +50,14 @@ public class GameController : MonoBehaviour {
 			GameObject button = GameObject.Find("Option" + (i + 1));
 			Text textObject = button.GetComponentInChildren<Text>();
 
-			if (i < choices.Length || preferencesForCurrentChoices.ContainsValue(i.ToString()))
+			if (preferencesForCurrentChoices.ContainsValue(i.ToString()) || 
+			    (i < choices.Length && !preferencesForCurrentChoices.ContainsKey(choices[i].keyword)))
 			{
 				KeyValuePair<string, string> preferredChoiceKvp = 
 					preferencesForCurrentChoices.FirstOrDefault(kvp => kvp.Value.Equals(i.ToString()));
 
 				// Set button text to preferred choice, otherwise just set it to whatever choice is up in the index of Choices
-				if (!preferredChoiceKvp.Equals(null))
+				if (!preferredChoiceKvp.Equals(default(KeyValuePair<string, string>)))
 				{
 					textObject.text = preferredChoiceKvp.Key;
 				}
