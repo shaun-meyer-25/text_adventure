@@ -4,11 +4,9 @@ using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName= "TextAdventure/InputActions/Go")]
-public class Go : InputAction {
-
-	// todo - this is the class i need to workshop. need to figure out how to transition to an "exiting" state after "go"
+public class Go : ActionChoice {
 	
-	public override void RespondToInput (GameController controller, string[] separatedInputWords) {
+	public override void RespondToAction (GameController controller, string[] separatedInputWords) {
 
 		if (separatedInputWords.Length == 1) {
 			List<ExitChoice> exits = new List<ExitChoice>();

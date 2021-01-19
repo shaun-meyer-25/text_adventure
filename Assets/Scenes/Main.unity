@@ -619,7 +619,12 @@ MonoBehaviour:
   exitNames: []
   roomNavigation: {fileID: 0}
   interactionDescriptionsInRoom: []
-  actions: []
+  startingActions:
+  - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
+  - {fileID: 11400000, guid: 6163d2be810d84313b3bb3dca3323e15, type: 2}
+  actions:
+  - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
+  - {fileID: 11400000, guid: 6163d2be810d84313b3bb3dca3323e15, type: 2}
 --- !u!4 &947878757
 Transform:
   m_ObjectHideFlags: 0

@@ -11,19 +11,19 @@ public class GameController : MonoBehaviour {
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
 	public Text displayText;
+	public Choice[] actions;
+	List<string> actionLog = new List<string>(); 
 
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
 	[HideInInspector] public List<string> exitNames = new List<string>();
 	[HideInInspector] public RoomNavigation roomNavigation;
 	[HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string> ();
 	
-	// todo - make this final, or find a better way to lock it in as unchanging
-	[HideInInspector] public Choice[] startingActions;
-	
-	
-	[HideInInspector] public Choice[] actions;
-
-	List<string> actionLog = new List<string>(); 
+	// todo - instead of using this workaround, we should make a "CalculateNextChoices" or something based on game state and room
+	// this section mostly for debugging
+	public bool debuggingMode = true;
+	public Choice[] startingActions;
+	public string currentRoom;
 
 	void Awake () {
 		roomNavigation = GetComponent<RoomNavigation> ();
@@ -31,7 +31,6 @@ public class GameController : MonoBehaviour {
 
 	void Start ()
 	{
-		InitializeChoices();
 		allPreferences = LoadPreferredButtonsForOptions();
 		DisplayRoomText ();
 		DisplayLoggedText (); 
@@ -135,22 +134,5 @@ public class GameController : MonoBehaviour {
 		}
 
 		return actionNames;
-	}
-
-	public void InitializeChoices()
-	{
-		Go go = ScriptableObject.CreateInstance<Go>();
-		go.keyword = "go";
-
-		Look look = ScriptableObject.CreateInstance<Look>();
-		look.keyword = "look";
-
-		startingActions = new InputAction[] {
-			go, look
-		};
-		
-		actions = new InputAction[] {
-			go, look
-		};
 	}
 }

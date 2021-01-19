@@ -30,6 +30,12 @@ public class RoomNavigation : MonoBehaviour {
 			controller.DisplayRoomText();
 			
 			controller.UpdateRoomChoices(controller.startingActions);
+
+			if (controller.debuggingMode)
+			{
+				controller.currentRoom = currentRoom.roomName;
+			}
+
 			return true;
 		} else {
 			controller.LogStringWithReturn("There is no path to the " + directionNoun);
