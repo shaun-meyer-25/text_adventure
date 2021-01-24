@@ -10,7 +10,8 @@ public class Room : ScriptableObject {
 	public string roomInvestigationDescription;
 	public string roomName;
 	public Exit[] exits;
-
+	public InteractableObject[] interactableObjectsInRoom;
+	
 	// The use case of the following methods depends on the name lists to be in the same order as the object lists
 
 	public List<string> exitNames()
@@ -37,4 +38,14 @@ public class Room : ScriptableObject {
 
 		return exitChoices;
 	}	
+	
+	public List<string> ObjectNames()
+	{
+		List<string> objectNames = new List<string>();
+		for (int i = 0; i < interactableObjectsInRoom.Length; i++) {
+			objectNames.Add(interactableObjectsInRoom[i].keyword);
+		}
+
+		return objectNames;
+	}
 }

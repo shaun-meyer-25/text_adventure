@@ -582,6 +582,7 @@ GameObject:
   - component: {fileID: 947878757}
   - component: {fileID: 947878756}
   - component: {fileID: 947878755}
+  - component: {fileID: 947878758}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -615,16 +616,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayText: {fileID: 473952483}
+  actions:
+  - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
+  - {fileID: 11400000, guid: 6163d2be810d84313b3bb3dca3323e15, type: 2}
+  - {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
+  observableChoices:
+  - {fileID: 11400000, guid: 4df2eb156a2587146ba1e5a39e23cb6c, type: 2}
   exitChoices: []
   exitNames: []
   roomNavigation: {fileID: 0}
   interactionDescriptionsInRoom: []
+  interactableItems: {fileID: 0}
   startingActions:
   - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
   - {fileID: 11400000, guid: 6163d2be810d84313b3bb3dca3323e15, type: 2}
-  actions:
-  - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
-  - {fileID: 11400000, guid: 6163d2be810d84313b3bb3dca3323e15, type: 2}
+  - {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
 --- !u!4 &947878757
 Transform:
   m_ObjectHideFlags: 0
@@ -639,6 +645,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &947878758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947878754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c313ef354246694994f57d276f9c36b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nounsInRoom: []
 --- !u!1 &962565872
 GameObject:
   m_ObjectHideFlags: 0
