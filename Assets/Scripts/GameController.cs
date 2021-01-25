@@ -119,7 +119,8 @@ public class GameController : MonoBehaviour {
 			for (int j = 0; j < interactableInRoom.interactions.Length; j++)
 			{
 				Interaction interaction = interactableInRoom.interactions[j];
-				if (interaction.action.keyword == "observe")
+				if (interaction.action.keyword == "observe" && 
+				    !interactableItems.examineDictionary.ContainsKey(interactableInRoom.noun))
 				{
 					interactableItems.examineDictionary.Add(interactableInRoom.noun, interaction.textResponse);
 				}
