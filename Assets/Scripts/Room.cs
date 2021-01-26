@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,9 +11,32 @@ public class Room : ScriptableObject {
 	public string roomInvestigationDescription;
 	public string roomName;
 	public Exit[] exits;
-	public InteractableObject[] interactableObjectsInRoom;
+	
+	[SerializeField] private InteractableObject[] baseInteractableObjectsInRoom;
+	
+	private InteractableObject[] interactableObjectsInRoom;
+	public InteractableObject[] InteractableObjectsInRoom
+	{
+		get { return interactableObjectsInRoom; }
+	}
+
+	public void SetInteractableObjectsInRoom(InteractableObject[] objects)
+	{
+		interactableObjectsInRoom = objects;
+	}
+	
+	// using https://answers.unity.com/questions/1664323/how-are-you-resetting-your-scriptable-objects-betw.html
 	
 	// The use case of the following methods depends on the name lists to be in the same order as the object lists
+
+	private void OnEnable()
+	{
+		interactableObjectsInRoom = baseInteractableObjectsInRoom;
+	}
+	
+	public void OnAfterDeserialize() 
+	{
+	}
 
 	public List<string> exitNames()
 	{

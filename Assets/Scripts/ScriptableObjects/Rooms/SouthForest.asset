@@ -32,5 +32,5 @@ MonoBehaviour:
   - keyString: west
     exitDescription: home cave nearby.
     valueRoom: {fileID: 11400000, guid: b7c0e35f021744710b76a66ca3e42f56, type: 2}
-  interactableObjectsInRoom:
+  baseInteractableObjectsInRoom:
   - {fileID: 11400000, guid: 4bb6e8875ca54404080ea5d67bc668cb, type: 2}

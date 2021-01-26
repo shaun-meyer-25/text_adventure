@@ -19,7 +19,7 @@ public class InteractableItems : MonoBehaviour
     private List<string> nounsInInventory = new List<string>();
     public string GetObjectsNotInInventory(Room currentRoom, int i)
     {
-        InteractableObject interactableInRoom = currentRoom.interactableObjectsInRoom[i];
+        InteractableObject interactableInRoom = currentRoom.InteractableObjectsInRoom[i];
 
         // Todo - this will make the item appear in the room again if it is removed from inventory
         // need it to be removed permanently from list in room, most likely.
@@ -59,9 +59,9 @@ public class InteractableItems : MonoBehaviour
     void RemoveObjectFromRoom(string noun)
     {
         List<InteractableObject> target =
-            new List<InteractableObject>(controller.roomNavigation.currentRoom.interactableObjectsInRoom);
+            new List<InteractableObject>(controller.roomNavigation.currentRoom.InteractableObjectsInRoom);
         
         target.RemoveAll(o => o.noun.Equals(noun));
-        controller.roomNavigation.currentRoom.interactableObjectsInRoom = target.ToArray();
+        controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(target.ToArray());
     }
 }

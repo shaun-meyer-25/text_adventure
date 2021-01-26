@@ -623,6 +623,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
   observableChoices:
   - {fileID: 11400000, guid: 4df2eb156a2587146ba1e5a39e23cb6c, type: 2}
+  - {fileID: 11400000, guid: 23b4ba9941e0ba74498789313b40f772, type: 2}
   interactableChoices:
   - {fileID: 11400000, guid: c2fe0c8272ee56242820ac9cd692c6a9, type: 2}
   - {fileID: 11400000, guid: 04ab77325e7d89e4d95fbe51f075a788, type: 2}
@@ -631,6 +632,8 @@ MonoBehaviour:
   roomNavigation: {fileID: 0}
   interactionDescriptionsInRoom: []
   interactableItems: {fileID: 0}
+  isInteracting: 0
+  isObserving: 0
   startingActions:
   - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
   - {fileID: 11400000, guid: 6163d2be810d84313b3bb3dca3323e15, type: 2}

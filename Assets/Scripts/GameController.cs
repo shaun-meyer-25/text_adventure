@@ -107,7 +107,7 @@ public class GameController : MonoBehaviour {
 
 	void PrepareObjectsToTakeOrExamine(Room currentRoom)
 	{
-		for (int i = 0; i < currentRoom.interactableObjectsInRoom.Length; i++)
+		for (int i = 0; i < currentRoom.InteractableObjectsInRoom.Length; i++)
 		{
 			string descriptionNotInInventory = interactableItems.GetObjectsNotInInventory(currentRoom, i);
 			if (descriptionNotInInventory != null)
@@ -116,7 +116,7 @@ public class GameController : MonoBehaviour {
 				interactionDescriptionsInRoom.Add(descriptionNotInInventory);
 			}
 
-			InteractableObject interactableInRoom = currentRoom.interactableObjectsInRoom[i];
+			InteractableObject interactableInRoom = currentRoom.InteractableObjectsInRoom[i];
 			for (int j = 0; j < interactableInRoom.interactions.Length; j++)
 			{
 				Interaction interaction = interactableInRoom.interactions[j];

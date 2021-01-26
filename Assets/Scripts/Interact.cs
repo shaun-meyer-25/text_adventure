@@ -19,10 +19,10 @@ public class Interact : ActionChoice
         } else if (separatedInputWords.Length == 2) {
             if (separatedInputWords[1].Equals("object"))
             {
-                if (controller.roomNavigation.currentRoom.interactableObjectsInRoom.Length > 0)
+                if (controller.roomNavigation.currentRoom.InteractableObjectsInRoom.Length > 0)
                 {
                     controller.LogStringWithReturn("Which object?");
-                    controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.interactableObjectsInRoom);
+                    controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.InteractableObjectsInRoom);
                 }
                 else
                 {

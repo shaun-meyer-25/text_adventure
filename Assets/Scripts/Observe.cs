@@ -8,10 +8,9 @@ public class Observe : ActionChoice
     public override void RespondToAction (GameController controller, string[] separatedInputWords) {
 
         if (separatedInputWords.Length == 1) {
-            
+            controller.LogStringWithReturn("Observe what?");
             for (int i = 0; i < controller.observableChoices.Length; i++)
             {
-                controller.LogStringWithReturn("Observe what?");
                 controller.UpdateRoomChoices(controller.observableChoices);
                 controller.isObserving = true;
             }
@@ -19,10 +18,10 @@ public class Observe : ActionChoice
         } else if (separatedInputWords.Length == 2) {
             if (separatedInputWords[1].Equals("object"))
             {
-                if (controller.roomNavigation.currentRoom.interactableObjectsInRoom.Length > 0)
+                if (controller.roomNavigation.currentRoom.InteractableObjectsInRoom.Length > 0)
                 {
                     controller.LogStringWithReturn("Observe which object?");
-                    controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.interactableObjectsInRoom);
+                    controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.InteractableObjectsInRoom);
                 }
                 else
                 {
@@ -33,7 +32,7 @@ public class Observe : ActionChoice
             }
             else // i.e.  "observe branch"
             {
-                InteractableObject[] interactableObjects = controller.roomNavigation.currentRoom.interactableObjectsInRoom;
+                InteractableObject[] interactableObjects = controller.roomNavigation.currentRoom.InteractableObjectsInRoom;
                 for (int i = 0; i < interactableObjects.Length; i++)
                 {
                     if (interactableObjects[i].keyword == separatedInputWords[1])
