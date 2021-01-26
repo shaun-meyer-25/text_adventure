@@ -28,9 +28,10 @@ public class OptionButton : MonoBehaviour {
 				}
 			}
 		}
-		else if (controller.observableChoiceNames.Contains(text) || controller.roomNavigation.currentRoom.ObjectNames().Contains(text)) 
+		// this could be a problem, as the objects can either be Observed or Taken 
+		else if ((controller.ObservableChoiceNames().Contains(text) || controller.roomNavigation.currentRoom.ObjectNames().Contains(text)) && controller.isObserving) 
 		{
-			for (int i = 0; i < controller.observableChoiceNames.Count; i++)
+			for (int i = 0; i < controller.ObservableChoiceNames().Count; i++)
 			{
 				Choice choice = controller.actions[i];
 
@@ -40,10 +41,21 @@ public class OptionButton : MonoBehaviour {
 				}
 			}
 		}
-		else
+		else if ((controller.InteractChoiceNames().Contains(text) || controller.roomNavigation.currentRoom.ObjectNames().Contains(text)) && controller.isInteracting) 
 		{
-			// todo - only doing GO right now. we're iterating over current available actions and probably do not need to do that. could simply do lookup by name maybe?
-			// i think we're calling the "GO" method twice and that's causing the far navigation 
+			for (int i = 0; i < controller.InteractChoiceNames().Count; i++)
+			{
+				Choice choice = controller.actions[i];
+
+				if (choice.keyword == text)
+				{
+					ScriptableObject.CreateInstance<Interact>().RespondToAction(controller, new string[] {"interact", choice.keyword });
+				}
+			}
+		}
+		else 
+		{
+			// todo - why does "go" have a special case? define that in a comment or refactor it
 			
 			for (int i = 0; i < controller.actions.Length; i++) {
 				var choice = controller.actions [i];

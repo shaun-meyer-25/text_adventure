@@ -12,14 +12,16 @@ public class GameController : MonoBehaviour {
 	public Text displayText;
 	public Choice[] actions;
 	public ObserveChoice[] observableChoices;
+	public InteractChoice[] interactableChoices;
 	List<string> actionLog = new List<string>(); 
 
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
 	[HideInInspector] public List<string> exitNames = new List<string>();
-	[HideInInspector] public List<string> observableChoiceNames = new List<string>();
 	[HideInInspector] public RoomNavigation roomNavigation;
 	[HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string> ();
 	[HideInInspector] public InteractableItems interactableItems;
+	[HideInInspector] public bool isInteracting = false;
+	[HideInInspector] public bool isObserving = false;
 	
 	// todo - instead of using this workaround, we should make a "CalculateNextChoices" or something based on game state and room
 	// this section mostly for debugging
@@ -33,7 +35,6 @@ public class GameController : MonoBehaviour {
 
 	void Start ()
 	{
-		observableChoiceNames.Add("object");
 		allPreferences = LoadPreferredButtonsForOptions();
 		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
@@ -119,10 +120,13 @@ public class GameController : MonoBehaviour {
 			for (int j = 0; j < interactableInRoom.interactions.Length; j++)
 			{
 				Interaction interaction = interactableInRoom.interactions[j];
-				if (interaction.action.keyword == "observe" && 
-				    !interactableItems.examineDictionary.ContainsKey(interactableInRoom.noun))
+				if (interaction.action.keyword == "observe")
 				{
 					interactableItems.examineDictionary.Add(interactableInRoom.noun, interaction.textResponse);
+				}
+				if (interaction.action.keyword == "take")
+				{
+					interactableItems.takeDictionary.Add(interactableInRoom.noun, interaction.textResponse);
 				}
 			}
 		}
@@ -138,6 +142,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	void ClearCollectionsForNewRoom() {
+		interactableItems.ClearCollections();
 		interactionDescriptionsInRoom.Clear ();
 		roomNavigation.ClearExits ();
 	}
@@ -173,4 +178,26 @@ public class GameController : MonoBehaviour {
 
 		return actionNames;
 	}
+
+	public List<string> ObservableChoiceNames()
+	{
+		List<string> observableChoiceNames = new List<string>();
+		for (int i = 0; i < observableChoices.Length; i++)
+		{
+			observableChoiceNames.Add(observableChoices[i].keyword);
+		}
+
+		return observableChoiceNames;
+	}
+	
+	public List<string> InteractChoiceNames()
+	{
+		List<string> interactChoiceNames = new List<string>();
+		for (int i = 0; i < interactableChoices.Length; i++)
+		{
+			interactChoiceNames.Add(interactableChoices[i].keyword);
+		}
+
+		return interactChoiceNames;
+	}	
 }
