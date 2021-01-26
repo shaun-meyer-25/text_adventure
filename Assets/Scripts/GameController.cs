@@ -124,7 +124,7 @@ public class GameController : MonoBehaviour {
 				{
 					interactableItems.examineDictionary.Add(interactableInRoom.noun, interaction.textResponse);
 				}
-				if (interaction.action.keyword == "take")
+				if (interaction.action.keyword == "interact")
 				{
 					interactableItems.takeDictionary.Add(interactableInRoom.noun, interaction.textResponse);
 				}

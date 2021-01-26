@@ -46,6 +46,7 @@ public class InteractableItems : MonoBehaviour
         {
             nounsInInventory.Add(noun);
             nounsInRoom.Remove(noun);
+            RemoveObjectFromRoom(noun);
             return takeDictionary;
         }
         else
@@ -53,5 +54,14 @@ public class InteractableItems : MonoBehaviour
             controller.LogStringWithReturn("No " + noun + " here to take.");
             return null;
         }
+    }
+
+    void RemoveObjectFromRoom(string noun)
+    {
+        List<InteractableObject> target =
+            new List<InteractableObject>(controller.roomNavigation.currentRoom.interactableObjectsInRoom);
+        
+        target.RemoveAll(o => o.noun.Equals(noun));
+        controller.roomNavigation.currentRoom.interactableObjectsInRoom = target.ToArray();
     }
 }

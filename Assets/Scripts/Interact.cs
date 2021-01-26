@@ -41,23 +41,16 @@ public class Interact : ActionChoice
             else
             {
                 Dictionary<string, string> takeDictionary = controller.interactableItems.Take(separatedInputWords);
+                //             ((List<InteractableObject>) controller.roomNavigation.currentRoom.interactableObjectsInRoom).RemoveAll(o => o.noun == noun)
 
-                controller.LogStringWithReturn("You take the " + separatedInputWords[1]);
+
+                if (takeDictionary != null)
+                {
+                    controller.LogStringWithReturn(controller.TestVerbDictionaryWithNoun(takeDictionary, separatedInputWords[0], separatedInputWords[1]));
+                }
+
                 controller.UpdateRoomChoices(controller.startingActions);
                 controller.isInteracting = false;
-
-                // todo - do we need any of this? 
-                /*
-                InteractableObject[] interactableObjects = controller.roomNavigation.currentRoom.interactableObjectsInRoom;
-                for (int i = 0; i < interactableObjects.Length; i++)
-                {
-                    if (interactableObjects[i].keyword == separatedInputWords[1])
-                    {
-                        controller.LogStringWithReturn(interactableObjects[i].description);
-                        controller.UpdateRoomChoices(controller.startingActions);
-                    }
-                }     
-                controller.UpdateRoomChoices(controller.startingActions); */
             }
         }
     }

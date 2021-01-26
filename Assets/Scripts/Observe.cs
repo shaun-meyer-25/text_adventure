@@ -38,7 +38,7 @@ public class Observe : ActionChoice
                 {
                     if (interactableObjects[i].keyword == separatedInputWords[1])
                     {
-                        controller.LogStringWithReturn(interactableObjects[i].description);
+                        controller.LogStringWithReturn (controller.TestVerbDictionaryWithNoun (controller.interactableItems.examineDictionary, separatedInputWords [0], separatedInputWords [1]));
                         controller.UpdateRoomChoices(controller.startingActions);
                     }
                 }

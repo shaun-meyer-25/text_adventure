@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f298cada63767b546855f8107b945bfa, type: 3}
   m_Name: TreeBranch
   m_EditorClassIdentifier: 
-  keyword: treeBranch
+  keyword: tree branch
   noun: tree branch
   description: A large tree branch with dying leaves
   interactions:
   - action: {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
     textResponse: The branch is long and sturdy. If the leaves were removed, it might
       be useful for something.
+  - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
+    textResponse: You take the tree branch

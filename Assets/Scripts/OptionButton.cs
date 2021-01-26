@@ -28,7 +28,6 @@ public class OptionButton : MonoBehaviour {
 				}
 			}
 		}
-		// this could be a problem, as the objects can either be Observed or Taken 
 		else if ((controller.ObservableChoiceNames().Contains(text) || controller.roomNavigation.currentRoom.ObjectNames().Contains(text)) && controller.isObserving) 
 		{
 			for (int i = 0; i < controller.ObservableChoiceNames().Count; i++)
