@@ -32,6 +32,23 @@ public class InteractableItems : MonoBehaviour
         return null;
     }
 
+    public void DisplayInventory()
+    {
+
+        if (nounsInInventory.Count > 0)
+        {
+            controller.LogStringWithReturn("You have ");
+            for (int i = 0; i < nounsInInventory.Count; i++)
+            {
+                controller.LogStringWithReturn(nounsInInventory[i]);
+            }
+        }
+        else
+        {
+            controller.LogStringWithReturn("You don't have anything right now");
+        }
+    }
+    
     public void ClearCollections()
     {
         examineDictionary.Clear();
