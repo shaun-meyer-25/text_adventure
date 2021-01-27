@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class OptionButton : MonoBehaviour {
@@ -15,30 +13,59 @@ public class OptionButton : MonoBehaviour {
 	void TaskOnClick() {		
 		Text textObject = button.GetComponentInChildren<Text>();
 		string text = textObject.text;
-		int numOfExits = controller.exitNames.Count;
 		
+		// todo - we could make exitnames part of an isExiting flag like for interacting or observing, and move this block in with "go"
 		if (controller.exitNames.Contains(text)) {
+			int numOfExits = controller.exitNames.Count;
 			for (int i = 0; i < numOfExits; i++) {
 				Choice choice = controller.exitChoices [i];
 			
-				if (choice.keyword == text) {
+				if (choice.keyword == text) 
+				{
 					ScriptableObject.CreateInstance<Go>().RespondToAction(controller, new string[] { "go", choice.keyword });
 					break;
 				}
 			}
 		}
-		else
+		else if ((controller.ObservableChoiceNames().Contains(text) || controller.roomNavigation.currentRoom.ObjectNames().Contains(text)) && controller.isObserving) 
 		{
-			// todo - only doing GO right now. we're iterating over current available actions and probably do not need to do that. could simply do lookup by name maybe?
-			// i think we're calling the "GO" method twice and that's causing the far navigation 
+			for (int i = 0; i < controller.actions.Length; i++)
+			{
+				Choice choice = controller.actions[i];
+
+				if (choice.keyword == text)
+				{
+					ScriptableObject.CreateInstance<Observe>().RespondToAction(controller, new string[] {"observe", choice.keyword });
+				}
+			}
+		}
+		else if ((controller.InteractChoiceNames().Contains(text) || controller.roomNavigation.currentRoom.ObjectNames().Contains(text)) && controller.isInteracting) 
+		{
+			for (int i = 0; i < controller.actions.Length; i++)
+			{
+				Choice choice = controller.actions[i];
+
+				if (choice.keyword == text)
+				{
+					ScriptableObject.CreateInstance<Interact>().RespondToAction(controller, new string[] {"interact", choice.keyword });
+				}
+			}
+		}
+		else 
+		{
+			// todo - why does "go" have a special case? define that in a comment or refactor it
 			
 			for (int i = 0; i < controller.actions.Length; i++) {
 				var choice = controller.actions [i];
 				
-				if (choice.keyword == text) {
+				if (choice.keyword == text && text == "go") {
 					ActionChoice actionChoice = (ActionChoice) choice; 
 					actionChoice.RespondToAction (controller, new string[] { "go" });
-				}
+				} else if (choice.keyword == text)
+				{
+					ActionChoice actionChoice = (ActionChoice) choice; 
+					actionChoice.RespondToAction (controller, new string[] { choice.keyword });
+				} 
 			}	
 		}
 	

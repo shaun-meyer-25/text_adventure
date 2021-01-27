@@ -23,61 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1342834d-446f-4706-a3b6-8c513df95064" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/commandPreferredButtons.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/commandPreferredButtons.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Room.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InputActions/Go.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InputActions/Go.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InputActions/Look.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InputActions/Look.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/HomeCave.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/HomeCave.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/NorthFoothills.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/NorthFoothills.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/NorthForest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/NorthForest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/NorthGrasslands.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/NorthGrasslands.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/NorthwestCoast.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/NorthwestCoast.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/NorthwestGrasslands.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/NorthwestGrasslands.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/OrbRoom.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/OrbRoom.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/OutsideStartingCave.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/OutsideStartingCave.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/SouthFoothills.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/SouthFoothills.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/SouthForest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/SouthForest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/SouthwestCoast.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/SouthwestCoast.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/StrangeCrater.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/StrangeCrater.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/WateringHole.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/WateringHole.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/WestCoast.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/WestCoast.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/WestGrasslands.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Rooms/WestGrasslands.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TextInput.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TextInput.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/snow1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/snow1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/stone1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/stone1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NetworkManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NetworkManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Use.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Use.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,25 +46,57 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Room.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/e1/c829d9a2/SerializeField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractChoice.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Observe.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interact.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Use.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/79822DAC-9C0E-415A-9499-BCD03FFF8B72/1d/799c8de3/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inspect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Surroundings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActionChoice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Room.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObserveChoice.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ExitChoice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActionResponse.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Go.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Person.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Exit.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Look.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/79822DAC-9C0E-415A-9499-BCD03FFF8B72/1d/799c8de3/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChangeRoomResponse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Take.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Resources/commandPreferredButtons.txt" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Room.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
       <option value="$PROJECT_DIR$/.gitignore" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ActionChoice.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Go.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Inspect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ObserveChoice.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InteractableObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InteractChoice.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Take.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Person.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Room.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interact.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Surroundings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Observe.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ActionResponse.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ChangeRoomResponse.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interaction.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Use.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l4TY3LkE5BZNYHbLWspZn459Jq" />
@@ -124,7 +106,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34940413" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34937125" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
@@ -178,7 +160,8 @@
       <workItem from="1610493216019" duration="87000" />
       <workItem from="1610493652702" duration="1943000" />
       <workItem from="1610496109981" duration="9742000" />
-      <workItem from="1610744954309" duration="451000" />
+      <workItem from="1610744954309" duration="50014000" />
+      <workItem from="1611725888300" duration="4488000" />
     </task>
     <servers />
   </component>
@@ -206,20 +189,103 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs</url>
-          <line>31</line>
-          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\RoomNavigation.cs" initialLine="30" containingFunctionPresentation="method 'AttemptToChangeRooms'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Observe.cs</url>
+          <line>47</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\Observe.cs" initialLine="25" containingFunctionPresentation="method 'RespondToAction'">
             <startOffsets>
-              <option value="1120" />
+              <option value="2098" />
             </startOffsets>
             <endOffsets>
-              <option value="1177" />
+              <option value="2205" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Observe.cs</url>
+          <line>50</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\Observe.cs" initialLine="28" containingFunctionPresentation="method 'RespondToAction'">
+            <startOffsets>
+              <option value="2313" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2374" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Observe.cs</url>
+          <line>18</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\Observe.cs" initialLine="18" containingFunctionPresentation="method 'RespondToAction'">
+            <startOffsets>
+              <option value="699" />
+            </startOffsets>
+            <endOffsets>
+              <option value="743" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs</url>
+          <line>102</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\InteractableItems.cs" initialLine="44" containingFunctionPresentation="method 'Take'">
+            <startOffsets>
+              <option value="3168" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3199" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameController.cs</url>
+          <line>136</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\GameController.cs" initialLine="136" containingFunctionPresentation="method 'TestVerbDictionaryWithNoun'">
+            <startOffsets>
+              <option value="4533" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4570" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs</url>
+          <line>108</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\InteractableItems.cs" initialLine="48" containingFunctionPresentation="method 'Take'">
+            <startOffsets>
+              <option value="3389" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3411" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/OptionButton.cs</url>
+          <line>33</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\OptionButton.cs" initialLine="34" containingFunctionPresentation="method 'TaskOnClick'">
+            <startOffsets>
+              <option value="1099" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1137" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
+        <watch expression="preferredChoiceKvp" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

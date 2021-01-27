@@ -7,32 +7,36 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 	
-	private bool going;
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
 	public Text displayText;
 	public Choice[] actions;
+	public ObserveChoice[] observableChoices;
+	public InteractChoice[] interactableChoices;
 	List<string> actionLog = new List<string>(); 
 
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
 	[HideInInspector] public List<string> exitNames = new List<string>();
 	[HideInInspector] public RoomNavigation roomNavigation;
 	[HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string> ();
+	[HideInInspector] public InteractableItems interactableItems;
+	[HideInInspector] public bool isInteracting = false;
+	[HideInInspector] public bool isObserving = false;
 	
-	// todo - instead of using this workaround, we should make a "CalculateNextChoices" or something based on game state and room
+	// todo - instead of using this workaround, we should make a "CalculateDNextChoices" or something based on game state and room
 	// this section mostly for debugging
-	public bool debuggingMode = true;
 	public Choice[] startingActions;
-	public string currentRoom;
-
-	void Awake () {
+	
+	void Awake ()
+	{
+		interactableItems = GetComponent<InteractableItems> ();
 		roomNavigation = GetComponent<RoomNavigation> ();
 	}
 
 	void Start ()
 	{
 		allPreferences = LoadPreferredButtonsForOptions();
-		DisplayRoomText ();
+		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
 	}
@@ -85,7 +89,7 @@ public class GameController : MonoBehaviour {
 		displayText.text = logAsText;
 	}
 	
-	public void DisplayRoomText () {
+	public void LoadRoomDataAndDisplayRoomText () {
 		ClearCollectionsForNewRoom ();
 		UnpackRoom ();
 
@@ -95,11 +99,50 @@ public class GameController : MonoBehaviour {
 		LogStringWithReturn (combinedText);
 	}
 
-	void UnpackRoom() {
-		roomNavigation.UnpackExitsInRoom ();
+	void UnpackRoom()
+	{
+		roomNavigation.UnpackExitsInRoom();
+		PrepareObjectsToTakeOrExamine(roomNavigation.currentRoom);
+	}
+
+	void PrepareObjectsToTakeOrExamine(Room currentRoom)
+	{
+		for (int i = 0; i < currentRoom.InteractableObjectsInRoom.Length; i++)
+		{
+			string descriptionNotInInventory = interactableItems.GetObjectsNotInInventory(currentRoom, i);
+			if (descriptionNotInInventory != null)
+			{
+				// if we end up making objects something you have to look for, we will change this.
+				interactionDescriptionsInRoom.Add(descriptionNotInInventory);
+			}
+
+			InteractableObject interactableInRoom = currentRoom.InteractableObjectsInRoom[i];
+			for (int j = 0; j < interactableInRoom.interactions.Length; j++)
+			{
+				Interaction interaction = interactableInRoom.interactions[j];
+				if (interaction.action.keyword == "observe")
+				{
+					interactableItems.examineDictionary.Add(interactableInRoom.noun, interaction.textResponse);
+				}
+				if (interaction.action.keyword == "interact")
+				{
+					interactableItems.takeDictionary.Add(interactableInRoom.noun, interaction.textResponse);
+				}
+			}
+		}
+	}
+
+	public string TestVerbDictionaryWithNoun(Dictionary<string, string> verbDictionary, string verb, string noun)
+	{
+		if (verbDictionary.ContainsKey(noun))
+		{
+			return verbDictionary[noun];
+		}
+		return "You can't " + verb + " " + noun;
 	}
 
 	void ClearCollectionsForNewRoom() {
+		interactableItems.ClearCollections();
 		interactionDescriptionsInRoom.Clear ();
 		roomNavigation.ClearExits ();
 	}
@@ -135,4 +178,26 @@ public class GameController : MonoBehaviour {
 
 		return actionNames;
 	}
+
+	public List<string> ObservableChoiceNames()
+	{
+		List<string> observableChoiceNames = new List<string>();
+		for (int i = 0; i < observableChoices.Length; i++)
+		{
+			observableChoiceNames.Add(observableChoices[i].keyword);
+		}
+
+		return observableChoiceNames;
+	}
+	
+	public List<string> InteractChoiceNames()
+	{
+		List<string> interactChoiceNames = new List<string>();
+		for (int i = 0; i < interactableChoices.Length; i++)
+		{
+			interactChoiceNames.Add(interactableChoices[i].keyword);
+		}
+
+		return interactChoiceNames;
+	}	
 }

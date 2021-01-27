@@ -11,12 +11,12 @@
           <e p="commandPreferredButtons.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="ActionChoice.cs" t="Include" />
           <e p="Choice.cs" t="Include" />
           <e p="Exit.cs" t="Include" />
           <e p="ExitChoice.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="Go.cs" t="Include" />
-          <e p="InputAction.cs" t="Include" />
           <e p="Look.cs" t="Include" />
           <e p="OptionButton.cs" t="Include" />
           <e p="Room.cs" t="Include" />
