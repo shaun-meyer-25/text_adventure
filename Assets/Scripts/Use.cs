@@ -6,6 +6,6 @@ using UnityEngine;
 public class Use : ActionChoice
 {
     public override void RespondToAction (GameController controller, string[] separatedInputWords) {
-        
+        controller.interactableItems.UseItem(separatedInputWords);
     }
 }

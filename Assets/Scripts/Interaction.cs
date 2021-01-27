@@ -7,4 +7,5 @@ public class Interaction
 {
     public ActionChoice action;
     [TextArea] public string textResponse;
+    public ActionResponse actionResponse; 
 }

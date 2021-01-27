@@ -666,6 +666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c313ef354246694994f57d276f9c36b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usableItemList:
+  - {fileID: 11400000, guid: 4bb6e8875ca54404080ea5d67bc668cb, type: 2}
   nounsInRoom: []
 --- !u!1 &962565872
 GameObject:

@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour {
 	[HideInInspector] public bool isInteracting = false;
 	[HideInInspector] public bool isObserving = false;
 	
-	// todo - instead of using this workaround, we should make a "CalculateNextChoices" or something based on game state and room
+	// todo - instead of using this workaround, we should make a "CalculateDNextChoices" or something based on game state and room
 	// this section mostly for debugging
 	public Choice[] startingActions;
 	

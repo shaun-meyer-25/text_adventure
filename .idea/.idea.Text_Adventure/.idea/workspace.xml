@@ -24,10 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1342834d-446f-4706-a3b6-8c513df95064" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interact.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Observe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Observe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Use.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Use.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,28 +46,29 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/e1/c829d9a2/SerializeField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractChoice.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Observe.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interact.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Use.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractableObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Look.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/79822DAC-9C0E-415A-9499-BCD03FFF8B72/1d/799c8de3/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inspect.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Surroundings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActionChoice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Room.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/e1/c829d9a2/SerializeField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObserveChoice.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractChoice.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ExitChoice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActionResponse.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Go.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Person.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Exit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChangeRoomResponse.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Take.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -78,7 +79,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ActionChoice.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Go.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Interaction.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Inspect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObserveChoice.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InteractableObject.cs" />
@@ -87,13 +87,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Person.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Room.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interact.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Use.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Surroundings.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Observe.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ActionResponse.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ChangeRoomResponse.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interaction.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Use.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l4TY3LkE5BZNYHbLWspZn459Jq" />
@@ -158,7 +161,7 @@
       <workItem from="1610493652702" duration="1943000" />
       <workItem from="1610496109981" duration="9742000" />
       <workItem from="1610744954309" duration="50014000" />
-      <workItem from="1611725888300" duration="1516000" />
+      <workItem from="1611725888300" duration="4488000" />
     </task>
     <servers />
   </component>
@@ -226,13 +229,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs</url>
-          <line>61</line>
+          <line>102</line>
           <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\InteractableItems.cs" initialLine="44" containingFunctionPresentation="method 'Take'">
             <startOffsets>
-              <option value="1858" />
+              <option value="3168" />
             </startOffsets>
             <endOffsets>
-              <option value="1889" />
+              <option value="3199" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="41" />
@@ -242,23 +245,23 @@
           <line>136</line>
           <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\GameController.cs" initialLine="136" containingFunctionPresentation="method 'TestVerbDictionaryWithNoun'">
             <startOffsets>
-              <option value="4532" />
+              <option value="4533" />
             </startOffsets>
             <endOffsets>
-              <option value="4569" />
+              <option value="4570" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs</url>
-          <line>66</line>
+          <line>108</line>
           <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\InteractableItems.cs" initialLine="48" containingFunctionPresentation="method 'Take'">
             <startOffsets>
-              <option value="2030" />
+              <option value="3389" />
             </startOffsets>
             <endOffsets>
-              <option value="2052" />
+              <option value="3411" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="43" />
