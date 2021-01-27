@@ -36,6 +36,13 @@ public class Observe : ActionChoice
                 controller.isObserving = false;
                 controller.UpdateRoomChoices(controller.startingActions);
             }
+            else if (separatedInputWords[1].Equals("surroundings"))
+            {
+                Room room = controller.roomNavigation.currentRoom;
+                controller.LogStringWithReturn("You see " + room.roomInvestigationDescription);
+                controller.isObserving = false;
+                controller.UpdateRoomChoices(controller.startingActions);
+            }
             else // i.e.  "observe branch"
             {
                 InteractableObject[] interactableObjects = controller.roomNavigation.currentRoom.InteractableObjectsInRoom;

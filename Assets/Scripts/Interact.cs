@@ -8,10 +8,9 @@ public class Interact : ActionChoice
     public override void RespondToAction (GameController controller, string[] separatedInputWords) {
 
         if (separatedInputWords.Length == 1) {
-            
+            controller.LogStringWithReturn("Interact with what?");
             for (int i = 0; i < controller.observableChoices.Length; i++)
             {
-                controller.LogStringWithReturn("Interact with what?");
                 controller.UpdateRoomChoices(controller.interactableChoices);
                 controller.isInteracting = true;
             }

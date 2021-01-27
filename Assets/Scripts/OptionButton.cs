@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class OptionButton : MonoBehaviour {
@@ -16,6 +14,7 @@ public class OptionButton : MonoBehaviour {
 		Text textObject = button.GetComponentInChildren<Text>();
 		string text = textObject.text;
 		
+		// todo - we could make exitnames part of an isExiting flag like for interacting or observing, and move this block in with "go"
 		if (controller.exitNames.Contains(text)) {
 			int numOfExits = controller.exitNames.Count;
 			for (int i = 0; i < numOfExits; i++) {
@@ -30,7 +29,7 @@ public class OptionButton : MonoBehaviour {
 		}
 		else if ((controller.ObservableChoiceNames().Contains(text) || controller.roomNavigation.currentRoom.ObjectNames().Contains(text)) && controller.isObserving) 
 		{
-			for (int i = 0; i < controller.ObservableChoiceNames().Count; i++)
+			for (int i = 0; i < controller.actions.Length; i++)
 			{
 				Choice choice = controller.actions[i];
 
@@ -42,7 +41,7 @@ public class OptionButton : MonoBehaviour {
 		}
 		else if ((controller.InteractChoiceNames().Contains(text) || controller.roomNavigation.currentRoom.ObjectNames().Contains(text)) && controller.isInteracting) 
 		{
-			for (int i = 0; i < controller.InteractChoiceNames().Count; i++)
+			for (int i = 0; i < controller.actions.Length; i++)
 			{
 				Choice choice = controller.actions[i];
 
