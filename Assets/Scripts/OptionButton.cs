@@ -39,6 +39,10 @@ public class OptionButton : MonoBehaviour {
 				}
 			}
 		}
+		else if (controller.interactableItems.nounsInInventory.Contains(text) && controller.isUsing)
+		{
+			ScriptableObject.CreateInstance<Use>().RespondToAction(controller, new string[] {"use", text});
+		}
 		else if ((controller.InteractChoiceNames().Contains(text) || controller.roomNavigation.currentRoom.ObjectNames().Contains(text)) && controller.isInteracting) 
 		{
 			for (int i = 0; i < controller.actions.Length; i++)
@@ -53,15 +57,10 @@ public class OptionButton : MonoBehaviour {
 		}
 		else 
 		{
-			// todo - why does "go" have a special case? define that in a comment or refactor it
-			
 			for (int i = 0; i < controller.actions.Length; i++) {
 				var choice = controller.actions [i];
 				
-				if (choice.keyword == text && text == "go") {
-					ActionChoice actionChoice = (ActionChoice) choice; 
-					actionChoice.RespondToAction (controller, new string[] { "go" });
-				} else if (choice.keyword == text)
+				if (choice.keyword == text)
 				{
 					ActionChoice actionChoice = (ActionChoice) choice; 
 					actionChoice.RespondToAction (controller, new string[] { choice.keyword });

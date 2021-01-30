@@ -18,8 +18,8 @@ public class InteractableItems : MonoBehaviour
     {
         controller = GetComponent<GameController>();
     }
+    public List<string> nounsInInventory = new List<string>();
     
-    private List<string> nounsInInventory = new List<string>();
     public string GetObjectsNotInInventory(Room currentRoom, int i)
     {
         InteractableObject interactableInRoom = currentRoom.InteractableObjectsInRoom[i];
@@ -113,6 +113,17 @@ public class InteractableItems : MonoBehaviour
             controller.LogStringWithReturn("No " + noun + " here to take.");
             return null;
         }
+    }
+
+    public List<InteractableObject> InteractableObjectsInInventory()
+    {
+        List<InteractableObject> inventoryItems = new List<InteractableObject>();
+        for (int i = 0; i < nounsInInventory.Count; i++)
+        {
+            inventoryItems.Add(usableItemList.Find(o => o.noun.Equals(nounsInInventory[i])));
+        }
+
+        return inventoryItems;
     }
 
     public void UseItem(string[] separatedInputWords)

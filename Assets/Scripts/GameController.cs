@@ -22,6 +22,8 @@ public class GameController : MonoBehaviour {
 	[HideInInspector] public InteractableItems interactableItems;
 	[HideInInspector] public bool isInteracting = false;
 	[HideInInspector] public bool isObserving = false;
+	[HideInInspector] public bool isUsing = false;
+	[HideInInspector] public Fire fire;
 	
 	// todo - instead of using this workaround, we should make a "CalculateDNextChoices" or something based on game state and room
 	// this section mostly for debugging
@@ -31,6 +33,7 @@ public class GameController : MonoBehaviour {
 	{
 		interactableItems = GetComponent<InteractableItems> ();
 		roomNavigation = GetComponent<RoomNavigation> ();
+		fire = GetComponent<Fire>();
 	}
 
 	void Start ()
@@ -95,6 +98,11 @@ public class GameController : MonoBehaviour {
 
 		string joinedInteractionDescriptions = string.Join ("\n", interactionDescriptionsInRoom.ToArray ());
 		string combinedText = roomNavigation.currentRoom.description + "\n" + joinedInteractionDescriptions;
+
+		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
+		{
+			combinedText += "\nThe fire is " + fire.fireLevel;
+		}
 
 		LogStringWithReturn (combinedText);
 	}

@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -14,7 +15,8 @@ MonoBehaviour:
   description: the sea moves, it is great and strong.
   roomInvestigationDescription: 'more coast to the north.
 
-    grasslands to the east.
+    grasslands to the
+    east.
 
     the sea lies to the west and south.'
   roomName: west coast
@@ -25,6 +27,7 @@ MonoBehaviour:
   - keyString: east
     exitDescription: grasslands to the east.
     valueRoom: {fileID: 11400000, guid: b862231ee3e5bb548b57e557f3a6a18a, type: 2}
-  roomActions:
-  - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
-  - {fileID: 11400000, guid: 6163d2be810d84313b3bb3dca3323e15, type: 2}
+  - keyString: south
+    exitDescription: dungeon!
+    valueRoom: {fileID: 11400000, guid: 40a91b3afc1e4ee498e5fbd94cd79a12, type: 2}
+  baseInteractableObjectsInRoom: []

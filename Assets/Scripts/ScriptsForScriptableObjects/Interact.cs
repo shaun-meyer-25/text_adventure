@@ -9,12 +9,9 @@ public class Interact : ActionChoice
 
         if (separatedInputWords.Length == 1) {
             controller.LogStringWithReturn("Interact with what?");
-            for (int i = 0; i < controller.observableChoices.Length; i++)
-            {
-                controller.UpdateRoomChoices(controller.interactableChoices);
-                controller.isInteracting = true;
-            }
-            
+            controller.UpdateRoomChoices(controller.interactableChoices);
+            controller.isInteracting = true;
+
         } else if (separatedInputWords.Length == 2) {
             if (separatedInputWords[1].Equals("object"))
             {

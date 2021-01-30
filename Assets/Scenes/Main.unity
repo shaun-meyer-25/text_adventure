@@ -583,6 +583,7 @@ GameObject:
   - component: {fileID: 947878756}
   - component: {fileID: 947878755}
   - component: {fileID: 947878758}
+  - component: {fileID: 947878759}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -635,6 +636,8 @@ MonoBehaviour:
   interactableItems: {fileID: 0}
   isInteracting: 0
   isObserving: 0
+  isUsing: 0
+  fire: {fileID: 0}
   startingActions:
   - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
   - {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
@@ -667,8 +670,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usableItemList:
-  - {fileID: 11400000, guid: 4bb6e8875ca54404080ea5d67bc668cb, type: 2}
+  - {fileID: 11400000, guid: 163b417b0a457634b8dc873763fdf718, type: 2}
   nounsInRoom: []
+  nounsInInventory: []
+--- !u!114 &947878759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947878754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc8cf090ca6b5f43bafbcb19730bb2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireLevel: 1
 --- !u!1 &962565872
 GameObject:
   m_ObjectHideFlags: 0

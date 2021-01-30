@@ -9,12 +9,8 @@ public class Observe : ActionChoice
 
         if (separatedInputWords.Length == 1) {
             controller.LogStringWithReturn("Observe what?");
-            for (int i = 0; i < controller.observableChoices.Length; i++)
-            {
-                controller.UpdateRoomChoices(controller.observableChoices);
-                controller.isObserving = true;
-            }
-            
+            controller.UpdateRoomChoices(controller.observableChoices);
+            controller.isObserving = true;
         } else if (separatedInputWords.Length == 2) {
             if (separatedInputWords[1].Equals("object"))
             {
