@@ -2,6 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "TextAdventure/ActionResponse/MakeConversation")]
+public class MakeConversation : ActionResponse
+{
+    public override bool DoActionResponse(GameController controller)
+    {
+        return true;
+    }
+}
+
+/*
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/FeedFire")]
 public class FeedFire : ActionResponse
 {
@@ -12,7 +22,8 @@ public class FeedFire : ActionResponse
             bool fireWasFed = controller.fire.FeedFire();
             if (fireWasFed)
             {
-                controller.checkpointManager.SetCheckpoint(0);
+                controller.checkpointManager.SetCheckpoint(1);
+                //controller.roomNavigation.currentRoom.InteractableObjectsInRoom
             }
             return true;
         }
@@ -20,3 +31,4 @@ public class FeedFire : ActionResponse
         return false;
     }
 }
+*/

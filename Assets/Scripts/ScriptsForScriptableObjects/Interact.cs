@@ -29,16 +29,34 @@ public class Interact : ActionChoice
             }
             else if (separatedInputWords[1].Equals("person"))
             {
-                // todo
-                controller.LogStringWithReturn("Nobody around yet");
-                controller.UpdateRoomChoices(controller.startingActions);
-                controller.isInteracting = false;
+                if (controller.roomNavigation.currentRoom.PeopleInRoom.Length > 0)
+                {
+                    controller.LogStringWithReturn("Which person?");
+                    controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.PeopleInRoom);
+                }
+                else
+                {
+                    controller.LogStringWithReturn("Nobody around yet");
+                    controller.UpdateRoomChoices(controller.startingActions);
+                    controller.isInteracting = false;
+                }
+            }
+            else if (controller.roomNavigation.currentRoom.CharacterNamesInRoom().Contains(separatedInputWords[1]))
+            {
+                for (int i = 0; i < controller.roomNavigation.currentRoom.PeopleInRoom.Length; i++)
+                {
+                    InteractableObject character = controller.roomNavigation.currentRoom.PeopleInRoom[i];
+                    if (character.keyword.Equals(separatedInputWords[1]))
+                    {
+                        controller.LogStringWithReturn(character.description);
+                        controller.UpdateRoomChoices(controller.startingActions);
+                        controller.isInteracting = false;
+                    }
+                }
             }
             else
             {
                 Dictionary<string, string> takeDictionary = controller.interactableItems.Take(separatedInputWords);
-                //             ((List<InteractableObject>) controller.roomNavigation.currentRoom.interactableObjectsInRoom).RemoveAll(o => o.noun == noun)
-
 
                 if (takeDictionary != null)
                 {

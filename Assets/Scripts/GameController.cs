@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
 	
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
+	public InteractableObject[] characters;
 	public Text displayText;
 	public Choice[] actions;
 	public ObserveChoice[] observableChoices;
@@ -24,7 +25,8 @@ public class GameController : MonoBehaviour {
 	[HideInInspector] public bool isObserving = false;
 	[HideInInspector] public bool isUsing = false;
 	[HideInInspector] public Fire fire;
-	
+	[HideInInspector] public CheckpointManager checkpointManager;
+
 	// todo - instead of using this workaround, we should make a "CalculateDNextChoices" or something based on game state and room
 	// this section mostly for debugging
 	public Choice[] startingActions;
@@ -34,11 +36,13 @@ public class GameController : MonoBehaviour {
 		interactableItems = GetComponent<InteractableItems> ();
 		roomNavigation = GetComponent<RoomNavigation> ();
 		fire = GetComponent<Fire>();
+		checkpointManager = GetComponent<CheckpointManager>();
 	}
 
 	void Start ()
 	{
-		allPreferences = LoadPreferredButtonsForOptions();
+		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
+		LogStringWithReturn("eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
 		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
@@ -96,14 +100,21 @@ public class GameController : MonoBehaviour {
 		ClearCollectionsForNewRoom ();
 		UnpackRoom ();
 
+		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
+		{
+			Dictionary<string, string> caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
+			roomNavigation.currentRoom.description = caveDescription[checkpointManager.checkpoint.ToString()];
+		}
+
 		string joinedInteractionDescriptions = string.Join ("\n", interactionDescriptionsInRoom.ToArray ());
 		string combinedText = roomNavigation.currentRoom.description + "\n" + joinedInteractionDescriptions;
 
+		/*
 		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
 		{
-			combinedText += "\nThe fire is " + fire.fireLevel;
+			combinedText += "\nthe fire is " + fire.fireLevel;
 		}
-
+*/
 		LogStringWithReturn (combinedText);
 	}
 
@@ -155,9 +166,9 @@ public class GameController : MonoBehaviour {
 		roomNavigation.ClearExits ();
 	}
 
-	Dictionary<string, string> LoadPreferredButtonsForOptions()
+	public Dictionary<string, string> LoadDictionaryFromFile(string fileName)
 	{
-		TextAsset data = (TextAsset) Resources.Load("commandPreferredButtons");
+		TextAsset data = (TextAsset) Resources.Load(fileName);
 		string[] lines = data.text.Split('\n');
 		
 		Dictionary<String, String> dict = new Dictionary<string, string>();
@@ -167,6 +178,24 @@ public class GameController : MonoBehaviour {
 			string[] split = line.Split('=');
 			string key = split[0].Trim();
 			string value = split[1].Trim();
+			dict.Add(key, value);
+		}
+		
+		return dict;
+	}
+	
+	public Dictionary<string, List<string>> LoadDictionaryFromCsvFile(string fileName)
+	{
+		TextAsset data = (TextAsset) Resources.Load(fileName);
+		string[] lines = data.text.Split('\n');
+		
+		Dictionary<String, List<String>> dict = new Dictionary<string, List<string>>();
+
+		foreach (string line in lines)
+		{
+			string[] split = line.Split(',');
+			string key = split[0].Trim();
+			List<string> value = split.Skip(1).ToList();
 			dict.Add(key, value);
 		}
 		
@@ -207,5 +236,5 @@ public class GameController : MonoBehaviour {
 		}
 
 		return interactChoiceNames;
-	}	
+	}
 }

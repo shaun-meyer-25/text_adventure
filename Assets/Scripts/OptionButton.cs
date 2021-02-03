@@ -43,7 +43,7 @@ public class OptionButton : MonoBehaviour {
 		{
 			ScriptableObject.CreateInstance<Use>().RespondToAction(controller, new string[] {"use", text});
 		}
-		else if ((controller.InteractChoiceNames().Contains(text) || controller.roomNavigation.currentRoom.ObjectNames().Contains(text)) && controller.isInteracting) 
+		else if (controller.isInteracting) 
 		{
 			for (int i = 0; i < controller.actions.Length; i++)
 			{

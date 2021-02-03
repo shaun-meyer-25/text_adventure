@@ -20,9 +20,21 @@ public class Room : ScriptableObject {
 		get { return interactableObjectsInRoom; }
 	}
 
+	private InteractableObject[] peopleInRoom;
+
+	public InteractableObject[] PeopleInRoom
+	{
+		get { return peopleInRoom;  }
+	}
+
 	public void SetInteractableObjectsInRoom(InteractableObject[] objects)
 	{
 		interactableObjectsInRoom = objects;
+	}
+
+	public void SetPeopleInRoom(InteractableObject[] objects)
+	{
+		peopleInRoom = objects;
 	}
 	
 	// using https://answers.unity.com/questions/1664323/how-are-you-resetting-your-scriptable-objects-betw.html
@@ -71,5 +83,16 @@ public class Room : ScriptableObject {
 		}
 
 		return objectNames;
+	}
+
+	public List<string> CharacterNamesInRoom()
+	{
+		List<string> characterNames = new List<string>();
+		for (int i = 0; i < peopleInRoom.Length; i++)
+		{
+			characterNames.Add(peopleInRoom[i].keyword);
+		}
+
+		return characterNames;
 	}
 }

@@ -27,7 +27,4 @@ MonoBehaviour:
   - keyString: east
     exitDescription: grasslands to the east.
     valueRoom: {fileID: 11400000, guid: b862231ee3e5bb548b57e557f3a6a18a, type: 2}
-  - keyString: south
-    exitDescription: dungeon!
-    valueRoom: {fileID: 11400000, guid: 40a91b3afc1e4ee498e5fbd94cd79a12, type: 2}
   baseInteractableObjectsInRoom: []

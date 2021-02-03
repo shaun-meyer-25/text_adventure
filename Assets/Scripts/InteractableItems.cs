@@ -139,6 +139,11 @@ public class InteractableItems : MonoBehaviour
                 {
                     controller.LogStringWithReturn("Nothing happens");
                 }
+                else
+                {
+                    useDictionary.Remove(nounToUse);
+                    nounsInInventory.Remove(nounToUse);
+                }
             }
             else
             {

@@ -3,24 +3,21 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fc7cf5db359646d6bf6e9ed1f7077dd, type: 3}
   m_Name: HomeCave
   m_EditorClassIdentifier: 
-  description: "eyes open. you look around the cave. there are many figures laying
-    nearby. the familiar shape next to you makes you feel safe and warm. you reach
-    out and grab their hand. \n\nhere is home. "
-  roomInvestigationDescription: the remains of last night's fire sit in the middle
-    of the room. everyone else is still asleep.
+  description: 'here is home. '
+  roomInvestigationDescription: everyone else is still asleep. the fire is low, you
+    should go to the forest and look for wood.
   roomName: home cave
   exits:
   - keyString: outside
-    exitDescription: Light filters in from outside
+    exitDescription: light filters in from outside
     valueRoom: {fileID: 11400000, guid: b7c0e35f021744710b76a66ca3e42f56, type: 2}
-  roomActions:
-  - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
-  - {fileID: 11400000, guid: 6163d2be810d84313b3bb3dca3323e15, type: 2}
+  baseInteractableObjectsInRoom: []

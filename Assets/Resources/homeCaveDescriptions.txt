@@ -1,0 +1,2 @@
+0=the fire is low, you should go to the forest and look for wood.
+1=the others have woken up, are starting their days. the cave feels better with life in it.
