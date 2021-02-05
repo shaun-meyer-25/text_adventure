@@ -46,6 +46,7 @@ public class GameController : MonoBehaviour {
 		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
+		
 	}
 
 	public void UpdateRoomChoices(Choice[] choices)
@@ -100,21 +101,21 @@ public class GameController : MonoBehaviour {
 		ClearCollectionsForNewRoom ();
 		UnpackRoom ();
 
+		string combinedText = "\n";
+
 		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
 		{
 			Dictionary<string, string> caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
 			roomNavigation.currentRoom.description = caveDescription[checkpointManager.checkpoint.ToString()];
 		}
+		else
+		{
+			DescribeTravelingCompanions(combinedText);
+		}
 
 		string joinedInteractionDescriptions = string.Join ("\n", interactionDescriptionsInRoom.ToArray ());
-		string combinedText = roomNavigation.currentRoom.description + "\n" + joinedInteractionDescriptions;
-
-		/*
-		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
-		{
-			combinedText += "\nthe fire is " + fire.fireLevel;
-		}
-*/
+		combinedText = roomNavigation.currentRoom.description + "\n" + joinedInteractionDescriptions + combinedText;
+		
 		LogStringWithReturn (combinedText);
 	}
 
@@ -236,5 +237,31 @@ public class GameController : MonoBehaviour {
 		}
 
 		return interactChoiceNames;
+	}
+
+	private void DescribeTravelingCompanions(string combinedText)
+	{
+		InteractableObject[] peopleInRoom = roomNavigation.currentRoom.PeopleInRoom;
+		if (peopleInRoom.Length == 1)
+		{
+			combinedText = peopleInRoom[0].keyword + " is traveling with you";
+		} else if (peopleInRoom.Length == 2)
+		{
+			combinedText = peopleInRoom[0] + " and " + peopleInRoom[1] + " are traveling with you";
+		} else if (peopleInRoom.Length > 2)
+		{
+			for (int i = 0; i < peopleInRoom.Length; i++)
+			{
+				if (i == peopleInRoom.Length - 1)
+				{
+					combinedText += " and " + peopleInRoom[i] + " are traveling with you";
+				}
+				else
+				{
+					combinedText += peopleInRoom[i] + ", ";
+				}
+			}
+		}
+
 	}
 }

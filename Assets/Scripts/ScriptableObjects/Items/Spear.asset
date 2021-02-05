@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f298cada63767b546855f8107b945bfa, type: 3}
-  m_Name: Ohm
+  m_Name: Spear
   m_EditorClassIdentifier: 
-  keyword: ohm
-  noun: ohm
-  description: "\"time to hunt\". they gesture outside.\r"
+  keyword: spear
+  noun: spear
+  description: it is sharp. it could pierce the flesh of a creature.
   interactions:
-  - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-    textResponse: "\"time to hunt\". they gesture outside.\r"
+  - action: {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}
+    textResponse: 
     actionResponse: {fileID: 0}

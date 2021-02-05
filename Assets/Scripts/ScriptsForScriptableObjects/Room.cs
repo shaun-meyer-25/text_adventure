@@ -20,6 +20,8 @@ public class Room : ScriptableObject {
 		get { return interactableObjectsInRoom; }
 	}
 
+	[SerializeField] private InteractableObject[] basePeopleInRoom;
+	
 	private InteractableObject[] peopleInRoom;
 
 	public InteractableObject[] PeopleInRoom
@@ -44,6 +46,7 @@ public class Room : ScriptableObject {
 	private void OnEnable()
 	{
 		interactableObjectsInRoom = baseInteractableObjectsInRoom;
+		peopleInRoom = basePeopleInRoom;
 	}
 	
 	public void OnAfterDeserialize() 

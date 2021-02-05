@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyword: tree branch
   noun: tree branch
-  description: A large tree branch lies on the ground
+  description: a large tree branch lies on the ground
   interactions:
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
     textResponse: You take the tree branch

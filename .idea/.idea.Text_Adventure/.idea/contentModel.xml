@@ -9,18 +9,39 @@
       <e p="Assets" t="Include">
         <e p="Resources" t="Include">
           <e p="commandPreferredButtons.txt" t="Include" />
+          <e p="homeCaveDescriptions.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="ActionChoice.cs" t="Include" />
-          <e p="Choice.cs" t="Include" />
-          <e p="Exit.cs" t="Include" />
-          <e p="ExitChoice.cs" t="Include" />
+          <e p="CheckpointManager.cs" t="Include" />
+          <e p="Fire.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
-          <e p="Go.cs" t="Include" />
-          <e p="Look.cs" t="Include" />
+          <e p="InteractableItems.cs" t="Include" />
           <e p="OptionButton.cs" t="Include" />
-          <e p="Room.cs" t="Include" />
           <e p="RoomNavigation.cs" t="Include" />
+          <e p="ScriptsForScriptableObjects" t="Include">
+            <e p="ActionChoice.cs" t="Include" />
+            <e p="ActionResponse.cs" t="Include" />
+            <e p="ChangeRoomResponse.cs" t="Include" />
+            <e p="Choice.cs" t="Include" />
+            <e p="Exit.cs" t="Include" />
+            <e p="ExitChoice.cs" t="Include" />
+            <e p="FeedFire.cs" t="Include" />
+            <e p="Go.cs" t="Include" />
+            <e p="Inspect.cs" t="Include" />
+            <e p="Interact.cs" t="Include" />
+            <e p="InteractableObject.cs" t="Include" />
+            <e p="InteractChoice.cs" t="Include" />
+            <e p="Interaction.cs" t="Include" />
+            <e p="Inventory.cs" t="Include" />
+            <e p="MakeConversation.cs" t="Include" />
+            <e p="Observe.cs" t="Include" />
+            <e p="ObserveChoice.cs" t="Include" />
+            <e p="Person.cs" t="Include" />
+            <e p="Room.cs" t="Include" />
+            <e p="Surroundings.cs" t="Include" />
+            <e p="Take.cs" t="Include" />
+            <e p="Use.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

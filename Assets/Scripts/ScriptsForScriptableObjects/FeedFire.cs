@@ -12,7 +12,7 @@ public class FeedFire : ActionResponse
             bool fireWasFed = controller.fire.FeedFire();
             if (fireWasFed)
             {
-                controller.checkpointManager.SetCheckpoint(0);
+                controller.checkpointManager.SetCheckpoint(1);
             }
             return true;
         }
