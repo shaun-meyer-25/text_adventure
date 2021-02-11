@@ -7,5 +7,17 @@ public class Interaction
 {
     public ActionChoice action;
     [TextArea] public string textResponse;
-    public ActionResponse actionResponse; 
+    [SerializeField] public ActionResponse baseActionResponse;
+
+    [HideInInspector] public ActionResponse actionResponse;
+
+    public ActionResponse ActionResponse
+    {
+	    get { return actionResponse; }
+    }
+
+    public void SetActionResponse(ActionResponse response)
+    {
+	    actionResponse = response;
+    }
 }

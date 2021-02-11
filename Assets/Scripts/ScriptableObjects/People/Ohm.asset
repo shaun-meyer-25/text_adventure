@@ -18,4 +18,4 @@ MonoBehaviour:
   interactions:
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
     textResponse: "\"time to hunt\". they gesture outside.\r"
-    actionResponse: {fileID: 0}
+    baseActionResponse: {fileID: 0}

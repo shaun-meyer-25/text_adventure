@@ -34,6 +34,7 @@
             <e p="Interaction.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="MakeConversation.cs" t="Include" />
+            <e p="NPCGivesItem.cs" t="Include" />
             <e p="Observe.cs" t="Include" />
             <e p="ObserveChoice.cs" t="Include" />
             <e p="Person.cs" t="Include" />

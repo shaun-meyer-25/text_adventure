@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
 	public Choice[] actions;
 	public ObserveChoice[] observableChoices;
 	public InteractChoice[] interactableChoices;
+	public List<InteractableObject> travelingCompanions;
 	List<string> actionLog = new List<string>(); 
 
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
@@ -101,6 +102,11 @@ public class GameController : MonoBehaviour {
 		ClearCollectionsForNewRoom ();
 		UnpackRoom ();
 
+		for (int i = 0; i < travelingCompanions.Count; i++)
+		{
+			roomNavigation.currentRoom.AddPersonToRoom(travelingCompanions[i]);
+		}
+
 		string combinedText = "\n";
 
 		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
@@ -110,11 +116,11 @@ public class GameController : MonoBehaviour {
 		}
 		else
 		{
-			DescribeTravelingCompanions(combinedText);
+			combinedText = DescribeTravelingCompanions(combinedText);
 		}
 
 		string joinedInteractionDescriptions = string.Join ("\n", interactionDescriptionsInRoom.ToArray ());
-		combinedText = roomNavigation.currentRoom.description + "\n" + joinedInteractionDescriptions + combinedText;
+		combinedText = roomNavigation.currentRoom.description + "\n" + joinedInteractionDescriptions + "\n" + combinedText;
 		
 		LogStringWithReturn (combinedText);
 	}
@@ -239,7 +245,7 @@ public class GameController : MonoBehaviour {
 		return interactChoiceNames;
 	}
 
-	private void DescribeTravelingCompanions(string combinedText)
+	private string DescribeTravelingCompanions(string combinedText)
 	{
 		InteractableObject[] peopleInRoom = roomNavigation.currentRoom.PeopleInRoom;
 		if (peopleInRoom.Length == 1)
@@ -263,5 +269,6 @@ public class GameController : MonoBehaviour {
 			}
 		}
 
+		return combinedText;
 	}
 }

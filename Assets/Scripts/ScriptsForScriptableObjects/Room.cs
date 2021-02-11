@@ -39,6 +39,13 @@ public class Room : ScriptableObject {
 		peopleInRoom = objects;
 	}
 	
+	public void AddPersonToRoom(InteractableObject obj)
+	{
+		List<InteractableObject> updatedPeopleInRoom = new List<InteractableObject>(PeopleInRoom);
+		updatedPeopleInRoom.Add(obj);
+		peopleInRoom = updatedPeopleInRoom.ToArray();
+	}
+	
 	// using https://answers.unity.com/questions/1664323/how-are-you-resetting-your-scriptable-objects-betw.html
 	
 	// The use case of the following methods depends on the name lists to be in the same order as the object lists
@@ -97,5 +104,10 @@ public class Room : ScriptableObject {
 		}
 
 		return characterNames;
+	}
+
+	public void SetBasePeopleInRoom()
+	{
+		peopleInRoom = basePeopleInRoom;
 	}
 }

@@ -51,9 +51,9 @@ public class Interact : ActionChoice
                         controller.LogStringWithReturn(character.description);
                         List<Interaction> interactions = new List<Interaction>(controller.characters[i].interactions);
                         Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
-                        if (!interaction.actionResponse.Equals(null))
+                        if (!(interaction.ActionResponse == null))
                         {
-                            interaction.actionResponse.DoActionResponse(controller);
+                            interaction.ActionResponse.DoActionResponse(controller);
                         }
                         controller.UpdateRoomChoices(controller.startingActions);
                         controller.isInteracting = false;

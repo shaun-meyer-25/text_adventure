@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
@@ -37,7 +38,7 @@ public class CheckpointManager : MonoBehaviour
                     List<Interaction> interactions = new List<Interaction>(controller.characters[i].interactions);
                     Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
                     ActionResponse response = (ActionResponse) ScriptableObject.CreateInstance<NPCGivesItem>().SetRequiredString("spear");
-                    interaction.actionResponse = response;
+                    interaction.SetActionResponse(response);
                 }
             }
             
@@ -49,8 +50,7 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 2)
         {
             checkpoint = maybeCheckpoint;
-            
-            
+            controller.travelingCompanions.Add(controller.characters.First(o => o.noun.Equals("ohm")));
         }
     }
 }

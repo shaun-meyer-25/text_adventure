@@ -49,12 +49,12 @@ public class InteractableItems : MonoBehaviour
             {
                 Interaction interaction = interactableObjectInInventory.interactions[j];
 
-                if (interaction.actionResponse == null)
+                if (interaction.ActionResponse == null)
                     continue;
 
                 if (!useDictionary.ContainsKey(noun))
                 {
-                    useDictionary.Add(noun, interaction.actionResponse);
+                    useDictionary.Add(noun, interaction.ActionResponse);
                 }
             }
         }
