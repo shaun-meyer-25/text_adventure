@@ -29,7 +29,7 @@ public class RoomNavigation : MonoBehaviour {
 				currentRoom.SetBasePeopleInRoom();
 			}
 			currentRoom = exitDictionary[directionNoun];
-			controller.LogStringWithReturn("You head off to the " + directionNoun);
+			controller.LogStringWithReturn("you go " + directionNoun);
 			controller.LoadRoomDataAndDisplayRoomText();
 			
 			controller.UpdateRoomChoices(controller.startingActions);

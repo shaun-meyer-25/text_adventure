@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class GameController : MonoBehaviour {
 	
@@ -11,6 +13,7 @@ public class GameController : MonoBehaviour {
 	private Dictionary<string, string> allPreferences;
 	public InteractableObject[] characters;
 	public Text displayText;
+	public Image background;
 	public Choice[] actions;
 	public ObserveChoice[] observableChoices;
 	public InteractChoice[] interactableChoices;
@@ -43,7 +46,11 @@ public class GameController : MonoBehaviour {
 	void Start ()
 	{
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
-		LogStringWithReturn("eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
+		if (roomNavigation.currentRoom.roomName == "home cave")
+		{
+			LogStringWithReturn(
+				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
+		}
 		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
@@ -94,6 +101,12 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void DisplayLoggedText () {
+		for (int i = 0; i < actionLog.Count; i++)
+		{
+			actionLog[i] = actionLog[i].Replace("you don't need to do this", "<color=red>" + "you don't need to do this" + "</color>");
+			actionLog[i] = actionLog[i].Replace("you can't go back. only forward.",
+				"<color=purple>" + "you can't go back. only forward." + "</color>");
+		}
 		string logAsText = string.Join ("\n", actionLog.ToArray ());
 		displayText.text = logAsText;
 	}

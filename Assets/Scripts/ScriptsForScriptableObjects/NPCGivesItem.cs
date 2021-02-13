@@ -8,18 +8,23 @@ public class NPCGivesItem : ActionResponse
 {
     public override bool DoActionResponse(GameController controller)
     { 
-        InteractableObject item =
-               InteractableObject.Instantiate(
-                   controller.interactableItems.usableItemList.Find(o => o.noun == requiredString));
-           
-        controller.interactableItems.nounsInInventory.Add(requiredString);
-        controller.interactableItems.AddActionResponsesToUseDictionary();
-        controller.LogStringWithReturn("you are given a " + requiredString);
-        if (requiredString == "spear")
-        {
-            controller.checkpointManager.SetCheckpoint(2);
+        if (!controller.interactableItems.nounsInInventory.Contains(requiredString)) {
+            InteractableObject item =
+                InteractableObject.Instantiate(
+                    controller.interactableItems.usableItemList.Find(o => o.noun == requiredString));
+
+            controller.interactableItems.nounsInInventory.Add(requiredString);
+            controller.interactableItems.AddActionResponsesToUseDictionary();
+            controller.LogStringWithReturn("you are given a " + requiredString);
+            if (requiredString == "spear")
+            {
+                controller.checkpointManager.SetCheckpoint(2);
+            }
+
+            return true;
         }
-        return true;
+
+        return false;
     }
 
     public ScriptableObject SetRequiredString(string requiredString)

@@ -3,27 +3,28 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fc7cf5db359646d6bf6e9ed1f7077dd, type: 3}
   m_Name: NorthFoothills
   m_EditorClassIdentifier: 
-  description: far from home now. foothills difficult, have to be careful moving.
-    many cracks and crevices in the stone.
+  description: 'far from home now, have to be careful. many cracks and crevices in
+    the stone, some large enough to be a beast''s home. '
   roomInvestigationDescription: 'endless plains to the north and west. should not
     wander too far away.
 
     mountains to the east, cannot pass them.
 
-    watering hole to the south.'
+    watering
+    hole to the south.'
   roomName: north foothills
   exits:
   - keyString: south
     exitDescription: watering hole to the south.
     valueRoom: {fileID: 11400000, guid: 88bc3b6bb76534e76b685cfa6fcba8f3, type: 2}
-  roomActions:
-  - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
-  - {fileID: 11400000, guid: 6163d2be810d84313b3bb3dca3323e15, type: 2}
+  baseInteractableObjectsInRoom: []
+  basePeopleInRoom: []

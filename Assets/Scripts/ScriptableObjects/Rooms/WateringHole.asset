@@ -3,18 +3,25 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fc7cf5db359646d6bf6e9ed1f7077dd, type: 3}
   m_Name: WateringHole
   m_EditorClassIdentifier: 
-  description: teeming with life. man and beast come here.
-  roomInvestigationDescription: 'foothills to the north and south.
+  description: a stream runs down from the mountain to the east, pools in a watering
+    hole. the area is teeming with life. man and beast come here.
+  roomInvestigationDescription: 'there are droppings on the ground, look to be from
+    a cave bear. it could be dangerous here.
 
-    mountains to the east, cannot pass.
+
+    foothills to the north and south.
+
+    mountains
+    to the east, cannot pass.
 
     forest to the north.'
   roomName: watering hole
@@ -28,6 +35,5 @@ MonoBehaviour:
   - keyString: west
     exitDescription: forest to the west.
     valueRoom: {fileID: 11400000, guid: f83faa7884e83684c8cc6d7da6013844, type: 2}
-  roomActions:
-  - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
-  - {fileID: 11400000, guid: 6163d2be810d84313b3bb3dca3323e15, type: 2}
+  baseInteractableObjectsInRoom: []
+  basePeopleInRoom: []
