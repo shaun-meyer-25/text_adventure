@@ -108,8 +108,8 @@ public class OptionButton : MonoBehaviour {
 			else if (text == "observe" || text == "use" || text == "interact")
 			{
 				audioSource.Play();
-				controller.LogStringWithReturn("<color=purple>" + "sdaSDFfdsadfsfasdfdsd5234632446uftf%%%&##RRR&^R&UFYFEHY@QG@G@VF@GV*##*R*U*SSF*FU%UJH##%HH#H#%fasadgsfadfgz" + "</color>");
-				IEnumerator coroutine = MessWithBackground();
+				controller.LogStringWithReturn("<color=purple>" + ManipulationEffects.RandomDistortedString(controller) + "</color>");
+				IEnumerator coroutine = ManipulationEffects.MessWithBackground(controller);
 				StartCoroutine(coroutine);
 			}
 			else
@@ -129,21 +129,4 @@ public class OptionButton : MonoBehaviour {
 
 		}
 	}
-
-	private IEnumerator MessWithBackground()
-	{
-		List<Color> colors = new List<Color>() {Color.magenta, Color.red, Color.white, Color.red, Color.black};
-		float timeRemaining = 1.5f;
-		float interval = 0.1f;
-
-		while (timeRemaining > 0)
-		{
-			Debug.Log(timeRemaining);
-			controller.background.color = colors[(int) (timeRemaining * 10) % 5];
-			timeRemaining -= Time.deltaTime;
-			yield return new WaitForSeconds(interval);
-		}
-	}
-	
-	
 }

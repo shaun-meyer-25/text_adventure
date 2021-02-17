@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
@@ -16,6 +18,7 @@ public class GameController : MonoBehaviour {
 	public Image background;
 	public Choice[] actions;
 	public ObserveChoice[] observableChoices;
+	public AudioSource tunnelSceneBackground;
 	public InteractChoice[] interactableChoices;
 	public List<InteractableObject> travelingCompanions;
 	List<string> actionLog = new List<string>(); 
@@ -41,16 +44,24 @@ public class GameController : MonoBehaviour {
 		roomNavigation = GetComponent<RoomNavigation> ();
 		fire = GetComponent<Fire>();
 		checkpointManager = GetComponent<CheckpointManager>();
+		Component[] aSources = GetComponents(typeof(AudioSource));
+		tunnelSceneBackground = (AudioSource) aSources[0];
 	}
 
 	void Start ()
 	{
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
-		if (roomNavigation.currentRoom.roomName == "home cave")
+		if (SceneManager.GetActiveScene().name == "Main")
 		{
 			LogStringWithReturn(
 				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
 		}
+
+		if (SceneManager.GetActiveScene().name == "Experimental")
+		{
+			tunnelSceneBackground.Play();
+		}
+		
 		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
@@ -108,6 +119,12 @@ public class GameController : MonoBehaviour {
 				"<color=purple>" + "you can't go back. only forward." + "</color>");
 		}
 		string logAsText = string.Join ("\n", actionLog.ToArray ());
+		while (logAsText.Length > 10000)
+		{
+			List<string> log = new List<string>(logAsText.Split('\n'));
+			log.RemoveRange(0, log.Count / 2);
+			logAsText = string.Join("\n", log.ToArray());
+		}
 		displayText.text = logAsText;
 	}
 	

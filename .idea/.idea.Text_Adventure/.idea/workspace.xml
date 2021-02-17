@@ -25,19 +25,9 @@
     <list default="true" id="1342834d-446f-4706-a3b6-8c513df95064" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Experimental.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Experimental.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Items/TreeBranch.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Items/TreeBranch.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/People/Ohm.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/People/Ohm.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/InteractableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/InteractableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/MakeConversation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/MakeConversation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/NPCGivesItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/NPCGivesItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Person.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Room.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +50,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/MakeConversation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Utility/VertexHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/d5/0317b923/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Go.cs" root0="FORCE_HIGHLIGHTING" />
@@ -69,26 +62,33 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Room.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B350834-7CDD-4690-BB59-87BB60ABF561/32/43894960/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Take.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/cd/d11f8677/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/3b/cbf823b7/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/FeedFire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0B76D74C-9007-4047-ADC3-E5DBD5D3F1DE/e4/b65fd75c/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E4B80291-7FD9-4352-8C82-E81323204F12/c8/5ccc35b9/ActionResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3CDF672C-21B8-49DE-A215-F9C9AFF21F77/8d/822a4b45/Background.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D832574-5596-48CD-996A-0DA83E001AD8/4d/8f7e559f/Choice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/InteractableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/CanvasUpdateRegistry.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D832574-5596-48CD-996A-0DA83E001AD8/9e/a0fa9864/InteractChoice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/79822DAC-9C0E-415A-9499-BCD03FFF8B72/1d/799c8de3/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Use.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/ChangeRoomResponse.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Observe.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/66/0afe47f5/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Person.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ManipulationEffects.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/NPCGivesItem.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -114,22 +114,24 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Use.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Observe.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Use.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Resources/characterInteractionDescriptions.csv" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Fire.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/FeedFire.cs" />
-      <option value="$PROJECT_DIR$/Assets/Resources/homeCaveDescriptions.txt" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Person.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/MakeConversation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/NPCGivesItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Room.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/InteractableObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interaction.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Resources/homeCaveDescriptions.txt" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/NPCGivesItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ManipulationEffects.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Resources/neverendingTunnelDescriptions.txt" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l4TY3LkE5BZNYHbLWspZn459Jq" />
@@ -139,7 +141,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34290358" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34317636" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
@@ -199,7 +201,7 @@
       <workItem from="1611800102601" duration="50798000" />
       <workItem from="1612392371972" duration="6080000" />
       <workItem from="1612804037737" duration="12763000" />
-      <workItem from="1612991230299" duration="11461000" />
+      <workItem from="1612991230299" duration="40190000" />
     </task>
     <servers />
   </component>
