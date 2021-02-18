@@ -16,6 +16,7 @@
           <e p="Fire.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="InteractableItems.cs" t="Include" />
+          <e p="ManipulationEffects.cs" t="Include" />
           <e p="OptionButton.cs" t="Include" />
           <e p="RoomNavigation.cs" t="Include" />
           <e p="ScriptsForScriptableObjects" t="Include">

@@ -2,8 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class GameController : MonoBehaviour {
 	
@@ -11,8 +15,10 @@ public class GameController : MonoBehaviour {
 	private Dictionary<string, string> allPreferences;
 	public InteractableObject[] characters;
 	public Text displayText;
+	public Image background;
 	public Choice[] actions;
 	public ObserveChoice[] observableChoices;
+	public AudioSource tunnelSceneBackground;
 	public InteractChoice[] interactableChoices;
 	public List<InteractableObject> travelingCompanions;
 	List<string> actionLog = new List<string>(); 
@@ -38,12 +44,29 @@ public class GameController : MonoBehaviour {
 		roomNavigation = GetComponent<RoomNavigation> ();
 		fire = GetComponent<Fire>();
 		checkpointManager = GetComponent<CheckpointManager>();
+		
+		// todo - probably want an audio loading class or method
+		
+		if (SceneManager.GetActiveScene().name != "Experimental") return;
+		Component[] aSources = GetComponents(typeof(AudioSource));
+		tunnelSceneBackground = (AudioSource) aSources[0];
 	}
 
 	void Start ()
 	{
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
-		LogStringWithReturn("eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
+		if (SceneManager.GetActiveScene().name == "Main")
+		{
+			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
+			LogStringWithReturn(
+				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
+		}
+
+		if (SceneManager.GetActiveScene().name == "Experimental")
+		{
+			tunnelSceneBackground.Play();
+		}
+		
 		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
@@ -94,7 +117,20 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void DisplayLoggedText () {
+		for (int i = 0; i < actionLog.Count; i++)
+		{
+			// todo - get this into a data file
+			actionLog[i] = actionLog[i].Replace("you don't need to do this", "<color=red>" + "you don't need to do this" + "</color>");
+			actionLog[i] = actionLog[i].Replace("you can't go back. only forward.",
+				"<color=purple>" + "you can't go back. only forward." + "</color>");
+		}
 		string logAsText = string.Join ("\n", actionLog.ToArray ());
+		while (logAsText.Length > 10000)
+		{
+			List<string> log = new List<string>(logAsText.Split('\n'));
+			log.RemoveRange(0, log.Count / 2);
+			logAsText = string.Join("\n", log.ToArray());
+		}
 		displayText.text = logAsText;
 	}
 	
