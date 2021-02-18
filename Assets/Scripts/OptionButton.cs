@@ -89,7 +89,6 @@ public class OptionButton : MonoBehaviour {
 			Text textObject = button.GetComponentInChildren<Text>();
 			string text = textObject.text;
 
-			// todo - we could make exitnames part of an isExiting flag like for interacting or observing, and move this block in with "go"
 			if (controller.exitNames.Contains(text))
 			{
 				int numOfExits = controller.exitNames.Count;

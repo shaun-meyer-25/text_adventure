@@ -44,6 +44,10 @@ public class GameController : MonoBehaviour {
 		roomNavigation = GetComponent<RoomNavigation> ();
 		fire = GetComponent<Fire>();
 		checkpointManager = GetComponent<CheckpointManager>();
+		
+		// todo - probably want an audio loading class or method
+		
+		if (SceneManager.GetActiveScene().name != "Experimental") return;
 		Component[] aSources = GetComponents(typeof(AudioSource));
 		tunnelSceneBackground = (AudioSource) aSources[0];
 	}
@@ -53,6 +57,7 @@ public class GameController : MonoBehaviour {
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
 		if (SceneManager.GetActiveScene().name == "Main")
 		{
+			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
 			LogStringWithReturn(
 				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
 		}
@@ -114,6 +119,7 @@ public class GameController : MonoBehaviour {
 	public void DisplayLoggedText () {
 		for (int i = 0; i < actionLog.Count; i++)
 		{
+			// todo - get this into a data file
 			actionLog[i] = actionLog[i].Replace("you don't need to do this", "<color=red>" + "you don't need to do this" + "</color>");
 			actionLog[i] = actionLog[i].Replace("you can't go back. only forward.",
 				"<color=purple>" + "you can't go back. only forward." + "</color>");

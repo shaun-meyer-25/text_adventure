@@ -23,9 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1342834d-446f-4706-a3b6-8c513df95064" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Experimental.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Experimental.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" afterDir="false" />
     </list>
@@ -128,10 +126,10 @@
       <option value="$PROJECT_DIR$/Assets/Resources/homeCaveDescriptions.txt" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/NPCGivesItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ManipulationEffects.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Resources/neverendingTunnelDescriptions.txt" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l4TY3LkE5BZNYHbLWspZn459Jq" />
@@ -201,7 +199,7 @@
       <workItem from="1611800102601" duration="50798000" />
       <workItem from="1612392371972" duration="6080000" />
       <workItem from="1612804037737" duration="12763000" />
-      <workItem from="1612991230299" duration="40190000" />
+      <workItem from="1612991230299" duration="42858000" />
     </task>
     <servers />
   </component>
