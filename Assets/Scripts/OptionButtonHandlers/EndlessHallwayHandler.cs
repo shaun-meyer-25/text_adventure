@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[CreateAssetMenu(menuName= "TextAdventure/ButtonHandlers/EndlessHallway")]
 public class EndlessHallwayHandler : IOptionButtonHandler
 {
     override public void Handle(GameController controller, Text textObject, AudioSource audioSource)
@@ -29,7 +30,7 @@ public class EndlessHallwayHandler : IOptionButtonHandler
             audioSource.Play();
             controller.LogStringWithReturn("<color=purple>" + ManipulationEffects.RandomDistortedString(controller) + "</color>");
             IEnumerator coroutine = ManipulationEffects.MessWithBackground(controller);
-            StartCoroutine(coroutine);
+            textObject.StartCoroutine(coroutine);
         }
         else
         {

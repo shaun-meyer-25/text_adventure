@@ -242,6 +242,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5025974587135247704, guid: c4a4c2602dcdf924596c214bd4f7a266,
         type: 3}
+      propertyPath: _handler
+      value: 
+      objectReference: {fileID: 11400000, guid: 86c15f938cf98ed4396e810b35043f57,
+        type: 2}
+    - target: {fileID: 5025974587135247704, guid: c4a4c2602dcdf924596c214bd4f7a266,
+        type: 3}
       propertyPath: controller
       value: 
       objectReference: {fileID: 947878756}
@@ -554,6 +560,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5025974587135247704, guid: c4a4c2602dcdf924596c214bd4f7a266,
         type: 3}
+      propertyPath: _handler
+      value: 
+      objectReference: {fileID: 11400000, guid: 86c15f938cf98ed4396e810b35043f57,
+        type: 2}
+    - target: {fileID: 5025974587135247704, guid: c4a4c2602dcdf924596c214bd4f7a266,
+        type: 3}
       propertyPath: controller
       value: 
       objectReference: {fileID: 947878756}
@@ -682,6 +694,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5025974587135247704, guid: c4a4c2602dcdf924596c214bd4f7a266,
+        type: 3}
+      propertyPath: _handler
+      value: 
+      objectReference: {fileID: 11400000, guid: 86c15f938cf98ed4396e810b35043f57,
+        type: 2}
     - target: {fileID: 5025974587135247704, guid: c4a4c2602dcdf924596c214bd4f7a266,
         type: 3}
       propertyPath: controller
@@ -1225,6 +1243,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5025974587135247704, guid: c4a4c2602dcdf924596c214bd4f7a266,
+        type: 3}
+      propertyPath: _handler
+      value: 
+      objectReference: {fileID: 11400000, guid: 86c15f938cf98ed4396e810b35043f57,
+        type: 2}
     - target: {fileID: 5025974587135247704, guid: c4a4c2602dcdf924596c214bd4f7a266,
         type: 3}
       propertyPath: controller
