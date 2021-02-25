@@ -16,10 +16,6 @@ public class NPCGivesItem : ActionResponse
             controller.interactableItems.nounsInInventory.Add(requiredString);
             controller.interactableItems.AddActionResponsesToUseDictionary();
             controller.LogStringWithReturn("you are given a " + requiredString);
-            if (requiredString == "spear")
-            {
-                controller.checkpointManager.SetCheckpoint(2);
-            }
 
             return true;
         }

@@ -558,6 +558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c115f74199dadb47a6680429751c1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointOneItems:
+  - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
   checkpoint: 0
 --- !u!850595691 &1236027653
 LightingSettings:

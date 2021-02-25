@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyword: spear
   noun: spear
-  description: it is sharp. it could pierce the flesh of a creature.
+  description: three spears are lined up against the wall. they are sharp, they could
+    pierce the flesh of a creature.
   interactions:
   - action: {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}
     textResponse: 
+    baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}

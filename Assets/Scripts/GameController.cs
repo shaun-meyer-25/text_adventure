@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour {
 	
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
+	private Dictionary<string, string> caveDescription;
+	private Dictionary<string, string> caveInvestigationDescriptions;
 	public InteractableObject[] characters;
 	public Text displayText;
 	public Image background;
@@ -55,6 +57,8 @@ public class GameController : MonoBehaviour {
 	void Start ()
 	{
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
+		caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
+		caveInvestigationDescriptions = LoadDictionaryFromFile("homeCaveInvestigationDescriptions");
 		if (SceneManager.GetActiveScene().name == "Main")
 		{
 			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
@@ -147,8 +151,9 @@ public class GameController : MonoBehaviour {
 
 		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
 		{
-			Dictionary<string, string> caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
 			roomNavigation.currentRoom.description = caveDescription[checkpointManager.checkpoint.ToString()];
+			roomNavigation.currentRoom.roomInvestigationDescription =
+				caveInvestigationDescriptions[checkpointManager.checkpoint.ToString()];
 		}
 		else
 		{

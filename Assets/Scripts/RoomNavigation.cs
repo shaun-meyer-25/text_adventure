@@ -30,8 +30,10 @@ public class RoomNavigation : MonoBehaviour {
 			}
 			currentRoom = exitDictionary[directionNoun];
 			controller.LogStringWithReturn("you go " + directionNoun);
-			controller.LoadRoomDataAndDisplayRoomText();
+
+			CheckIfCheckpointNeedsSetting();
 			
+			controller.LoadRoomDataAndDisplayRoomText();
 			controller.UpdateRoomChoices(controller.startingActions);
 			
 			return true;
@@ -43,5 +45,21 @@ public class RoomNavigation : MonoBehaviour {
 
 	public void ClearExits() {
 		exitDictionary.Clear();
+	}
+
+	private void CheckIfCheckpointNeedsSetting()
+	{
+		if (currentRoom.roomName == "home cave" && controller.interactableItems.nounsInInventory.Contains("tree branch") && 
+		    controller.checkpointManager.checkpoint == 0)
+		{
+			controller.checkpointManager.SetCheckpoint(1);
+		}
+
+		if (currentRoom.roomName == "outside home" &&
+		    controller.interactableItems.nounsInInventory.Contains("spear") &&
+		    controller.checkpointManager.checkpoint == 1)
+		{
+			controller.checkpointManager.SetCheckpoint(2);
+		}
 	}
 }

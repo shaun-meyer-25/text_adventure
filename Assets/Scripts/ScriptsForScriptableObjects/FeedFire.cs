@@ -10,11 +10,8 @@ public class FeedFire : ActionResponse
         if (controller.roomNavigation.currentRoom.roomName == requiredString)
         {
             bool fireWasFed = controller.fire.FeedFire();
-            if (fireWasFed)
-            {
-                controller.checkpointManager.SetCheckpoint(1);
-            }
-            return true;
+
+            return fireWasFed;
         }
 
         return false;

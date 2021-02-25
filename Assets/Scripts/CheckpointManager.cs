@@ -8,6 +8,7 @@ public class CheckpointManager : MonoBehaviour
     private GameController controller;
     private Dictionary<string, List<string>> characterInteractions;
 
+    public List<InteractableObject> checkpointOneItems;
     public int checkpoint;
     
     void Start()
@@ -15,7 +16,7 @@ public class CheckpointManager : MonoBehaviour
         checkpoint = 0;
         controller = GetComponent<GameController>();
         characterInteractions = controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
-    }
+        }
 
     void Update()
     {
@@ -32,19 +33,10 @@ public class CheckpointManager : MonoBehaviour
             {
                 controller.characters[i].description =
                     characterInteractions[controller.characters[i].keyword][maybeCheckpoint - 1];
-
-                if (controller.characters[i].keyword.Equals("ohm"))
-                {
-                    List<Interaction> interactions = new List<Interaction>(controller.characters[i].interactions);
-                    Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
-                    ActionResponse response = (ActionResponse) ScriptableObject.CreateInstance<NPCGivesItem>().SetRequiredString("spear");
-                    interaction.SetActionResponse(response);
-                }
             }
             
             controller.roomNavigation.currentRoom.SetPeopleInRoom(controller.characters);
-
-            controller.LoadRoomDataAndDisplayRoomText();
+            controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(checkpointOneItems.ToArray());
         }
 
         if (maybeCheckpoint == 2)
