@@ -8,6 +8,7 @@ public class InteractableObject : Choice
 {
     public string noun = "name";
     [TextArea] public string description = "Description of where it is in room";
+    
     public Interaction[] interactions;
 
     private void OnEnable()

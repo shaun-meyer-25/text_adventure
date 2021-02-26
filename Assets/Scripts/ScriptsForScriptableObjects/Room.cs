@@ -4,7 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "TextAdventure/Room")]
-public class Room : ScriptableObject {
+public class Room : ScriptableObject
+{
+	[SerializeField] [TextArea] private string baseDescription;
+	[SerializeField] [TextArea] private string baseInvestigationDescription;
+	
 	[TextArea]
 	public string description;
 	[TextArea]
@@ -54,6 +58,8 @@ public class Room : ScriptableObject {
 	{
 		interactableObjectsInRoom = baseInteractableObjectsInRoom;
 		peopleInRoom = basePeopleInRoom;
+		description = baseDescription;
+		roomInvestigationDescription = baseInvestigationDescription;
 	}
 	
 	public void OnAfterDeserialize() 

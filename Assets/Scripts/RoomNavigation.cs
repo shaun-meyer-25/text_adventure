@@ -61,5 +61,10 @@ public class RoomNavigation : MonoBehaviour {
 		{
 			controller.checkpointManager.SetCheckpoint(2);
 		}
+
+		if (currentRoom.roomName == "north foothills" && controller.checkpointManager.checkpoint == 2)
+		{
+			controller.checkpointManager.SetCheckpoint(3);
+		}
 	}
 }

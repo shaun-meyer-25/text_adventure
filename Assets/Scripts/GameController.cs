@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 using Image = UnityEngine.UI.Image;
 
 public class GameController : MonoBehaviour {
@@ -87,6 +88,8 @@ public class GameController : MonoBehaviour {
 		
 		for (int i = 0; i < NUMBER_OF_OPTIONS; i++) {
 			GameObject button = GameObject.Find("Option" + (i + 1));
+			button.GetComponent<Button>().interactable = true;
+			
 			Text textObject = button.GetComponentInChildren<Text>();
 
 			if (preferencesForCurrentChoices.ContainsValue(i.ToString()) || 
@@ -111,6 +114,7 @@ public class GameController : MonoBehaviour {
 			else
 			{
 				textObject.text = null;
+				button.GetComponent<Button>().interactable = false;
 			}
 
 		}
@@ -152,8 +156,7 @@ public class GameController : MonoBehaviour {
 		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
 		{
 			roomNavigation.currentRoom.description = caveDescription[checkpointManager.checkpoint.ToString()];
-			roomNavigation.currentRoom.roomInvestigationDescription =
-				caveInvestigationDescriptions[checkpointManager.checkpoint.ToString()];
+			roomNavigation.currentRoom.roomInvestigationDescription = caveInvestigationDescriptions[checkpointManager.checkpoint.ToString()];
 		}
 		else
 		{
@@ -311,5 +314,15 @@ public class GameController : MonoBehaviour {
 		}
 
 		return combinedText;
+	}
+
+	public void YouAreDead()
+	{
+		LogStringWithReturn("the unforgiving world has claimed your life.");
+		for (int i = 0; i < NUMBER_OF_OPTIONS; i++)
+		{
+			GameObject button = GameObject.Find("Option" + (i + 1));
+			button.GetComponent<Button>().interactable = false;
+		}
 	}
 }
