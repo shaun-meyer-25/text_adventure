@@ -38,6 +38,13 @@ public class Room : ScriptableObject
 		interactableObjectsInRoom = objects;
 	}
 
+	public void AddObjectToRoom(InteractableObject obj)
+	{
+		List<InteractableObject> updatedObjectsInRoom = new List<InteractableObject>(InteractableObjectsInRoom);
+		updatedObjectsInRoom.Add(obj);
+		interactableObjectsInRoom = updatedObjectsInRoom.ToArray();
+	}
+
 	public void SetPeopleInRoom(InteractableObject[] objects)
 	{
 		peopleInRoom = objects;

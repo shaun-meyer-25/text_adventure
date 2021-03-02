@@ -487,6 +487,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c2fe0c8272ee56242820ac9cd692c6a9, type: 2}
   - {fileID: 11400000, guid: 04ab77325e7d89e4d95fbe51f075a788, type: 2}
   travelingCompanions: []
+  allRoomsInGame:
+  - {fileID: 11400000, guid: 706b6a14038955b499f187e045418d6d, type: 2}
+  - {fileID: 11400000, guid: 41aa8f173b5cf487abe6ad6e6de61fb1, type: 2}
+  - {fileID: 11400000, guid: 3286e1265fb7d6241a233c2a258f4d7c, type: 2}
+  - {fileID: 11400000, guid: f83faa7884e83684c8cc6d7da6013844, type: 2}
+  - {fileID: 11400000, guid: 4a3c2ae3917ba42aa992c2985cfc036d, type: 2}
+  - {fileID: 11400000, guid: 5087a9b8ca4054b40817dc60a9ea1738, type: 2}
+  - {fileID: 11400000, guid: 05f90a73357d43c4baad43c508158983, type: 2}
+  - {fileID: 11400000, guid: b7c0e35f021744710b76a66ca3e42f56, type: 2}
+  - {fileID: 11400000, guid: e518f50a2f1524040a411cc9f56696f8, type: 2}
+  - {fileID: 11400000, guid: 3a48eba189f20cf4c8b98f4529c6f9c2, type: 2}
+  - {fileID: 11400000, guid: 5fad144d28c82154fa76911b378e1e1f, type: 2}
+  - {fileID: 11400000, guid: cc2d74776b775440994368ce001657c6, type: 2}
+  - {fileID: 11400000, guid: 88bc3b6bb76534e76b685cfa6fcba8f3, type: 2}
+  - {fileID: 11400000, guid: 20b26a4a85dd63e419e9bc30c8401200, type: 2}
+  - {fileID: 11400000, guid: b862231ee3e5bb548b57e557f3a6a18a, type: 2}
   exitChoices: []
   exitNames: []
   roomNavigation: {fileID: 0}
@@ -558,6 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c115f74199dadb47a6680429751c1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ohmInPosition: 0
   checkpointOneItems:
   - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
   checkpoint: 0

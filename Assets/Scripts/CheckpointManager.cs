@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
 {
-    private GameController controller;
-    private Dictionary<string, List<string>> characterInteractions;
+    private GameController _controller;
+    private Dictionary<string, List<string>> _characterInteractions;
     
     // Checkpoint 1 flags
     
@@ -21,8 +21,8 @@ public class CheckpointManager : MonoBehaviour
     void Start()
         {
         checkpoint = 0;
-        controller = GetComponent<GameController>();
-        characterInteractions = controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
+        _controller = GetComponent<GameController>();
+        _characterInteractions = _controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
         }
 
     public void SetCheckpoint(int maybeCheckpoint)
@@ -31,35 +31,36 @@ public class CheckpointManager : MonoBehaviour
         {
             checkpoint = maybeCheckpoint;
             
-            for (int i = 0; i < controller.characters.Length; i++)
+            for (int i = 0; i < _controller.characters.Length; i++)
             {
-                controller.characters[i].description =
-                    characterInteractions[controller.characters[i].keyword][maybeCheckpoint - 1];
+                _controller.characters[i].description =
+                    _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1];
             }
             
-            controller.roomNavigation.currentRoom.SetPeopleInRoom(controller.characters);
-            controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(checkpointOneItems.ToArray());
+            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
+            _controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(checkpointOneItems.ToArray());
+            SaveGameManager.SaveGame(_controller);
         }
 
         if (maybeCheckpoint == 2)
         {
             checkpoint = maybeCheckpoint;
-            controller.travelingCompanions.Add(controller.characters.First(o => o.noun.Equals("ohm")));
+            _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("ohm")));
         }
 
         if (maybeCheckpoint == 3)
         {
             checkpoint = maybeCheckpoint;
-            controller.roomNavigation.currentRoom.description = controller.roomNavigation.currentRoom.description + 
+            _controller.roomNavigation.currentRoom.description = _controller.roomNavigation.currentRoom.description + 
                 "\nthere is a cave bear at the mouth of an opening in the rocks. ohm signals you to stop. they brandish " +
                 "their spear. it looks like they are forming a plan.";
             
-            controller.roomNavigation.currentRoom.roomInvestigationDescription =
-                controller.roomNavigation.currentRoom.roomInvestigationDescription +
+            _controller.roomNavigation.currentRoom.roomInvestigationDescription =
+                _controller.roomNavigation.currentRoom.roomInvestigationDescription +
                 "\nthe beast glares at you. it takes a step towards you and lets out a low, menacing growl.";
 
             List<Interaction> interactions =
-                new List<Interaction>(controller.roomNavigation.currentRoom.PeopleInRoom[0].interactions);
+                new List<Interaction>(_controller.roomNavigation.currentRoom.PeopleInRoom[0].interactions);
             Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
             ActionResponse response = (ActionResponse) ScriptableObject.CreateInstance<NPCGivesItem>().SetRequiredString("spear");
             interaction.SetActionResponse(response);

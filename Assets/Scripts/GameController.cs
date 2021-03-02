@@ -24,8 +24,9 @@ public class GameController : MonoBehaviour {
 	public AudioSource tunnelSceneBackground;
 	public InteractChoice[] interactableChoices;
 	public List<InteractableObject> travelingCompanions;
-	List<string> actionLog = new List<string>(); 
-
+	public List<Room> allRoomsInGame;
+	
+	[HideInInspector] public List<string> actionLog = new List<string>();
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
 	[HideInInspector] public List<string> exitNames = new List<string>();
 	[HideInInspector] public RoomNavigation roomNavigation;

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c531e5808a83cf141a388f3acaf25c56, type: 3}
   m_Name: OhmGetInPosition
   m_EditorClassIdentifier: 
-  requiredString: 
+  requiredString: north foothills
