@@ -7,18 +7,30 @@
     <e p="C:\Users\Shaun\Projects\text_adventure" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Plugins" t="Include" />
         <e p="Resources" t="Include">
           <e p="commandPreferredButtons.txt" t="Include" />
           <e p="homeCaveDescriptions.txt" t="Include" />
+          <e p="homeCaveInvestigationDescriptions.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
           <e p="CheckpointManager.cs" t="Include" />
+          <e p="ContinueScreen.cs" t="Include" />
           <e p="Fire.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="InteractableItems.cs" t="Include" />
+          <e p="IOptionButtonHandler.cs" t="Include" />
           <e p="ManipulationEffects.cs" t="Include" />
           <e p="OptionButton.cs" t="Include" />
+          <e p="OptionButtonHandlers" t="Include">
+            <e p="EndlessHallwayHandler.cs" t="Include" />
+            <e p="EndlessHallwayHandler.cs.meta" t="Include" />
+            <e p="StartingSceneHandler.cs" t="Include" />
+            <e p="StartingSceneHandler.cs.meta" t="Include" />
+          </e>
           <e p="RoomNavigation.cs" t="Include" />
+          <e p="SaveGame.cs" t="Include" />
+          <e p="SaveGameManager.cs" t="Include" />
           <e p="ScriptsForScriptableObjects" t="Include">
             <e p="ActionChoice.cs" t="Include" />
             <e p="ActionResponse.cs" t="Include" />
@@ -27,6 +39,7 @@
             <e p="Exit.cs" t="Include" />
             <e p="ExitChoice.cs" t="Include" />
             <e p="FeedFire.cs" t="Include" />
+            <e p="FirstHunt.cs" t="Include" />
             <e p="Go.cs" t="Include" />
             <e p="Inspect.cs" t="Include" />
             <e p="Interact.cs" t="Include" />
@@ -38,6 +51,7 @@
             <e p="NPCGivesItem.cs" t="Include" />
             <e p="Observe.cs" t="Include" />
             <e p="ObserveChoice.cs" t="Include" />
+            <e p="OhmGetInPosition.cs" t="Include" />
             <e p="Person.cs" t="Include" />
             <e p="Room.cs" t="Include" />
             <e p="Surroundings.cs" t="Include" />

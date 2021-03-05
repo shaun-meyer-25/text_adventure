@@ -23,9 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1342834d-446f-4706-a3b6-8c513df95064" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Text_Adventure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ContinueScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ContinueScreen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/People/Huu.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/People/Huu.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/People/Tei.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/People/Tei.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/People/Unh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/People/Unh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Choice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Choice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/InteractableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/InteractableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Room.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,54 +57,82 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Inspect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveGameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ContinueScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/d5/0317b923/Color.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D543B821-B878-4871-8A83-0ACF2C6DF44D/12/0b3d63cc/ActionResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/c6/b2e81b92/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/3b/cbf823b7/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/FeedFire.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E4B80291-7FD9-4352-8C82-E81323204F12/c8/5ccc35b9/ActionResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/CanvasUpdateRegistry.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/79822DAC-9C0E-415A-9499-BCD03FFF8B72/1d/799c8de3/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/dc/11146886/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OptionButtonHandlers/StartingSceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Observe.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Person.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OptionButtonHandlers/EndlessHallwayHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/NPCGivesItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Inspect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/MakeConversation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Utility/VertexHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/d5/0317b923/Color.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/OhmGetInPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Go.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Fire.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D543B821-B878-4871-8A83-0ACF2C6DF44D/12/0b3d63cc/ActionResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/e1/c829d9a2/SerializeField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Room.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B350834-7CDD-4690-BB59-87BB60ABF561/32/43894960/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Take.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B350834-7CDD-4690-BB59-87BB60ABF561/32/43894960/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/FirstHunt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Take.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/cd/d11f8677/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/3b/cbf823b7/String.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/FeedFire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0B76D74C-9007-4047-ADC3-E5DBD5D3F1DE/e4/b65fd75c/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E4B80291-7FD9-4352-8C82-E81323204F12/c8/5ccc35b9/ActionResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IOptionButtonHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3CDF672C-21B8-49DE-A215-F9C9AFF21F77/8d/822a4b45/Background.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D832574-5596-48CD-996A-0DA83E001AD8/4d/8f7e559f/Choice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/InteractableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/CanvasUpdateRegistry.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D832574-5596-48CD-996A-0DA83E001AD8/9e/a0fa9864/InteractChoice.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/79822DAC-9C0E-415A-9499-BCD03FFF8B72/1d/799c8de3/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/06/a2eddda0/File.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Use.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/ChangeRoomResponse.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/d2/c16fa2e6/Application.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Text.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Observe.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E414E10B-FE5F-4572-9FF1-22F3359DE21B/66/0afe47f5/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Person.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ManipulationEffects.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/NPCGivesItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Resources/commandPreferredButtons.txt" />
       <option value="$PROJECT_DIR$/.gitignore" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ActionChoice.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Go.cs" />
@@ -114,22 +155,35 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Use.cs" />
       <option value="$PROJECT_DIR$/Assets/Resources/characterInteractionDescriptions.csv" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Fire.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/FeedFire.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Person.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/MakeConversation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Room.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InteractableItems.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/InteractableObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interaction.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs" />
       <option value="$PROJECT_DIR$/Assets/Resources/homeCaveDescriptions.txt" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/NPCGivesItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ManipulationEffects.cs" />
       <option value="$PROJECT_DIR$/Assets/Resources/neverendingTunnelDescriptions.txt" />
+      <option value="$PROJECT_DIR$/Packages/manifest.json" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/OptionButtonHandlers/ButtonHandlerInstaller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/OptionButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/OptionButtonHandlers/StartingSceneHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/IOptionButtonHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/OptionButtonHandlers/EndlessHallwayHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Resources/homeCaveInvestigationDescriptions.cs" />
+      <option value="$PROJECT_DIR$/Assets/Resources/homeCaveInvestigationDescriptions.txt" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/FeedFire.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/NPCGivesItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RoomNavigation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/FirstHunt.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/OhmGetInPosition.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Choice.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/InteractableObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SaveGame.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ContinueScreen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SaveGameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Room.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l4TY3LkE5BZNYHbLWspZn459Jq" />
@@ -139,7 +193,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34317636" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34338623" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
@@ -147,10 +201,18 @@
     <property name="XThreadsFramesViewSplitterKey" value="0.50057536" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop\TextGame.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Shaun\Desktop" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -160,10 +222,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29392">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8936">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="29392" />
+      <option name="pid" value="8936" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -199,7 +261,12 @@
       <workItem from="1611800102601" duration="50798000" />
       <workItem from="1612392371972" duration="6080000" />
       <workItem from="1612804037737" duration="12763000" />
-      <workItem from="1612991230299" duration="42858000" />
+      <workItem from="1612991230299" duration="51118000" />
+      <workItem from="1613764706680" duration="6812000" />
+      <workItem from="1614025976301" duration="24680000" />
+      <workItem from="1614397200158" duration="236000" />
+      <workItem from="1614397463682" duration="6662000" />
+      <workItem from="1614660817179" duration="26844000" />
     </task>
     <servers />
   </component>
@@ -227,17 +294,108 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs</url>
-          <line>53</line>
-          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\ScriptsForScriptableObjects\Interact.cs" initialLine="53" containingFunctionPresentation="method 'RespondToAction'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameController.cs</url>
+          <line>325</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\GameController.cs" initialLine="324" containingFunctionPresentation="method 'YouAreDead'">
             <startOffsets>
-              <option value="2673" />
+              <option value="10402" />
             </startOffsets>
             <endOffsets>
-              <option value="2714" />
+              <option value="10453" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="23" />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameController.cs</url>
+          <line>321</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\GameController.cs" initialLine="320" containingFunctionPresentation="method 'YouAreDead'">
+            <startOffsets>
+              <option value="10220" />
+            </startOffsets>
+            <endOffsets>
+              <option value="10288" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/SaveGameManager.cs</url>
+          <line>106</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\SaveGameManager.cs" initialLine="100" containingFunctionPresentation="method 'PopulateGameData'">
+            <startOffsets>
+              <option value="4274" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4348" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs</url>
+          <line>50</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\ScriptsForScriptableObjects\Interact.cs" initialLine="50" containingFunctionPresentation="method 'RespondToAction'">
+            <startOffsets>
+              <option value="2364" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2487" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs</url>
+          <line>48</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\ScriptsForScriptableObjects\Interact.cs" initialLine="48" containingFunctionPresentation="method 'RespondToAction'">
+            <startOffsets>
+              <option value="2264" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2317" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Interact.cs</url>
+          <line>31</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\ScriptsForScriptableObjects\Interact.cs" initialLine="31" containingFunctionPresentation="method 'RespondToAction'">
+            <startOffsets>
+              <option value="1340" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1406" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/ContinueScreen.cs</url>
+          <line>35</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\ContinueScreen.cs" initialLine="35" containingFunctionPresentation="method 'OnSceneLoaded'">
+            <startOffsets>
+              <option value="922" />
+            </startOffsets>
+            <endOffsets>
+              <option value="979" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/ScriptsForScriptableObjects/Room.cs</url>
+          <line>76</line>
+          <properties documentPath="C:\Users\Shaun\Projects\text_adventure\Assets\Scripts\ScriptsForScriptableObjects\Room.cs" initialLine="74" containingFunctionPresentation="method 'OnEnable'">
+            <startOffsets>
+              <option value="2072" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2140" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
