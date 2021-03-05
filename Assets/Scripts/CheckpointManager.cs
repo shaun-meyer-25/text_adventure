@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckpointManager : MonoBehaviour
 {
@@ -20,7 +21,6 @@ public class CheckpointManager : MonoBehaviour
     
     void Start()
         {
-        checkpoint = 0;
         _controller = GetComponent<GameController>();
         _characterInteractions = _controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
         }
@@ -40,6 +40,7 @@ public class CheckpointManager : MonoBehaviour
             _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
             _controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(checkpointOneItems.ToArray());
             SaveGameManager.SaveGame(_controller);
+            SceneManager.LoadScene("Death Menu", LoadSceneMode.Single);
         }
 
         if (maybeCheckpoint == 2)

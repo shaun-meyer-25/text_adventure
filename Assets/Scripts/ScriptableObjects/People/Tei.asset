@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyword: tei
   noun: tei
-  description: Description of where it is in room
+  description: "they touch your arm with affection. their eyes are warm.\r"
   interactions:
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-    textResponse: 
+    textResponse: "they touch your arm with affection. their eyes are warm.\r"
+    baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}

@@ -48,7 +48,7 @@ public class Interact : ActionChoice
                     InteractableObject character = controller.roomNavigation.currentRoom.PeopleInRoom[i];
                     if (character.keyword.Equals(separatedInputWords[1]))
                     {
-                        List<Interaction> interactions = new List<Interaction>(controller.characters[i].interactions);
+                        List<Interaction> interactions = new List<Interaction>(controller.roomNavigation.currentRoom.PeopleInRoom[i].interactions);
                         Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
                         controller.LogStringWithReturn(interaction.textResponse);
                         if (!(interaction.ActionResponse == null))

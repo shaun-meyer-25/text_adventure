@@ -325,5 +325,7 @@ public class GameController : MonoBehaviour {
 			GameObject button = GameObject.Find("Option" + (i + 1));
 			button.GetComponent<Button>().interactable = false;
 		}
+
+		SceneManager.LoadScene("Death Menu");
 	}
 }

@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyword: unh
   noun: unh
-  description: Description of where it is in room
+  description: "they do not notice you. they are busy throwing rocks about on the
+    ground.\r"
   interactions:
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-    textResponse: 
+    textResponse: "they do not notice you. they are busy throwing rocks about on
+      the ground.\r"
+    baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}

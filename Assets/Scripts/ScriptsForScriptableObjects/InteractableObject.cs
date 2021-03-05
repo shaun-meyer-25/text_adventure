@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 [CreateAssetMenu (menuName = "TextAdventure/Interactable Object")]
 public class InteractableObject : Choice
 {

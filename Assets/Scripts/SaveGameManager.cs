@@ -17,7 +17,7 @@ public static class SaveGameManager
         game.currentScene = SceneManager.GetActiveScene().name;
         game.fireLevel = controller.fire.fireLevel;
         game.nounsInInventory = controller.interactableItems.nounsInInventory;
-        game.travelingCompanions = controller.travelingCompanions;
+        game.travelingCompanions = controller.travelingCompanions.Select(o => o.name).ToList();
 
         for (int i = 0; i < controller.allRoomsInGame.Count; i++)
         {
@@ -25,8 +25,8 @@ public static class SaveGameManager
             {
                 for (int j = 0; j < controller.allRoomsInGame[i].PeopleInRoom.Length; j++)
                 {
-                    game.mapOfPeopleToLocation.Add(controller.allRoomsInGame[i].PeopleInRoom[j], 
-                        controller.allRoomsInGame[i]);
+                    game.mapOfPeopleToLocation.Add(controller.allRoomsInGame[i].PeopleInRoom[j].name, 
+                        controller.allRoomsInGame[i].roomName);
                 }
             }
         } 
@@ -37,8 +37,8 @@ public static class SaveGameManager
             {
                 for (int j = 0; j < controller.allRoomsInGame[i].InteractableObjectsInRoom.Length; j++)
                 {
-                    game.mapOfThingsToLocation.Add(controller.allRoomsInGame[i].InteractableObjectsInRoom[j], 
-                        controller.allRoomsInGame[i]);
+                    game.mapOfThingsToLocation.Add(controller.allRoomsInGame[i].InteractableObjectsInRoom[j].name, 
+                        controller.allRoomsInGame[i].roomName);
                 }
             }
         }
@@ -49,7 +49,7 @@ public static class SaveGameManager
         file.Close();
     }
 
-    public static void LoadGame()
+    public static SaveGame LoadGame()
     {
         SaveGame saveGame;
         if(File.Exists(Application.persistentDataPath + "/savedGames.gd")) {
@@ -57,38 +57,62 @@ public static class SaveGameManager
             FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
             saveGame = (SaveGame) bf.Deserialize(file);
             file.Close();
-
-            SceneManager.LoadScene(saveGame.currentScene, LoadSceneMode.Single);
-            GameController controller = (GameController) GameObject.FindObjectOfType(typeof(GameController));
-
-            for (int i = 0; i < saveGame.mapOfThingsToLocation.Count; i++)
-            {
-                
-                InteractableObject intObj = saveGame.mapOfThingsToLocation.Keys.ToList()[i];
-                Room location = controller.allRoomsInGame.Find(o => o.roomName == saveGame.mapOfThingsToLocation[intObj].roomName);
-                
-                location.AddObjectToRoom(intObj);
-            }
-            
-            for (int i = 0; i < saveGame.mapOfPeopleToLocation.Count; i++)
-            {
-                
-                InteractableObject person = saveGame.mapOfPeopleToLocation.Keys.ToList()[i];
-                Room location = controller.allRoomsInGame.Find(o => o.roomName == saveGame.mapOfPeopleToLocation[person].roomName);
-                
-                location.AddPersonToRoom(person);
-            }
-
-            controller.actionLog = saveGame.actionLog;
-            controller.checkpointManager.checkpoint = saveGame.checkpointReached;
-            controller.fire.fireLevel = saveGame.fireLevel;
-            controller.interactableItems.nounsInInventory = saveGame.nounsInInventory;
-            controller.travelingCompanions = saveGame.travelingCompanions;
+            return saveGame;
         }
         else
         {
             Debug.Log("no save file");
             SceneManager.LoadScene("Main");
+            return null;
         }
+    }
+
+    public static void PopulateGameData(SaveGame saveGame, GameController controller)
+    {
+        for (int i = 0; i < saveGame.mapOfThingsToLocation.Count; i++)
+        {
+            string objectName = saveGame.mapOfThingsToLocation.Keys.ToList()[i];
+            InteractableObject intObj = controller.interactableItems.usableItemList
+                .Find(o => o.name == objectName);
+            Room location = controller.allRoomsInGame.Find(o => o.roomName == saveGame.mapOfThingsToLocation[objectName]);
+
+            if (location != null)
+            {
+                if (location.InteractableObjectsInRoom == null || !location.InteractableObjectsInRoom.Contains(intObj))
+                {
+                    location.AddObjectToRoom(intObj);
+                }
+            }
+        }
+            
+        for (int i = 0; i < saveGame.mapOfPeopleToLocation.Count; i++)
+        {
+            string personName = saveGame.mapOfPeopleToLocation.Keys.ToList()[i];
+            InteractableObject person = new List<InteractableObject>(controller.characters)
+                .Find(o => o.name == personName);
+            Room location = controller.allRoomsInGame.Find(o => o.roomName == saveGame.mapOfPeopleToLocation[personName]);
+
+            if (location != null)
+            {
+                if (location.PeopleInRoom == null || !location.PeopleInRoom.Contains(person))
+                {
+                    location.AddPersonToRoom(person);
+                }
+            }
+        }
+
+        controller.actionLog = saveGame.actionLog;
+        controller.checkpointManager.checkpoint = saveGame.checkpointReached;
+        controller.fire.fireLevel = saveGame.fireLevel;
+        controller.interactableItems.nounsInInventory = saveGame.nounsInInventory;
+
+        List<InteractableObject> travelingCompanions = new List<InteractableObject>();
+        for (int i = 0; i < saveGame.travelingCompanions.Count; i++)
+        {
+            travelingCompanions.Add(new List<InteractableObject>(controller.characters)
+                .Find(o => o.name == saveGame.travelingCompanions[i]));
+        }
+
+        controller.travelingCompanions = travelingCompanions; 
     }
 }
