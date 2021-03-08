@@ -39,14 +39,15 @@ public class CheckpointManager : MonoBehaviour
             
             _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
             _controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(checkpointOneItems.ToArray());
+            _controller.LoadRoomData();
             SaveGameManager.SaveGame(_controller);
-            SceneManager.LoadScene("Death Menu", LoadSceneMode.Single);
         }
 
         if (maybeCheckpoint == 2)
         {
             checkpoint = maybeCheckpoint;
             _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("ohm")));
+            SaveGameManager.SaveGame(_controller);
         }
 
         if (maybeCheckpoint == 3)
@@ -61,13 +62,15 @@ public class CheckpointManager : MonoBehaviour
                 "\nthe beast glares at you. it takes a step towards you and lets out a low, menacing growl.";
 
             List<Interaction> interactions =
-                new List<Interaction>(_controller.roomNavigation.currentRoom.PeopleInRoom[0].interactions);
+                new List<Interaction>(_controller.characters.First(o => o.noun.Equals("ohm")).interactions);
             Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
-            ActionResponse response = (ActionResponse) ScriptableObject.CreateInstance<NPCGivesItem>().SetRequiredString("spear");
+            ActionResponse response = (ActionResponse) ScriptableObject.CreateInstance<OhmGetInPosition>().SetRequiredString("north foothills");
             interaction.SetActionResponse(response);
             // if you just "use" the spear here, you will die. 
             // you first should interact with ohm, ohm will circle around. then you can use the spear 
+            SaveGameManager.SaveGame(_controller);
         }
     }
 }
 
+ 

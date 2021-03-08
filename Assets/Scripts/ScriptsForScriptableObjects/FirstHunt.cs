@@ -13,7 +13,6 @@ public class FirstHunt : ActionResponse
             {
                 controller.LogStringWithReturn("ohm is distracting the beast. you plunge forward with your spear. at the last minute, " +
                                                "the bear whirls, snapping the spear. it was too fast, too strong for you. you are defenseless, and must run.");
-                return true;
             }
             else
             {
@@ -24,7 +23,6 @@ public class FirstHunt : ActionResponse
                 controller.YouAreDead();
             }
         }
-
-        return false;
+        return true;
     }
 }

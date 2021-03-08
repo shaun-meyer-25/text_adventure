@@ -1,3 +1,4 @@
 0=the fire is low, you should go to the forest and look for wood.
 1=the others have woken up, are starting their days. the cave is full of life.
 2=your group is in need of food. people are going about tho
+3=there is a distant, worried look in the faces of the others. when food is scarce, all are filled with dread.

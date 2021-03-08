@@ -18,6 +18,7 @@ public static class SaveGameManager
         game.fireLevel = controller.fire.fireLevel;
         game.nounsInInventory = controller.interactableItems.nounsInInventory;
         game.travelingCompanions = controller.travelingCompanions.Select(o => o.name).ToList();
+        game.currentRoom = controller.roomNavigation.currentRoom.roomName;
 
         for (int i = 0; i < controller.allRoomsInGame.Count; i++)
         {
@@ -105,6 +106,8 @@ public static class SaveGameManager
         controller.checkpointManager.checkpoint = saveGame.checkpointReached;
         controller.fire.fireLevel = saveGame.fireLevel;
         controller.interactableItems.nounsInInventory = saveGame.nounsInInventory;
+        controller.roomNavigation.currentRoom = controller.allRoomsInGame.Find(o => o.roomName == saveGame.currentRoom);
+        controller.interactableItems.AddActionResponsesToUseDictionary();
 
         List<InteractableObject> travelingCompanions = new List<InteractableObject>();
         for (int i = 0; i < saveGame.travelingCompanions.Count; i++)

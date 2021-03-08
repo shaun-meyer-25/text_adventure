@@ -35,7 +35,8 @@ public class Observe : ActionChoice
             else if (separatedInputWords[1].Equals("surroundings"))
             {
                 Room room = controller.roomNavigation.currentRoom;
-                controller.LogStringWithReturn("You see " + room.roomInvestigationDescription);
+                string joinedInteractionDescriptions = string.Join ("\n", controller.interactionDescriptionsInRoom.ToArray ());
+                controller.LogStringWithReturn(room.roomInvestigationDescription + joinedInteractionDescriptions);
                 controller.isObserving = false;
                 controller.UpdateRoomChoices(controller.startingActions);
             }

@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc7cf5db359646d6bf6e9ed1f7077dd, type: 3}
   m_Name: NorthFoothills
   m_EditorClassIdentifier: 
-  description: 'far from home now, have to be careful. many cracks and crevices in
-    the stone, some large enough to be a beast''s home. '
-  roomInvestigationDescription: 'endless plains to the north and west. should not
-    wander too far away.
-
-    mountains to the east, cannot pass them.
-
-    watering
-    hole to the south.'
+  baseDescription: 
+  baseInvestigationDescription: 
+  description: there is a cave bear at the mouth of an opening in the rocks. ohm
+    signals you to stop. they brandish their spear. it looks like they are forming
+    a plan.
+  roomInvestigationDescription: the beast glares at you. it takes a step towards
+    you and lets out a low, menacing growl.
   roomName: north foothills
   exits:
   - keyString: south

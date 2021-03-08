@@ -25,4 +25,10 @@ public class OhmGetInPosition : ActionResponse
 
         return false;
     }
+    
+    public ScriptableObject SetRequiredString(string requiredString)
+    {
+        this.requiredString = requiredString;
+        return this;
+    }
 }

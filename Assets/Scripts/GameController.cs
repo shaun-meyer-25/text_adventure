@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour {
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
 		caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
 		caveInvestigationDescriptions = LoadDictionaryFromFile("homeCaveInvestigationDescriptions");
-		if (SceneManager.GetActiveScene().name == "Main")
+		if (SceneManager.GetActiveScene().name == "Main" && checkpointManager.checkpoint == 0)
 		{
 			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
 			LogStringWithReturn(
@@ -142,24 +142,33 @@ public class GameController : MonoBehaviour {
 		}
 		displayText.text = logAsText;
 	}
-	
-	public void LoadRoomDataAndDisplayRoomText () {
+
+	public void LoadRoomData()
+	{
 		ClearCollectionsForNewRoom ();
 		UnpackRoom ();
 
 		for (int i = 0; i < travelingCompanions.Count; i++)
 		{
-			roomNavigation.currentRoom.AddPersonToRoom(travelingCompanions[i]);
+			if (!roomNavigation.currentRoom.PeopleInRoom.Contains(travelingCompanions[i]))
+			{
+				roomNavigation.currentRoom.AddPersonToRoom(travelingCompanions[i]);
+			}
 		}
-
-		string combinedText = "\n";
-
+		
 		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
 		{
 			roomNavigation.currentRoom.description = caveDescription[checkpointManager.checkpoint.ToString()];
 			roomNavigation.currentRoom.roomInvestigationDescription = caveInvestigationDescriptions[checkpointManager.checkpoint.ToString()];
 		}
-		else
+	}
+	
+	public void LoadRoomDataAndDisplayRoomText () {
+		LoadRoomData();
+
+		string combinedText = "\n";
+		
+		if (!roomNavigation.currentRoom.roomName.Equals("home cave"))
 		{
 			combinedText = DescribeTravelingCompanions(combinedText);
 		}

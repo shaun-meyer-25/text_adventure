@@ -14,6 +14,7 @@ public class SaveGame
     public Fire.FireLevel fireLevel;
     public string currentScene;
     public List<string> travelingCompanions;
+    public string currentRoom;
 
     public SaveGame()
     {
