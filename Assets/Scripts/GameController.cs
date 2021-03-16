@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour {
 	private Dictionary<string, string> allPreferences;
 	private Dictionary<string, string> caveDescription;
 	private Dictionary<string, string> caveInvestigationDescriptions;
+	private List<string> undisplayedSentences = new List<string>();
 	public InteractableObject[] characters;
 	public Text displayText;
 	public Image background;
@@ -58,6 +59,7 @@ public class GameController : MonoBehaviour {
 
 	void Start ()
 	{
+		displayText.text = "";
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
 		caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
 		caveInvestigationDescriptions = LoadDictionaryFromFile("homeCaveInvestigationDescriptions");
@@ -133,14 +135,34 @@ public class GameController : MonoBehaviour {
 			actionLog[i] = actionLog[i].Replace("you can't go back. only forward.",
 				"<color=purple>" + "you can't go back. only forward." + "</color>");
 		}
-		string logAsText = string.Join ("\n", actionLog.ToArray ());
+		//string logAsText = string.Join ("\n", actionLog.ToArray ());
+		string logAsText = string.Join ("\n\n", undisplayedSentences.ToArray ());
 		while (logAsText.Length > 10000)
 		{
 			List<string> log = new List<string>(logAsText.Split('\n'));
 			log.RemoveRange(0, log.Count / 2);
 			logAsText = string.Join("\n", log.ToArray());
 		}
-		displayText.text = logAsText;
+		
+		//displayText.text = logAsText;
+		StopAllCoroutines();
+		StartCoroutine(TypeSentence("\n" + logAsText));
+		undisplayedSentences.Clear();
+	}
+	
+	public void LogStringWithReturn(string stringToAdd) {
+		undisplayedSentences.Add(stringToAdd);
+		actionLog.Add (stringToAdd + "\n");
+	}
+
+	IEnumerator TypeSentence(string sentence)
+	{
+		
+		foreach (var letter in sentence.ToCharArray())
+		{
+			displayText.text += letter;
+			yield return null;
+		}
 	}
 
 	public void LoadRoomData()
@@ -263,10 +285,6 @@ public class GameController : MonoBehaviour {
 		return dict;
 	}
 
-	public void LogStringWithReturn(string stringToAdd) {
-		actionLog.Add (stringToAdd + "\n");
-	}
-	
 	public List<string> ActionNames()
 	{
 		List<string> actionNames = new List<string>();

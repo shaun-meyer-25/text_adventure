@@ -33,7 +33,11 @@ public class CheckpointManager : MonoBehaviour
             
             for (int i = 0; i < _controller.characters.Length; i++)
             {
-                _controller.characters[i].description =
+                List<Interaction> interactions =
+                    new List<Interaction>(_controller.characters[i].interactions);
+                Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+                
+                interact.textResponse =
                     _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1];
             }
             
