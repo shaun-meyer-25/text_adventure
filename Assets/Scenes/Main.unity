@@ -548,6 +548,7 @@ MonoBehaviour:
   usableItemList:
   - {fileID: 11400000, guid: 163b417b0a457634b8dc873763fdf718, type: 2}
   - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
+  - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
   nounsInRoom: []
   nounsInInventory: []
 --- !u!114 &947878759
@@ -578,6 +579,8 @@ MonoBehaviour:
   ohmInPosition: 0
   checkpointOneItems:
   - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
+  checkpointFourItems:
+  - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
   checkpoint: 0
 --- !u!850595691 &1236027653
 LightingSettings:

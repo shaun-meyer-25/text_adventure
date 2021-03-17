@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = System.Object;
 
 public class RoomNavigation : MonoBehaviour {
 	
@@ -59,6 +60,12 @@ public class RoomNavigation : MonoBehaviour {
 		if (currentRoom.roomName == "north foothills" && controller.checkpointManager.checkpoint == 2)
 		{
 			controller.checkpointManager.SetCheckpoint(3);
+		}
+
+		if (currentRoom.roomName == "watering hole" && controller.checkpointManager.checkpoint == 3 &&
+		    !controller.interactableItems.nounsInInventory.Contains("spear"))
+		{
+			controller.checkpointManager.SetCheckpoint(4);
 		}
 	}
 }

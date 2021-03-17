@@ -2,3 +2,4 @@
 1=the others have woken up, are starting their days. the cave is full of life.
 2=your group is in need of food. people are going about their daily activities.
 3=there is a distant, worried look in the faces of the others. when food is scarce, all are filled with dread.
+4=there is a distant, worried look in the faces of the others. when food is scarce, all are filled with dread.

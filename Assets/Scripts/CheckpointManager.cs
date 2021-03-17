@@ -17,6 +17,7 @@ public class CheckpointManager : MonoBehaviour
     public bool ohmInPosition = false;
 
     public List<InteractableObject> checkpointOneItems;
+    public List<InteractableObject> checkpointFourItems;
     public int checkpoint;
     
     void Start()
@@ -73,6 +74,17 @@ public class CheckpointManager : MonoBehaviour
             // if you just "use" the spear here, you will die. 
             // you first should interact with ohm, ohm will circle around. then you can use the spear 
             SaveGameManager.SaveGame(_controller);
+        }
+
+        if (maybeCheckpoint == 4)
+        {
+            checkpoint = maybeCheckpoint;
+            _controller.LogStringWithReturn("you and ohm successfully flee the vicious bear. it is afternoon now, hunger weighs heavily on you.");
+            List<Interaction> interactions =
+                new List<Interaction>(_controller.characters.First(o => o.noun.Equals("ohm")).interactions);
+            Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
+            interaction.textResponse = _characterInteractions["ohm"][maybeCheckpoint - 1];
+            _controller.allRoomsInGame.Find(o => o.roomName == "north forest").SetInteractableObjectsInRoom(checkpointFourItems.ToArray());
         }
     }
 }
