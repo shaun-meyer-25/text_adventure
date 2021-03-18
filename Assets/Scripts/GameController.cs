@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 using Image = UnityEngine.UI.Image;
 
 public class GameController : MonoBehaviour {
@@ -15,6 +16,7 @@ public class GameController : MonoBehaviour {
 	private Dictionary<string, string> allPreferences;
 	private Dictionary<string, string> caveDescription;
 	private Dictionary<string, string> caveInvestigationDescriptions;
+	private List<string> undisplayedSentences = new List<string>();
 	public InteractableObject[] characters;
 	public Text displayText;
 	public Image background;
@@ -23,8 +25,9 @@ public class GameController : MonoBehaviour {
 	public AudioSource tunnelSceneBackground;
 	public InteractChoice[] interactableChoices;
 	public List<InteractableObject> travelingCompanions;
-	List<string> actionLog = new List<string>(); 
-
+	public List<Room> allRoomsInGame;
+	
+	[HideInInspector] public List<string> actionLog = new List<string>();
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
 	[HideInInspector] public List<string> exitNames = new List<string>();
 	[HideInInspector] public RoomNavigation roomNavigation;
@@ -35,18 +38,17 @@ public class GameController : MonoBehaviour {
 	[HideInInspector] public bool isUsing = false;
 	[HideInInspector] public Fire fire;
 	[HideInInspector] public CheckpointManager checkpointManager;
-
+	
 	// todo - instead of using this workaround, we should make a "CalculateDNextChoices" or something based on game state and room
 	// this section mostly for debugging
 	public Choice[] startingActions;
 	
 	void Awake ()
 	{
+		checkpointManager = GetComponent<CheckpointManager>();
 		interactableItems = GetComponent<InteractableItems> ();
 		roomNavigation = GetComponent<RoomNavigation> ();
 		fire = GetComponent<Fire>();
-		checkpointManager = GetComponent<CheckpointManager>();
-		
 		// todo - probably want an audio loading class or method
 		
 		if (SceneManager.GetActiveScene().name != "Experimental") return;
@@ -56,10 +58,13 @@ public class GameController : MonoBehaviour {
 
 	void Start ()
 	{
+
+		checkpointManager.checkpoint = StaticDataHolder.instance.Checkpoint;
+		displayText.text = "";
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
 		caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
 		caveInvestigationDescriptions = LoadDictionaryFromFile("homeCaveInvestigationDescriptions");
-		if (SceneManager.GetActiveScene().name == "Main")
+		if (SceneManager.GetActiveScene().name == "Main" && checkpointManager.checkpoint == 0)
 		{
 			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
 			LogStringWithReturn(
@@ -87,6 +92,8 @@ public class GameController : MonoBehaviour {
 		
 		for (int i = 0; i < NUMBER_OF_OPTIONS; i++) {
 			GameObject button = GameObject.Find("Option" + (i + 1));
+			button.GetComponent<Button>().interactable = true;
+			
 			Text textObject = button.GetComponentInChildren<Text>();
 
 			if (preferencesForCurrentChoices.ContainsValue(i.ToString()) || 
@@ -111,6 +118,7 @@ public class GameController : MonoBehaviour {
 			else
 			{
 				textObject.text = null;
+				button.GetComponent<Button>().interactable = false;
 			}
 
 		}
@@ -128,34 +136,62 @@ public class GameController : MonoBehaviour {
 			actionLog[i] = actionLog[i].Replace("you can't go back. only forward.",
 				"<color=purple>" + "you can't go back. only forward." + "</color>");
 		}
-		string logAsText = string.Join ("\n", actionLog.ToArray ());
+		//string logAsText = string.Join ("\n", actionLog.ToArray ());
+		string logAsText = string.Join ("\n\n", undisplayedSentences.ToArray ());
 		while (logAsText.Length > 10000)
 		{
 			List<string> log = new List<string>(logAsText.Split('\n'));
 			log.RemoveRange(0, log.Count / 2);
 			logAsText = string.Join("\n", log.ToArray());
 		}
-		displayText.text = logAsText;
+		
+		//displayText.text = logAsText;
+		StopAllCoroutines();
+		StartCoroutine(TypeSentence("\n" + logAsText));
+		undisplayedSentences.Clear();
 	}
 	
-	public void LoadRoomDataAndDisplayRoomText () {
+	public void LogStringWithReturn(string stringToAdd) {
+		undisplayedSentences.Add(stringToAdd);
+		actionLog.Add (stringToAdd + "\n");
+	}
+
+	IEnumerator TypeSentence(string sentence)
+	{
+		
+		foreach (var letter in sentence.ToCharArray())
+		{
+			displayText.text += letter;
+			yield return null;
+		}
+	}
+
+	public void LoadRoomData()
+	{
 		ClearCollectionsForNewRoom ();
 		UnpackRoom ();
 
 		for (int i = 0; i < travelingCompanions.Count; i++)
 		{
-			roomNavigation.currentRoom.AddPersonToRoom(travelingCompanions[i]);
+			if (!roomNavigation.currentRoom.PeopleInRoom.Contains(travelingCompanions[i]))
+			{
+				roomNavigation.currentRoom.AddPersonToRoom(travelingCompanions[i]);
+			}
 		}
-
-		string combinedText = "\n";
-
+		
 		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
 		{
 			roomNavigation.currentRoom.description = caveDescription[checkpointManager.checkpoint.ToString()];
-			roomNavigation.currentRoom.roomInvestigationDescription =
-				caveInvestigationDescriptions[checkpointManager.checkpoint.ToString()];
+			roomNavigation.currentRoom.roomInvestigationDescription = caveInvestigationDescriptions[checkpointManager.checkpoint.ToString()];
 		}
-		else
+	}
+	
+	public void LoadRoomDataAndDisplayRoomText () {
+		LoadRoomData();
+
+		string combinedText = "\n";
+		
+		if (!roomNavigation.currentRoom.roomName.Equals("home cave"))
 		{
 			combinedText = DescribeTravelingCompanions(combinedText);
 		}
@@ -250,10 +286,6 @@ public class GameController : MonoBehaviour {
 		return dict;
 	}
 
-	public void LogStringWithReturn(string stringToAdd) {
-		actionLog.Add (stringToAdd + "\n");
-	}
-	
 	public List<string> ActionNames()
 	{
 		List<string> actionNames = new List<string>();
@@ -311,5 +343,17 @@ public class GameController : MonoBehaviour {
 		}
 
 		return combinedText;
+	}
+
+	public void YouAreDead()
+	{
+		LogStringWithReturn("the unforgiving world has claimed your life.");
+		for (int i = 0; i < NUMBER_OF_OPTIONS; i++)
+		{
+			GameObject button = GameObject.Find("Option" + (i + 1));
+			button.GetComponent<Button>().interactable = false;
+		}
+
+		SceneManager.LoadScene("Death Menu");
 	}
 }

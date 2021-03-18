@@ -1,10 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "TextAdventure/Room")]
-public class Room : ScriptableObject {
+public class Room : ScriptableObject
+{
+	[SerializeField] [TextArea] private string baseDescription;
+	[SerializeField] [TextArea] private string baseInvestigationDescription;
+	
 	[TextArea]
 	public string description;
 	[TextArea]
@@ -12,7 +18,7 @@ public class Room : ScriptableObject {
 	public string roomName;
 	public Exit[] exits;
 	
-	[SerializeField] private InteractableObject[] baseInteractableObjectsInRoom;
+	[SerializeField] private List<InteractableObject> baseInteractableObjectsInRoom;
 	
 	private InteractableObject[] interactableObjectsInRoom;
 	public InteractableObject[] InteractableObjectsInRoom
@@ -20,7 +26,7 @@ public class Room : ScriptableObject {
 		get { return interactableObjectsInRoom; }
 	}
 
-	[SerializeField] private InteractableObject[] basePeopleInRoom;
+	[SerializeField] [ItemCanBeNull] private List<InteractableObject> basePeopleInRoom;
 	
 	private InteractableObject[] peopleInRoom;
 
@@ -34,6 +40,13 @@ public class Room : ScriptableObject {
 		interactableObjectsInRoom = objects;
 	}
 
+	public void AddObjectToRoom(InteractableObject obj)
+	{
+		List<InteractableObject> updatedObjectsInRoom = new List<InteractableObject>(InteractableObjectsInRoom);
+		updatedObjectsInRoom.Add(obj);
+		interactableObjectsInRoom = updatedObjectsInRoom.ToArray();
+	}
+
 	public void SetPeopleInRoom(InteractableObject[] objects)
 	{
 		peopleInRoom = objects;
@@ -41,7 +54,16 @@ public class Room : ScriptableObject {
 	
 	public void AddPersonToRoom(InteractableObject obj)
 	{
-		List<InteractableObject> updatedPeopleInRoom = new List<InteractableObject>(PeopleInRoom);
+		List<InteractableObject> updatedPeopleInRoom;
+		if (PeopleInRoom == null)
+		{
+			updatedPeopleInRoom = new List<InteractableObject>();
+		}
+		else
+		{
+			updatedPeopleInRoom = new List<InteractableObject>(PeopleInRoom);
+		}
+		
 		updatedPeopleInRoom.Add(obj);
 		peopleInRoom = updatedPeopleInRoom.ToArray();
 	}
@@ -52,8 +74,10 @@ public class Room : ScriptableObject {
 
 	private void OnEnable()
 	{
-		interactableObjectsInRoom = baseInteractableObjectsInRoom;
-		peopleInRoom = basePeopleInRoom;
+		interactableObjectsInRoom = baseInteractableObjectsInRoom.ToArray();
+		peopleInRoom = basePeopleInRoom.ToArray();
+		description = baseDescription;
+		roomInvestigationDescription = baseInvestigationDescription;
 	}
 	
 	public void OnAfterDeserialize() 
@@ -108,6 +132,6 @@ public class Room : ScriptableObject {
 
 	public void SetBasePeopleInRoom()
 	{
-		peopleInRoom = basePeopleInRoom;
+		peopleInRoom = basePeopleInRoom.ToArray();
 	}
 }

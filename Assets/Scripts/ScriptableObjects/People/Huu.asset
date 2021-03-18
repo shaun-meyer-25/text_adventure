@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyword: huu
   noun: huu
-  description: Description of where it is in room
+  description: they do not notice you. they are busy watching unh.
   interactions:
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-    textResponse: 
+    textResponse: they do not notice you. they are busy watching unh.
+    baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}
