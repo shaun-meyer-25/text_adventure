@@ -38,18 +38,17 @@ public class GameController : MonoBehaviour {
 	[HideInInspector] public bool isUsing = false;
 	[HideInInspector] public Fire fire;
 	[HideInInspector] public CheckpointManager checkpointManager;
-
+	
 	// todo - instead of using this workaround, we should make a "CalculateDNextChoices" or something based on game state and room
 	// this section mostly for debugging
 	public Choice[] startingActions;
 	
 	void Awake ()
 	{
+		checkpointManager = GetComponent<CheckpointManager>();
 		interactableItems = GetComponent<InteractableItems> ();
 		roomNavigation = GetComponent<RoomNavigation> ();
 		fire = GetComponent<Fire>();
-		checkpointManager = GetComponent<CheckpointManager>();
-		
 		// todo - probably want an audio loading class or method
 		
 		if (SceneManager.GetActiveScene().name != "Experimental") return;
@@ -59,6 +58,8 @@ public class GameController : MonoBehaviour {
 
 	void Start ()
 	{
+
+		checkpointManager.checkpoint = StaticDataHolder.instance.Checkpoint;
 		displayText.text = "";
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
 		caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");

@@ -18,7 +18,7 @@ public class CheckpointManager : MonoBehaviour
 
     public List<InteractableObject> checkpointOneItems;
     public List<InteractableObject> checkpointFourItems;
-    public int checkpoint;
+    [HideInInspector] public int checkpoint;
     
     void Start()
         {
@@ -31,16 +31,6 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 1)
         {
             checkpoint = maybeCheckpoint;
-            
-            for (int i = 0; i < _controller.characters.Length; i++)
-            {
-                List<Interaction> interactions =
-                    new List<Interaction>(_controller.characters[i].interactions);
-                Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
-                
-                interact.textResponse =
-                    _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1];
-            }
             
             _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
             _controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(checkpointOneItems.ToArray());
@@ -80,11 +70,20 @@ public class CheckpointManager : MonoBehaviour
         {
             checkpoint = maybeCheckpoint;
             _controller.LogStringWithReturn("you and ohm successfully flee the vicious bear. it is afternoon now, hunger weighs heavily on you.");
-            List<Interaction> interactions =
-                new List<Interaction>(_controller.characters.First(o => o.noun.Equals("ohm")).interactions);
-            Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
-            interaction.textResponse = _characterInteractions["ohm"][maybeCheckpoint - 1];
             _controller.allRoomsInGame.Find(o => o.roomName == "north forest").SetInteractableObjectsInRoom(checkpointFourItems.ToArray());
+        }
+        
+        for (int i = 0; i < _controller.characters.Length; i++)
+        {
+            List<Interaction> interactions =
+                new List<Interaction>(_controller.characters[i].interactions);
+            Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+
+            if (_characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1] != "x")
+            {
+                interact.textResponse =
+                    _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1];
+            }
         }
     }
 }

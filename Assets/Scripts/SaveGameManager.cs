@@ -20,6 +20,8 @@ public static class SaveGameManager
         game.travelingCompanions = controller.travelingCompanions.Select(o => o.name).ToList();
         game.currentRoom = controller.roomNavigation.currentRoom.roomName;
 
+        StaticDataHolder.instance.Checkpoint = controller.checkpointManager.checkpoint;
+
         for (int i = 0; i < controller.allRoomsInGame.Count; i++)
         {
             if (controller.allRoomsInGame[i].PeopleInRoom.Length > 0)
