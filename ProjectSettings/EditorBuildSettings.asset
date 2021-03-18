@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Death Menu.unity
     guid: 8207798eb3a9e9745aca32b46c956c1d
+  - enabled: 1
+    path: Assets/Scenes/First Dream.unity
+    guid: f986cd03f90ac0e4b8b83d762bd16551
   m_configObjects: {}
