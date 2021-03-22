@@ -16,7 +16,6 @@ public class Room : ScriptableObject
 	[TextArea]
 	public string roomInvestigationDescription;
 	public string roomName;
-	public Exit[] exits;
 	
 	[SerializeField] private List<InteractableObject> baseInteractableObjectsInRoom;
 	
@@ -35,6 +34,20 @@ public class Room : ScriptableObject
 		get { return peopleInRoom;  }
 	}
 
+	[SerializeField] private List<Exit> baseExits;
+
+	private Exit[] exits;
+
+	public Exit[] Exits
+	{
+		get { return exits.ToArray(); }
+	}
+
+	public void SetExitsInRoom(Exit[] e)
+	{
+		exits = e;
+	}
+	
 	public void SetInteractableObjectsInRoom(InteractableObject[] objects)
 	{
 		interactableObjectsInRoom = objects;
@@ -74,6 +87,7 @@ public class Room : ScriptableObject
 
 	private void OnEnable()
 	{
+		exits = baseExits.ToArray();
 		interactableObjectsInRoom = baseInteractableObjectsInRoom.ToArray();
 		peopleInRoom = basePeopleInRoom.ToArray();
 		description = baseDescription;
@@ -87,7 +101,7 @@ public class Room : ScriptableObject
 	public List<string> exitNames()
 	{
 		List<string> exitNames = new List<string>();
-		for (int i = 0; i < exits.Length; i++)
+		for (int i = 0; i < Exits.Length; i++)
 		{
 			exitNames.Add(exits[i].keyString);
 		}
@@ -99,7 +113,7 @@ public class Room : ScriptableObject
 	{
 		List<ExitChoice> exitChoices = new List<ExitChoice>();
 
-		for (int i = 0; i < exits.Length; i++)
+		for (int i = 0; i < Exits.Length; i++)
 		{
 			ExitChoice choice = CreateInstance<ExitChoice>();
 			choice.keyword = exits[i].keyString;

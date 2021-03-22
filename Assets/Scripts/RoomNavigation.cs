@@ -17,9 +17,9 @@ public class RoomNavigation : MonoBehaviour {
 	}
 
 	public void UnpackExitsInRoom() { 
-		for (int i = 0; i < currentRoom.exits.Length; i++) {
-			exitDictionary.Add (currentRoom.exits [i].keyString, currentRoom.exits [i].valueRoom);
-			controller.interactionDescriptionsInRoom.Add (currentRoom.exits [i].exitDescription);
+		for (int i = 0; i < currentRoom.Exits.Length; i++) {
+			exitDictionary.Add (currentRoom.Exits [i].keyString, currentRoom.Exits [i].valueRoom);
+			controller.interactionDescriptionsInRoom.Add (currentRoom.Exits [i].exitDescription);
 		}
 	}
 

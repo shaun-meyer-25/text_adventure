@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class CheckpointManager : MonoBehaviour
 {
     private GameController _controller;
+    private LevelLoader _levelLoader;
     private Dictionary<string, List<string>> _characterInteractions;
     
     // Checkpoint 1 flags
@@ -18,11 +19,13 @@ public class CheckpointManager : MonoBehaviour
 
     public List<InteractableObject> checkpointOneItems;
     public List<InteractableObject> checkpointFourItems;
+    public List<Exit> checkpointFiveExits;
     [HideInInspector] public int checkpoint;
     
     void Start()
         {
         _controller = GetComponent<GameController>();
+        _levelLoader = GetComponent<LevelLoader>();
         _characterInteractions = _controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
         }
 
@@ -77,7 +80,8 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 5)
         {
             checkpoint = maybeCheckpoint;
-            _controller.LogStringWithReturn("you feel energy for little else but sleep. your normal place next to tei waits for you.");
+            _controller.roomNavigation.currentRoom.SetExitsInRoom(checkpointFiveExits.ToArray());
+            
             SaveGameManager.SaveGame(_controller);
         }
         

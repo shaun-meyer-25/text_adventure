@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour {
 	private Dictionary<string, string> caveDescription;
 	private Dictionary<string, string> caveInvestigationDescriptions;
 	private List<string> undisplayedSentences = new List<string>();
+	public LevelLoader levelLoader;
 	public InteractableObject[] characters;
 	public Text displayText;
 	public Image background;
@@ -45,6 +46,7 @@ public class GameController : MonoBehaviour {
 	
 	void Awake ()
 	{
+		levelLoader = FindObjectOfType<LevelLoader>();
 		checkpointManager = GetComponent<CheckpointManager>();
 		interactableItems = GetComponent<InteractableItems> ();
 		roomNavigation = GetComponent<RoomNavigation> ();
@@ -345,6 +347,12 @@ public class GameController : MonoBehaviour {
 		return combinedText;
 	}
 
+	IEnumerator LoadDeathScene()
+	{
+		yield return new WaitForSeconds(3);
+		
+		levelLoader.LoadScene("Death Menu");
+	}
 	public void YouAreDead()
 	{
 		LogStringWithReturn("the unforgiving world has claimed your life.");
@@ -354,6 +362,8 @@ public class GameController : MonoBehaviour {
 			button.GetComponent<Button>().interactable = false;
 		}
 
+		// todo - get this working
+		//StartCoroutine(LoadDeathScene());
 		SceneManager.LoadScene("Death Menu");
 	}
 }

@@ -11,10 +11,10 @@ public class Go : ActionChoice {
 		if (separatedInputWords.Length == 1) {
 			List<ExitChoice> exits = new List<ExitChoice>();
 
-			for (int i = 0; i < controller.roomNavigation.currentRoom.exits.Length; i++)
+			for (int i = 0; i < controller.roomNavigation.currentRoom.Exits.Length; i++)
 			{
 				ExitChoice choice = CreateInstance<ExitChoice>();
-				choice.keyword = controller.roomNavigation.currentRoom.exits[i].keyString;
+				choice.keyword = controller.roomNavigation.currentRoom.Exits[i].keyString;
 				exits.Add(choice);
 			}
 		
@@ -23,7 +23,14 @@ public class Go : ActionChoice {
 				controller.UpdateRoomChoices(exits.ToArray());
 			}
 		} else {
-			controller.roomNavigation.AttemptToChangeRooms(separatedInputWords[1]);
+			if (separatedInputWords[1] == "sleep" && controller.checkpointManager.checkpoint == 5)
+			{
+				controller.levelLoader.LoadScene("First Dream");
+			}
+			else
+			{
+				controller.roomNavigation.AttemptToChangeRooms(separatedInputWords[1]);
+			}
 		}
 	}
 }
