@@ -813,7 +813,6 @@ GameObject:
   m_Component:
   - component: {fileID: 935348746}
   - component: {fileID: 935348743}
-  - component: {fileID: 935348745}
   - component: {fileID: 935348744}
   m_Layer: 0
   m_Name: SecondCamera
@@ -897,14 +896,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &935348745
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935348742}
-  m_Enabled: 1
 --- !u!4 &935348746
 Transform:
   m_ObjectHideFlags: 0
@@ -1008,6 +999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213021461}
   - component: {fileID: 1213021460}
+  - component: {fileID: 1213021462}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -1044,6 +1036,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -5248778980927145527, guid: 3333dfe60b5e37141b9e06e80d068f9f, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 5314726034194043735, guid: 3333dfe60b5e37141b9e06e80d068f9f, type: 2}
+    value: {fileID: 1213021459}
   m_ExposedReferences:
     m_References:
     - 7368e79c6c69ab2438d00f2ee2bfce7a: {fileID: 869626672}
@@ -1061,6 +1055,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213021462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213021459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 465be08e5d8decf408852c7a9b5c05ac, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2005819676}
+          m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+          m_MethodName: LoadScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Find Orb
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1464100626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1260,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654830442}
   m_CullTransparentMesh: 1
+--- !u!114 &2005819676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1020658580}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0366cae66a2954c8820d121c9b95b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2066135349
 GameObject:
   m_ObjectHideFlags: 0

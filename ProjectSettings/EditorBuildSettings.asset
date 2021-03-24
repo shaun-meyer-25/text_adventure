@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/First Dream.unity
     guid: f986cd03f90ac0e4b8b83d762bd16551
+  - enabled: 1
+    path: Assets/Scenes/Find Orb.unity
+    guid: 46db6f80c0e97474fabdab3382aa46b5
   m_configObjects: {}
