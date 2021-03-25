@@ -16,6 +16,6 @@ public class CometMovement : MonoBehaviour
         // We add +1 to the x axis every frame.
         // Time.deltaTime is the time it took to complete the last frame
         // The result of this is that the object moves one unit on the x axis every second
-        transform.position += new Vector3(-1 * Time.deltaTime, -1 * Time.deltaTime, 0);
+        transform.position += new Vector3(-2 * Time.deltaTime, -2 * Time.deltaTime, 0);
     }
 }

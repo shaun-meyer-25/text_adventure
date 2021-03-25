@@ -26,6 +26,13 @@ public class Go : ActionChoice {
 			if (separatedInputWords[1] == "sleep" && controller.checkpointManager.checkpoint == 5)
 			{
 				controller.levelLoader.LoadScene("First Dream");
+				Room homeCave = controller.allRoomsInGame.Find(o => o.roomName == "home cave");
+				Room outside = controller.allRoomsInGame.Find(o => o.roomName == "outside home");
+				Exit e = new Exit();
+				e.exitDescription = "it is night out. leaving the cave is dangerous, but it must be done";
+				e.keyString = "outside";
+				e.valueRoom = outside;
+				controller.roomNavigation.currentRoom.SetExitsInRoom(new Exit[] {e});
 			}
 			else
 			{

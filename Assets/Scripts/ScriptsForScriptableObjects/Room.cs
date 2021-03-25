@@ -87,7 +87,16 @@ public class Room : ScriptableObject
 
 	private void OnEnable()
 	{
-		exits = baseExits.ToArray();
+		if (baseExits.Count == 0)
+		{
+			throw new Exception("WE HAVE A PROBLEM GUYS, ROOM: " + roomName);
+		}
+		else
+		{
+			exits = baseExits.ToArray();
+		}
+
+		//baseExits = new List<Exit>(exits);
 		interactableObjectsInRoom = baseInteractableObjectsInRoom.ToArray();
 		peopleInRoom = basePeopleInRoom.ToArray();
 		description = baseDescription;

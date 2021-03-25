@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fc7cf5db359646d6bf6e9ed1f7077dd, type: 3}
-  m_Name: StrangeCrater
+  m_Script: {fileID: 11500000, guid: b5cc3e22c8858ae478f7a08769ea198e, type: 3}
+  m_Name: TakeOrb
   m_EditorClassIdentifier: 
-  description: 
-  roomInvestigationDescription: 
-  roomName: 
-  exits: []
-  baseInteractableObjectsInRoom: []
+  requiredString: 

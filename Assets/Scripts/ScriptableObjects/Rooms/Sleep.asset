@@ -17,6 +17,9 @@ MonoBehaviour:
   description: 
   roomInvestigationDescription: 
   roomName: sleep
-  exits: []
   baseInteractableObjectsInRoom: []
   basePeopleInRoom: []
+  baseExits:
+  - keyString: eternal
+    exitDescription: no exit
+    valueRoom: {fileID: 0}

@@ -14,7 +14,7 @@ public class StaticDataHolder : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            instance.Checkpoint = 0;
+            instance.Checkpoint = Checkpoint;
             DontDestroyOnLoad(gameObject);
         }
         else

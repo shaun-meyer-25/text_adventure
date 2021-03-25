@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f298cada63767b546855f8107b945bfa, type: 3}
+  m_Name: Orb
+  m_EditorClassIdentifier: 
+  keyword: orb
+  noun: orb
+  description: 'a small, glowing orb lies in the middle of a crater blasted into
+    the earth. you feel something... new inside of you as you gaze upon it. '
+  interactions:
+  - action: {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
+    textResponse: 'the orb glows the color of a late sun reflected off the sea. you
+      gaze upon it, and the light pulses slightly. you try to look away but your
+      eyes are pulled back to it.
+
+
+      you should take it. '
+    baseActionResponse: {fileID: 0}
+    actionResponse: {fileID: 0}
+  - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
+    textResponse: 
+    baseActionResponse: {fileID: 11400000, guid: f253b1d043e1fb949bec9327cda6fc3f,
+      type: 2}
+    actionResponse: {fileID: 0}

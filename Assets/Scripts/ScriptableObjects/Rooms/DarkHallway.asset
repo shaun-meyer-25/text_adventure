@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc7cf5db359646d6bf6e9ed1f7077dd, type: 3}
   m_Name: DarkHallway
   m_EditorClassIdentifier: 
+  baseDescription: 
+  baseInvestigationDescription: 
   description: you don't need to do this. you can go back! please, please go back.
   roomInvestigationDescription: 'it is so dark. only a dim light at the end of the
     tunnel to guide you.
@@ -19,9 +21,9 @@ MonoBehaviour:
 
 '
   roomName: darkHallway
-  exits:
-  - keyString: forward
-    exitDescription: you can't go back. only forward.
-    valueRoom: {fileID: 11400000}
   baseInteractableObjectsInRoom: []
   basePeopleInRoom: []
+  baseExits:
+  - keyString: forward
+    exitDescription: there is no back, you can only go forward.
+    valueRoom: {fileID: 11400000}

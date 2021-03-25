@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
+using Cursor = UnityEngine.Cursor;
 using Image = UnityEngine.UI.Image;
 
 public class GameController : MonoBehaviour {
@@ -185,6 +186,7 @@ public class GameController : MonoBehaviour {
 		{
 			roomNavigation.currentRoom.description = caveDescription[checkpointManager.checkpoint.ToString()];
 			roomNavigation.currentRoom.roomInvestigationDescription = caveInvestigationDescriptions[checkpointManager.checkpoint.ToString()];
+
 		}
 	}
 	
