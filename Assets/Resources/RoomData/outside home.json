@@ -1,50 +1,152 @@
 [
-  {
+{
     "chapter": 0,
-    "exits": [{
-      "roomName": "outside home",
-      "keyString": "outside",
-      "description": "light filters in from outside"}
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "north",
+        "description": "grasslands to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "east",
+        "description": "forest to the east"
+      },
+      {
+        "roomName": "home cave",
+        "keyString": "home",
+        "description": "you are just outside of your home cave"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "west",
+        "description": "grasslands continue to stretch to the west"
+      }
     ]
   },
   {
     "chapter": 1,
-    "exits": [{
-      "roomName": "outside home",
-      "keyString": "outside",
-      "description": "light filters in from outside"}
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "north",
+        "description": "grasslands to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "east",
+        "description": "forest to the east"
+      },
+      {
+        "roomName": "home cave",
+        "keyString": "home",
+        "description": "you are just outside of your home cave"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "west",
+        "description": "grasslands continue to stretch to the west"
+      }
     ]
   },
   {
     "chapter": 2,
-    "exits": [{
-      "roomName": "outside home",
-      "keyString": "outside",
-      "description": "light filters in from outside"}
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "north",
+        "description": "grasslands to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "east",
+        "description": "forest to the east"
+      },
+      {
+        "roomName": "home cave",
+        "keyString": "home",
+        "description": "you are just outside of your home cave"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "west",
+        "description": "grasslands continue to stretch to the west"
+      }
     ]
   },
   {
     "chapter": 3,
-    "exits": [{
-      "roomName": "outside home",
-      "keyString": "outside",
-      "description": "light filters in from outside"}
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "north",
+        "description": "grasslands to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "east",
+        "description": "forest to the east"
+      },
+      {
+        "roomName": "home cave",
+        "keyString": "home",
+        "description": "you are just outside of your home cave"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "west",
+        "description": "grasslands continue to stretch to the west"
+      }
     ]
   },
   {
     "chapter": 4,
-    "exits": [{
-      "roomName": "sleep",
-      "keyString": "sleep",
-      "description": "you feel energy for little else but sleep. your normal place next to tei waits for you."
-    }]
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "north",
+        "description": "grasslands to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "east",
+        "description": "forest to the east"
+      },
+      {
+        "roomName": "home cave",
+        "keyString": "home",
+        "description": "you are just outside of your home cave"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "west",
+        "description": "grasslands continue to stretch to the west"
+      }
+    ]
   },
   {
     "chapter": 5,
-    "exits": [{
-      "roomName": "outside home",
-      "keyString": "outside",
-      "description": "it is night out. leaving the cave is dangerous, but it must be done"
-    }]
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "north",
+        "description": "grasslands to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "east",
+        "description": "forest to the east"
+      },
+      {
+        "roomName": "home cave",
+        "keyString": "home",
+        "description": "you are just outside of your home cave"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "west",
+        "description": "grasslands continue to stretch to the west. you see a faint glow off in this direction."
+      }
+    ]
   }
 ]

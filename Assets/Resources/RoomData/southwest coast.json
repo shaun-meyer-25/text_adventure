@@ -1,0 +1,50 @@
+[
+  {
+    "chapter": 0,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 1,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 2,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 3,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 4,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 5,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  }
+]

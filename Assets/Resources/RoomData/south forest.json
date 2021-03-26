@@ -1,0 +1,122 @@
+[
+  {
+    "chapter": 0,
+    "exits": [
+      {
+        "roomName": "north forest",
+        "keyString": "north",
+        "description": "the forest continues to the north"
+      },
+      {
+        "roomName": "south foothills",
+        "keyString": "east",
+        "description": "the forest thins as the ground gets higher and rockier to the east"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "west",
+        "description": "home lies outside of the woods to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 1,
+    "exits": [
+      {
+        "roomName": "north forest",
+        "keyString": "north",
+        "description": "the forest continues to the north"
+      },
+      {
+        "roomName": "south foothills",
+        "keyString": "east",
+        "description": "the forest thins as the ground gets higher and rockier to the east"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "west",
+        "description": "home lies outside of the woods to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "exits": [
+      {
+        "roomName": "north forest",
+        "keyString": "north",
+        "description": "the forest continues to the north"
+      },
+      {
+        "roomName": "south foothills",
+        "keyString": "east",
+        "description": "the forest thins as the ground gets higher and rockier to the east"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "west",
+        "description": "home lies outside of the woods to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 3,
+    "exits": [
+      {
+        "roomName": "north forest",
+        "keyString": "north",
+        "description": "the forest continues to the north"
+      },
+      {
+        "roomName": "south foothills",
+        "keyString": "east",
+        "description": "the forest thins as the ground gets higher and rockier to the east"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "west",
+        "description": "home lies outside of the woods to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 4,
+    "exits": [
+      {
+        "roomName": "north forest",
+        "keyString": "north",
+        "description": "the forest continues to the north"
+      },
+      {
+        "roomName": "south foothills",
+        "keyString": "east",
+        "description": "the forest thins as the ground gets higher and rockier to the east"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "west",
+        "description": "home lies outside of the woods to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 5,
+    "exits": [
+      {
+        "roomName": "north forest",
+        "keyString": "north",
+        "description": "the forest continues to the north"
+      },
+      {
+        "roomName": "south foothills",
+        "keyString": "east",
+        "description": "the forest thins as the ground gets higher and rockier to the east"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "west",
+        "description": "home lies outside of the woods to the west"
+      }
+    ]
+  }
+]

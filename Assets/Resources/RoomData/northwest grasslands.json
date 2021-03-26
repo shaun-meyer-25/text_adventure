@@ -1,0 +1,122 @@
+[
+  {
+    "chapter": 0,
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "east",
+        "description": "the plains that meet the forest stretch to the east"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "south",
+        "description": "the plains continue to the south as well, bordering the coast"
+      },
+      {
+        "roomName": "northwest coast",
+        "keyString": "west",
+        "description": "the coast is to the west, smelling of sea."
+      }
+    ]
+  },
+  {
+    "chapter": 1,
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "east",
+        "description": "the plains that meet the forest stretch to the east"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "south",
+        "description": "the plains continue to the south as well, bordering the coast"
+      },
+      {
+        "roomName": "northwest coast",
+        "keyString": "west",
+        "description": "the coast is to the west, smelling of sea."
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "east",
+        "description": "the plains that meet the forest stretch to the east"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "south",
+        "description": "the plains continue to the south as well, bordering the coast"
+      },
+      {
+        "roomName": "northwest coast",
+        "keyString": "west",
+        "description": "the coast is to the west, smelling of sea."
+      }
+    ]
+  },
+  {
+    "chapter": 3,
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "east",
+        "description": "the plains that meet the forest stretch to the east"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "south",
+        "description": "the plains continue to the south as well, bordering the coast"
+      },
+      {
+        "roomName": "northwest coast",
+        "keyString": "west",
+        "description": "the coast is to the west, smelling of sea."
+      }
+    ]
+  },
+  {
+    "chapter": 4,
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "east",
+        "description": "the plains that meet the forest stretch to the east"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "south",
+        "description": "the plains continue to the south as well, bordering the coast"
+      },
+      {
+        "roomName": "northwest coast",
+        "keyString": "west",
+        "description": "the coast is to the west, smelling of sea."
+      }
+    ]
+  },
+  {
+    "chapter": 5,
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "east",
+        "description": "the plains that meet the forest stretch to the east"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "south",
+        "description": "the plains continue to the south as well, bordering the coast"
+      },
+      {
+        "roomName": "northwest coast",
+        "keyString": "west",
+        "description": "the coast is to the west, smelling of sea."
+      }
+    ]
+  }
+]
