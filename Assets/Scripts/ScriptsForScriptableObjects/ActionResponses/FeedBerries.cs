@@ -14,7 +14,6 @@ public class FeedBerries : ActionResponse
                                            " this cannot continue much longer. a successful hunt must come soon." +
                                            "\n\nnothing left now but to go to bed.");
 
-            controller.checkpointManager.SetCheckpoint(5);
 
             return true;
         }

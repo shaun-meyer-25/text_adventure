@@ -69,5 +69,11 @@ public class RoomNavigation : MonoBehaviour {
 		{
 			controller.checkpointManager.SetCheckpoint(4);
 		}
+
+		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 4)
+		{
+			controller.checkpointManager.SetCheckpoint(5);
+			controller.levelLoader.LoadScene("First Dream");
+		}
 	}
 }
