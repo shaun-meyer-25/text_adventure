@@ -80,7 +80,6 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 5)
         {
             checkpoint = maybeCheckpoint;
-            _controller.roomNavigation.currentRoom.SetExitsInRoom(checkpointFiveExits.ToArray());
             
             SaveGameManager.SaveGame(_controller);
         }

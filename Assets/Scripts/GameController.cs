@@ -127,8 +127,8 @@ public class GameController : MonoBehaviour {
 		}
 
 		// We want the game controller to be the source of truth on what the player's options are
-		exitChoices = roomNavigation.currentRoom.exitChoices();
-		exitNames = roomNavigation.currentRoom.exitNames();
+		exitChoices = roomNavigation.currentRoom.exitChoices(checkpointManager.checkpoint);
+		exitNames = roomNavigation.currentRoom.exitNames(checkpointManager.checkpoint);
 	}
 
 	public void DisplayLoggedText () {

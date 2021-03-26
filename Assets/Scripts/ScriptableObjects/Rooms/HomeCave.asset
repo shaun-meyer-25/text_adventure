@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseDescription: 
   baseInvestigationDescription: 
-  description: the fire is low, you should go to the forest and look for wood.
-  roomInvestigationDescription: the fire is low, you should go to the forest and
-    look for wood.
+  description: 
+  roomInvestigationDescription: 
   roomName: home cave
   baseInteractableObjectsInRoom: []
   basePeopleInRoom: []
@@ -24,3 +23,6 @@ MonoBehaviour:
   - keyString: outside
     exitDescription: light filters in from outside
     valueRoom: {fileID: 11400000, guid: b7c0e35f021744710b76a66ca3e42f56, type: 2}
+  - keyString: sleep
+    exitDescription: sleep
+    valueRoom: {fileID: 11400000, guid: 80e63e22d3f392a4ea5b0e8a8f111567, type: 2}

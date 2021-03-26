@@ -14,16 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseDescription: 
   baseInvestigationDescription: 
-  description: you don't need to do this. you can go back! please, please go back.
-  roomInvestigationDescription: 'it is so dark. only a dim light at the end of the
-    tunnel to guide you.
-
-
-'
-  roomName: darkHallway
+  description: 
+  roomInvestigationDescription: 
+  roomName: dark hallway
   baseInteractableObjectsInRoom: []
   basePeopleInRoom: []
-  baseExits:
-  - keyString: forward
-    exitDescription: there is no back, you can only go forward.
-    valueRoom: {fileID: 11400000}
+  baseExits: []
