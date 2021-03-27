@@ -6,7 +6,7 @@ using UnityEngine;
 public class Interaction
 {
     public ActionChoice action;
-    [TextArea] public string textResponse;
+    [TextArea(10, 15)] public string textResponse;
     [SerializeField] public ActionResponse baseActionResponse;
 
     [HideInInspector] public ActionResponse actionResponse;

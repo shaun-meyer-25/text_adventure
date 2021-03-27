@@ -19,7 +19,7 @@ public class CheckpointManager : MonoBehaviour
 
     public List<InteractableObject> checkpointOneItems;
     public List<InteractableObject> checkpointFourItems;
-    public List<Exit> checkpointFiveExits;
+    public List<InteractableObject> checkpointFiveItems;
     [HideInInspector] public int checkpoint;
     
     void Start()
@@ -80,6 +80,7 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 5)
         {
             checkpoint = maybeCheckpoint;
+            _controller.allRoomsInGame.Find(o => o.roomName == "west coast").SetInteractableObjectsInRoom(checkpointFiveItems.ToArray());
             
             SaveGameManager.SaveGame(_controller);
         }
