@@ -23,7 +23,7 @@ MonoBehaviour:
       eyes are pulled back to it.
 
 
-      you should take it. '
+      <color=purple>you should take it.</color> '
     baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
@@ -45,6 +45,5 @@ MonoBehaviour:
 
 
       <color=purple>but we will protect you</color>'
-    baseActionResponse: {fileID: 11400000, guid: f253b1d043e1fb949bec9327cda6fc3f,
-      type: 2}
-    actionResponse: {fileID: 11400000, guid: f253b1d043e1fb949bec9327cda6fc3f, type: 2}
+    baseActionResponse: {fileID: 0}
+    actionResponse: {fileID: 0}

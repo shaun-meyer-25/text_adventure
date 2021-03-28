@@ -195,7 +195,7 @@ MonoBehaviour:
     m_MaxSize: 40
     m_Alignment: 6
     m_AlignByGeometry: 0
-    m_RichText: 0
+    m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
@@ -548,6 +548,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 20b26a4a85dd63e419e9bc30c8401200, type: 2}
   - {fileID: 11400000, guid: b862231ee3e5bb548b57e557f3a6a18a, type: 2}
   - {fileID: 11400000, guid: 80e63e22d3f392a4ea5b0e8a8f111567, type: 2}
+  currentColor: white
   actionLog: []
   exitChoices: []
   exitNames: []
@@ -626,10 +627,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
   checkpointFourItems:
   - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
-  checkpointFiveExits:
-  - keyString: sleep
-    description: 
-    roomName: 
+  checkpointFiveItems: []
   checkpoint: 0
 --- !u!850595691 &1236027653
 LightingSettings:
@@ -1293,6 +1291,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!20 &1937549219
 Camera:
   m_ObjectHideFlags: 0

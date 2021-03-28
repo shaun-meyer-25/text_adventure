@@ -80,7 +80,6 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 5)
         {
             checkpoint = maybeCheckpoint;
-            _controller.allRoomsInGame.Find(o => o.roomName == "west coast").SetInteractableObjectsInRoom(checkpointFiveItems.ToArray());
             
             SaveGameManager.SaveGame(_controller);
         }
