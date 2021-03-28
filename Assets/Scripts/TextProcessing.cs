@@ -14,6 +14,8 @@ public class TextProcessing
 		_controller = controller;
 	}
 	
+	// instead of doing this character by character, we should compose a list or dict of characters by color and go off that, 
+	// not the original string, to avoid adding things like the </color> string 
 	Dictionary<Tuple<int, int>, string> indicesOfColoredCharacters = new Dictionary<Tuple<int, int>, string>();
 	
 	public IEnumerator TypeSentence(string sentence)
@@ -37,11 +39,11 @@ public class TextProcessing
 	private string GetColoredChar(int indexOfChar, string sentence)
 	{
 		string substring = sentence;
-
+// 104, 126
 		while (substring.Contains('<'))
 		{
 			string color = Regex.Match(substring,"(?<=color=)(.*?)(?=>)").Value;
-			int startingColorIndex = substring.IndexOf('>');
+			int startingColorIndex = substring.IndexOf('>') + 1;
 			int endingColorIndex = LookAheadForChar(startingColorIndex, substring, '<');
 
 			if (!indicesOfColoredCharacters.ContainsKey(new Tuple<int, int>(startingColorIndex, endingColorIndex)))
@@ -67,7 +69,7 @@ public class TextProcessing
 	
 	private int LookAheadForChar(int indexOfOpenBracket, string sentence, char c)
 	{
-		string slice = sentence.Substring(indexOfOpenBracket + 1);
-		return slice.IndexOf(c);
+		string slice = sentence.Substring(indexOfOpenBracket);
+		return indexOfOpenBracket + slice.IndexOf(c);
 	}
 }
