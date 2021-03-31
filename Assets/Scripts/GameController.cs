@@ -155,7 +155,7 @@ public class GameController : MonoBehaviour {
 
 		TextProcessing tp = new TextProcessing(this);
 		
-		StartCoroutine(tp.TypeSentence("\n" + logAsText));
+		tp.DisplayText("\n" + logAsText);
 		undisplayedSentences.Clear();
 	}
 	

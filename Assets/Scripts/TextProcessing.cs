@@ -13,33 +13,75 @@ public class TextProcessing
 	{
 		_controller = controller;
 	}
-	
-	// instead of doing this character by character, we should compose a list or dict of characters by color and go off that, 
-	// not the original string, to avoid adding things like the </color> string 
+
 	Dictionary<Tuple<int, int>, string> indicesOfColoredCharacters = new Dictionary<Tuple<int, int>, string>();
+	Dictionary<int, Tuple<string, char>> charactersAndTheirColors = new Dictionary<int, Tuple<string, char>>();
+	List<Tuple<int, int>> rangesOfMarkupCharacters = new List<Tuple<int, int>>();
+
+	public void DisplayText(string sentence)
+	{
+		PopulateList(sentence);
+		PopulateColoredCharDict(sentence);
+		PopulateCharactersAndTheirColors(sentence);
+		_controller.StartCoroutine(TypeSentence(sentence));
+	}
 	
 	public IEnumerator TypeSentence(string sentence)
 	{
-		
-		for (int i = 0; i < sentence.ToCharArray().Length; i++) 
+		for (int i = 0; i < charactersAndTheirColors.Count; i++)
 		{
-			if (i < LookAheadForChar(i, sentence, '<'))
-			{
-				_controller.displayText.text += GetColoredChar(i, sentence);
-			}
-			else
-			{
-				_controller.displayText.text += sentence[i];
-			}
-			
-			yield return new WaitForSeconds(.05f);
+			Tuple<string, char> value = charactersAndTheirColors[i];
+			_controller.displayText.text += "<color=" + value.Item1 + ">" + value.Item2 + "</color>";
+
+			yield return new WaitForSeconds(.005f);
 		}
 	}
 
-	private string GetColoredChar(int indexOfChar, string sentence)
+	private void PopulateCharactersAndTheirColors(string sentence)
+	{
+		int indexOfFinalString = 0;
+		bool indexOutsideMarkupRange;
+
+		for (int i = 0; i < sentence.ToCharArray().Length; i++)
+		{
+
+			indexOutsideMarkupRange = true;
+			foreach (var range in rangesOfMarkupCharacters)
+			{
+				if (Enumerable.Range(range.Item1, range.Item2 - range.Item1 + 1).Contains(i))
+				{
+					indexOutsideMarkupRange = false;
+				}
+			}
+
+			if (indexOutsideMarkupRange)
+			{
+				charactersAndTheirColors.Add(indexOfFinalString, new Tuple<string, char>(GetColorOfChar(i, sentence), sentence[i]));
+				indexOfFinalString += 1;
+			}
+		}
+	}
+	
+	private string GetColorOfChar(int indexOfChar, string sentence)
+	{
+		if (indicesOfColoredCharacters.Count > 0)
+		{
+			foreach (var kvp in indicesOfColoredCharacters)
+			{
+				if (Enumerable.Range(kvp.Key.Item1, kvp.Key.Item2 - kvp.Key.Item1 + 1).Contains(indexOfChar))
+				{
+					return kvp.Value;
+				}
+			}
+		}
+
+		return _controller.currentColor;
+	}
+
+	private void PopulateColoredCharDict(string sentence)
 	{
 		string substring = sentence;
-// 104, 126
+		
 		while (substring.Contains('<'))
 		{
 			string color = Regex.Match(substring,"(?<=color=)(.*?)(?=>)").Value;
@@ -50,26 +92,32 @@ public class TextProcessing
 			{
 				indicesOfColoredCharacters.Add(new Tuple<int, int>(startingColorIndex, endingColorIndex), color);
 			}
+
 			substring = substring.Substring(endingColorIndex + 7);
 		}
+	}
 
-		if (indicesOfColoredCharacters.Count > 0)
+	private void PopulateList(string sentence)
+	{
+		int startingIndex = 0;
+		int endingIndex = 0;
+
+		while (LookAheadForChar(endingIndex + 1, sentence, '<') != -1)
 		{
-			foreach (var kvp in indicesOfColoredCharacters)
-			{
-				if (Enumerable.Range(kvp.Key.Item1, kvp.Key.Item2).Contains(indexOfChar))
-				{
-					return "<color=" + kvp.Value + ">" + sentence[indexOfChar] + "</color>";
-				}
-			}
+			startingIndex = LookAheadForChar(startingIndex + 1, sentence, '<');
+			endingIndex = LookAheadForChar(endingIndex + 1, sentence, '>');
+			
+			rangesOfMarkupCharacters.Add(new Tuple<int, int>(startingIndex, endingIndex));
 		}
-
-		return "<color=" + _controller.currentColor + ">" + sentence[indexOfChar] + "</color>";
 	}
 	
 	private int LookAheadForChar(int indexOfOpenBracket, string sentence, char c)
 	{
 		string slice = sentence.Substring(indexOfOpenBracket);
+		if (slice.IndexOf(c) == -1)
+		{
+			return -1;
+		} 
 		return indexOfOpenBracket + slice.IndexOf(c);
 	}
 }
