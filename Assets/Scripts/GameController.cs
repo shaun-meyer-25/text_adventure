@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,6 +29,7 @@ public class GameController : MonoBehaviour {
 	public InteractChoice[] interactableChoices;
 	public List<InteractableObject> travelingCompanions;
 	public List<Room> allRoomsInGame;
+	public string currentColor;
 	
 	[HideInInspector] public List<string> actionLog = new List<string>();
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
@@ -150,23 +152,16 @@ public class GameController : MonoBehaviour {
 		
 		//displayText.text = logAsText;
 		StopAllCoroutines();
-		StartCoroutine(TypeSentence("\n" + logAsText));
+
+		TextProcessing tp = new TextProcessing(this);
+		
+		tp.DisplayText("\n" + logAsText);
 		undisplayedSentences.Clear();
 	}
 	
 	public void LogStringWithReturn(string stringToAdd) {
 		undisplayedSentences.Add(stringToAdd);
 		actionLog.Add (stringToAdd + "\n");
-	}
-
-	IEnumerator TypeSentence(string sentence)
-	{
-		
-		foreach (var letter in sentence.ToCharArray())
-		{
-			displayText.text += letter;
-			yield return null;
-		}
 	}
 
 	public void LoadRoomData()

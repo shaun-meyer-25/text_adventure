@@ -1,0 +1,18 @@
+[
+  {
+    "chapter": 0,
+    "exits": [{
+      "roomName": "dark hallway",
+      "keyString": "forward",
+      "description": "<color=purple>there is no back, only forward</color>"}
+    ]
+  },
+  {
+    "chapter": 1,
+    "exits": [{
+      "roomName": "dark hallway",
+      "keyString": "forward",
+      "description": "<color=purple>there is no back, only forward</color>"}
+    ]
+  }
+]

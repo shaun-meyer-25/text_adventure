@@ -937,6 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1fe4a4be7c94ab384a1eca678bc7d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoader: {fileID: 0}
   characters:
   - {fileID: 11400000, guid: f774650eecbc87044ae9bb3dedb62731, type: 2}
   - {fileID: 11400000, guid: ef7402b7423a67742bba8efb34061b11, type: 2}
@@ -959,6 +960,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 04ab77325e7d89e4d95fbe51f075a788, type: 2}
   travelingCompanions: []
   allRoomsInGame: []
+  currentColor: 
   actionLog: []
   exitChoices: []
   exitNames: []
@@ -1033,6 +1035,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ohmInPosition: 0
   checkpointOneItems: []
+  checkpointFourItems: []
+  checkpointFiveItems: []
   checkpoint: 0
 --- !u!82 &947878761
 AudioSource:
@@ -1508,6 +1512,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320410135}
   m_CullTransparentMesh: 1
+--- !u!1 &1537530960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1537530962}
+  - component: {fileID: 1537530961}
+  m_Layer: 0
+  m_Name: StaticData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1537530961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537530960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1a7fd1cdc469c4b844092d6472a85e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Checkpoint: 0
+--- !u!4 &1537530962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537530960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 564.8603, y: 111.895096, z: -4.0583763}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1609352434
 GameObject:
   m_ObjectHideFlags: 0
