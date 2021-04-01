@@ -13,13 +13,9 @@ public class OhmGetInPosition : ActionResponse
             controller.LogStringWithReturn("ohm circles around to distract the bear. its gaze follows him.");
             
             // todo - fix
-            controller.roomNavigation.currentRoom.description = "something else";
-            controller.roomNavigation.currentRoom.roomInvestigationDescription = "some other thing";
-            
-            //List<Interaction> interactions =
-                //new List<Interaction>(controller.roomNavigation.currentRoom.PeopleInRoom[0].interactions);
-            //Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
-            //interaction.textResponse = ""
+            //controller.roomNavigation.currentRoom.description = "something else";
+            controller.roomNavigation.currentRoom.roomInvestigationDescription = "the bear is focused on ohm. now is your chance to strike.";
+
             return true;
         }
 

@@ -1,0 +1,125 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic; 
+using System.Runtime.Serialization.Formatters.Binary; 
+using System.IO;
+using System.Linq;
+
+public static class SaveGameManager
+{
+    public static void SaveGame(GameController controller)
+    {
+        SaveGame game = new SaveGame();
+        game.actionLog = controller.actionLog;
+        game.checkpointReached = controller.checkpointManager.checkpoint;
+        game.currentScene = SceneManager.GetActiveScene().name;
+        game.fireLevel = controller.fire.fireLevel;
+        game.nounsInInventory = controller.interactableItems.nounsInInventory;
+        game.travelingCompanions = controller.travelingCompanions.Select(o => o.name).ToList();
+        game.currentRoom = controller.roomNavigation.currentRoom.roomName;
+
+        StaticDataHolder.instance.Checkpoint = controller.checkpointManager.checkpoint;
+
+        for (int i = 0; i < controller.allRoomsInGame.Count; i++)
+        {
+            if (controller.allRoomsInGame[i].PeopleInRoom.Length > 0)
+            {
+                for (int j = 0; j < controller.allRoomsInGame[i].PeopleInRoom.Length; j++)
+                {
+                    game.mapOfPeopleToLocation.Add(controller.allRoomsInGame[i].PeopleInRoom[j].name, 
+                        controller.allRoomsInGame[i].roomName);
+                }
+            }
+        } 
+
+        for (int i = 0; i < controller.allRoomsInGame.Count; i++)
+        {
+            if (controller.allRoomsInGame[i].InteractableObjectsInRoom.Length > 0)
+            {
+                for (int j = 0; j < controller.allRoomsInGame[i].InteractableObjectsInRoom.Length; j++)
+                {
+                    game.mapOfThingsToLocation.Add(controller.allRoomsInGame[i].InteractableObjectsInRoom[j].name, 
+                        controller.allRoomsInGame[i].roomName);
+                }
+            }
+        }
+        
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create (Application.persistentDataPath + "/savedGames.gd");
+        bf.Serialize(file, game);
+        file.Close();
+    }
+
+    public static SaveGame LoadGame()
+    {
+        SaveGame saveGame;
+        if(File.Exists(Application.persistentDataPath + "/savedGames.gd")) {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
+            saveGame = (SaveGame) bf.Deserialize(file);
+            file.Close();
+            return saveGame;
+        }
+        else
+        {
+            Debug.Log("no save file");
+            SceneManager.LoadScene("Main");
+            return null;
+        }
+    }
+
+    public static void PopulateGameData(SaveGame saveGame, GameController controller)
+    {
+        for (int i = 0; i < saveGame.mapOfThingsToLocation.Count; i++)
+        {
+            string objectName = saveGame.mapOfThingsToLocation.Keys.ToList()[i];
+            InteractableObject intObj = controller.interactableItems.usableItemList
+                .Find(o => o.name == objectName);
+            Room location = controller.allRoomsInGame.Find(o => o.roomName == saveGame.mapOfThingsToLocation[objectName]);
+
+            if (location != null)
+            {
+                if (location.InteractableObjectsInRoom == null || !location.InteractableObjectsInRoom.Contains(intObj))
+                {
+                    location.AddObjectToRoom(intObj);
+                }
+            }
+        }
+            
+        for (int i = 0; i < saveGame.mapOfPeopleToLocation.Count; i++)
+        {
+            string personName = saveGame.mapOfPeopleToLocation.Keys.ToList()[i];
+            InteractableObject person = new List<InteractableObject>(controller.characters)
+                .Find(o => o.name == personName);
+            Room location = controller.allRoomsInGame.Find(o => o.roomName == saveGame.mapOfPeopleToLocation[personName]);
+
+            if (location != null)
+            {
+                if (location.PeopleInRoom == null || !location.PeopleInRoom.Contains(person))
+                {
+                    location.AddPersonToRoom(person);
+                }
+            }
+        }
+
+        controller.actionLog = saveGame.actionLog;
+        controller.checkpointManager.checkpoint = saveGame.checkpointReached;
+        controller.fire.fireLevel = saveGame.fireLevel;
+        controller.interactableItems.nounsInInventory = saveGame.nounsInInventory;
+        controller.roomNavigation.currentRoom = controller.allRoomsInGame.Find(o => o.roomName == saveGame.currentRoom);
+        controller.interactableItems.AddActionResponsesToUseDictionary();
+        
+        controller.checkpointManager.SetCheckpoint(saveGame.checkpointReached);
+
+        List<InteractableObject> travelingCompanions = new List<InteractableObject>();
+        for (int i = 0; i < saveGame.travelingCompanions.Count; i++)
+        {
+            travelingCompanions.Add(new List<InteractableObject>(controller.characters)
+                .Find(o => o.name == saveGame.travelingCompanions[i]));
+        }
+
+        controller.travelingCompanions = travelingCompanions; 
+    }
+}

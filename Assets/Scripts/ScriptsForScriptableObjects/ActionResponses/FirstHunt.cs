@@ -16,11 +16,7 @@ public class FirstHunt : ActionResponse
             }
             else
             {
-                controller.LogStringWithReturn("the bear stares you down as you attempt to stab it with your spear. it rears up on its haunches. " +
-                                               "ohm cries out. as the bear lunges at you, your spear buries into its mass, but you are pinned to the ground.");
-                controller.LogStringWithReturn("\nthe bear roars in pain and anger, then buries its teeth into your neck. red pain clouds your vision," +
-                                               "you can't breathe as you feel it tearing out your throat.");
-                controller.YouAreDead();
+                controller.BearKillsYou();
             }
         }
         return true;
