@@ -15,7 +15,7 @@ MonoBehaviour:
   keyword: orb
   noun: orb
   description: 'a small, glowing orb lies in the middle of a crater blasted into
-    the earth. you feel something... new inside of you as you gaze upon it. '
+    the earth. you feel something strange inside of you as you gaze upon it. '
   interactions:
   - action: {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
     textResponse: 'the orb glows the color of a late sun reflected off the sea. you
@@ -27,23 +27,17 @@ MonoBehaviour:
     baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-    textResponse: 'you approach the orb. the still-glowing ground is hot in places,
-      you burn your feet, but that is not at the front of your mind.
+    textResponse: 'you stand above it, it pulses. you take it. you feel powerful.
+      you hold the orb in both hands, the hunger in your gut subsides.
 
 
-      you
-      stand above it, it pulses again. you take it. you feel... powerful. you hold
-      the orb in both hands, no longer aware of the burning in your feet.
-
-      the
-      hunger in your gut subsides.
+      after
+      a moment of gazing into it, the orb ceases its glow. you ought to go home,
+      it is dangerous to be out alone.
 
 
-      after a moment of gazing into it, the
-      orb ceases its glow. the beasts and bugs resume their night sounds. you ought
-      to go home.
-
-
-      <color=purple>but we will protect you</color>'
-    baseActionResponse: {fileID: 0}
-    actionResponse: {fileID: 0}
+      <color=purple>but it will protect
+      you</color>'
+    baseActionResponse: {fileID: 11400000, guid: f253b1d043e1fb949bec9327cda6fc3f,
+      type: 2}
+    actionResponse: {fileID: 11400000, guid: f253b1d043e1fb949bec9327cda6fc3f, type: 2}

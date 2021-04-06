@@ -13,7 +13,7 @@ public class BearKillsYouController : IController
                        "as the bear lunges at you, your spear buries into its mass, but it pins you to the ground." +
                        "\n\nthe bear roars in pain, oblivious to the person it has pinned, inches from its face. " +
                        "\n\nthen\n\n <color=red>buries its teeth into your neck. pain explodes in your vision, your mind.\n\n" +
-                       "you can't breathe as you feel it tearing out your throat.\n\nyou die slowly, painfully. alone.</color>", .03f);
+                       "you can't breathe as you feel it tearing out your throat.\n\nyou die slowly, painfully. alone.</color>", .04f);
     }
 
     void Update()

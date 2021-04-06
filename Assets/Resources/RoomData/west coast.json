@@ -80,12 +80,12 @@
       {
         "roomName": "northwest coast",
         "keyString": "north",
-        "description": "the coast continues to the north"
+        "description": ""
       },
       {
         "roomName": "west grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": ""
       }
     ]
   }

@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
-using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
-using Cursor = UnityEngine.Cursor;
 using Image = UnityEngine.UI.Image;
 
 public class GameController : IController {
@@ -28,6 +23,9 @@ public class GameController : IController {
 	public InteractChoice[] interactableChoices;
 	public List<InteractableObject> travelingCompanions;
 	public List<Room> allRoomsInGame;
+	public Animator backgroundColor;
+	public bool isDaytime;
+	public float processingDelay;
 	
 	[HideInInspector] public List<string> actionLog = new List<string>();
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
@@ -52,6 +50,7 @@ public class GameController : IController {
 		interactableItems = GetComponent<InteractableItems> ();
 		roomNavigation = GetComponent<RoomNavigation> ();
 		fire = GetComponent<Fire>();
+		isDaytime = true;
 		// todo - probably want an audio loading class or method
 		
 		if (SceneManager.GetActiveScene().name != "Experimental") return;
@@ -131,7 +130,9 @@ public class GameController : IController {
 		exitNames = roomNavigation.currentRoom.exitNames(checkpointManager.checkpoint);
 	}
 
-	public void DisplayLoggedText () {
+	public void DisplayLoggedText ()
+	{
+		displayText.text = "";
 		for (int i = 0; i < actionLog.Count; i++)
 		{
 			// todo - get this into a data file
@@ -139,25 +140,42 @@ public class GameController : IController {
 			actionLog[i] = actionLog[i].Replace("you can't go back. only forward.",
 				"<color=purple>" + "you can't go back. only forward." + "</color>");
 		}
-		string logAsText = string.Join ("\n\n", undisplayedSentences.ToArray ());
+		
+		string logAsText = string.Join ("\n", actionLog.ToArray ());
+		List<string> pastLog = new List<string>(logAsText.Split('\n'));
 		while (logAsText.Length > 10000)
 		{
-			List<string> log = new List<string>(logAsText.Split('\n'));
+			pastLog.RemoveRange(0, pastLog.Count / 2);
+			logAsText = string.Join("\n", pastLog.ToArray());
+		}
+		foreach (var line in pastLog)
+		{
+			displayText.text += "\n<color=" + currentColor + ">" + line + "</color>";
+		}
+
+		string undisplayedLogAsText = string.Join ("\n\n", undisplayedSentences.ToArray ());
+		while (undisplayedLogAsText.Length > 10000)
+		{
+			List<string> log = new List<string>(undisplayedLogAsText.Split('\n'));
 			log.RemoveRange(0, log.Count / 2);
-			logAsText = string.Join("\n", log.ToArray());
+			undisplayedLogAsText = string.Join("\n", log.ToArray());
 		}
 		
 		StopAllCoroutines();
 
 		TextProcessing tp = new TextProcessing(this);
 		
-		tp.DisplayText("\n" + logAsText, .005f);
+		tp.DisplayText("\n" + undisplayedLogAsText, processingDelay);
+		foreach (var sentence in undisplayedSentences)
+		{
+			actionLog.Add(sentence);
+		}
 		undisplayedSentences.Clear();
 	}
 	
 	public void LogStringWithReturn(string stringToAdd) {
 		undisplayedSentences.Add(stringToAdd);
-		actionLog.Add (stringToAdd + "\n");
+//		actionLog.Add (stringToAdd + "\n");
 	}
 
 	public void LoadRoomData()
@@ -236,7 +254,7 @@ public class GameController : IController {
 		{
 			return verbDictionary[noun];
 		}
-		return "You can't " + verb + " " + noun;
+		return "you can't " + verb + " " + noun;
 	}
 
 	void ClearCollectionsForNewRoom() {
@@ -340,26 +358,25 @@ public class GameController : IController {
 		return combinedText;
 	}
 
-/*	IEnumerator LoadDeathScene()
+	public void SetDaylight()
 	{
-		LogStringWithReturn("the unforgiving world has claimed your life.");
-		for (int i = 0; i < NUMBER_OF_OPTIONS; i++)
-		{
-			GameObject button = GameObject.Find("Option" + (i + 1));
-			button.GetComponent<Button>().interactable = false;
-		}
-		yield return new WaitForSeconds(3);
-		
-		//levelLoader.LoadScene("Death Menu");
-		Debug.Log("printing stuff 2.5 sec later");
-		SceneManager.LoadScene("Death Menu");
-	} */
+		backgroundColor.SetTrigger("SetDaytime");
+		currentColor = "black";
+	}
+
+	public void SetNighttime()
+	{
+		backgroundColor.SetTrigger("SetNighttime");
+		currentColor = "white";
+	}
+	
 	public void BearKillsYou()
 	{
-
-
-		// todo - get this working
-		//StartCoroutine(LoadDeathScene());
 		SceneManager.LoadScene("BearKillsYou");
+	}
+	
+	void DelayedSceneLoad()
+	{
+		levelLoader.LoadScene("Thank You");
 	}
 }

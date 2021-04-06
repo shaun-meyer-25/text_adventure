@@ -19,6 +19,8 @@ public static class SaveGameManager
         game.nounsInInventory = controller.interactableItems.nounsInInventory;
         game.travelingCompanions = controller.travelingCompanions.Select(o => o.name).ToList();
         game.currentRoom = controller.roomNavigation.currentRoom.roomName;
+        game.isDaylight = controller.isDaytime;
+        game.currentTextColor = controller.currentColor;
 
         StaticDataHolder.instance.Checkpoint = controller.checkpointManager.checkpoint;
 
@@ -72,6 +74,16 @@ public static class SaveGameManager
 
     public static void PopulateGameData(SaveGame saveGame, GameController controller)
     {
+        controller.isDaytime = saveGame.isDaylight;
+        if (saveGame.isDaylight)
+        {
+            controller.SetDaylight();
+        }
+        else
+        {
+            controller.SetNighttime();
+        }
+
         for (int i = 0; i < saveGame.mapOfThingsToLocation.Count; i++)
         {
             string objectName = saveGame.mapOfThingsToLocation.Keys.ToList()[i];

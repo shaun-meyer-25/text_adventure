@@ -15,6 +15,8 @@ public class SaveGame
     public string currentScene;
     public List<string> travelingCompanions;
     public string currentRoom;
+    public string currentTextColor;
+    public bool isDaylight;
 
     public SaveGame()
     {

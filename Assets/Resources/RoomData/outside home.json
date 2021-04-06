@@ -130,12 +130,12 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": "grasslands to the north"
+        "description": ""
       },
       {
         "roomName": "south forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": ""
       },
       {
         "roomName": "home cave",

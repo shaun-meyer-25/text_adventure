@@ -130,17 +130,17 @@
       {
         "roomName": "northwest grasslands",
         "keyString": "north",
-        "description": "the plains stretch to the north"
+        "description": ""
       },
       {
         "roomName": "outside home",
         "keyString": "east",
-        "description": "home lies just to the east"
+        "description": ""
       },
       {
         "roomName": "southwest coast",
         "keyString": "south",
-        "description": "a small mass of land juts out into the sea to the south"
+        "description": ""
       },
       {
         "roomName": "west coast",

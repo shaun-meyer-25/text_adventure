@@ -8,7 +8,7 @@ public class Observe : ActionChoice
     public override void RespondToAction (GameController controller, string[] separatedInputWords) {
 
         if (separatedInputWords.Length == 1) {
-            controller.LogStringWithReturn("Observe what?");
+            controller.LogStringWithReturn("observe what?");
             controller.UpdateRoomChoices(controller.observableChoices);
             controller.isObserving = true;
         } else if (separatedInputWords.Length == 2) {
@@ -16,12 +16,12 @@ public class Observe : ActionChoice
             {
                 if (controller.roomNavigation.currentRoom.InteractableObjectsInRoom.Length > 0)
                 {
-                    controller.LogStringWithReturn("Observe which object?");
+                    controller.LogStringWithReturn("observe which object?");
                     controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.InteractableObjectsInRoom);
                 }
                 else
                 {
-                    controller.LogStringWithReturn("You see no objects nearby");
+                    controller.LogStringWithReturn("you see no objects nearby");
                     controller.UpdateRoomChoices(controller.startingActions);
                     controller.isObserving = false;
                 }

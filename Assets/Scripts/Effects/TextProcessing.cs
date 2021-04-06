@@ -35,6 +35,7 @@ public class TextProcessing
 
 			yield return new WaitForSeconds(processingDelay);
 		}
+
 	}
 
 	private void PopulateCharactersAndTheirColors(string sentence)

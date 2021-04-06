@@ -52,7 +52,7 @@ public class InteractableItems : MonoBehaviour
                 if (interaction.ActionResponse == null)
                     continue;
 
-                if (!useDictionary.ContainsKey(noun))
+                if (!useDictionary.ContainsKey(noun) && interaction.action.keyword == "use")
                 {
                     useDictionary.Add(noun, interaction.ActionResponse);
                 }
@@ -78,7 +78,7 @@ public class InteractableItems : MonoBehaviour
 
         if (nounsInInventory.Count > 0)
         {
-            controller.LogStringWithReturn("You have ");
+            controller.LogStringWithReturn("you have ");
             for (int i = 0; i < nounsInInventory.Count; i++)
             {
                 controller.LogStringWithReturn(nounsInInventory[i]);
@@ -86,7 +86,7 @@ public class InteractableItems : MonoBehaviour
         }
         else
         {
-            controller.LogStringWithReturn("You don't have anything right now");
+            controller.LogStringWithReturn("you don't have anything right now");
         }
     }
     
@@ -110,7 +110,7 @@ public class InteractableItems : MonoBehaviour
         }
         else
         {
-            controller.LogStringWithReturn("No " + noun + " here to take.");
+            controller.LogStringWithReturn("no " + noun + " here to take.");
             return null;
         }
     }

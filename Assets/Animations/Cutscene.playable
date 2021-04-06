@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 19.866666666666667
+  m_Time: 16.833333333333332
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 465be08e5d8decf408852c7a9b5c05ac, type: 2}
@@ -1419,7 +1419,9 @@ MonoBehaviour:
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
   m_Parent: {fileID: 11400000}
-  m_Children: []
+  m_Children:
+  - {fileID: 526859784766278829}
+  - {fileID: 2235720485693563497}
   m_Clips: []
   m_Markers:
     m_Objects: []
@@ -1521,6 +1523,7 @@ MonoBehaviour:
   - {fileID: 8622469080555256855}
   - {fileID: -4650047925180356229}
   - {fileID: 4350606375118512246}
+  - {fileID: -3154117216053952429}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -1879,8 +1882,8 @@ MonoBehaviour:
   m_Curves: {fileID: 0}
   m_Parent: {fileID: 11400000}
   m_Children:
-  - {fileID: 2837212107430188438}
-  - {fileID: -6762296570036036998}
+  - {fileID: 7893508235445472525}
+  - {fileID: -5248778980927145527}
   m_Clips: []
   m_Markers:
     m_Objects: []
@@ -2109,7 +2112,9 @@ MonoBehaviour:
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
   m_Parent: {fileID: 11400000}
-  m_Children: []
+  m_Children:
+  - {fileID: -6070268182897792167}
+  - {fileID: 4346797910726361571}
   m_Clips: []
   m_Markers:
     m_Objects: []

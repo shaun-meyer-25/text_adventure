@@ -163,7 +163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02379081, y: 0.67741764}
   m_AnchorMax: {x: 0.9692989, y: 0.9514483}
-  m_AnchoredPosition: {x: -5.279541, y: -76.38226}
+  m_AnchoredPosition: {x: -5.2795715, y: -76.38226}
   m_SizeDelta: {x: 10.6, y: 174.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &473952483
@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 603948180}
   - component: {fileID: 603948182}
   - component: {fileID: 603948181}
+  - component: {fileID: 603948183}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -290,6 +291,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603948179}
   m_CullTransparentMesh: 1
+--- !u!95 &603948183
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603948179}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9b2b9d61412f094896bf208cb62c766, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &930233360
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,13 +530,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1fe4a4be7c94ab384a1eca678bc7d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayText: {fileID: 473952483}
+  currentColor: white
   levelLoader: {fileID: 0}
   characters:
   - {fileID: 11400000, guid: f774650eecbc87044ae9bb3dedb62731, type: 2}
   - {fileID: 11400000, guid: ef7402b7423a67742bba8efb34061b11, type: 2}
   - {fileID: 11400000, guid: 73397920584cbd1428ce8a94dc9e92bb, type: 2}
   - {fileID: 11400000, guid: 72f9d79fab6b8d2459083437c9ab4b05, type: 2}
-  displayText: {fileID: 473952483}
   background: {fileID: 0}
   actions:
   - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
@@ -548,7 +569,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 20b26a4a85dd63e419e9bc30c8401200, type: 2}
   - {fileID: 11400000, guid: b862231ee3e5bb548b57e557f3a6a18a, type: 2}
   - {fileID: 11400000, guid: 80e63e22d3f392a4ea5b0e8a8f111567, type: 2}
-  currentColor: white
+  backgroundColor: {fileID: 603948183}
+  isDaytime: 1
+  processingDelay: 0.005
   actionLog: []
   exitChoices: []
   exitNames: []
@@ -572,8 +595,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947878754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 766, y: 386.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 733.96234, y: 155.0723, z: -1839.607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1074,7 +1097,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96

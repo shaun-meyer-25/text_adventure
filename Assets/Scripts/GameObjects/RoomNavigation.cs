@@ -31,6 +31,22 @@ public class RoomNavigation : MonoBehaviour {
 			{
 				currentRoom.SetBasePeopleInRoom();
 			}
+			
+			if (currentRoom.roomName == "home cave")
+			{
+				if (controller.isDaytime && controller.currentColor == "white")
+				{
+					controller.SetDaylight();
+				} 
+			}
+			else
+			{
+				if (controller.allRoomsInGame.Find(o => o.roomName == exitDictionary[directionNoun].roomName).roomName ==
+				    "home cave" && controller.currentColor == "black")
+				{
+					controller.SetNighttime();
+				}
+			}
 			currentRoom = controller.allRoomsInGame.Find(o => o.roomName == exitDictionary[directionNoun].roomName);
 			controller.LogStringWithReturn("you go " + directionNoun);
 
@@ -59,7 +75,7 @@ public class RoomNavigation : MonoBehaviour {
 			controller.checkpointManager.SetCheckpoint(2);
 		}
 
-		if (currentRoom.roomName == "north foothills" && controller.checkpointManager.checkpoint == 2)
+		if (currentRoom.roomName == "north foothills" && controller.checkpointManager.checkpoint == 2 && !controller.checkpointManager.ohmInPosition)
 		{
 			controller.checkpointManager.SetCheckpoint(3);
 		}

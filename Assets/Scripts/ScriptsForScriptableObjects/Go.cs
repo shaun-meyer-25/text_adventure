@@ -20,7 +20,7 @@ public class Go : ActionChoice {
 			}
 		
 			if (exits.Count > 0) {
-				controller.LogStringWithReturn("Go where?");
+				controller.LogStringWithReturn("go where?");
 				controller.UpdateRoomChoices(exits.ToArray());
 			}
 		} else {

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53f39764d176e62438389f632e742504, type: 3}
-  m_Name: TakeOrb
+  m_Script: {fileID: 11500000, guid: 925f2bbaeaa4c104881f67df64f6e2c6, type: 3}
+  m_Name: ForagingBerries
   m_EditorClassIdentifier: 
-  requiredString: 
+  requiredString: berries
