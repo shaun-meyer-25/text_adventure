@@ -1,0 +1,92 @@
+[
+  {
+    "chapter": 0,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "north",
+        "description": "the watering hole lies to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "west",
+        "description": "the rocky terrain levels out and gives way to forest to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 1,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "north",
+        "description": "the watering hole lies to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "west",
+        "description": "the rocky terrain levels out and gives way to forest to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "north",
+        "description": "the watering hole lies to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "west",
+        "description": "the rocky terrain levels out and gives way to forest to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 3,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "north",
+        "description": "the watering hole lies to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "west",
+        "description": "the rocky terrain levels out and gives way to forest to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 4,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "north",
+        "description": "the watering hole lies to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "west",
+        "description": "the rocky terrain levels out and gives way to forest to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 5,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "north",
+        "description": "the watering hole lies to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "west",
+        "description": "the rocky terrain levels out and gives way to forest to the west"
+      }
+    ]
+  }
+]

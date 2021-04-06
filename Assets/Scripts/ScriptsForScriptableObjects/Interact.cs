@@ -8,7 +8,7 @@ public class Interact : ActionChoice
     public override void RespondToAction (GameController controller, string[] separatedInputWords) {
 
         if (separatedInputWords.Length == 1) {
-            controller.LogStringWithReturn("Interact with what?");
+            controller.LogStringWithReturn("interact with what?");
             controller.UpdateRoomChoices(controller.interactableChoices);
             controller.isInteracting = true;
 
@@ -17,12 +17,12 @@ public class Interact : ActionChoice
             {
                 if (controller.roomNavigation.currentRoom.InteractableObjectsInRoom.Length > 0)
                 {
-                    controller.LogStringWithReturn("Which object?");
+                    controller.LogStringWithReturn("which object?");
                     controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.InteractableObjectsInRoom);
                 }
                 else
                 {
-                    controller.LogStringWithReturn("You see no objects nearby");
+                    controller.LogStringWithReturn("you see no objects nearby");
                     controller.UpdateRoomChoices(controller.startingActions);
                     controller.isInteracting = false;
                 }
@@ -31,12 +31,12 @@ public class Interact : ActionChoice
             {
                 if (controller.roomNavigation.currentRoom.PeopleInRoom.Length > 0)
                 {
-                    controller.LogStringWithReturn("Which person?");
+                    controller.LogStringWithReturn("which person?");
                     controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.PeopleInRoom);
                 }
                 else
                 {
-                    controller.LogStringWithReturn("Nobody around yet");
+                    controller.LogStringWithReturn("nobody around yet");
                     controller.UpdateRoomChoices(controller.startingActions);
                     controller.isInteracting = false;
                 }
@@ -67,6 +67,14 @@ public class Interact : ActionChoice
                 if (takeDictionary != null)
                 {
                     controller.LogStringWithReturn(controller.TestVerbDictionaryWithNoun(takeDictionary, separatedInputWords[0], separatedInputWords[1]));
+                    InteractableObject obj = controller.interactableItems.usableItemList
+                        .Find(o => o.noun == separatedInputWords[1]);
+                    Interaction interaction =
+                        new List<Interaction>(obj.interactions).Find(o => o.action.keyword.Equals("interact"));
+                    if (!(interaction.ActionResponse == null))
+                    {
+                        interaction.ActionResponse.DoActionResponse(controller);
+                    }
                 }
 
                 controller.UpdateRoomChoices(controller.startingActions);

@@ -21,8 +21,13 @@ MonoBehaviour:
     textResponse: 
     baseActionResponse: {fileID: 11400000, guid: ee967bb8c8793a94f81ab9c9e806ad5b,
       type: 2}
-    actionResponse: {fileID: 0}
+    actionResponse: {fileID: 11400000, guid: ee967bb8c8793a94f81ab9c9e806ad5b, type: 2}
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
     textResponse: you take the spear. ohm looks ready to hunt with you.
+    baseActionResponse: {fileID: 0}
+    actionResponse: {fileID: 0}
+  - action: {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
+    textResponse: it is sharp, deadly. used for hunting the dangerous beasts which
+      live around here.
     baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}

@@ -11,13 +11,13 @@ public class Use : ActionChoice
         {
             if (controller.interactableItems.InteractableObjectsInInventory().Count > 0)
             {
-                controller.LogStringWithReturn("Use what?");
+                controller.LogStringWithReturn("use what?");
                 controller.UpdateRoomChoices(controller.interactableItems.InteractableObjectsInInventory().ToArray());
                 controller.isUsing = true;
             }
             else
             {
-                controller.LogStringWithReturn("There is nothing in your inventory");
+                controller.LogStringWithReturn("there is nothing in your inventory");
             }
         }
         else if (separatedInputWords.Length == 2)

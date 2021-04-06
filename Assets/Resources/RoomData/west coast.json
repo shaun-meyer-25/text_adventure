@@ -1,0 +1,92 @@
+[
+  {
+    "chapter": 0,
+    "exits": [
+      {
+        "roomName": "northwest coast",
+        "keyString": "north",
+        "description": "the coast continues to the north"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "east",
+        "description": "from here, the vast grasslands appear to begin to the east"
+      }
+    ]
+  },
+  {
+    "chapter": 1,
+    "exits": [
+      {
+        "roomName": "northwest coast",
+        "keyString": "north",
+        "description": "the coast continues to the north"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "east",
+        "description": "from here, the vast grasslands appear to begin to the east"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "exits": [
+      {
+        "roomName": "northwest coast",
+        "keyString": "north",
+        "description": "the coast continues to the north"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "east",
+        "description": "from here, the vast grasslands appear to begin to the east"
+      }
+    ]
+  },
+  {
+    "chapter": 3,
+    "exits": [
+      {
+        "roomName": "northwest coast",
+        "keyString": "north",
+        "description": "the coast continues to the north"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "east",
+        "description": "from here, the vast grasslands appear to begin to the east"
+      }
+    ]
+  },
+  {
+    "chapter": 4,
+    "exits": [
+      {
+        "roomName": "northwest coast",
+        "keyString": "north",
+        "description": "the coast continues to the north"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "east",
+        "description": "from here, the vast grasslands appear to begin to the east"
+      }
+    ]
+  },
+  {
+    "chapter": 5,
+    "exits": [
+      {
+        "roomName": "northwest coast",
+        "keyString": "north",
+        "description": ""
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "east",
+        "description": ""
+      }
+    ]
+  }
+]

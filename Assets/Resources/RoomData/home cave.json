@@ -1,0 +1,50 @@
+[
+        {
+          "chapter": 0,
+          "exits": [{
+            "roomName": "outside home", 
+            "keyString": "outside",
+            "description": "light filters in from outside"}
+          ]
+        },
+        {
+          "chapter": 1,
+          "exits": [{
+            "roomName": "outside home",
+            "keyString": "outside",
+            "description": "light filters in from outside"}
+          ]
+        },
+        {
+          "chapter": 2,
+          "exits": [{
+            "roomName": "outside home",
+            "keyString": "outside",
+            "description": "light filters in from outside"}
+          ]
+        },
+        {
+          "chapter": 3,
+          "exits": [{
+            "roomName": "outside home",
+            "keyString": "outside",
+            "description": "light filters in from outside"}
+          ]
+        },
+        {
+          "chapter": 4,
+          "exits": [{
+            "roomName": "sleep",
+            "keyString": "sleep",
+            "description": "you feel energy for little else but sleep. your normal place next to tei waits for you."
+          }]
+        },
+        {
+          "chapter": 5,
+          "exits": [{
+            "roomName": "outside home",
+            "keyString": "outside",
+            "description": "it is night out. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+          }]
+        }
+]

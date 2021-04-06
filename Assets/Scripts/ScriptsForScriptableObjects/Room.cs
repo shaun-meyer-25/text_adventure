@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -10,13 +11,15 @@ public class Room : ScriptableObject
 {
 	[SerializeField] [TextArea] private string baseDescription;
 	[SerializeField] [TextArea] private string baseInvestigationDescription;
+
+	private TextAsset _roomExitData;
+	private List<ChapterExits> _chapterExits;
 	
 	[TextArea]
 	public string description;
 	[TextArea]
 	public string roomInvestigationDescription;
 	public string roomName;
-	public Exit[] exits;
 	
 	[SerializeField] private List<InteractableObject> baseInteractableObjectsInRoom;
 	
@@ -35,6 +38,12 @@ public class Room : ScriptableObject
 		get { return peopleInRoom;  }
 	}
 
+	public Exit[] GetExits(int checkpoint)
+	{
+		ChapterExits chapterExits = _chapterExits.Find(o => o.chapter == checkpoint);
+		return chapterExits.exits.ToArray();
+	}
+	
 	public void SetInteractableObjectsInRoom(InteractableObject[] objects)
 	{
 		interactableObjectsInRoom = objects;
@@ -74,6 +83,14 @@ public class Room : ScriptableObject
 
 	private void OnEnable()
 	{
+		string filePath = "RoomData/" + roomName;
+		TextAsset file = Resources.Load<TextAsset>(filePath);
+		if (file != null)
+		{
+			_chapterExits = new List<ChapterExits>(JsonUtility.FromJson<Wrapper<ChapterExits>>("{\"array\":" + file.text + "}").array);
+		}
+		
+		
 		interactableObjectsInRoom = baseInteractableObjectsInRoom.ToArray();
 		peopleInRoom = basePeopleInRoom.ToArray();
 		description = baseDescription;
@@ -84,25 +101,28 @@ public class Room : ScriptableObject
 	{
 	}
 
-	public List<string> exitNames()
+	public List<string> exitNames(int checkpoint)
 	{
 		List<string> exitNames = new List<string>();
-		for (int i = 0; i < exits.Length; i++)
+		ChapterExits chapterExits = _chapterExits.Find(o => o.chapter == checkpoint);
+
+		for (int i = 0; i < GetExits(checkpoint).Length; i++)
 		{
-			exitNames.Add(exits[i].keyString);
+			exitNames.Add(chapterExits.exits[i].keyString);
 		}
 
 		return exitNames;
 	}
 	
-	public List<ExitChoice> exitChoices()
+	public List<ExitChoice> exitChoices(int checkpoint)
 	{
 		List<ExitChoice> exitChoices = new List<ExitChoice>();
+		ChapterExits chapterExits = _chapterExits.Find(o => o.chapter == checkpoint);
 
-		for (int i = 0; i < exits.Length; i++)
+		for (int i = 0; i <  GetExits(checkpoint).Length; i++)
 		{
 			ExitChoice choice = CreateInstance<ExitChoice>();
-			choice.keyword = exits[i].keyString;
+			choice.keyword = chapterExits.exits[i].keyString;
 			exitChoices.Add(choice);
 		}
 

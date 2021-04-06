@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc7cf5db359646d6bf6e9ed1f7077dd, type: 3}
   m_Name: HomeCave
   m_EditorClassIdentifier: 
-  description: 'here is home. '
-  roomInvestigationDescription: everyone else is still asleep. the fire is low, you
-    should go to the forest and look for wood.
+  baseDescription: 
+  baseInvestigationDescription: 
+  description: 
+  roomInvestigationDescription: 
   roomName: home cave
-  exits:
+  baseInteractableObjectsInRoom: []
+  basePeopleInRoom: []
+  baseExits:
   - keyString: outside
     exitDescription: light filters in from outside
     valueRoom: {fileID: 11400000, guid: b7c0e35f021744710b76a66ca3e42f56, type: 2}
-  baseInteractableObjectsInRoom: []
+  - keyString: sleep
+    exitDescription: sleep
+    valueRoom: {fileID: 11400000, guid: 80e63e22d3f392a4ea5b0e8a8f111567, type: 2}

@@ -19,10 +19,16 @@ MonoBehaviour:
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
     textResponse: you spend several hours searching for enough berries to bring back
       home. it is almost nightfall.
-    baseActionResponse: {fileID: 0}
-    actionResponse: {fileID: 0}
+    baseActionResponse: {fileID: 11400000, guid: 4a05c8c1588ece94cb53d4653e69eb74,
+      type: 2}
+    actionResponse: {fileID: 11400000, guid: 4a05c8c1588ece94cb53d4653e69eb74, type: 2}
   - action: {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}
     textResponse: 
     baseActionResponse: {fileID: 11400000, guid: 4ebab4edad4f9874e842cc8a53387cb8,
       type: 2}
-    actionResponse: {fileID: 0}
+    actionResponse: {fileID: 11400000, guid: 4ebab4edad4f9874e842cc8a53387cb8, type: 2}
+  - action: {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
+    textResponse: substantial food in large enough quantities. foraging them is time
+      consuming.
+    baseActionResponse: {fileID: 0}
+    actionResponse: {fileID: 11400000, guid: 4ebab4edad4f9874e842cc8a53387cb8, type: 2}

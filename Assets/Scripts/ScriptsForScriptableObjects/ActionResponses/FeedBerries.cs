@@ -14,9 +14,7 @@ public class FeedBerries : ActionResponse
                                            " this cannot continue much longer. a successful hunt must come soon." +
                                            "\n\nnothing left now but to go to bed.");
 
-            controller.checkpointManager.SetCheckpoint(5);
-            // todo -  delay a number of seconds, do the generic scene dissolve that i am definitely going to write someday
-            SceneManager.LoadScene("First Dream");
+
             return true;
         }
 

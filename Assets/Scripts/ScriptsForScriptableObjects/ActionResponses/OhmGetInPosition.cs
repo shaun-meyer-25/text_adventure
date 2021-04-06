@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/OhmGetInPosition")]
@@ -10,16 +11,18 @@ public class OhmGetInPosition : ActionResponse
         if (controller.roomNavigation.currentRoom.roomName == requiredString)
         {
             controller.checkpointManager.ohmInPosition = true;
-            controller.LogStringWithReturn("ohm circles around to distract the bear. its gaze follows him.");
-            
-            // todo - fix
-            controller.roomNavigation.currentRoom.description = "something else";
-            controller.roomNavigation.currentRoom.roomInvestigationDescription = "some other thing";
-            
-            //List<Interaction> interactions =
-                //new List<Interaction>(controller.roomNavigation.currentRoom.PeopleInRoom[0].interactions);
-            //Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
-            //interaction.textResponse = ""
+            if (!controller.displayText.text.Contains("ohm circles around"))
+            {
+                controller.LogStringWithReturn("ohm circles around to distract the bear. its gaze follows him.");
+            }
+
+            List<Interaction> interactions =
+                new List<Interaction>(controller.characters.First(o => o.noun.Equals("ohm")).interactions);
+            Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
+            interaction.textResponse = "they motion to you to strike";
+            interaction.SetActionResponse(null);
+            controller.roomNavigation.currentRoom.roomInvestigationDescription = "the bear is focused on ohm. now is your chance to strike.";
+
             return true;
         }
 

@@ -1,0 +1,152 @@
+[
+  {
+    "chapter": 0,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "north",
+        "description": "the plains stretch to the north"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "east",
+        "description": "home lies just to the east"
+      },
+      {
+        "roomName": "southwest coast",
+        "keyString": "south",
+        "description": "a small mass of land juts out into the sea to the south"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "west",
+        "description": "coast lies to the west, you can smell the sea from here"
+      }
+    ]
+  },
+  {
+    "chapter": 1,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "north",
+        "description": "the plains stretch to the north"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "east",
+        "description": "home lies just to the east"
+      },
+      {
+        "roomName": "southwest coast",
+        "keyString": "south",
+        "description": "a small mass of land juts out into the sea to the south"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "west",
+        "description": "coast lies to the west, you can smell the sea from here"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "north",
+        "description": "the plains stretch to the north"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "east",
+        "description": "home lies just to the east"
+      },
+      {
+        "roomName": "southwest coast",
+        "keyString": "south",
+        "description": "a small mass of land juts out into the sea to the south"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "west",
+        "description": "coast lies to the west, you can smell the sea from here"
+      }
+    ]
+  },
+  {
+    "chapter": 3,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "north",
+        "description": "the plains stretch to the north"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "east",
+        "description": "home lies just to the east"
+      },
+      {
+        "roomName": "southwest coast",
+        "keyString": "south",
+        "description": "a small mass of land juts out into the sea to the south"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "west",
+        "description": "coast lies to the west, you can smell the sea from here"
+      }
+    ]
+  },
+  {
+    "chapter": 4,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "north",
+        "description": "the plains stretch to the north"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "east",
+        "description": "home lies just to the east"
+      },
+      {
+        "roomName": "southwest coast",
+        "keyString": "south",
+        "description": "a small mass of land juts out into the sea to the south"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "west",
+        "description": "coast lies to the west, you can smell the sea from here"
+      }
+    ]
+  },
+  {
+    "chapter": 5,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "north",
+        "description": ""
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "east",
+        "description": ""
+      },
+      {
+        "roomName": "southwest coast",
+        "keyString": "south",
+        "description": ""
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "west",
+        "description": "coast lies to the west. the glow is stronger now, you are almost upon it"
+      }
+    ]
+  }
+]
