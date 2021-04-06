@@ -25,7 +25,7 @@ public class TextProcessing
 		PopulateCharactersAndTheirColors(sentence);
 		_controller.StartCoroutine(TypeSentence(sentence, processingDelay));
 	}
-	
+
 	public IEnumerator TypeSentence(string sentence, float processingDelay)
 	{
 		for (int i = 0; i < charactersAndTheirColors.Count; i++)
@@ -81,20 +81,21 @@ public class TextProcessing
 
 	private void PopulateColoredCharDict(string sentence)
 	{
-		string substring = sentence;
-		
-		while (substring.Contains('<'))
+		int startingIndex = 0;
+		int endingIndex = 0;
+
+		while (LookAheadForChar(endingIndex + 1, sentence, '<') != -1)
 		{
-			string color = Regex.Match(substring,"(?<=color=)(.*?)(?=>)").Value;
-			int startingColorIndex = substring.IndexOf('>') + 1;
-			int endingColorIndex = LookAheadForChar(startingColorIndex, substring, '<');
+			string color = Regex.Match(sentence.Substring(endingIndex),"(?<=color=)(.*?)(?=>)").Value;
+			int startingColorIndex = LookAheadForChar(endingIndex + 1, sentence, '>') + 1;
+			int endingColorIndex = LookAheadForChar(startingColorIndex, sentence, '<');
 
 			if (!indicesOfColoredCharacters.ContainsKey(new Tuple<int, int>(startingColorIndex, endingColorIndex)))
 			{
 				indicesOfColoredCharacters.Add(new Tuple<int, int>(startingColorIndex, endingColorIndex), color);
 			}
 
-			substring = substring.Substring(endingColorIndex + 7);
+			endingIndex = endingColorIndex + 7;
 		}
 	}
 
