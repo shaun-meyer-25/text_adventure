@@ -14,6 +14,7 @@ public class GameController : IController {
 	private Dictionary<string, string> caveDescription;
 	private Dictionary<string, string> caveInvestigationDescriptions;
 	private List<string> undisplayedSentences = new List<string>();
+
 	public LevelLoader levelLoader;
 	public InteractableObject[] characters;
 	public Image background;
@@ -26,6 +27,10 @@ public class GameController : IController {
 	public Animator backgroundColor;
 	public bool isDaytime;
 	public float processingDelay;
+	public Text northLabel;
+	public Text eastLabel;
+	public Text westLabel;
+	public Text southLabel;
 	
 	[HideInInspector] public List<string> actionLog = new List<string>();
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
@@ -45,6 +50,25 @@ public class GameController : IController {
 	
 	void Awake ()
 	{
+		foreach (var text in FindObjectsOfType<Text>())
+		{
+			if (text.name == "NorthExitLabel")
+			{
+				northLabel = text;
+			}
+			if (text.name == "EastExitLabel")
+			{
+				eastLabel = text;
+			}
+			if (text.name == "SouthExitLabel")
+			{
+				southLabel = text;
+			}
+			if (text.name == "WestExitLabel")
+			{
+				westLabel = text;
+			}
+		}
 		levelLoader = FindObjectOfType<LevelLoader>();
 		checkpointManager = GetComponent<CheckpointManager>();
 		interactableItems = GetComponent<InteractableItems> ();
@@ -81,7 +105,7 @@ public class GameController : IController {
 		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
-		
+		roomNavigation.SetExitLabels(roomNavigation.currentRoom.GetExits(checkpointManager.checkpoint));
 	}
 
 	public void UpdateRoomChoices(Choice[] choices)
@@ -378,5 +402,27 @@ public class GameController : IController {
 	void DelayedSceneLoad()
 	{
 		levelLoader.LoadScene("Thank You");
+	}
+
+	public Text GetTextForButton(string key)
+	{
+		if (key == "0")
+		{
+			return northLabel;
+		}
+		else if (key == "1")
+		{
+			return eastLabel;
+		}
+		else if (key == "2")
+		{
+			return southLabel;
+		}
+		else if (key == "3")
+		{
+			return westLabel;
+		}
+
+		throw new Exception("we don't have a preferred key for this");
 	}
 }
