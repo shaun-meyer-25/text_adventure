@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using Object = System.Object;
 
 public class RoomNavigation : MonoBehaviour {
@@ -53,6 +55,8 @@ public class RoomNavigation : MonoBehaviour {
 			CheckIfCheckpointNeedsSetting();
 			
 			controller.LoadRoomDataAndDisplayRoomText();
+			SetExitLabels(currentRoom.GetExits(controller.checkpointManager.checkpoint));
+
 			controller.UpdateRoomChoices(controller.startingActions);
 			
 			return true;
@@ -90,6 +94,37 @@ public class RoomNavigation : MonoBehaviour {
 		{
 			controller.checkpointManager.SetCheckpoint(5);
 			controller.levelLoader.LoadScene("First Dream");
+		}
+	}
+
+	public void SetExitLabels(Exit[] choices)
+	{
+		List<Exit> listOfExits = new List<Exit>(choices);
+		for (int i = 0; i < 4; i++) {
+			if (i == 0)
+			{
+				Exit e = listOfExits.Find(o => (o.keyString == "north" || o.keyString == "outside"));
+				if (e != null) controller.northLabel.text = e.roomName;
+				else controller.northLabel.text = null;
+			}
+			if (i == 1)
+			{
+				Exit e = listOfExits.Find(o => o.keyString == "east");
+				if (e != null) controller.eastLabel.text = e.roomName;
+				else controller.eastLabel.text = null;
+			}
+			if (i == 2)
+			{
+				Exit e = listOfExits.Find(o => o.keyString == "south" || o.keyString == "home");
+				if (e != null) controller.southLabel.text = e.roomName;
+				else controller.southLabel.text = null;
+			}
+			if (i == 3)
+			{
+				Exit e = listOfExits.Find(o => o.keyString == "west");
+				if (e != null) controller.westLabel.text = e.roomName;
+				else controller.westLabel.text = null;
+			}
 		}
 	}
 }

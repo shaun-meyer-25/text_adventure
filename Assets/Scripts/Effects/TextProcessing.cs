@@ -81,7 +81,7 @@ public class TextProcessing
 
 	private void PopulateColoredCharDict(string sentence)
 	{
-		int startingIndex = 0;
+		int startingIndex = 0;  
 		int endingIndex = 0;
 
 		while (LookAheadForChar(endingIndex + 1, sentence, '<') != -1)
