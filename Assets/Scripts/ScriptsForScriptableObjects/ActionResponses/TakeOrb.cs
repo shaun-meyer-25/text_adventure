@@ -8,7 +8,7 @@ public class TakeOrb : ActionResponse
 {
     public override bool DoActionResponse(GameController controller)
     {
-        controller.Invoke("DelayedSceneLoad", 15f);
+        controller.checkpointManager.SetCheckpoint(6);
         return true;
     }
 }

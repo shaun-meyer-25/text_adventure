@@ -88,5 +88,20 @@
         "description": ""
       }
     ]
+  },
+  {
+    "chapter": 6,
+    "exits": [
+      {
+        "roomName": "northwest coast",
+        "keyString": "north",
+        "description": ""
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "east",
+        "description": ""
+      }
+    ]
   }
 ]

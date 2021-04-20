@@ -46,5 +46,13 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ]
-  }
+  },
+  {
+    "chapter": 6,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  } 
 ]

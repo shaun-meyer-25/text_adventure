@@ -118,5 +118,25 @@
         "description": "the grasslands begin to the west"
       }
     ]
-  }
+  },
+  {
+    "chapter": 6,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  }  
 ]

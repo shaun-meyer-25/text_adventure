@@ -88,5 +88,20 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ]
+  },
+  {
+    "chapter": 6,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "north",
+        "description": "the watering hole lies to the north"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "west",
+        "description": "the rocky terrain levels out and gives way to forest to the west"
+      }
+    ]
   }
 ]

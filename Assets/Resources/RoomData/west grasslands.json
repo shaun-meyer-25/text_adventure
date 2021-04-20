@@ -148,5 +148,30 @@
         "description": "coast lies to the west. the glow is stronger now, you are almost upon it"
       }
     ]
+  },
+  {
+    "chapter": 6,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "north",
+        "description": ""
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "east",
+        "description": ""
+      },
+      {
+        "roomName": "southwest coast",
+        "keyString": "south",
+        "description": ""
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "west",
+        "description": "coast lies to the west, you can smell the sea from here"
+      }
+    ]
   }
 ]

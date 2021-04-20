@@ -118,5 +118,25 @@
         "description": "the densest part of the forest, often good for foraging, lies to the west"
       }
     ]
-  }
+  },
+  {
+    "chapter": 6,
+    "exits": [
+      {
+        "roomName": "north foothills",
+        "keyString": "north",
+        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+      },
+      {
+        "roomName": "south foothills",
+        "keyString": "south",
+        "description": "foothills lie to the south"
+      },
+      {
+        "roomName": "north forest",
+        "keyString": "west",
+        "description": "the densest part of the forest, often good for foraging, lies to the west"
+      }
+    ]
+  }  
 ]

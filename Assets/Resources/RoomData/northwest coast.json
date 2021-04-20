@@ -88,5 +88,20 @@
         "description": "the coast continues to the south"
       }
     ]
+  },
+  {
+    "chapter": 6,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
   }
 ]

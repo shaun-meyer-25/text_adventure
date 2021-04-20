@@ -148,5 +148,30 @@
         "description": "grasslands continue to stretch to the west. you see a faint glow off to the horizon."
       }
     ]
+  },
+  {
+    "chapter": 6,
+    "exits": [
+      {
+        "roomName": "north grasslands",
+        "keyString": "north",
+        "description": ""
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "east",
+        "description": ""
+      },
+      {
+        "roomName": "home cave",
+        "keyString": "home",
+        "description": "you are just outside of your home cave"
+      },
+      {
+        "roomName": "west grasslands",
+        "keyString": "west",
+        "description": "grasslands continue to stretch to the west."
+      }
+    ]
   }
 ]
