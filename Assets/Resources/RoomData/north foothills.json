@@ -54,5 +54,101 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ]
-  } 
+  },
+  {
+    "chapter": 7,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  },
+  {
+    "chapter": 8,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  },
+  {
+    "chapter": 9,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  },
+  {
+    "chapter": 10,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  },
+  {
+    "chapter": 11,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  },
+  {
+    "chapter": 12,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  },
+  {
+    "chapter": 13,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  },
+  {
+    "chapter": 14,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  },
+  {
+    "chapter": 15,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  },
+  {
+    "chapter": 16,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  },
+  {
+    "chapter": 17,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  },
+  {
+    "chapter": 18,
+    "exits": [{
+      "roomName": "watering hole",
+      "keyString": "south",
+      "description": "the watering hole lies to the south"}
+    ]
+  }
 ]

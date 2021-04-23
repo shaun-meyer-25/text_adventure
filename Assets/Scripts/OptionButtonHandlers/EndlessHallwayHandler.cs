@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName= "TextAdventure/ButtonHandlers/EndlessHallway")]
 public class EndlessHallwayHandler : IOptionButtonHandler
 {
-    override public void Handle(GameController controller, Text textObject, AudioSource audioSource)
+    override public void Handle(GameController controller, Text textObject)
     {
         string text = textObject.text;
 
@@ -27,7 +27,7 @@ public class EndlessHallwayHandler : IOptionButtonHandler
         }
         else if (text == "observe" || text == "use" || text == "interact")
         {
-            audioSource.Play();
+            //audioSource.Play();
             controller.LogStringWithReturn("<color=purple>" + ManipulationEffects.RandomDistortedString(controller) + "</color>");
             IEnumerator coroutine = ManipulationEffects.MessWithBackground(controller);
             textObject.StartCoroutine(coroutine);

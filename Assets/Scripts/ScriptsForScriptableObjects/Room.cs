@@ -12,8 +12,7 @@ public class Room : ScriptableObject
 	[SerializeField] [TextArea] private string baseDescription;
 	[SerializeField] [TextArea] private string baseInvestigationDescription;
 
-	private TextAsset _roomExitData;
-	private List<ChapterExits> _chapterExits;
+	private List<RoomData> _roomData;
 	
 	[TextArea]
 	public string description;
@@ -40,8 +39,8 @@ public class Room : ScriptableObject
 
 	public Exit[] GetExits(int checkpoint)
 	{
-		ChapterExits chapterExits = _chapterExits.Find(o => o.chapter == checkpoint);
-		return chapterExits.exits.ToArray();
+		RoomData roomData = _roomData.Find(o => o.chapter == checkpoint);
+		return roomData.exits.ToArray();
 	}
 	
 	public void SetInteractableObjectsInRoom(InteractableObject[] objects)
@@ -87,7 +86,7 @@ public class Room : ScriptableObject
 		TextAsset file = Resources.Load<TextAsset>(filePath);
 		if (file != null)
 		{
-			_chapterExits = new List<ChapterExits>(JsonUtility.FromJson<Wrapper<ChapterExits>>("{\"array\":" + file.text + "}").array);
+			_roomData = new List<RoomData>(JsonUtility.FromJson<Wrapper<RoomData>>("{\"array\":" + file.text + "}").array);
 		}
 		
 		
@@ -97,6 +96,21 @@ public class Room : ScriptableObject
 		roomInvestigationDescription = baseInvestigationDescription;
 	}
 	
+	public string GetDescription(int checkpoint)
+	{
+		return _roomData.Find(o => o.chapter == checkpoint).description;
+	}
+
+	public string GetInvestigationDescription(int checkpoint)
+	{
+		return _roomData.Find(o => o.chapter == checkpoint).investigationDescription;
+	}
+
+	public string GetEffectTriggerName(int checkpoint)
+	{
+		return _roomData.Find(o => o.chapter == checkpoint).effectTriggerName;
+	}
+	
 	public void OnAfterDeserialize() 
 	{
 	}
@@ -104,11 +118,11 @@ public class Room : ScriptableObject
 	public List<string> exitNames(int checkpoint)
 	{
 		List<string> exitNames = new List<string>();
-		ChapterExits chapterExits = _chapterExits.Find(o => o.chapter == checkpoint);
+		RoomData roomData = _roomData.Find(o => o.chapter == checkpoint);
 
 		for (int i = 0; i < GetExits(checkpoint).Length; i++)
 		{
-			exitNames.Add(chapterExits.exits[i].keyString);
+			exitNames.Add(roomData.exits[i].keyString);
 		}
 
 		return exitNames;
@@ -117,12 +131,12 @@ public class Room : ScriptableObject
 	public List<ExitChoice> exitChoices(int checkpoint)
 	{
 		List<ExitChoice> exitChoices = new List<ExitChoice>();
-		ChapterExits chapterExits = _chapterExits.Find(o => o.chapter == checkpoint);
+		RoomData roomData = _roomData.Find(o => o.chapter == checkpoint);
 
 		for (int i = 0; i <  GetExits(checkpoint).Length; i++)
 		{
 			ExitChoice choice = CreateInstance<ExitChoice>();
-			choice.keyword = chapterExits.exits[i].keyString;
+			choice.keyword = roomData.exits[i].keyString;
 			exitChoices.Add(choice);
 		}
 

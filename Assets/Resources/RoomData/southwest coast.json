@@ -54,5 +54,101 @@
       "keyString": "north",
       "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
     ]
+  },
+  {
+    "chapter": 7,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 8,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 9,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 10,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 11,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 12,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 13,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 14,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 15,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 16,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 17,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
+  },
+  {
+    "chapter": 18,
+    "exits": [{
+      "roomName": "west grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ]
   }
 ]

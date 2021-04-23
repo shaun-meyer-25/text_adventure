@@ -8,34 +8,29 @@ using UnityEngine;
 public class TextProcessing 
 {
 	private IController _controller;
+	private IEnumerator typeSentence;
 	
-	public TextProcessing(IController controller)
+	public TextProcessing(IController controller, float processingDelay)
 	{
 		_controller = controller;
+		//typeSentence = TypeSentence(processingDelay);
 	}
 
 	Dictionary<Tuple<int, int>, string> indicesOfColoredCharacters = new Dictionary<Tuple<int, int>, string>();
 	Dictionary<int, Tuple<string, char>> charactersAndTheirColors = new Dictionary<int, Tuple<string, char>>();
 	List<Tuple<int, int>> rangesOfMarkupCharacters = new List<Tuple<int, int>>();
 
-	public void DisplayText(string sentence, float processingDelay)
+	public void DisplayText(string sentence)
 	{
+		ClearCollections();
 		PopulateList(sentence);
 		PopulateColoredCharDict(sentence);
 		PopulateCharactersAndTheirColors(sentence);
-		_controller.StartCoroutine(TypeSentence(sentence, processingDelay));
+		_controller.StartCoroutine("TypeSentence", charactersAndTheirColors);
 	}
-
-	public IEnumerator TypeSentence(string sentence, float processingDelay)
+	public void StopTypingCoroutine()
 	{
-		for (int i = 0; i < charactersAndTheirColors.Count; i++)
-		{
-			Tuple<string, char> value = charactersAndTheirColors[i];
-			_controller.displayText.text += "<color=" + value.Item1 + ">" + value.Item2 + "</color>";
-
-			yield return new WaitForSeconds(processingDelay);
-		}
-
+		_controller.StopCoroutine("TypeSentence");
 	}
 
 	private void PopulateCharactersAndTheirColors(string sentence)
@@ -121,5 +116,13 @@ public class TextProcessing
 			return -1;
 		} 
 		return indexOfOpenBracket + slice.IndexOf(c);
+	}
+
+	private void ClearCollections()
+	{
+		indicesOfColoredCharacters = new Dictionary<Tuple<int, int>, string>();
+		charactersAndTheirColors = new Dictionary<int, Tuple<string, char>>();
+		rangesOfMarkupCharacters = new List<Tuple<int, int>>();
+
 	}
 }

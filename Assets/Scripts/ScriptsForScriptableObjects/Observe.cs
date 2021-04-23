@@ -36,7 +36,7 @@ public class Observe : ActionChoice
             {
                 Room room = controller.roomNavigation.currentRoom;
                 string joinedInteractionDescriptions = string.Join ("\n", controller.interactionDescriptionsInRoom.ToArray ());
-                controller.LogStringWithReturn(room.roomInvestigationDescription + "\n" + joinedInteractionDescriptions);
+                controller.LogStringWithReturn(room.GetInvestigationDescription(controller.checkpointManager.checkpoint) + "\n" + joinedInteractionDescriptions);
                 controller.isObserving = false;
                 controller.UpdateRoomChoices(controller.startingActions);
             }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName= "TextAdventure/ButtonHandlers/StartingScene")]
 public class StartingSceneHandler : IOptionButtonHandler
 {
-    override public void Handle(GameController controller, Text textObject, AudioSource audioSource)
+    override public void Handle(GameController controller, Text textObject)
     {
 	    string text = textObject.text;
 

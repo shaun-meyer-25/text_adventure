@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 using Object = System.Object;
 
@@ -53,6 +54,12 @@ public class RoomNavigation : MonoBehaviour {
 			controller.LogStringWithReturn("you go " + directionNoun);
 
 			CheckIfCheckpointNeedsSetting();
+
+			if (currentRoom.GetEffectTriggerName(controller.checkpointManager.checkpoint) != null &&
+				currentRoom.GetEffectTriggerName(controller.checkpointManager.checkpoint) != "")
+			{
+				controller.volumeManipulation.EffectStart(controller, currentRoom.GetEffectTriggerName(controller.checkpointManager.checkpoint));
+			}
 			
 			controller.LoadRoomDataAndDisplayRoomText();
 			SetExitLabels(currentRoom.GetExits(controller.checkpointManager.checkpoint));
@@ -94,6 +101,12 @@ public class RoomNavigation : MonoBehaviour {
 		{
 			controller.checkpointManager.SetCheckpoint(5);
 			controller.levelLoader.LoadScene("First Dream");
+		}
+
+		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 6)
+		{
+			controller.checkpointManager.SetCheckpoint(7); 
+			controller.levelLoader.LoadScene("Second Day");
 		}
 	}
 

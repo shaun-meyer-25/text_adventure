@@ -9,19 +9,17 @@ using UnityEngine.UI;
 public class OptionButton : MonoBehaviour {
 
 	public GameController controller;
-	public AudioSource audioSource;
 	[FormerlySerializedAs("handler")] public IOptionButtonHandler _handler;
 	private Button button;
 	
 	void Awake () {
 		button = gameObject.GetComponent<Button>();
 		button.onClick.AddListener(TaskOnClick);
-		audioSource = gameObject.GetComponent<AudioSource>();
 	}
 	
 	void TaskOnClick()
 	{
 		Text textObject = button.GetComponentInChildren<Text>();
-		_handler.Handle(controller, textObject, audioSource);
+		_handler.Handle(controller, textObject);
 	}
 }
