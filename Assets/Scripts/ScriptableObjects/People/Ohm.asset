@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f298cada63767b546855f8107b945bfa, type: 3}
   m_Name: Ohm
   m_EditorClassIdentifier: 
-  keyword: ohm
-  noun: ohm
+  keyword: Ohm
+  noun: Ohm
   description: "\"time to hunt\". they gesture outside.\r"
   interactions:
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-    textResponse: 
+    textResponse: time to hunt. they gesture to the northeast.
     baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}

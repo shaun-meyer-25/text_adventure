@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f298cada63767b546855f8107b945bfa, type: 3}
   m_Name: Tei
   m_EditorClassIdentifier: 
-  keyword: tei
-  noun: tei
+  keyword: Tei
+  noun: Tei
   description: "they touch your arm with affection. their eyes are warm.\r"
   interactions:
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-    textResponse: "they touch your arm with affection. their eyes are warm.\r"
+    textResponse: they touch your arm with affection. their eyes are warm.
     baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}

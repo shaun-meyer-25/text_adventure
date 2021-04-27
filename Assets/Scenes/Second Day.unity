@@ -632,7 +632,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
   - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
   nounsInRoom: []
-  nounsInInventory: []
+  nounsInInventory:
+  - orb
 --- !u!114 &1347101013
 MonoBehaviour:
   m_ObjectHideFlags: 0

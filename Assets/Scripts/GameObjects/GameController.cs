@@ -45,6 +45,7 @@ public class GameController : IController {
 	[HideInInspector] public bool isInteracting = false;
 	[HideInInspector] public bool isObserving = false;
 	[HideInInspector] public bool isUsing = false;
+	[HideInInspector] public bool isConversing = false;
 	[HideInInspector] public Fire fire;
 	[HideInInspector] public CheckpointManager checkpointManager;
 	

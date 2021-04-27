@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f298cada63767b546855f8107b945bfa, type: 3}
-  m_Name: Huu
+  m_Name: Onah
   m_EditorClassIdentifier: 
-  keyword: huu
-  noun: huu
-  description: they do not notice you. they are busy watching unh.
+  keyword: Onah
+  noun: Onah
+  description: they do not notice you. they are busy watching Nua.
   interactions:
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-    textResponse: they do not notice you. they are busy watching unh.
+    textResponse: they do not notice you. they are busy watching Nua.
     baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}

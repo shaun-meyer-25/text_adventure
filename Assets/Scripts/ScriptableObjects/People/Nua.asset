@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f298cada63767b546855f8107b945bfa, type: 3}
-  m_Name: Unh
+  m_Name: Nua
   m_EditorClassIdentifier: 
-  keyword: unh
-  noun: unh
+  keyword: Nua
+  noun: Nua
   description: "they do not notice you. they are busy throwing rocks about on the
     ground.\r"
   interactions:
