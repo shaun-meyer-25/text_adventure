@@ -103,5 +103,185 @@
         "description": "the coast continues to the south"
       }
     ]
+  },
+  {
+    "chapter": 7,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
+  },
+  {
+    "chapter": 8,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
+  },
+  {
+    "chapter": 9,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
+  },
+  {
+    "chapter": 10,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
+  },
+  {
+    "chapter": 11,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
+  },
+  {
+    "chapter": 12,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
+  },
+  {
+    "chapter": 13,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
+  },
+  {
+    "chapter": 14,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
+  },
+  {
+    "chapter": 15,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
+  },
+  {
+    "chapter": 16,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
+  },
+  {
+    "chapter": 17,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
+  },
+  {
+    "chapter": 18,
+    "exits": [
+      {
+        "roomName": "northwest grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "west coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ]
   }
 ]

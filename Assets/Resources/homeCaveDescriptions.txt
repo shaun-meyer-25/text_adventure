@@ -5,3 +5,4 @@
 4=there is a distant, worried look in the faces of the others. when food is scarce, all are filled with dread.
 5=you awake to a crashing sound from outside.
 6=everyone is still asleep, undisturbed. 
+7=the others are looking at you with interest. they eye the strange orb you hold with you.

@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
@@ -14,13 +16,14 @@ public class GameController : IController {
 	private Dictionary<string, string> caveDescription;
 	private Dictionary<string, string> caveInvestigationDescriptions;
 	private List<string> undisplayedSentences = new List<string>();
-
+	private TextProcessing _textProcessing;
+	
 	public LevelLoader levelLoader;
 	public InteractableObject[] characters;
 	public Image background;
 	public Choice[] actions;
 	public ObserveChoice[] observableChoices;
-	public AudioSource tunnelSceneBackground;
+	public AudioSource audio;
 	public InteractChoice[] interactableChoices;
 	public List<InteractableObject> travelingCompanions;
 	public List<Room> allRoomsInGame;
@@ -31,7 +34,8 @@ public class GameController : IController {
 	public Text eastLabel;
 	public Text westLabel;
 	public Text southLabel;
-	
+	public VolumeManipulation volumeManipulation;
+
 	[HideInInspector] public List<string> actionLog = new List<string>();
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
 	[HideInInspector] public List<string> exitNames = new List<string>();
@@ -41,15 +45,16 @@ public class GameController : IController {
 	[HideInInspector] public bool isInteracting = false;
 	[HideInInspector] public bool isObserving = false;
 	[HideInInspector] public bool isUsing = false;
+	[HideInInspector] public bool isConversing = false;
 	[HideInInspector] public Fire fire;
 	[HideInInspector] public CheckpointManager checkpointManager;
 	
-	// todo - instead of using this workaround, we should make a "CalculateDNextChoices" or something based on game state and room
-	// this section mostly for debugging
 	public Choice[] startingActions;
 	
 	void Awake ()
 	{
+		_textProcessing = new TextProcessing(this, processingDelay);
+		volumeManipulation = gameObject.AddComponent<VolumeManipulation>();
 		foreach (var text in FindObjectsOfType<Text>())
 		{
 			if (text.name == "NorthExitLabel")
@@ -75,16 +80,11 @@ public class GameController : IController {
 		roomNavigation = GetComponent<RoomNavigation> ();
 		fire = GetComponent<Fire>();
 		isDaytime = true;
-		// todo - probably want an audio loading class or method
-		
-		if (SceneManager.GetActiveScene().name != "Experimental") return;
-		Component[] aSources = GetComponents(typeof(AudioSource));
-		tunnelSceneBackground = (AudioSource) aSources[0];
 	}
 
 	void Start ()
 	{
-
+		audio = FindObjectOfType<AudioSource>();
 		checkpointManager.checkpoint = StaticDataHolder.instance.Checkpoint;
 		displayText.text = "";
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
@@ -97,11 +97,6 @@ public class GameController : IController {
 				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
 		}
 
-		if (SceneManager.GetActiveScene().name == "Experimental")
-		{
-			tunnelSceneBackground.Play();
-		}
-		
 		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
@@ -185,11 +180,9 @@ public class GameController : IController {
 			undisplayedLogAsText = string.Join("\n", log.ToArray());
 		}
 		
-		StopAllCoroutines();
-
-		TextProcessing tp = new TextProcessing(this);
+		_textProcessing.StopTypingCoroutine();
 		
-		tp.DisplayText("\n" + undisplayedLogAsText, processingDelay);
+		_textProcessing.DisplayText("\n" + undisplayedLogAsText);
 		foreach (var sentence in undisplayedSentences)
 		{
 			actionLog.Add(sentence);
@@ -234,7 +227,7 @@ public class GameController : IController {
 		}
 
 		string joinedInteractionDescriptions = string.Join ("\n", interactionDescriptionsInRoom.ToArray ());
-		combinedText = roomNavigation.currentRoom.description + "\n" + joinedInteractionDescriptions + "\n" + combinedText;
+		combinedText = roomNavigation.currentRoom.GetDescription(checkpointManager.checkpoint) + "\n" + joinedInteractionDescriptions + "\n" + combinedText;
 		
 		LogStringWithReturn (combinedText);
 	}
@@ -424,5 +417,17 @@ public class GameController : IController {
 		}
 
 		throw new Exception("we don't have a preferred key for this");
+	}
+	
+	public IEnumerator TypeSentence(Dictionary<int, Tuple<string, char>> charactersAndTheirColors )
+	{
+		for (int i = 0; i < charactersAndTheirColors.Count; i++)
+		{
+			Tuple<string, char> value = charactersAndTheirColors[i];
+			displayText.text += "<color=" + value.Item1 + ">" + value.Item2 + "</color>";
+
+			yield return new WaitForSeconds(processingDelay);
+		}
+
 	}
 }

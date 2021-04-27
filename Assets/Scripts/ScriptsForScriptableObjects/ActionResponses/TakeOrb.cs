@@ -8,6 +8,8 @@ public class TakeOrb : ActionResponse
 {
     public override bool DoActionResponse(GameController controller)
     {
+        
+        controller.volumeManipulation.EffectEnd(controller, "firstOrbEncounter");
         controller.checkpointManager.SetCheckpoint(6);
         return true;
     }

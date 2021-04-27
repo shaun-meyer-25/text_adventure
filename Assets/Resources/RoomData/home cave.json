@@ -5,7 +5,10 @@
             "roomName": "outside home", 
             "keyString": "outside",
             "description": "light filters in from outside"}
-          ]
+          ],
+          "description": "",
+          "investigationDescription": "",
+          "effectTriggerName": ""
         },
         {
           "chapter": 1,
@@ -13,7 +16,10 @@
             "roomName": "outside home",
             "keyString": "outside",
             "description": "light filters in from outside"}
-          ]
+          ],
+          "description": "",
+          "investigationDescription": "",
+          "effectTriggerName": ""
         },
         {
           "chapter": 2,
@@ -21,7 +27,10 @@
             "roomName": "outside home",
             "keyString": "outside",
             "description": "light filters in from outside"}
-          ]
+          ],
+          "description": "",
+          "investigationDescription": "",
+          "effectTriggerName": ""
         },
         {
           "chapter": 3,
@@ -29,7 +38,10 @@
             "roomName": "outside home",
             "keyString": "outside",
             "description": "light filters in from outside"}
-          ]
+          ],
+          "description": "",
+          "investigationDescription": "",
+          "effectTriggerName": ""
         },
         {
           "chapter": 4,
@@ -37,7 +49,10 @@
             "roomName": "sleep",
             "keyString": "sleep",
             "description": "you feel energy for little else but sleep. your normal place next to tei waits for you."
-          }]
+          }],
+          "description": "",
+          "investigationDescription": "",
+          "effectTriggerName": ""
         },
         {
           "chapter": 5,
@@ -45,7 +60,10 @@
             "roomName": "outside home",
             "keyString": "outside",
             "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
-          }]
+          }],
+          "description": "",
+          "investigationDescription": "",
+          "effectTriggerName": ""
         },
         {
           "chapter": 6,
@@ -53,6 +71,141 @@
             "roomName": "sleep",
             "keyString": "sleep",
             "description": "there is a comfort in the orb. sleep will come easy."
-          }]
+          }],
+          "description": "",
+          "investigationDescription": "",
+          "effectTriggerName": ""
+  },
+  {
+    "chapter": 7,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "light filters in from outside"
+    }],
+    "description": "the others look at you curiously",
+    "investigationDescription": "the others are focused on the orb you now carry in your hand.",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 8,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+    }],
+    "description": "",
+    "investigationDescription": "",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 9,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+    }],
+    "description": "",
+    "investigationDescription": "",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 10,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+    }],
+    "description": "",
+    "investigationDescription": "",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 11,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+    }],
+    "description": "",
+    "investigationDescription": "",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 12,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+    }],
+    "description": "",
+    "investigationDescription": "",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 13,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+    }],
+    "description": "",
+    "investigationDescription": "",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 14,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+    }],
+    "description": "",
+    "investigationDescription": "",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 15,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+    }],
+    "description": "",
+    "investigationDescription": "",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 16,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+    }],
+    "description": "",
+    "investigationDescription": "",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 17,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+    }],
+    "description": "",
+    "investigationDescription": "",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 18,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+    }],
+    "description": "",
+    "investigationDescription": "",
+    "effectTriggerName": ""
   }
 ]

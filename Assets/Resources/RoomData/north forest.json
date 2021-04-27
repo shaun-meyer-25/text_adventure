@@ -138,5 +138,245 @@
         "description": "the grasslands begin to the west"
       }
     ]
-  }  
+  },
+  {
+    "chapter": 7,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 8,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 9,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 10,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 11,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 12,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 13,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 14,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 15,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 16,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 17,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  },
+  {
+    "chapter": 18,
+    "exits": [
+      {
+        "roomName": "watering hole",
+        "keyString": "east",
+        "description": "the watering hole lies to the east"
+      },
+      {
+        "roomName": "south forest",
+        "keyString": "south",
+        "description": "the forest continues to the south"
+      },
+      {
+        "roomName": "north grasslands",
+        "keyString": "west",
+        "description": "the grasslands begin to the west"
+      }
+    ]
+  }
 ]

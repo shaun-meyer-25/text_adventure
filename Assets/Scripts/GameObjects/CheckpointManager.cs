@@ -88,6 +88,11 @@ public class CheckpointManager : MonoBehaviour
             checkpoint = maybeCheckpoint;
         }
 
+        if (maybeCheckpoint == 7)
+        {
+            checkpoint = maybeCheckpoint;
+        }
+        
         for (int i = 0; i < _controller.characters.Length; i++)
         {
             List<Interaction> interactions =

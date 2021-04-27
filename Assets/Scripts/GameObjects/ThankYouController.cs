@@ -8,9 +8,9 @@ public class ThankYouController : IController
     void Start()
     {
         displayText.text = "";
-        TextProcessing tp = new TextProcessing(this);
+        TextProcessing tp = new TextProcessing(this, 0.4f);
         tp.DisplayText("\n" + "that concludes this demo of 'a curse from beyond'. thank you so much for playing. " +
-                       "the rest of this tale is coming soon.\n\n<color=purple>see you then</color>", .04f);
+                       "the rest of this tale is coming soon.\n\n<color=purple>see you then</color>");
     }
 
     void Update()
