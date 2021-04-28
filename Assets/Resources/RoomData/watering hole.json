@@ -5,7 +5,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -15,9 +15,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
+    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth."
   },
   {
     "chapter": 1,
@@ -25,7 +27,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -35,9 +37,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
+    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth, but you can distinguish the tracks of your prey. it is close now."
   },
   {
     "chapter": 2,
@@ -45,7 +49,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -55,9 +59,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
+    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth, but you can distinguish the tracks of your prey. it is close now."
   },
   {
     "chapter": 3,
@@ -65,7 +71,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -75,9 +81,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
+    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth, but you can distinguish the tracks of your prey. it is close now."
   },
   {
     "chapter": 4,
@@ -85,7 +93,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -95,9 +103,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
+    "investigationDescription": "the tracks left in the mud here now only serve to remind you of your failure."
   },
   {
     "chapter": 5,
@@ -105,7 +115,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -115,9 +125,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "the watering hole here is the most reliable source of water for your small group of companions, but the predators of the night know this is an appealing spot for their prey. best not to linger.",
+    "investigationDescription": "the sound of insects and frogs reverberate through the night. they do not share your fear of being found, being killed for another beast's meal."
   },
   {
     "chapter": 6,
@@ -125,7 +137,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -135,9 +147,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "the watering hole here is the most reliable source of water for your small group of companions, but the predators of the night know this is an appealing spot for their prey. best not to linger.",
+    "investigationDescription": "the sound of insects and frogs reverberate through the night. they do not share your fear of being found, being killed for another beast's meal."
   },
   {
     "chapter": 7,
@@ -145,7 +159,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -155,9 +169,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "the watering hole here is the most reliable source of water for your small group of companions, but the predators of the night know this is an appealing spot for their prey. best not to linger.",
+    "investigationDescription": "the sound of insects and frogs reverberate through the night. they do not share your fear of being found, being killed for another beast's meal."
   },
   {
     "chapter": 8,
@@ -165,7 +181,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -175,9 +191,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 9,
@@ -185,7 +203,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -195,9 +213,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 10,
@@ -205,7 +225,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -215,9 +235,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 11,
@@ -225,7 +247,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -235,9 +257,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 12,
@@ -245,7 +269,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -255,9 +279,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 13,
@@ -265,7 +291,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -275,9 +301,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 14,
@@ -285,7 +313,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -295,9 +323,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 15,
@@ -305,7 +335,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -315,9 +345,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 16,
@@ -325,7 +357,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -335,9 +367,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 17,
@@ -345,7 +379,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -355,9 +389,11 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 18,
@@ -365,7 +401,7 @@
       {
         "roomName": "north foothills",
         "keyString": "north",
-        "description": "north of here is dangerous, many beasts found here in the day slumber in the caves north of here at night"
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
         "roomName": "south foothills",
@@ -375,8 +411,10 @@
       {
         "roomName": "north forest",
         "keyString": "west",
-        "description": "the densest part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   }
 ]

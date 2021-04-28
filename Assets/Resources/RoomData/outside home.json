@@ -22,7 +22,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west"
       }
-    ]
+    ],
+  "description": "you are just outside of your home. the others still slumber inside.",
+  "investigationDescription": "your home is familiar now after many moons of living here. was it luck or something else that brought you all here in your time of need?"
   },
   {
     "chapter": 1,
@@ -47,7 +49,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west"
       }
-    ]
+    ],
+    "description": "you are just outside of your home. the day is bright and full of promise.",
+    "investigationDescription": "your home is familiar now after many moons of living here, but you will not find food here."
   },
   {
     "chapter": 2,
@@ -72,7 +76,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west"
       }
-    ]
+    ],
+    "description": "you are just outside of your home. the day is bright and full of promise.",
+    "investigationDescription": "your home is familiar now after many moons of living here, but you will not find food here."
   },
   {
     "chapter": 3,
@@ -97,7 +103,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west"
       }
-    ]
+    ],
+    "description": "you are just outside of your home. the day is bright and full of promise.",
+    "investigationDescription": "your home is familiar now after many moons of living here, but you will not find food here."
   },
   {
     "chapter": 4,
@@ -122,7 +130,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west"
       }
-    ]
+    ],
+    "description": "you are just outside of your home. you do not look forward to sharing word of your failed hunt with the others.",
+    "investigationDescription": "your home is familiar now after many moons of living here, but you will not find food here."
   },
   {
     "chapter": 5,
@@ -145,9 +155,11 @@
       {
         "roomName": "west grasslands",
         "keyString": "west",
-        "description": "grasslands continue to stretch to the west. you see a faint glow off to the horizon."
+        "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "you are just outside of your home. you feel a bitter twist in your gut, a mix of hunger and shame.",
+    "investigationDescription": "there is nothing to do now but bring what little food you have to the others, and yet you linger outside a moment, not wanting to bring disappointment."
   },
   {
     "chapter": 6,
@@ -170,9 +182,11 @@
       {
         "roomName": "west grasslands",
         "keyString": "west",
-        "description": "grasslands continue to stretch to the west."
+        "description": "grasslands continue to stretch to the west. you see a faint glow coming from this direction."
       }
-    ]
+    ],
+    "description": "you are just outside of your home. it is dangerous to leave at night, but...",
+    "investigationDescription": "the glow from the west captures your attention."
   },
   {
     "chapter": 7,
@@ -197,7 +211,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "you are just outside of your home. you feel a bit strange for leaving so far from home in the middle of the night, but you are glad to be back safely.",
+    "investigationDescription": "the entrance to your cave is shadowed by the small tree that stands outside, cast by the moon's light."
   },
   {
     "chapter": 8,
@@ -222,7 +238,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "you are just outside of your home. yesterday's failures are behind you - today must bring a successful hunt.",
+    "investigationDescription": "the familiarity of home does not bring its normal comfort to you. instead, you feel only a swell of determination that contrasts with the hunger in your gut."
   },
   {
     "chapter": 9,
@@ -247,7 +265,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 10,
@@ -272,7 +292,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 11,
@@ -297,7 +319,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 12,
@@ -322,7 +346,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 13,
@@ -347,7 +373,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 14,
@@ -372,7 +400,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 15,
@@ -397,7 +427,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 16,
@@ -422,7 +454,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 17,
@@ -447,7 +481,9 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 18,
@@ -472,6 +508,8 @@
         "keyString": "west",
         "description": "grasslands continue to stretch to the west."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   }
 ]

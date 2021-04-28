@@ -11,17 +11,17 @@ public class OhmGetInPosition : ActionResponse
         if (controller.roomNavigation.currentRoom.roomName == requiredString)
         {
             controller.checkpointManager.ohmInPosition = true;
-            if (!controller.displayText.text.Contains("ohm circles around"))
+            if (!controller.displayText.text.Contains("Ohm circles around"))
             {
-                controller.LogStringWithReturn("ohm circles around to distract the bear. its gaze follows him.");
+                controller.LogStringWithReturn("Ohm circles around to distract the bear. its gaze follows him.");
             }
 
             List<Interaction> interactions =
-                new List<Interaction>(controller.characters.First(o => o.noun.Equals("ohm")).interactions);
+                new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
             Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
             interaction.textResponse = "they motion to you to strike";
             interaction.SetActionResponse(null);
-            controller.roomNavigation.currentRoom.roomInvestigationDescription = "the bear is focused on ohm. now is your chance to strike.";
+            controller.roomNavigation.currentRoom.roomInvestigationDescription = "the bear is focused on Ohm. now is your chance to strike.";
 
             return true;
         }

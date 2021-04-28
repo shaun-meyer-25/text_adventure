@@ -36,7 +36,13 @@ public class Room : ScriptableObject
 	public Exit[] GetExits(int checkpoint)
 	{
 		RoomData roomData = _roomData.Find(o => o.chapter == checkpoint);
-		return roomData.exits.ToArray();
+		if (roomData != null && roomData.exits != null)
+		{
+			return roomData.exits.ToArray();
+		}
+
+		Debug.Log("no exits found for checkpoint " + checkpoint);
+		return new Exit[] { };
 	}
 	
 	public void SetInteractableObjectsInRoom(InteractableObject[] objects)
@@ -99,12 +105,24 @@ public class Room : ScriptableObject
 
 	public string GetInvestigationDescription(int checkpoint)
 	{
-		return _roomData.Find(o => o.chapter == checkpoint).investigationDescription;
+		RoomData data = _roomData.Find(o => o.chapter == checkpoint);
+		if (data != null)
+		{
+			return _roomData.Find(o => o.chapter == checkpoint).investigationDescription;
+		}
+		
+		return null;
 	}
 
 	public string GetEffectTriggerName(int checkpoint)
 	{
-		return _roomData.Find(o => o.chapter == checkpoint).effectTriggerName;
+		RoomData data = _roomData.Find(o => o.chapter == checkpoint);
+		if (data != null)
+		{
+			return data.effectTriggerName;
+		}
+
+		return null;
 	}
 	
 	public void OnAfterDeserialize() 

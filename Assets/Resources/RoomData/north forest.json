@@ -17,7 +17,10 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. you are more likely to find food to forage here.",
+    "investigationDescription": "young trees make poor fuel for the fire. better off heading for the older part of the forest south of here.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 1,
@@ -37,7 +40,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. you are more likely to find food to forage for here.",
+    "investigationDescription": "small beasts catch your eye, scurrying about through the branches of the trees. you have larger prey on your mind today."
   },
   {
     "chapter": 2,
@@ -57,7 +62,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. you are more likely to find food to forage for here.",
+    "investigationDescription": "small beasts catch your eye, scurrying about through the branches of the trees. you have larger prey on your mind today."
   },
   {
     "chapter": 3,
@@ -77,7 +84,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. you are more likely to find food to forage for here.",
+    "investigationDescription": "small beasts catch your eye, scurrying about through the branches of the trees. you have larger prey on your mind today."
   },
   {
     "chapter": 4,
@@ -97,7 +106,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. you are more likely to find food to forage for here.",
+    "investigationDescription": "the thrill of the hunt has left you, leaving you feeling empty, exhausted. small prey will be too quick for you in this state. better off looking for food here that doesn't flee from you."
   },
   {
     "chapter": 5,
@@ -117,7 +128,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the woods, though sparser here, are still dangerous at night. going too far in would surely leave you lost.",
+    "investigationDescription": "you cannot see well enough to navigate through the woods at night. a bird of the night calls. a warning?"
   },
   {
     "chapter": 6,
@@ -137,7 +150,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the woods, though sparser here, are still dangerous at night. going too far in would surely leave you lost.",
+    "investigationDescription": "you cannot see well enough to navigate through the woods at night. a bird of the night calls. a warning?"
   },
   {
     "chapter": 7,
@@ -157,7 +172,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the woods, though sparser here, are still dangerous at night. going too far in would surely leave you lost.",
+    "investigationDescription": "you cannot see well enough to navigate through the woods at night. a bird of the night calls. a warning?"
   },
   {
     "chapter": 8,
@@ -177,7 +194,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 9,

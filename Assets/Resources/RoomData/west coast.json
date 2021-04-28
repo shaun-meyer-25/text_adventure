@@ -13,8 +13,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
+    "investigationDescription": "a small breeze from the west brings the strong scent of the sea to you. the coast continues as far as you can see. gazing upon the vastness of the ocean fills you with awe, fear.",
     "effectTriggerName": ""
   },
   {
@@ -31,8 +31,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
+    "investigationDescription": "the wind is stronger now, the salty air stinging your eyes and nose. the coast continues as far as you can see. gazing upon the vastness of the ocean fills you with awe, fear.",
     "effectTriggerName": ""
   },
   {
@@ -49,8 +49,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
+    "investigationDescription": "the wind is stronger now, the salty air stinging your eyes and nose. the coast continues as far as you can see. gazing upon the vastness of the ocean fills you with awe, fear.",
     "effectTriggerName": ""
   },
   {
@@ -67,8 +67,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
+    "investigationDescription": "the wind is stronger now, the salty air stinging your eyes and nose. the coast continues as far as you can see. gazing upon the vastness of the ocean fills you with awe, fear.",
     "effectTriggerName": ""
   },
   {
@@ -85,8 +85,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
+    "investigationDescription": "the wind is stronger now, the salty air stinging your eyes and nose. the coast continues as far as you can see. gazing upon the vastness of the ocean fills you with awe, fear.",
     "effectTriggerName": ""
   },
   {
@@ -103,9 +103,9 @@
         "description": ""
       }
     ],
-    "description": "",
-    "investigationDescription": "",
-    "effectTriggerName": "firstOrbEncounter"
+    "description": "you stand where the land meets the sea. the sand is cold beneath your feet. what was inviting during the day rejects your presence at night.",
+    "investigationDescription": "the sea in the total darkness of night is a terrible thing. infinite blackness stretches before you. you feel if you stare too long, you will fall into it.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 6,
@@ -121,9 +121,9 @@
         "description": ""
       }
     ],
-    "description": "",
-    "investigationDescription": "",
-    "effectTriggerName": ""
+    "description": "there is a large crater in the normally smooth sand.",
+    "investigationDescription": "the ground around the glow is red with fire. the sea itself appears restless from this disturbance.",
+    "effectTriggerName": "firstOrbEncounter"
   },
   {
     "chapter": 7,
@@ -139,8 +139,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "there is a large crater in the normally smooth sand. the ground around it glows with vestiges of fire.",
+    "investigationDescription": "the night remains indifferent, oblivious to the strange things that just occurred here. you feel a kinship with the moon as you gaze upon it, as if it is one of your companions. it fills you with a surreal calm.",
     "effectTriggerName": ""
   },
   {
@@ -157,8 +157,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "the crater from the night before lies before you, already being filled by the sand that blows along the coast.",
+    "investigationDescription": "the ocean's restlessness from the night before has ceased. it is a calm day over the waters.",
     "effectTriggerName": ""
   },
   {
@@ -175,8 +175,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {
@@ -193,8 +193,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {
@@ -211,8 +211,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {
@@ -229,8 +229,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {
@@ -247,8 +247,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {
@@ -265,8 +265,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {
@@ -283,8 +283,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {
@@ -301,8 +301,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {
@@ -319,8 +319,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {
@@ -337,8 +337,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "",
-    "investigationDescription": "",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   }
 ]

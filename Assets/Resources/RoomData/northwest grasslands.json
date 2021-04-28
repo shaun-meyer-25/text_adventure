@@ -17,7 +17,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "tall grass reaches high up your legs. the land around you is flat, but the grasses could conceal danger.",
+    "investigationDescription": "you see no threats, for now. all you see, all you hear is the tall grass rustling in the light wind. \n\nthe vast expanse of these grasslands continue north, but wandering too far from home is dangerous."
   },
   {
     "chapter": 1,
@@ -37,7 +39,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "tall grass reaches high up your legs. the land around you is flat, but the grasses could conceal danger.",
+    "investigationDescription": "you see no threats, for now. all you see, all you hear is the tall grass rustling in the light wind. \n\nthe vast expanse of these grasslands continue north, but wandering too far from home is dangerous."
   },
   {
     "chapter": 2,
@@ -57,7 +61,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "tall grass reaches high up your legs. the land around you is flat, but the grasses could conceal danger.",
+    "investigationDescription": "you see no threats, for now. all you see, all you hear is the tall grass rustling in the light wind. \n\nthe vast expanse of these grasslands continue north, but wandering too far from home is dangerous."
   },
   {
     "chapter": 3,
@@ -77,7 +83,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "tall grass reaches high up your legs. the land around you is flat, but the grasses could conceal danger.",
+    "investigationDescription": "you see no threats, for now. all you see, all you hear is the tall grass rustling in the light wind. \n\nthe vast expanse of these grasslands continue north, but wandering too far from home is dangerous."
   },
   {
     "chapter": 4,
@@ -97,7 +105,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "tall grass reaches high up your legs. the land around you is flat, but the grasses could conceal danger.",
+    "investigationDescription": "you see no threats, for now. all you see, all you hear is the tall grass rustling in the light wind. \n\nthe vast expanse of these grasslands continue north, but wandering too far from home is dangerous."
   },
   {
     "chapter": 5,
@@ -117,7 +127,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "the moon has yet to come out and illuminate the ground. the plains are eerie at this time of night.",
+    "investigationDescription": "your heart beats a little faster as you imagine the beasts that hunt these plains at night. you see nothing, but something in your mind tells you to leave."
   },
   {
     "chapter": 6,
@@ -137,7 +149,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "the moon illuminates the grasslands around you. the vastness of the plains stretching north makes you aware of how alone you are.",
+    "investigationDescription": "your heart beats a little faster as you imagine the beasts that hunt these plains at night. without a companion, nobody would bear witness to your death. you see nothing, but something in your mind tells you to leave."
   },
   {
     "chapter": 7,
@@ -157,7 +171,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "the moon illuminates the grasslands around you. the vastness of the plains stretching north makes you aware of how alone you are.",
+    "investigationDescription": "your heart beats a little faster as you imagine the beasts that hunt these plains at night. without a companion, nobody would bear witness to your death. you see nothing, but something in your mind tells you to leave."
   },
   {
     "chapter": 8,
@@ -177,7 +193,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "tall grass reaches high up your legs. the land around you is flat, but the grasses could conceal danger. without realizing it, you touch the orb.",
+    "investigationDescription": "you see no threats, for now. all you see, all you hear is the tall grass rustling in the light wind. \n\nthe vast expanse of these grasslands continue north, but wandering too far from home is dangerous."
   },
   {
     "chapter": 9,
@@ -197,7 +215,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 10,
@@ -217,7 +237,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 11,
@@ -237,7 +259,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 12,
@@ -257,7 +281,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 13,
@@ -277,7 +303,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 14,
@@ -297,7 +325,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 15,
@@ -317,7 +347,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 16,
@@ -337,7 +369,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 17,
@@ -357,7 +391,9 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 18,
@@ -377,6 +413,8 @@
         "keyString": "west",
         "description": "the coast is to the west, smelling of sea."
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   }
 ]

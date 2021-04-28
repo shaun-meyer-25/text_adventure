@@ -10,7 +10,7 @@ public class TakeOrb : ActionResponse
     {
         
         controller.volumeManipulation.EffectEnd(controller, "firstOrbEncounter");
-        controller.checkpointManager.SetCheckpoint(6);
+        controller.checkpointManager.SetCheckpoint(7);
         return true;
     }
 }
