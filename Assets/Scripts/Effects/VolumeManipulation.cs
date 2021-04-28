@@ -25,6 +25,11 @@ public class VolumeManipulation : MonoBehaviour
              c.active = true; 
              StartCoroutine("Pulse", bloom);
          }
+
+         if (requiredString == "caveBearAround")
+         {
+             Debug.Log("todo - caveBearAround");
+         }
      }
 
      public IEnumerator Pulse(Bloom bloom)

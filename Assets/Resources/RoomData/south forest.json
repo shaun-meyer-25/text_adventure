@@ -17,7 +17,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "the forest here is old, a good place to find dry fuel when you need it. the small beasts of the forest prefer the younger parts north of here, where the branches are less likely to break and fall under their feet.",
+    "investigationDescription": "walking into the forest, you can scarcely see the sky through the treetops. birds chirp here and there."
   },
   {
     "chapter": 1,
@@ -37,7 +39,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "the forest here is old, a good place to find dry fuel when you need it. the small beasts of the forest prefer the younger parts north of here, where the branches are less likely to break and fall under their feet.",
+    "investigationDescription": "walking into the forest, you can scarcely see the sky through the treetops. birds chirp here and there."
   },
   {
     "chapter": 2,
@@ -57,7 +61,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "the forest here is old, a good place to find dry fuel when you need it. with the sun exactly overhead, you can just make it out through the trees.",
+    "investigationDescription": "you recall a time when deer roamed these forests. those days are passed. now you must hunt more dangerous prey."
   },
   {
     "chapter": 3,
@@ -77,7 +83,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "the forest here is old, a good place to find dry fuel when you need it. with the sun exactly overhead, you can just make it out through the trees.",
+    "investigationDescription": "you recall a time when deer roamed these forests. those days are passed. now you must hunt more dangerous prey."
   },
   {
     "chapter": 4,
@@ -97,7 +105,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "the forest here is old, a good place to find dry fuel when you need it. with the sun exactly overhead, you can just make it out through the trees.",
+    "investigationDescription": "the trees here are too tall for berries to grow. the younger forest to the north will be more likely to yield fruit."
   },
   {
     "chapter": 5,
@@ -117,7 +127,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "the forest is terribly dark. you stay near the outskirts, for fear of getting lost in the blackness.",
+    "investigationDescription": "you dare not go further into these old woods."
   },
   {
     "chapter": 6,
@@ -137,7 +149,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "the forest is terribly dark. you stay near the outskirts, for fear of getting lost in the blackness.",
+    "investigationDescription": "you dare not go further into these old woods."
   },
   {
     "chapter": 7,
@@ -157,7 +171,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "the forest is terribly dark. you stay near the outskirts, for fear of getting lost in the blackness.",
+    "investigationDescription": "you dare not go further into these old woods."
   },
   {
     "chapter": 8,
@@ -177,7 +193,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 9,
@@ -197,7 +215,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 10,
@@ -217,7 +237,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 11,
@@ -237,7 +259,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 12,
@@ -257,7 +281,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 13,
@@ -277,7 +303,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 14,
@@ -297,7 +325,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 15,
@@ -317,7 +347,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 16,
@@ -337,7 +369,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 17,
@@ -357,7 +391,9 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 18,
@@ -377,6 +413,8 @@
         "keyString": "west",
         "description": "home lies outside of the woods to the west"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   }
 ]

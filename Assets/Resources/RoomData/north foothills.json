@@ -5,7 +5,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "there is a cave bear at the mouth of an opening in the rocks, you do not approach. it is dangerous here.",
+    "investigationDescription": "the beast glares at you. it notices you now. time to leave, while you still can.",
+    "effectTriggerName": "caveBearAround"
   },
   {
     "chapter": 1,
@@ -13,7 +16,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "there is a cave bear at the mouth of an opening in the rocks, you do not approach. it is dangerous here.",
+    "investigationDescription": "the beast glares at you. it notices you now. time to leave, while you still can.",
+    "effectTriggerName": "caveBearAround"   
   },
   {
     "chapter": 2,
@@ -21,7 +27,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "there is a cave bear at the mouth of an opening in the rocks, you do not approach. it is dangerous here.",
+    "investigationDescription": "the beast glares at you. it notices you now. time to leave, while you still can.",
+    "effectTriggerName": "caveBearAround"
   },
   {
     "chapter": 3,
@@ -29,7 +38,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "there is a cave bear at the mouth of an opening in the rocks. Ohm signals you to stop. they brandish their spear. it looks like they are forming a plan.",
+    "investigationDescription": "the beast glares at you. it takes a step towards you and lets out a low, menacing growl.",
+    "effectTriggerName": "caveBearAround"
   },
   {
     "chapter": 4,
@@ -37,7 +49,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "the bear from earlier is nowhere to be seen, but this is still its home. it is not safe.",
+    "investigationDescription": "you see the hollow where the bear lives, visions of its deadly claws flashing through your mind. you dare not get close enough to see if it is still around.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 5,
@@ -45,7 +60,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "the beast should be sleeping by now, but the rocky footing is especially treacherous in the dark. a broken leg would mean slow death.",
+    "investigationDescription": "you cannot see well enough to navigate the terrain.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 6,
@@ -53,7 +71,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "the beast should be sleeping by now, but the rocky footing is especially treacherous in the dark. a broken leg would mean slow death.",
+    "investigationDescription": "you cannot see well enough to navigate the terrain.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 7,
@@ -61,7 +82,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "the beast should be sleeping by now, but the rocky footing is especially treacherous in the dark. a broken leg would mean slow death.",
+    "investigationDescription": "you cannot see well enough to navigate the terrain.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 8,
@@ -69,7 +93,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO",
+    "effectTriggerName": ""
   },
   {
     "chapter": 9,
@@ -77,7 +104,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO",
+    "effectTriggerName": ""
   },
   {
     "chapter": 10,
@@ -85,7 +115,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO",
+    "effectTriggerName": ""
   },
   {
     "chapter": 11,
@@ -93,7 +126,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO",
+    "effectTriggerName": ""
   },
   {
     "chapter": 12,
@@ -101,7 +137,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO",
+    "effectTriggerName": ""
   },
   {
     "chapter": 13,
@@ -109,7 +148,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO",
+    "effectTriggerName": ""
   },
   {
     "chapter": 14,
@@ -117,7 +159,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO",
+    "effectTriggerName": ""
   },
   {
     "chapter": 15,
@@ -125,7 +170,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO",
+    "effectTriggerName": ""
   },
   {
     "chapter": 16,
@@ -133,7 +181,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO",
+    "effectTriggerName": ""
   },
   {
     "chapter": 17,
@@ -141,7 +192,10 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO",
+    "effectTriggerName": ""
   },
   {
     "chapter": 18,
@@ -149,6 +203,9 @@
       "roomName": "watering hole",
       "keyString": "south",
       "description": "the watering hole lies to the south"}
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO",
+    "effectTriggerName": ""
   }
 ]

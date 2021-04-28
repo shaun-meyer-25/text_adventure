@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseDescription: 
   baseInvestigationDescription: 
-  description: there is a cave bear at the mouth of an opening in the rocks. ohm
+  description: there is a cave bear at the mouth of an opening in the rocks. Ohm
     signals you to stop. they brandish their spear. it looks like they are forming
     a plan.
   roomInvestigationDescription: the beast glares at you. it takes a step towards

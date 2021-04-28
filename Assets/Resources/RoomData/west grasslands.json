@@ -22,7 +22,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "this stretch of the grasslands, between your home and the coast, is safe. the grass is not as tall here, and the beasts of the plains do not go near the sea.",
+    "investigationDescription": "you hear the grass rustling in the light wind, and beyond that, the mighty churning of the ocean."
   },
   {
     "chapter": 1,
@@ -47,7 +49,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "this stretch of the grasslands, between your home and the coast, is safe. the grass is not as tall here, and the beasts of the plains do not go near the sea.",
+    "investigationDescription": "you hear the grass rustling in the light wind, and beyond that, the mighty churning of the ocean."
   },
   {
     "chapter": 2,
@@ -72,7 +76,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "this stretch of the grasslands, between your home and the coast, is safe. the grass is not as tall here, and the beasts of the plains do not go near the sea.",
+    "investigationDescription": "you hear the grass rustling in the light wind, and beyond that, the mighty churning of the ocean."
   },
   {
     "chapter": 3,
@@ -97,7 +103,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "this stretch of the grasslands, between your home and the coast, is safe. the grass is not as tall here, and the beasts of the plains do not go near the sea.",
+    "investigationDescription": "you hear the grass rustling in the wind, and beyond that, the mighty churning of the ocean. the wind blows stronger now, and you can smell the sea."
   },
   {
     "chapter": 4,
@@ -122,7 +130,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "this stretch of the grasslands, between your home and the coast, is safe. the grass is not as tall here, and the beasts of the plains do not go near the sea.",
+    "investigationDescription": "you hear the grass rustling in the wind, and beyond that, the mighty churning of the ocean. the wind blows stronger now, and you can smell the sea."
   },
   {
     "chapter": 5,
@@ -130,24 +140,26 @@
       {
         "roomName": "northwest grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "the plains stretch to the north"
       },
       {
         "roomName": "outside home",
         "keyString": "east",
-        "description": ""
+        "description": "home lies just to the east"
       },
       {
         "roomName": "southwest coast",
         "keyString": "south",
-        "description": ""
+        "description": "a small mass of land juts out into the sea to the south"
       },
       {
         "roomName": "west coast",
         "keyString": "west",
-        "description": "coast lies to the west. the glow is stronger now, you are almost upon it"
+        "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "this stretch of the grasslands, between your home and the coast, is safe. it is not wise to be out at night regardless.",
+    "investigationDescription": "in the dark, you can see little. better to go home for now."
   },
   {
     "chapter": 6,
@@ -170,9 +182,11 @@
       {
         "roomName": "west coast",
         "keyString": "west",
-        "description": "coast lies to the west, you can smell the sea from here"
+        "description": "coast lies to the west, the glow is stronger now, you are almost upon it"
       }
-    ]
+    ],
+    "description": "",
+    "investigationDescription": "you can see the glow off to the west."
   },
   {
     "chapter": 7,
@@ -197,7 +211,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "you make your way back to the grasslands nearest to home. you notice a fear blooming inside of you. you should not be out alone at night.",
+    "investigationDescription": "in the dark, you can see little. better to go home for now."
   },
   {
     "chapter": 8,
@@ -222,7 +238,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "a moment of dizziness strikes you as you walk the same path through the grass as you did last night. it seems ordinary again in the light of day.",
+    "investigationDescription": "you can just make out the scuttling of small animals of the plains. the smell of the sea is stronger than it was yesterday."
   },
   {
     "chapter": 9,
@@ -247,7 +265,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 10,
@@ -272,7 +292,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 11,
@@ -297,7 +319,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 12,
@@ -322,7 +346,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 13,
@@ -347,7 +373,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 14,
@@ -372,7 +400,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 15,
@@ -397,7 +427,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 16,
@@ -422,7 +454,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 17,
@@ -447,7 +481,9 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 18,
@@ -472,6 +508,8 @@
         "keyString": "west",
         "description": "coast lies to the west, you can smell the sea from here"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   }
 ]

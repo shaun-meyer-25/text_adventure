@@ -12,7 +12,10 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
+    "investigationDescription": "a small breeze from the west brings the strong scent of the sea to you. the coast continues as far as you can see. gazing upon the vastness of the ocean fills you with awe, fear.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 1,
@@ -27,7 +30,10 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
+    "investigationDescription": "the wind is stronger now, the salty air stinging your eyes and nose. the coast continues as far as you can see. gazing upon the vastness of the ocean fills you with awe, fear.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 2,
@@ -42,7 +48,10 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
+    "investigationDescription": "the wind is stronger now, the salty air stinging your eyes and nose. the coast continues as far as you can see. gazing upon the vastness of the ocean fills you with awe, fear.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 3,
@@ -57,7 +66,10 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
+    "investigationDescription": "the wind is stronger now, the salty air stinging your eyes and nose. the coast continues as far as you can see. gazing upon the vastness of the ocean fills you with awe, fear.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 4,
@@ -72,7 +84,10 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
+    "investigationDescription": "the wind is stronger now, the salty air stinging your eyes and nose. the coast continues as far as you can see. gazing upon the vastness of the ocean fills you with awe, fear.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 5,
@@ -87,7 +102,10 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "you stand where the land meets the sea. the sand is cold beneath your feet. what was inviting during the day rejects your presence at night.",
+    "investigationDescription": "the sea in the total darkness of night is a terrible thing. infinite blackness stretches before you. you feel if you stare too long, you will fall into it.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 6,
@@ -102,7 +120,9 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "you stand where the land meets the sea. a glow comes from the south.",
+    "investigationDescription": "the moon is in the sky now, illuminating the sea. a brighter glow comes from south of you."
   },
   {
     "chapter": 7,
@@ -117,7 +137,9 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "you stand where the land meets the sea. the sand is cold beneath your feet. what was inviting during the day rejects your presence at night.",
+    "investigationDescription": "the moon illuminates the vast sea. you have rarely gazed upon the moon on the broken surface of the ocean. it puzzles and intrigues you."
   },
   {
     "chapter": 8,
@@ -132,7 +154,10 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
+    "investigationDescription": "the coast continues as far as you can see. gazing upon the vastness of the ocean fills you with awe, fear.",
+    "effectTriggerName": ""
   },
   {
     "chapter": 9,
@@ -147,7 +172,9 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 10,
@@ -162,7 +189,9 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 11,
@@ -177,7 +206,9 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 12,
@@ -192,7 +223,9 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 13,
@@ -207,7 +240,9 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 14,
@@ -222,7 +257,9 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 15,
@@ -237,7 +274,9 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 16,
@@ -252,7 +291,9 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 17,
@@ -267,7 +308,9 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 18,
@@ -282,6 +325,8 @@
         "keyString": "south",
         "description": "the coast continues to the south"
       }
-    ]
+    ],
+    "description": "TODO",
+    "investigationDescription": "TODO"
   }
 ]

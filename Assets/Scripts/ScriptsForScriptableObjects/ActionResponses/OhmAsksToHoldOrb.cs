@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "TextAdventure/ActionResponses/OhmAsksToHoldOrb")]
 public class OhmAsksToHoldOrb : ActionResponse
 { 
     public override bool DoActionResponse(GameController controller)

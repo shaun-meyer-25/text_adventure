@@ -49,21 +49,15 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 2)
         {
             checkpoint = maybeCheckpoint;
-            _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("ohm")));
+            _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Ohm")));
         }
 
         if (maybeCheckpoint == 3)
         {
             checkpoint = maybeCheckpoint;
-            _controller.roomNavigation.currentRoom.description =
-                "\nthere is a cave bear at the mouth of an opening in the rocks. ohm signals you to stop. they brandish " +
-                "their spear. it looks like they are forming a plan.";
-            
-            _controller.roomNavigation.currentRoom.roomInvestigationDescription =
-                "\nthe beast glares at you. it takes a step towards you and lets out a low, menacing growl.";
 
             List<Interaction> interactions =
-                new List<Interaction>(_controller.characters.First(o => o.noun.Equals("ohm")).interactions);
+                new List<Interaction>(_controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
             Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
             ActionResponse response = (ActionResponse) ScriptableObject.CreateInstance<OhmGetInPosition>().SetRequiredString("north foothills");
             interaction.SetActionResponse(response);
@@ -74,7 +68,7 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 4)
         {
             checkpoint = maybeCheckpoint;
-            _controller.LogStringWithReturn("you and ohm successfully flee the vicious bear. it is afternoon now, hunger weighs heavily on you.");
+            _controller.LogStringWithReturn("you and Ohm successfully flee the vicious bear. it is afternoon now, hunger weighs heavily on you.");
             _controller.allRoomsInGame.Find(o => o.roomName == "north forest").SetInteractableObjectsInRoom(checkpointFourItems.ToArray());
         }
 
@@ -89,6 +83,11 @@ public class CheckpointManager : MonoBehaviour
         }
 
         if (maybeCheckpoint == 7)
+        {
+            checkpoint = maybeCheckpoint;
+        }
+        
+        if (maybeCheckpoint == 8)
         {
             checkpoint = maybeCheckpoint;
         }

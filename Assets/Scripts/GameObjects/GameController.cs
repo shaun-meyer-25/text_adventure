@@ -152,14 +152,7 @@ public class GameController : IController {
 	public void DisplayLoggedText ()
 	{
 		displayText.text = "";
-		for (int i = 0; i < actionLog.Count; i++)
-		{
-			// todo - get this into a data file
-			actionLog[i] = actionLog[i].Replace("you don't need to do this", "<color=red>" + "you don't need to do this" + "</color>");
-			actionLog[i] = actionLog[i].Replace("you can't go back. only forward.",
-				"<color=purple>" + "you can't go back. only forward." + "</color>");
-		}
-		
+
 		string logAsText = string.Join ("\n", actionLog.ToArray ());
 		List<string> pastLog = new List<string>(logAsText.Split('\n'));
 		while (logAsText.Length > 10000)
@@ -185,14 +178,13 @@ public class GameController : IController {
 		_textProcessing.DisplayText("\n" + undisplayedLogAsText);
 		foreach (var sentence in undisplayedSentences)
 		{
-			actionLog.Add(sentence);
+			actionLog.Add(sentence + "\n");
 		}
 		undisplayedSentences.Clear();
 	}
 	
 	public void LogStringWithReturn(string stringToAdd) {
 		undisplayedSentences.Add(stringToAdd);
-//		actionLog.Add (stringToAdd + "\n");
 	}
 
 	public void LoadRoomData()
