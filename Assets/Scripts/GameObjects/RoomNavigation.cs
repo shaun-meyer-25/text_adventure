@@ -24,7 +24,6 @@ public class RoomNavigation : MonoBehaviour {
 			exitDictionary.Add (currentRoom.GetExits(controller.checkpointManager.checkpoint)[i].keyString, 
 				controller.allRoomsInGame.Find(o => o.roomName == 
 				                                    currentRoom.GetExits(controller.checkpointManager.checkpoint) [i].roomName));
-			controller.interactionDescriptionsInRoom.Add (currentRoom.GetExits(controller.checkpointManager.checkpoint) [i].description);
 		}
 	}
 
