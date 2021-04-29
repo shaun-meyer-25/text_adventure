@@ -10,7 +10,7 @@ public class OhmAsksToHoldOrb : ActionResponse
         controller.isConversing = true;
 
         List<ConversationChoice> choices = new List<ConversationChoice>();
-        //ExitChoice choice = CreateInstance<ExitChoice>();
+
         ConversationChoice yes = CreateInstance<ConversationChoice>();
         yes.keyword = "yes";
         ConversationChoice no = CreateInstance<ConversationChoice>();
@@ -21,6 +21,7 @@ public class OhmAsksToHoldOrb : ActionResponse
         
         //ConversationChoice 
         controller.UpdateRoomChoices(choices.ToArray());
+        controller.isInteracting = false;
         return true;
     }
 }

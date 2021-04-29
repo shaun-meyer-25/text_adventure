@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1a7fd1cdc469c4b844092d6472a85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Checkpoint: 7
+  Checkpoint: 8
 --- !u!4 &114129366
 Transform:
   m_ObjectHideFlags: 0
@@ -204,6 +204,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4414887960710519955, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4797650007323348398, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -212,7 +217,7 @@ PrefabInstance:
     - target: {fileID: 4797650007323348398, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -102.81911
+      value: -102.81949
       objectReference: {fileID: 0}
     - target: {fileID: 4797650007323348399, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
@@ -562,6 +567,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1198900128 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4797650006413212121, guid: 9a174499d254c204785136d2b80ceeea,
+    type: 3}
+  m_PrefabInstance: {fileID: 122787895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1347101009
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,7 +684,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ef7402b7423a67742bba8efb34061b11, type: 2}
   - {fileID: 11400000, guid: 73397920584cbd1428ce8a94dc9e92bb, type: 2}
   - {fileID: 11400000, guid: 72f9d79fab6b8d2459083437c9ab4b05, type: 2}
-  background: {fileID: 0}
+  background: {fileID: 1198900128}
   actions:
   - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
   - {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
@@ -715,6 +732,7 @@ MonoBehaviour:
   isInteracting: 0
   isObserving: 0
   isUsing: 0
+  isConversing: 0
   fire: {fileID: 0}
   checkpointManager: {fileID: 0}
   startingActions:
@@ -782,7 +800,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -821,7 +839,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0

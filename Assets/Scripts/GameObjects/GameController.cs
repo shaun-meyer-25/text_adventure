@@ -85,7 +85,7 @@ public class GameController : IController {
 	void Start ()
 	{
 		audio = FindObjectOfType<AudioSource>();
-		checkpointManager.checkpoint = StaticDataHolder.instance.Checkpoint;
+		checkpointManager.SetCheckpoint(StaticDataHolder.instance.Checkpoint);
 		displayText.text = "";
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
 		caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
@@ -198,13 +198,6 @@ public class GameController : IController {
 			{
 				roomNavigation.currentRoom.AddPersonToRoom(travelingCompanions[i]);
 			}
-		}
-		
-		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
-		{
-			roomNavigation.currentRoom.description = caveDescription[checkpointManager.checkpoint.ToString()];
-			roomNavigation.currentRoom.roomInvestigationDescription = caveInvestigationDescriptions[checkpointManager.checkpoint.ToString()];
-
 		}
 	}
 	

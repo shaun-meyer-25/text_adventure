@@ -57,6 +57,10 @@ public class StartingSceneHandler : IOptionButtonHandler
 			    }
 		    }
 	    }
+	    else if (controller.isConversing)
+	    {
+		    ConversationHandler.HandleConversation(controller, text);
+	    }
 	    else
 	    {
 		    for (int i = 0; i < controller.actions.Length; i++)

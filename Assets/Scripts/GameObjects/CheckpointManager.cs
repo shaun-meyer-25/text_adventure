@@ -90,6 +90,15 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 8)
         {
             checkpoint = maybeCheckpoint;
+            
+            InteractableObject person = new List<InteractableObject>(_controller.characters)
+                .Find(o => o.name == "Ohm");
+            List<Interaction> interactions =
+                new List<Interaction>(person.interactions);
+            Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+            interact.actionResponse = ScriptableObject.CreateInstance<OhmAsksToHoldOrb>();
+            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
+
         }
         
         for (int i = 0; i < _controller.characters.Length; i++)
@@ -98,7 +107,7 @@ public class CheckpointManager : MonoBehaviour
                 new List<Interaction>(_controller.characters[i].interactions);
             Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
 
-            if (_characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1] != "x")
+            if (maybeCheckpoint > 0 && _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1] != "x")
             {
                 interact.textResponse =
                     _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1];
