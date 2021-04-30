@@ -116,7 +116,7 @@
         "description": "the coast meets the grasslands to the east"
       },
       {
-        "roomName": "west coast",
+        "roomName": "<color=purple>west coast</color>",
         "keyString": "south",
         "description": "the coast continues to the south"
       }

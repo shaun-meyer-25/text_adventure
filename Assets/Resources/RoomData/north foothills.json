@@ -94,8 +94,8 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO",
+    "description": "the rocky ground is harsh upon your feet. the beast must still be slumbering. you do not see it, but you also should not be here alone.",
+    "investigationDescription": "best not stay and look around while alone. a charging bear will catch a human in the best of circumstances.",
     "effectTriggerName": ""
   },
   {
@@ -105,8 +105,8 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO",
+    "description": "the bear is near, you feel you should return to the hunt.",
+    "investigationDescription": "you do not feel compelled to look around, it is time for the hunt.",
     "effectTriggerName": ""
   },
   {

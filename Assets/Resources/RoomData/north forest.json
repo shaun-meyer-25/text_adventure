@@ -195,14 +195,14 @@
         "description": "the grasslands begin to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. there is fewer food here today than there was yesterday, it will need more time to regrow.",
+    "investigationDescription": "small beasts catch your eye, scurrying about through the branches of the trees."
   },
   {
     "chapter": 9,
     "exits": [
       {
-        "roomName": "watering hole",
+        "roomName": "<color=red>watering hole</color>",
         "keyString": "east",
         "description": "the watering hole lies to the east"
       },
@@ -216,7 +216,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the smell of the beast is very close now. it must just be east of here, drinking at the watering hole.",
+    "investigationDescription": "the chittering of the smaller beasts around you seem almost to mock you."
   },
   {
     "chapter": 10,

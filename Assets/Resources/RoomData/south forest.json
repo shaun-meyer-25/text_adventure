@@ -194,19 +194,19 @@
         "description": "home lies outside of the woods to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the forest here is old, a good place to find dry fuel when you need it. with the sun exactly overhead, you can just make it out through the trees.",
+    "investigationDescription": "you recall a time when deer roamed these forests. those days are passed. now you must hunt more dangerous prey."
   },
   {
     "chapter": 9,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "<color=red>north forest</color>",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "<color=red>south foothills</color>",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -216,8 +216,8 @@
         "description": "home lies outside of the woods to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "though no wind blows through the trees to carry the scent, you can smell the blood you drew from the bear yesterday coming from the northeast.",
+    "investigationDescription": "the sound of the birds in the trees is louder today, enough to cause you discomfort. better to keep moving, better to focus on the hunt."
   },
   {
     "chapter": 10,

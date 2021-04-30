@@ -108,7 +108,7 @@ public class TextProcessing
 		}
 	}
 	
-	private int LookAheadForChar(int indexOfOpenBracket, string sentence, char c)
+	public static int LookAheadForChar(int indexOfOpenBracket, string sentence, char c)
 	{
 		string slice = sentence.Substring(indexOfOpenBracket);
 		if (slice.IndexOf(c) == -1)

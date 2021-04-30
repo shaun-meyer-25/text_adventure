@@ -216,8 +216,8 @@
         "description": "the coast is to the west, smelling of sea."
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "this is the wrong direction, the beast is to the east.",
+    "investigationDescription": "you do not feel compelled to look around, it is time for the hunt."
   },
   {
     "chapter": 10,

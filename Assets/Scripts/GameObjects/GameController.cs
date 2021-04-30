@@ -96,6 +96,12 @@ public class GameController : IController {
 			LogStringWithReturn(
 				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
 		}
+		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 8)
+		{
+			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
+			LogStringWithReturn(
+				"you awake slowly. you sit up, and see that the others have woken up before you. they seem to have noticed the orb that you kept in your hands.");
+		}
 
 		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
@@ -223,7 +229,7 @@ public class GameController : IController {
 		PrepareObjectsToTakeOrExamine(roomNavigation.currentRoom);
 	}
 
-	void PrepareObjectsToTakeOrExamine(Room currentRoom)
+	public void PrepareObjectsToTakeOrExamine(Room currentRoom)
 	{
 		for (int i = 0; i < currentRoom.InteractableObjectsInRoom.Length; i++)
 		{

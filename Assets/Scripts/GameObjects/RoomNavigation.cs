@@ -20,10 +20,17 @@ public class RoomNavigation : MonoBehaviour {
 	}
 
 	public void UnpackExitsInRoom() { 
-		for (int i = 0; i < currentRoom.GetExits(controller.checkpointManager.checkpoint).Length; i++) {
+		for (int i = 0; i < currentRoom.GetExits(controller.checkpointManager.checkpoint).Length; i++)
+		{
+			string roomName = currentRoom.GetExits(controller.checkpointManager.checkpoint)[i].roomName;
+			if (roomName.Contains("<color"))
+			{
+				roomName = roomName.Substring(TextProcessing.LookAheadForChar(0, roomName, '>') + 1)
+					.Replace("</color>", "");
+			}
 			exitDictionary.Add (currentRoom.GetExits(controller.checkpointManager.checkpoint)[i].keyString, 
 				controller.allRoomsInGame.Find(o => o.roomName == 
-				                                    currentRoom.GetExits(controller.checkpointManager.checkpoint) [i].roomName));
+				                                   roomName));
 		}
 	}
 

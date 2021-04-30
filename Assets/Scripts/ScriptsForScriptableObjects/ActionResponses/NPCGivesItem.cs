@@ -10,7 +10,7 @@ public class NPCGivesItem : ActionResponse
     { 
         if (!controller.interactableItems.nounsInInventory.Contains(requiredString)) {
             InteractableObject item =
-                InteractableObject.Instantiate(
+                Instantiate(
                     controller.interactableItems.usableItemList.Find(o => o.noun == requiredString));
 
             controller.interactableItems.nounsInInventory.Add(requiredString);
@@ -23,7 +23,7 @@ public class NPCGivesItem : ActionResponse
         return false;
     }
 
-    public ScriptableObject SetRequiredString(string requiredString)
+    public NPCGivesItem SetRequiredString(string requiredString)
     {
         this.requiredString = requiredString;
         return this;

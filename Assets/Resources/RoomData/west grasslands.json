@@ -180,12 +180,12 @@
         "description": ""
       },
       {
-        "roomName": "west coast",
+        "roomName": "<color=purple>west coast</color>",
         "keyString": "west",
         "description": "coast lies to the west, the glow is stronger now, you are almost upon it"
       }
     ],
-    "description": "",
+    "description": "you continue to the west of your home, through the grasslands. the glow is stronger now.",
     "investigationDescription": "you can see the glow off to the west."
   },
   {

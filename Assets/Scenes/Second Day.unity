@@ -618,6 +618,8 @@ MonoBehaviour:
   checkpointFourItems:
   - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
   checkpointFiveItems: []
+  checkpointNineItems:
+  - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
   checkpoint: 0
 --- !u!114 &1347101011
 MonoBehaviour:
@@ -800,7 +802,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:

@@ -21,6 +21,7 @@ public class CheckpointManager : MonoBehaviour
     public List<InteractableObject> checkpointOneItems;
     public List<InteractableObject> checkpointFourItems;
     public List<InteractableObject> checkpointFiveItems;
+    public List<InteractableObject> checkpointNineItems;
     [HideInInspector] public int checkpoint;
 
     private void OnEnable()
@@ -99,6 +100,23 @@ public class CheckpointManager : MonoBehaviour
             interact.actionResponse = ScriptableObject.CreateInstance<OhmAsksToHoldOrb>();
             _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
 
+        }
+
+        if (maybeCheckpoint == 9)
+        {
+            checkpoint = maybeCheckpoint;
+            
+            _controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(_controller.checkpointManager.checkpointNineItems.ToArray());
+            _controller.PrepareObjectsToTakeOrExamine(_controller.roomNavigation.currentRoom);
+            InteractableObject item = _controller.checkpointManager.checkpointNineItems.First();
+
+            _controller.interactableItems.nounsInInventory.Add("spear");
+            _controller.interactableItems.AddActionResponsesToUseDictionary();
+            _controller.LogStringWithReturn("Ohm pauses for a moment, then turns to the wall to grab the two remaining spears. they hand you one and motion outside.");
+            _controller.LogStringWithReturn("when you meet their eyes, you see a cold determination. you must be victorious.");
+            _controller.LogStringWithReturn("you have obtained a spear.");
+            
+            _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Ohm")));
         }
         
         for (int i = 0; i < _controller.characters.Length; i++)
