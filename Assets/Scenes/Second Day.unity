@@ -194,6 +194,16 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 1347101014}
+    - target: {fileID: 708396256673494348, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 708396256673494348, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_TagString
+      value: EvilButton
+      objectReference: {fileID: 0}
     - target: {fileID: 4414887960710519955, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -353,6 +363,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791480085981821234, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1347101014}
+    - target: {fileID: 8791480085981821246, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -273.33002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791480087484412527, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791480087484412527, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791480087484412527, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791480087484412527, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a174499d254c204785136d2b80ceeea, type: 3}
@@ -579,6 +619,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1280343120 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8791480085981821234, guid: 9a174499d254c204785136d2b80ceeea,
+    type: 3}
+  m_PrefabInstance: {fileID: 122787895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb3a773c04f564959b0454f12e5dcf75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1347101009
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +702,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 163b417b0a457634b8dc873763fdf718, type: 2}
   - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
   - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
+  - {fileID: 11400000, guid: 781592594b662dc45961bb1b1cafd420, type: 2}
   nounsInRoom: []
   nounsInInventory:
   - orb
@@ -725,6 +778,7 @@ MonoBehaviour:
   westLabel: {fileID: 0}
   southLabel: {fileID: 0}
   volumeManipulation: {fileID: 0}
+  fifthButton: {fileID: 1280343120}
   actionLog: []
   exitChoices: []
   exitNames: []

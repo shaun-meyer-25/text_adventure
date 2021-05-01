@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f270c01c3f70580468cd6a10ba138963, type: 3}
-  m_Name: FirstHunt
+  m_Script: {fileID: 11500000, guid: 3937ed5fa7b21eb48af41087cdd4c663, type: 3}
+  m_Name: UseOrbFirstTime
   m_EditorClassIdentifier: 
-  requiredString: north foothills
+  requiredString: watering hole

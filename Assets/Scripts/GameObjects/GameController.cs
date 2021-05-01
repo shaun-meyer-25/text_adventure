@@ -35,6 +35,7 @@ public class GameController : IController {
 	public Text westLabel;
 	public Text southLabel;
 	public VolumeManipulation volumeManipulation;
+	public OptionButton fifthButton;
 
 	[HideInInspector] public List<string> actionLog = new List<string>();
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
@@ -107,6 +108,7 @@ public class GameController : IController {
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
 		roomNavigation.SetExitLabels(roomNavigation.currentRoom.GetExits(checkpointManager.checkpoint));
+		interactableItems.AddActionResponsesToUseDictionary();
 	}
 
 	public void UpdateRoomChoices(Choice[] choices)
