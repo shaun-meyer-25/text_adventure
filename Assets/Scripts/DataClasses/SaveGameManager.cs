@@ -23,7 +23,7 @@ public static class SaveGameManager
         game.currentTextColor = controller.currentColor;
 
         StaticDataHolder.instance.Checkpoint = controller.checkpointManager.checkpoint;
-
+        
         for (int i = 0; i < controller.allRoomsInGame.Count; i++)
         {
             if (controller.allRoomsInGame[i].PeopleInRoom.Length > 0)

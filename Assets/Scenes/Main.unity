@@ -297,7 +297,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4df2eb156a2587146ba1e5a39e23cb6c, type: 2}
   - {fileID: 11400000, guid: 23b4ba9941e0ba74498789313b40f772, type: 2}
   - {fileID: 11400000, guid: 248cfec788cee1b44b06b7dfa542eba0, type: 2}
-  tunnelSceneBackground: {fileID: 0}
+  audio: {fileID: 0}
   interactableChoices:
   - {fileID: 11400000, guid: c2fe0c8272ee56242820ac9cd692c6a9, type: 2}
   - {fileID: 11400000, guid: 04ab77325e7d89e4d95fbe51f075a788, type: 2}
@@ -325,6 +325,8 @@ MonoBehaviour:
   eastLabel: {fileID: 0}
   westLabel: {fileID: 0}
   southLabel: {fileID: 0}
+  volumeManipulation: {fileID: 0}
+  fifthButton: {fileID: 0}
   actionLog: []
   exitChoices: []
   exitNames: []
@@ -334,6 +336,7 @@ MonoBehaviour:
   isInteracting: 0
   isObserving: 0
   isUsing: 0
+  isConversing: 0
   fire: {fileID: 0}
   checkpointManager: {fileID: 0}
   startingActions:
@@ -404,6 +407,7 @@ MonoBehaviour:
   checkpointFourItems:
   - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
   checkpointFiveItems: []
+  checkpointNineItems: []
   checkpoint: 0
 --- !u!850595691 &1236027653
 LightingSettings:
@@ -684,6 +688,11 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 947878756}
+    - target: {fileID: 708396256673494348, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4414887960710519955, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -694,6 +703,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4438895336455566582, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4797650007323348398, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -702,7 +716,7 @@ PrefabInstance:
     - target: {fileID: 4797650007323348398, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -102.81825
+      value: -102.81949
       objectReference: {fileID: 0}
     - target: {fileID: 4797650007323348399, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
@@ -838,6 +852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791480085981821246, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -273.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a174499d254c204785136d2b80ceeea, type: 3}

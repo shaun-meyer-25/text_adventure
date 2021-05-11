@@ -141,8 +141,11 @@ public class InteractableItems : MonoBehaviour
                 }
                 else
                 {
-                    useDictionary.Remove(nounToUse);
-                    nounsInInventory.Remove(nounToUse);
+                    if (nounToUse != "orb")
+                    {
+                        useDictionary.Remove(nounToUse);
+                        nounsInInventory.Remove(nounToUse);                        
+                    }
                 }
             }
             else

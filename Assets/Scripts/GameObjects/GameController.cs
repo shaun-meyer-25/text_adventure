@@ -199,14 +199,7 @@ public class GameController : IController {
 	{
 		ClearCollectionsForNewRoom ();
 		UnpackRoom ();
-
-		for (int i = 0; i < travelingCompanions.Count; i++)
-		{
-			if (!roomNavigation.currentRoom.PeopleInRoom.Contains(travelingCompanions[i]))
-			{
-				roomNavigation.currentRoom.AddPersonToRoom(travelingCompanions[i]);
-			}
-		}
+		
 	}
 	
 	public void LoadRoomDataAndDisplayRoomText () {

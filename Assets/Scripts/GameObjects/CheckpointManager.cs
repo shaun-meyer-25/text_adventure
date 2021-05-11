@@ -22,6 +22,7 @@ public class CheckpointManager : MonoBehaviour
     public List<InteractableObject> checkpointFourItems;
     public List<InteractableObject> checkpointFiveItems;
     public List<InteractableObject> checkpointNineItems;
+    public InteractableObject checkpointNineBear;
     [HideInInspector] public int checkpoint;
 
     private void OnEnable()
@@ -117,6 +118,24 @@ public class CheckpointManager : MonoBehaviour
             _controller.LogStringWithReturn("you have obtained a spear.");
             
             _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Ohm")));
+        }
+
+        if (maybeCheckpoint == 10)
+        {
+            checkpoint = maybeCheckpoint;
+         //   _controller.
+        }
+        
+        if (maybeCheckpoint == 11)
+        {
+            checkpoint = maybeCheckpoint;
+            _controller.LogStringWithReturn(
+                "there is joy on the faces of the others as you lay the carcass on the ground. Tei says they will go get more fuel for the fire, to cook with. " +
+                "you skin the bear with the help of the others, which takes until nightfall. there is plenty of meat to cook, " +
+                "but Tei does not return with fuel for the fire. this is troubling.");
+            _controller.LogStringWithReturn("Ohm, though injured, agrees to go looking for Tei with you.");
+            _controller.SetNighttime();
+            _controller.travelingCompanions.Remove(_controller.characters.First(o => o.noun.Equals("Ohm")));
         }
         
         for (int i = 0; i < _controller.characters.Length; i++)

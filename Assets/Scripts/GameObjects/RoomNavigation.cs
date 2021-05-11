@@ -36,9 +36,14 @@ public class RoomNavigation : MonoBehaviour {
 
 	public bool AttemptToChangeRooms(string directionNoun) {
 		if (exitDictionary.ContainsKey(directionNoun)) {
-			if (currentRoom.roomName != "home cave")
+/*			if (currentRoom.roomName != "home cave")
 			{
 				currentRoom.SetBasePeopleInRoom();
+			}
+*/
+			for (int i = 0; i < controller.travelingCompanions.Count; i++)
+			{
+				currentRoom.RemovePersonFromRoom(controller.travelingCompanions[i].name);
 			}
 			
 			if (currentRoom.roomName == "home cave")
@@ -59,6 +64,14 @@ public class RoomNavigation : MonoBehaviour {
 			currentRoom = controller.allRoomsInGame.Find(o => o.roomName == exitDictionary[directionNoun].roomName);
 			controller.LogStringWithReturn("you go " + directionNoun);
 
+			for (int i = 0; i < controller.travelingCompanions.Count; i++)
+			{
+				if (!currentRoom.PeopleInRoom.Contains(controller.travelingCompanions[i]))
+				{
+					currentRoom.AddPersonToRoom(controller.travelingCompanions[i]);
+				}
+			}
+			
 			CheckIfCheckpointNeedsSetting();
 
 			if (currentRoom.GetEffectTriggerName(controller.checkpointManager.checkpoint) != null &&

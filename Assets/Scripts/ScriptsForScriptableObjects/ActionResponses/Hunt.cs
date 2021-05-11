@@ -35,7 +35,7 @@ public class Hunt : ActionResponse
             controller.LogStringWithReturn("you plunge forward, once again, this time with all your might. you drive your spear deep into the beast's side just as it lunges and collides with Ohm.");
             controller.LogStringWithReturn("your piercing blow struck true...");
             controller.LogStringWithReturn("...but still the bear does not fall. the blow may be mortal given time, but ravenous hunger and battle rage drives it just as yours drives you. " +
-                                           "it swipes at you, and you must recoil, one paw still pinning down a struggling Ohm. they cry out in pain.");
+                                           "it swipes at you, and you must recoil, one paw still pinning down a struggling Ohm. they cry out in pain. desperation clouds your mind.");
 
             return true;
 

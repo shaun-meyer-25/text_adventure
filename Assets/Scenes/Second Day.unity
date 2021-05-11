@@ -366,6 +366,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8791480085981821234, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
+      propertyPath: _handler
+      value: 
+      objectReference: {fileID: 11400000, guid: 3d73d9d1383a4e74794f20ceea3a25a6,
+        type: 2}
+    - target: {fileID: 8791480085981821234, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
       propertyPath: controller
       value: 
       objectReference: {fileID: 1347101014}
@@ -672,6 +678,7 @@ MonoBehaviour:
   checkpointFiveItems: []
   checkpointNineItems:
   - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
+  checkpointNineBear: {fileID: 11400000, guid: bb721676d96e36145a3be4539150ad59, type: 2}
   checkpoint: 0
 --- !u!114 &1347101011
 MonoBehaviour:
@@ -703,6 +710,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
   - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
   - {fileID: 11400000, guid: 781592594b662dc45961bb1b1cafd420, type: 2}
+  - {fileID: 11400000, guid: bb721676d96e36145a3be4539150ad59, type: 2}
   nounsInRoom: []
   nounsInInventory:
   - orb

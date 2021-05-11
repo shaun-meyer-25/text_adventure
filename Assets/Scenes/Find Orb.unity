@@ -164,6 +164,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
   checkpointFiveItems:
   - {fileID: 11400000, guid: 781592594b662dc45961bb1b1cafd420, type: 2}
+  checkpointNineItems: []
   checkpoint: 0
 --- !u!114 &674355945
 MonoBehaviour:
@@ -269,6 +270,7 @@ MonoBehaviour:
   westLabel: {fileID: 0}
   southLabel: {fileID: 0}
   volumeManipulation: {fileID: 0}
+  fifthButton: {fileID: 0}
   actionLog: []
   exitChoices: []
   exitNames: []
@@ -423,6 +425,11 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 674355948}
+    - target: {fileID: 708396256673494348, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4414887960710519955, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchorMax.x

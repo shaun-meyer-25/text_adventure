@@ -61,6 +61,13 @@ public class Room : ScriptableObject
 	{
 		peopleInRoom = objects;
 	}
+
+	public void RemovePersonFromRoom(string personName)
+	{
+		List<InteractableObject> people = new List<InteractableObject>(PeopleInRoom);
+		people.Remove(people.Find(o => o.name == personName));
+		peopleInRoom = people.ToArray();
+	}
 	
 	public void AddPersonToRoom(InteractableObject obj)
 	{

@@ -13,6 +13,8 @@ public class UseOrbFirstTime : ActionResponse
             controller.checkpointManager.checkpoint == 9)
         {
             controller.fifthButton.gameObject.SetActive(true);
+            controller.LogStringWithReturn("your awareness of the situation enhances, time seems to slow down. new possibilities of how to act arise from every detail of the landscape.");
+            // todo - pulse purple single time
             Text textObject = controller.fifthButton.GetComponentInChildren<Text>();
             textObject.text = "throw";
             return true;
