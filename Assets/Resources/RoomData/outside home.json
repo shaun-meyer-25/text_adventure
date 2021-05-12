@@ -180,7 +180,7 @@
         "description": "you are just outside of your home cave"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "<color=purple>west grasslands</color>",
         "keyString": "west",
         "description": "grasslands continue to stretch to the west. you see a faint glow coming from this direction."
       }
@@ -251,7 +251,7 @@
         "description": ""
       },
       {
-        "roomName": "south forest",
+        "roomName": "<color=red>south forest</color>",
         "keyString": "east",
         "description": ""
       },
@@ -266,8 +266,8 @@
         "description": "grasslands continue to stretch to the west."
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "you walk outside with spear in hand, orb tied to your waist with animal hide. you feel a rush through your body, originating from the orb, and the world around you intensifies. your instincts and your senses come alive in a way unlike you have ever felt before. the bear... is somewhere to the east. you can smell it. <color=purple>it will not be a match for you today.</color>",
+    "investigationDescription": "you are consumed by a thrill for the hunt. your prey lies east of here, it is all your mind will hold."
   },
   {
     "chapter": 10,

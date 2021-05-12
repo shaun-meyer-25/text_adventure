@@ -180,12 +180,12 @@
         "description": ""
       },
       {
-        "roomName": "west coast",
+        "roomName": "<color=purple>west coast</color>",
         "keyString": "west",
         "description": "coast lies to the west, the glow is stronger now, you are almost upon it"
       }
     ],
-    "description": "",
+    "description": "you continue to the west of your home, through the grasslands. the glow is stronger now.",
     "investigationDescription": "you can see the glow off to the west."
   },
   {
@@ -194,17 +194,17 @@
       {
         "roomName": "northwest grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "the plains stretch to the north"
       },
       {
         "roomName": "outside home",
         "keyString": "east",
-        "description": ""
+        "description": "home lies just to the east"
       },
       {
         "roomName": "southwest coast",
         "keyString": "south",
-        "description": ""
+        "description": "a small mass of land juts out into the sea to the south"
       },
       {
         "roomName": "west coast",
@@ -221,17 +221,17 @@
       {
         "roomName": "northwest grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "the plains stretch to the north"
       },
       {
         "roomName": "outside home",
         "keyString": "east",
-        "description": ""
+        "description": "home lies just to the east"
       },
       {
         "roomName": "southwest coast",
         "keyString": "south",
-        "description": ""
+        "description": "a small mass of land juts out into the sea to the south"
       },
       {
         "roomName": "west coast",
@@ -248,17 +248,17 @@
       {
         "roomName": "northwest grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "the plains stretch to the north"
       },
       {
         "roomName": "outside home",
         "keyString": "east",
-        "description": ""
+        "description": "home lies just to the east"
       },
       {
         "roomName": "southwest coast",
         "keyString": "south",
-        "description": ""
+        "description": "a small mass of land juts out into the sea to the south"
       },
       {
         "roomName": "west coast",
@@ -266,8 +266,8 @@
         "description": "coast lies to the west, you can smell the sea from here"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "this is the wrong direction, the beast is to the east.",
+    "investigationDescription": "you do not feel compelled to look around, it is time for the hunt."
   },
   {
     "chapter": 10,

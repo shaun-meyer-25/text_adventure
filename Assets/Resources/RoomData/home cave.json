@@ -68,11 +68,11 @@
         {
           "chapter": 6,
           "exits": [{
-            "roomName": "outside home",
+            "roomName": "<color=purple>outside home</color>",
             "keyString": "outside",
             "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
           }],
-          "description": "the others are asleep. best not to wake them.",
+          "description": "the others are asleep. best not to wake them. it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>",
           "investigationDescription": "it is too dark to see anything. the fire is gone.",
           "effectTriggerName": ""
   },
@@ -94,7 +94,7 @@
       "keyString": "outside",
       "description": "light filters in from outside"
     }],
-    "description": "the others look at you curiously",
+    "description": "the others look at you curiously, as if expecting an explanation",
     "investigationDescription": "the others are focused on the orb you now carry in your hand.",
     "effectTriggerName": ""
   },

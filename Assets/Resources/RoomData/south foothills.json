@@ -156,7 +156,7 @@
     "chapter": 9,
     "exits": [
       {
-        "roomName": "watering hole",
+        "roomName": "<color=red>watering hole</color>",
         "keyString": "north",
         "description": "the watering hole lies to the north"
       },
@@ -166,8 +166,8 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "you watch your step as your walk through the foothills. the beast is near now, it must be north of here at the watering hole.",
+    "investigationDescription": "the mountains to the east seem somehow smaller today."
   },
   {
     "chapter": 10,

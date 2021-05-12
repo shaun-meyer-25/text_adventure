@@ -20,18 +20,30 @@ public class RoomNavigation : MonoBehaviour {
 	}
 
 	public void UnpackExitsInRoom() { 
-		for (int i = 0; i < currentRoom.GetExits(controller.checkpointManager.checkpoint).Length; i++) {
+		for (int i = 0; i < currentRoom.GetExits(controller.checkpointManager.checkpoint).Length; i++)
+		{
+			string roomName = currentRoom.GetExits(controller.checkpointManager.checkpoint)[i].roomName;
+			if (roomName.Contains("<color"))
+			{
+				roomName = roomName.Substring(TextProcessing.LookAheadForChar(0, roomName, '>') + 1)
+					.Replace("</color>", "");
+			}
 			exitDictionary.Add (currentRoom.GetExits(controller.checkpointManager.checkpoint)[i].keyString, 
 				controller.allRoomsInGame.Find(o => o.roomName == 
-				                                    currentRoom.GetExits(controller.checkpointManager.checkpoint) [i].roomName));
+				                                   roomName));
 		}
 	}
 
 	public bool AttemptToChangeRooms(string directionNoun) {
 		if (exitDictionary.ContainsKey(directionNoun)) {
-			if (currentRoom.roomName != "home cave")
+/*			if (currentRoom.roomName != "home cave")
 			{
 				currentRoom.SetBasePeopleInRoom();
+			}
+*/
+			for (int i = 0; i < controller.travelingCompanions.Count; i++)
+			{
+				currentRoom.RemovePersonFromRoom(controller.travelingCompanions[i].name);
 			}
 			
 			if (currentRoom.roomName == "home cave")
@@ -52,6 +64,14 @@ public class RoomNavigation : MonoBehaviour {
 			currentRoom = controller.allRoomsInGame.Find(o => o.roomName == exitDictionary[directionNoun].roomName);
 			controller.LogStringWithReturn("you go " + directionNoun);
 
+			for (int i = 0; i < controller.travelingCompanions.Count; i++)
+			{
+				if (!currentRoom.PeopleInRoom.Contains(controller.travelingCompanions[i]))
+				{
+					currentRoom.AddPersonToRoom(controller.travelingCompanions[i]);
+				}
+			}
+			
 			CheckIfCheckpointNeedsSetting();
 
 			if (currentRoom.GetEffectTriggerName(controller.checkpointManager.checkpoint) != null &&

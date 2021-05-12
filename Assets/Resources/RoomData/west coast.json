@@ -175,8 +175,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO",
+    "description": "this is the wrong direction, the beast is to the east.",
+    "investigationDescription": "you do not feel compelled to look around, it is time for the hunt.",
     "effectTriggerName": ""
   },
   {

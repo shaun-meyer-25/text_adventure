@@ -202,7 +202,7 @@
     "chapter": 9,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "<color=red>north forest</color>",
         "keyString": "east",
         "description": "forest to the east"
       },
@@ -217,8 +217,8 @@
         "description": "the grasslands continue to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "this is the wrong direction, the beast is to the east.",
+    "investigationDescription": "you do not feel compelled to look around, it is time for the hunt."
   },
   {
     "chapter": 10,

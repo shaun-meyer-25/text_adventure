@@ -35,6 +35,7 @@ public class GameController : IController {
 	public Text westLabel;
 	public Text southLabel;
 	public VolumeManipulation volumeManipulation;
+	public OptionButton fifthButton;
 
 	[HideInInspector] public List<string> actionLog = new List<string>();
 	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
@@ -85,7 +86,7 @@ public class GameController : IController {
 	void Start ()
 	{
 		audio = FindObjectOfType<AudioSource>();
-		checkpointManager.checkpoint = StaticDataHolder.instance.Checkpoint;
+		checkpointManager.SetCheckpoint(StaticDataHolder.instance.Checkpoint);
 		displayText.text = "";
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
 		caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
@@ -96,11 +97,18 @@ public class GameController : IController {
 			LogStringWithReturn(
 				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
 		}
+		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 8)
+		{
+			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
+			LogStringWithReturn(
+				"you awake slowly. you sit up, and see that the others have woken up before you. they seem to have noticed the orb that you kept in your hands.");
+		}
 
 		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
 		roomNavigation.SetExitLabels(roomNavigation.currentRoom.GetExits(checkpointManager.checkpoint));
+		interactableItems.AddActionResponsesToUseDictionary();
 	}
 
 	public void UpdateRoomChoices(Choice[] choices)
@@ -191,21 +199,7 @@ public class GameController : IController {
 	{
 		ClearCollectionsForNewRoom ();
 		UnpackRoom ();
-
-		for (int i = 0; i < travelingCompanions.Count; i++)
-		{
-			if (!roomNavigation.currentRoom.PeopleInRoom.Contains(travelingCompanions[i]))
-			{
-				roomNavigation.currentRoom.AddPersonToRoom(travelingCompanions[i]);
-			}
-		}
 		
-		if (roomNavigation.currentRoom.roomName.Equals("home cave"))
-		{
-			roomNavigation.currentRoom.description = caveDescription[checkpointManager.checkpoint.ToString()];
-			roomNavigation.currentRoom.roomInvestigationDescription = caveInvestigationDescriptions[checkpointManager.checkpoint.ToString()];
-
-		}
 	}
 	
 	public void LoadRoomDataAndDisplayRoomText () {
@@ -230,7 +224,7 @@ public class GameController : IController {
 		PrepareObjectsToTakeOrExamine(roomNavigation.currentRoom);
 	}
 
-	void PrepareObjectsToTakeOrExamine(Room currentRoom)
+	public void PrepareObjectsToTakeOrExamine(Room currentRoom)
 	{
 		for (int i = 0; i < currentRoom.InteractableObjectsInRoom.Length; i++)
 		{

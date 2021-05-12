@@ -31,6 +31,7 @@ public class Interact : ActionChoice
             {
                 if (controller.roomNavigation.currentRoom.PeopleInRoom.Length > 0)
                 {
+                    
                     controller.LogStringWithReturn("which person?");
                     controller.UpdateRoomChoices(controller.roomNavigation.currentRoom.PeopleInRoom);
                 }
@@ -55,8 +56,11 @@ public class Interact : ActionChoice
                         {
                             interaction.ActionResponse.DoActionResponse(controller);
                         }
-                        controller.UpdateRoomChoices(controller.startingActions);
-                        controller.isInteracting = false;
+                        else
+                        {
+                            controller.UpdateRoomChoices(controller.startingActions);
+                            controller.isInteracting = false;   
+                        }
                     }
                 }
             }

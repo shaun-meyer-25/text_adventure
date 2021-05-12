@@ -23,8 +23,14 @@ public class OhmGetInPosition : ActionResponse
             interaction.SetActionResponse(null);
             controller.roomNavigation.currentRoom.roomInvestigationDescription = "the bear is focused on Ohm. now is your chance to strike.";
 
+            controller.UpdateRoomChoices(controller.startingActions);
+
+            controller.isInteracting = false;
             return true;
         }
+
+        controller.UpdateRoomChoices(controller.startingActions);
+        controller.isInteracting = false;
 
         return false;
     }
