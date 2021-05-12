@@ -123,7 +123,7 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 10)
         {
             checkpoint = maybeCheckpoint;
-         //   _controller.
+            _controller.LoadRoomData();
         }
         
         if (maybeCheckpoint == 11)
