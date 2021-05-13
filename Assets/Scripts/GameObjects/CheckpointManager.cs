@@ -52,6 +52,8 @@ public class CheckpointManager : MonoBehaviour
         {
             checkpoint = maybeCheckpoint;
             _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Ohm")));
+            // this is kind of a smell, as we are running the checkpoint after room change so the cleanup code isn't run like it should
+            _controller.allRoomsInGame.Find(o => o.roomName == "home cave").RemovePersonFromRoom("Ohm");
         }
 
         if (maybeCheckpoint == 3)
