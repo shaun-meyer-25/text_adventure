@@ -129,6 +129,11 @@ public class RoomNavigation : MonoBehaviour {
 			controller.checkpointManager.SetCheckpoint(8); 
 			controller.levelLoader.LoadScene("Second Day");
 		}
+		
+		if (currentRoom.roomName == "watering hole" && controller.checkpointManager.checkpoint == 9)
+		{
+			controller.checkpointManager.SetCheckpoint(10);
+		}
 	}
 
 	public void SetExitLabels(Exit[] choices)

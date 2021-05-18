@@ -94,16 +94,20 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 8)
         {
             checkpoint = maybeCheckpoint;
-            
-            InteractableObject person = new List<InteractableObject>(_controller.characters)
-                .Find(o => o.name == "Ohm");
-            List<Interaction> interactions =
-                new List<Interaction>(person.interactions);
-            Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
-            interact.actionResponse = ScriptableObject.CreateInstance<OhmAsksToHoldOrb>();
-            Debug.Log("WHEN WE SET CHAPTER 8 ppl The ROOM NAME IS - " + _controller.roomNavigation.currentRoom.roomName);
-            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
 
+            // todo - we are currently calling this twice (once when going to sleep, once on scene load) which seems awfully bad
+            if (_controller.roomNavigation.currentRoom.roomName != "sleep")
+            {
+                InteractableObject person = new List<InteractableObject>(_controller.characters)
+                    .Find(o => o.name == "Ohm");
+                List<Interaction> interactions =
+                    new List<Interaction>(person.interactions);
+                Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+                interact.actionResponse = ScriptableObject.CreateInstance<OhmAsksToHoldOrb>();
+                Debug.Log("WHEN WE SET CHAPTER 8 ppl The ROOM NAME IS - " +
+                          _controller.roomNavigation.currentRoom.roomName);
+                _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
+            }
         }
 
         if (maybeCheckpoint == 9)
@@ -126,10 +130,20 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 10)
         {
             checkpoint = maybeCheckpoint;
-            _controller.LoadRoomData();
         }
         
         if (maybeCheckpoint == 11)
+        {
+            checkpoint = maybeCheckpoint;
+        }
+        
+        if (maybeCheckpoint == 12)
+        {
+            checkpoint = maybeCheckpoint;
+            _controller.LoadRoomData();
+        }
+        
+        if (maybeCheckpoint == 13)
         {
             checkpoint = maybeCheckpoint;
             _controller.LogStringWithReturn(

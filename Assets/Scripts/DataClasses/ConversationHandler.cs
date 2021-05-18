@@ -35,5 +35,6 @@ public static class ConversationHandler
             new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
         Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
         interaction.textResponse = "they look at you strangely.";
+        interaction.actionResponse = null;
     }
 }
