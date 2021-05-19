@@ -30,7 +30,7 @@ public class Hunt : ActionResponse
 
         }
         
-        if (controller.roomNavigation.currentRoom.roomName == "watering hole" && controller.checkpointManager.checkpoint == 9)
+        if (controller.roomNavigation.currentRoom.roomName == "watering hole" && controller.checkpointManager.checkpoint == 10)
         {
             controller.LogStringWithReturn("you plunge forward with all your might. you drive your spear into the beast's side as it lunges at Ohm.");
             controller.LogStringWithReturn("your piercing blow struck true...");

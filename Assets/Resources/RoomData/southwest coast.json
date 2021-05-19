@@ -126,8 +126,8 @@
       "keyString": "north",
       "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the land juts out into the sea here, you can go no further.",
+    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home."
   },
   {
     "chapter": 13,
@@ -136,8 +136,8 @@
       "keyString": "north",
       "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "it is terribly dark. the sea is restless. it surrounds you on all sides in this part of the shore.",
+    "investigationDescription": "this place is unwelcoming, and Tei will not be found here."
   },
   {
     "chapter": 14,

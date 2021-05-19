@@ -282,8 +282,8 @@
         "description": "home lies outside of the woods to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the forest here is old, a good place to find dry fuel when you need it. with the sun exactly overhead, you can just make it out through the trees.",
+    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home."
   },
   {
     "chapter": 13,

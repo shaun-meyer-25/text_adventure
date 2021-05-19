@@ -252,8 +252,8 @@
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "you have slain the cave bear. calm is returning again to the tranquil watering hole.",
+    "investigationDescription": "the blood of the slain bear soaks the dirt. it tells the tale of your struggle and triumph."
   },
   {
     "chapter": 13,
@@ -274,8 +274,8 @@
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the watering hole is a dangerous place to be at night. vicious beasts could be in any hidden place to wait for prey.",
+    "investigationDescription": "you do not have time to look around, Tei may be injured."
   },
   {
     "chapter": 14,
