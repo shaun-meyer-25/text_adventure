@@ -21,7 +21,6 @@ public class CheckpointManager : MonoBehaviour
     public List<InteractableObject> checkpointOneItems;
     public List<InteractableObject> checkpointFourItems;
     public List<InteractableObject> checkpointFiveItems;
-    public List<InteractableObject> checkpointNineItems;
     public InteractableObject checkpointNineBear;
     [HideInInspector] public int checkpoint;
 
@@ -113,10 +112,6 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 9)
         {
             checkpoint = maybeCheckpoint;
-            
-            _controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(_controller.checkpointManager.checkpointNineItems.ToArray());
-            _controller.PrepareObjectsToTakeOrExamine(_controller.roomNavigation.currentRoom);
-            InteractableObject item = _controller.checkpointManager.checkpointNineItems.First();
 
             _controller.interactableItems.nounsInInventory.Add("spear");
             _controller.interactableItems.AddActionResponsesToUseDictionary();
@@ -141,6 +136,9 @@ public class CheckpointManager : MonoBehaviour
         {
             checkpoint = maybeCheckpoint;
             _controller.LoadRoomData();
+            _controller.roomNavigation.SetExitLabels(_controller.roomNavigation.currentRoom
+                .GetExits(_controller.checkpointManager.checkpoint));
+
         }
         
         if (maybeCheckpoint == 13)
@@ -153,6 +151,7 @@ public class CheckpointManager : MonoBehaviour
             _controller.LogStringWithReturn("Ohm, though injured, agrees to go looking for Tei with you.");
             _controller.SetNighttime();
             _controller.travelingCompanions.Remove(_controller.characters.First(o => o.noun.Equals("Ohm")));
+            _controller.roomNavigation.currentRoom.RemovePersonFromRoom("Tei");
         }
         
         for (int i = 0; i < _controller.characters.Length; i++)
