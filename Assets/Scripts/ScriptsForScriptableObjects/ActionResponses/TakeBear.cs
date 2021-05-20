@@ -9,7 +9,7 @@ public class TakeBear : ActionResponse
     {
         if (controller.roomNavigation.currentRoom.roomName == requiredString)
         {
-            controller.checkpointManager.SetCheckpoint(10);
+            controller.checkpointManager.SetCheckpoint(12);
             return true;
         }
 

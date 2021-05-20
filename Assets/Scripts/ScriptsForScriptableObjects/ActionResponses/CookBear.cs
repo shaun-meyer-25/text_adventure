@@ -9,7 +9,7 @@ public class CookBear : ActionResponse
     {
         if (controller.roomNavigation.currentRoom.roomName == requiredString)
         {
-            controller.checkpointManager.SetCheckpoint(11);
+            controller.checkpointManager.SetCheckpoint(13);
             return true;
         }
 

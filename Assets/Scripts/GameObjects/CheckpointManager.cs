@@ -21,7 +21,6 @@ public class CheckpointManager : MonoBehaviour
     public List<InteractableObject> checkpointOneItems;
     public List<InteractableObject> checkpointFourItems;
     public List<InteractableObject> checkpointFiveItems;
-    public List<InteractableObject> checkpointNineItems;
     public InteractableObject checkpointNineBear;
     [HideInInspector] public int checkpoint;
 
@@ -52,6 +51,8 @@ public class CheckpointManager : MonoBehaviour
         {
             checkpoint = maybeCheckpoint;
             _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Ohm")));
+            // this is kind of a smell, as we are running the checkpoint after room change so the cleanup code isn't run like it should
+            _controller.allRoomsInGame.Find(o => o.roomName == "home cave").RemovePersonFromRoom("Ohm");
         }
 
         if (maybeCheckpoint == 3)
@@ -92,24 +93,25 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 8)
         {
             checkpoint = maybeCheckpoint;
-            
-            InteractableObject person = new List<InteractableObject>(_controller.characters)
-                .Find(o => o.name == "Ohm");
-            List<Interaction> interactions =
-                new List<Interaction>(person.interactions);
-            Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
-            interact.actionResponse = ScriptableObject.CreateInstance<OhmAsksToHoldOrb>();
-            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
 
+            // todo - we are currently calling this twice (once when going to sleep, once on scene load) which seems awfully bad
+            if (_controller.roomNavigation.currentRoom.roomName != "sleep")
+            {
+                InteractableObject person = new List<InteractableObject>(_controller.characters)
+                    .Find(o => o.name == "Ohm");
+                List<Interaction> interactions =
+                    new List<Interaction>(person.interactions);
+                Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+                interact.actionResponse = ScriptableObject.CreateInstance<OhmAsksToHoldOrb>();
+                Debug.Log("WHEN WE SET CHAPTER 8 ppl The ROOM NAME IS - " +
+                          _controller.roomNavigation.currentRoom.roomName);
+                _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
+            }
         }
 
         if (maybeCheckpoint == 9)
         {
             checkpoint = maybeCheckpoint;
-            
-            _controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(_controller.checkpointManager.checkpointNineItems.ToArray());
-            _controller.PrepareObjectsToTakeOrExamine(_controller.roomNavigation.currentRoom);
-            InteractableObject item = _controller.checkpointManager.checkpointNineItems.First();
 
             _controller.interactableItems.nounsInInventory.Add("spear");
             _controller.interactableItems.AddActionResponsesToUseDictionary();
@@ -123,10 +125,23 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 10)
         {
             checkpoint = maybeCheckpoint;
-         //   _controller.
         }
         
         if (maybeCheckpoint == 11)
+        {
+            checkpoint = maybeCheckpoint;
+        }
+        
+        if (maybeCheckpoint == 12)
+        {
+            checkpoint = maybeCheckpoint;
+            _controller.LoadRoomData();
+            _controller.roomNavigation.SetExitLabels(_controller.roomNavigation.currentRoom
+                .GetExits(_controller.checkpointManager.checkpoint));
+
+        }
+        
+        if (maybeCheckpoint == 13)
         {
             checkpoint = maybeCheckpoint;
             _controller.LogStringWithReturn(
@@ -136,6 +151,7 @@ public class CheckpointManager : MonoBehaviour
             _controller.LogStringWithReturn("Ohm, though injured, agrees to go looking for Tei with you.");
             _controller.SetNighttime();
             _controller.travelingCompanions.Remove(_controller.characters.First(o => o.noun.Equals("Ohm")));
+            _controller.roomNavigation.currentRoom.RemovePersonFromRoom("Tei");
         }
         
         for (int i = 0; i < _controller.characters.Length; i++)

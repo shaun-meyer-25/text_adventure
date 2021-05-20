@@ -195,7 +195,7 @@
         "description": "the grasslands begin to the west"
       }
     ],
-    "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. there is fewer food here today than there was yesterday, it will need more time to regrow.",
+    "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. there is less food here today than there was yesterday, it will need more time to regrow.",
     "investigationDescription": "small beasts catch your eye, scurrying about through the branches of the trees."
   },
   {
@@ -278,7 +278,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. there is less food here today than there was yesterday, it will need more time to regrow.",
+    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home."
   },
   {
     "chapter": 13,
@@ -298,7 +300,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the woods, though sparser here, are still dangerous at night. Tei would not have come this far north looking for wood.",
+    "investigationDescription": "you cannot see well enough to navigate through the woods at night. Tei would be south of here."
   },
   {
     "chapter": 14,

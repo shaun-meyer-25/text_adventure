@@ -248,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: {fileID: 283939590}
   currentColor: white
+  processingDelay: 0.04
 --- !u!1 &1293305018
 GameObject:
   m_ObjectHideFlags: 0

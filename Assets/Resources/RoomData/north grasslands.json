@@ -129,7 +129,7 @@
         "description": "the grasslands continue to the west"
       }
     ],
-    "description": "the moon has yet to come out and illuminate the ground. the plains are eerie at this time of night.",
+    "description": "the eye of night has yet to come out and illuminate the ground. the plains are eerie at this time of night.",
     "investigationDescription": "your heart beats a little faster as you imagine the beasts that hunt these plains at night. you see nothing, but something in your mind tells you to leave."
   },
   {
@@ -151,7 +151,7 @@
         "description": "the grasslands continue to the west"
       }
     ],
-    "description": "the moon illuminates the grasslands around you. the vastness of the plains stretching north makes you aware of how alone you are.",
+    "description": "the bright eye of the night illuminates the grasslands around you. the vastness of the plains stretching north makes you aware of how alone you are.",
     "investigationDescription": "your heart beats a little faster as you imagine the beasts that hunt these plains at night. without a companion, nobody would bear witness to your death. you see nothing, but something in your mind tells you to leave."
   },
   {
@@ -173,7 +173,7 @@
         "description": "the grasslands continue to the west"
       }
     ],
-    "description": "the moon illuminates the grasslands around you. the vastness of the plains stretching north makes you aware of how alone you are.",
+    "description": "the bright eye of the night illuminates the grasslands around you. the vastness of the plains stretching north makes you aware of how alone you are.",
     "investigationDescription": "your heart beats a little faster as you imagine the beasts that hunt these plains at night. without a companion, nobody would bear witness to your death. you see nothing, but something in your mind tells you to leave."
   },
   {
@@ -283,8 +283,8 @@
         "description": "the grasslands continue to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "tall grass reaches high up your legs. the land around you is flat, but the grasses could conceal danger.",
+    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home. \n\nthe vast expanse of these grasslands continue north, but wandering too far from home is dangerous."
   },
   {
     "chapter": 13,
@@ -305,8 +305,8 @@
         "description": "the grasslands continue to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the grasslands around you are dark. hard to see, easy to lose your way.",
+    "investigationDescription": "there is no time to look around, you must find Tei."
   },
   {
     "chapter": 14,

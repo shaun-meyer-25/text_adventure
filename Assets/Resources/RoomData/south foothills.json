@@ -13,7 +13,7 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north, but their legs are better suited for it than yours.",
+    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north. their legs are better suited for it than yours.",
     "investigationDescription": "the mountains rise to the east, impassable. memories of a time long ago, of a place much like this one surface in your mind. another member of your group lost to brutal death."
   },
   {
@@ -30,7 +30,7 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north, but their legs are better suited for it than yours.",
+    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north. their legs are better suited for it than yours.",
     "investigationDescription": "the mountains rise to the east, impassable. memories of a time long ago, of a place much like this one surface in your mind. another member of your group lost to brutal death."
   },
   {
@@ -47,7 +47,7 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north, but their legs are better suited for it than yours.",
+    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north. their legs are better suited for it than yours.",
     "investigationDescription": "the mountains rise to the east, impassable. memories of a time long ago, of a place much like this one surface in your mind. another member of your group lost to brutal death."
   },
   {
@@ -64,7 +64,7 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north, but their legs are better suited for it than yours.",
+    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north. their legs are better suited for it than yours.",
     "investigationDescription": "the mountains rise to the east, impassable. memories of a time long ago, of a place much like this one surface in your mind. another member of your group lost to brutal death."
   },
   {
@@ -81,7 +81,7 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north, but their legs are better suited for it than yours.",
+    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north. their legs are better suited for it than yours.",
     "investigationDescription": "the mountains rise to the east, impassable. memories of a time long ago, of a place much like this one surface in your mind. another member of your group lost to brutal death."
   },
   {
@@ -149,7 +149,7 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north, but their legs are better suited for it than yours.",
+    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north. their legs are better suited for it than yours.",
     "investigationDescription": "the mountains rise to the east, impassable. you do not let your mind wander for too long while you are here, lest you remember things you would rather not"
   },
   {
@@ -217,8 +217,8 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north. their legs are better suited for it than yours.",
+    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home."
   },
   {
     "chapter": 13,
@@ -234,8 +234,8 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the rocky footing is especially treacherous in the dark. a broken leg would mean slow death.",
+    "investigationDescription": "you cannot see well enough to navigate the terrain. you should search for Tei."
   },
   {
     "chapter": 14,

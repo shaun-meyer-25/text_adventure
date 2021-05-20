@@ -124,8 +124,15 @@ public class RoomNavigation : MonoBehaviour {
 
 		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 7)
 		{
+			// todo - when we call this method this insures that SetCheckpoint is called twice. we need it only called once
+			// it's called the second time in the Start function in GameController
 			controller.checkpointManager.SetCheckpoint(8); 
 			controller.levelLoader.LoadScene("Second Day");
+		}
+		
+		if (currentRoom.roomName == "watering hole" && controller.checkpointManager.checkpoint == 9)
+		{
+			controller.checkpointManager.SetCheckpoint(10);
 		}
 	}
 

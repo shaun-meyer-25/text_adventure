@@ -59,6 +59,10 @@ public class Room : ScriptableObject
 
 	public void SetPeopleInRoom(InteractableObject[] objects)
 	{
+		if (roomName == "sleep")
+		{
+			Debug.Log("setting people in sleep room - " + objects.Length);
+		}
 		peopleInRoom = objects;
 	}
 
@@ -71,6 +75,10 @@ public class Room : ScriptableObject
 	
 	public void AddPersonToRoom(InteractableObject obj)
 	{
+		if (roomName == "sleep")
+		{
+			Debug.Log("setting person in sleep room - " + obj.noun);
+		}
 		List<InteractableObject> updatedPeopleInRoom;
 		if (PeopleInRoom == null)
 		{

@@ -282,8 +282,8 @@
         "description": "the coast is to the west, smelling of sea."
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "tall grass reaches high up your legs. the land around you is flat, but the grasses could conceal danger.",
+    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home."
   },
   {
     "chapter": 13,
@@ -304,8 +304,8 @@
         "description": "the coast is to the west, smelling of sea."
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the grasslands around you are dark. hard to see, easy to lose your way.",
+    "investigationDescription": "there is no time to look around, you must find Tei."
   },
   {
     "chapter": 14,

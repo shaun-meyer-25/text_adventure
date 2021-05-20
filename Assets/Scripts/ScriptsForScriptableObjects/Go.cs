@@ -23,6 +23,10 @@ public class Go : ActionChoice {
 				controller.LogStringWithReturn("go where?");
 				controller.UpdateRoomChoices(exits.ToArray());
 			}
+			else
+			{
+				controller.LogStringWithReturn("you cannot leave right now.");
+			}
 		} else {
 			controller.roomNavigation.AttemptToChangeRooms(separatedInputWords[1]);
 		}
