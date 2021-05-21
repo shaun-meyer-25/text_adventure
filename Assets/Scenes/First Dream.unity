@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1a7fd1cdc469c4b844092d6472a85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Checkpoint: 0
+  Checkpoint: 6
 --- !u!4 &637630127
 Transform:
   m_ObjectHideFlags: 0

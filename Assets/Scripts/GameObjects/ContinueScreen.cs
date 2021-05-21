@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ContinueScreen : MonoBehaviour
 {
-    private GameController _controller;
+    private IController _controller;
     private SaveGame _saveGame;
     private static ContinueScreen _continueScreen;
     
@@ -42,7 +42,7 @@ public class ContinueScreen : MonoBehaviour
         Debug.Log("OnSceneLoaded: " + scene.name);
         if (scene.name == "Main")
         {
-            _controller = (GameController) GameObject.FindObjectOfType(typeof(GameController));
+            _controller = (IController) GameObject.FindObjectOfType(typeof(IController));
             SaveGameManager.PopulateGameData(_saveGame, _controller);
         }
 

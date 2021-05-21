@@ -15,7 +15,7 @@ public class VolumeManipulation : MonoBehaviour
 
     }
 
-    public void EffectStart(GameController controller, string requiredString)
+    public void EffectStart(IController controller, string requiredString)
      {
          if (requiredString == "firstOrbEncounter")
          {
@@ -41,7 +41,7 @@ public class VolumeManipulation : MonoBehaviour
          }
      }
 
-     public IEnumerator SwellThenFizzle(GameController controller, Bloom bloom)
+     public IEnumerator SwellThenFizzle(IController controller, Bloom bloom)
      {
          float seconds = 6;
          while (seconds > 0) 
@@ -55,7 +55,7 @@ public class VolumeManipulation : MonoBehaviour
          bloom.active = false;
      }
 
-     public void EffectEnd(GameController controller, string requiredString)
+     public void EffectEnd(IController controller, string requiredString)
      {
          if (requiredString == "firstOrbEncounter")
          {

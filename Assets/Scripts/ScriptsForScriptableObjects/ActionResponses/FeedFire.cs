@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/FeedFire")]
 public class FeedFire : ActionResponse
 {
-    public override bool DoActionResponse(GameController controller)
+    public override bool DoActionResponse(IController controller)
     {
         if (controller.roomNavigation.currentRoom.roomName == requiredString)
         {
@@ -16,9 +16,7 @@ public class FeedFire : ActionResponse
                                                "the noise from this begins to wake the others, who stir and rise to start their days.");
             }
             bool fireWasFed = controller.fire.FeedFire();
-
-            Debug.Log("the current checkpoint - " + controller.checkpointManager.checkpoint);
-
+            
             return fireWasFed;
         }
 

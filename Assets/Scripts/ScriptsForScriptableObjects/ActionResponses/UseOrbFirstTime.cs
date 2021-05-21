@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/UseOrbFirstTime")]
 public class UseOrbFirstTime : ActionResponse
 {
-    public override bool DoActionResponse(GameController controller)
+    public override bool DoActionResponse(IController controller)
     {
         if (requiredString == controller.roomNavigation.currentRoom.roomName && 
             !controller.interactableItems.nounsInInventory.Contains("spear") && 

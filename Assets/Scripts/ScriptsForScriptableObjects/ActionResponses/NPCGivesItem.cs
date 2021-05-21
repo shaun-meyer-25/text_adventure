@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/NPCGivesItem")]
 public class NPCGivesItem : ActionResponse
 {
-    public override bool DoActionResponse(GameController controller)
+    public override bool DoActionResponse(IController controller)
     { 
         if (!controller.interactableItems.nounsInInventory.Contains(requiredString)) {
             InteractableObject item =

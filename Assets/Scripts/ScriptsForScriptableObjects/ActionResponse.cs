@@ -6,5 +6,5 @@ public abstract class ActionResponse : ScriptableObject
 {
     public string requiredString;
 
-    public abstract bool DoActionResponse(GameController controller);
+    public abstract bool DoActionResponse(IController controller);
 }

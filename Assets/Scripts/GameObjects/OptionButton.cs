@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class OptionButton : MonoBehaviour {
 
-	public GameController controller;
+	public IController controller;
 	[FormerlySerializedAs("handler")] public IOptionButtonHandler _handler;
 	private Button button;
 	

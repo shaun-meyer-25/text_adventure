@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName= "TextAdventure/ButtonHandlers/DayTwoOrbHandler")]
 public class DayTwoOrbHandler : IOptionButtonHandler
 {
-    public override void Handle(GameController controller, Text textObject)
+    public override void Handle(IController controller, Text textObject)
     {
         string text = textObject.text;
         if (text == "throw")

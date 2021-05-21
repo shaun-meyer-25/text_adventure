@@ -41,7 +41,7 @@ public class Room : ScriptableObject
 			return roomData.exits.ToArray();
 		}
 
-		Debug.Log("no exits found for checkpoint " + checkpoint);
+		Debug.Log("no exits found for checkpoint " + checkpoint + " and room " + roomName);
 		return new Exit[] { };
 	}
 	
@@ -63,11 +63,15 @@ public class Room : ScriptableObject
 		{
 			Debug.Log("setting people in sleep room - " + objects.Length);
 		}
+		
+		Debug.Log("setting" + objects.Length + " people in " + roomName);
+
 		peopleInRoom = objects;
 	}
 
 	public void RemovePersonFromRoom(string personName)
 	{
+	//	Debug.Log("removing " + personName + " from room " + roomName);
 		List<InteractableObject> people = new List<InteractableObject>(PeopleInRoom);
 		people.Remove(people.Find(o => o.name == personName));
 		peopleInRoom = people.ToArray();
@@ -79,6 +83,8 @@ public class Room : ScriptableObject
 		{
 			Debug.Log("setting person in sleep room - " + obj.noun);
 		}
+//		Debug.Log("setting " + obj.noun + " in room - " + roomName);
+
 		List<InteractableObject> updatedPeopleInRoom;
 		if (PeopleInRoom == null)
 		{
@@ -101,11 +107,22 @@ public class Room : ScriptableObject
 	{
 		string filePath = "RoomData/" + roomName;
 		TextAsset file = Resources.Load<TextAsset>(filePath);
+		
+		// TODO : remove this is just for debugging
+		if (roomName == "sleep")
+		{
+			Debug.Log(_roomData == null);	
+		}
 		if (file != null)
 		{
 			_roomData = new List<RoomData>(JsonUtility.FromJson<Wrapper<RoomData>>("{\"array\":" + file.text + "}").array);
 		}
-		
+
+		if (roomName == "home cave")
+		{
+			Debug.Log(GetInstanceID());
+
+		}
 		
 		interactableObjectsInRoom = baseInteractableObjectsInRoom.ToArray();
 		peopleInRoom = basePeopleInRoom.ToArray();
@@ -195,6 +212,10 @@ public class Room : ScriptableObject
 
 	public void SetBasePeopleInRoom()
 	{
+		if (roomName == "home cave")
+		{
+			Debug.Log("setting base people in room - " + basePeopleInRoom.Count);
+		}
 		peopleInRoom = basePeopleInRoom.ToArray();
 	}
 }

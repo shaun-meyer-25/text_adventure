@@ -189,7 +189,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1138714459
+--- !u!1 &849152655
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,12 +197,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1138714465}
-  - component: {fileID: 1138714464}
-  - component: {fileID: 1138714463}
-  - component: {fileID: 1138714462}
-  - component: {fileID: 1138714461}
-  - component: {fileID: 1138714460}
+  - component: {fileID: 849152657}
+  - component: {fileID: 849152656}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -210,160 +206,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1138714460
+--- !u!114 &849152656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138714459}
+  m_GameObject: {fileID: 849152655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c115f74199dadb47a6680429751c1b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ohmInPosition: 0
-  checkpointOneItems:
-  - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
-  checkpointFourItems:
-  - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
-  checkpointFiveItems: []
-  checkpointNineBear: {fileID: 0}
-  checkpoint: 0
---- !u!114 &1138714461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138714459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc8cf090ca6b5f43bafbcb19730bb2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireLevel: 1
---- !u!114 &1138714462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138714459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c313ef354246694994f57d276f9c36b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  usableItemList:
-  - {fileID: 11400000, guid: 163b417b0a457634b8dc873763fdf718, type: 2}
-  - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
-  - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
-  nounsInRoom: []
-  nounsInInventory: []
---- !u!114 &1138714463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138714459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f043b3d59d924524ab7fcc1195f20d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentRoom: {fileID: 11400000, guid: 41aa8f173b5cf487abe6ad6e6de61fb1, type: 2}
---- !u!114 &1138714464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138714459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a1fe4a4be7c94ab384a1eca678bc7d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5620956b45fa908448f79f42a67a61a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   displayText: {fileID: 1695353951}
-  currentColor: white
-  levelLoader: {fileID: 0}
-  characters:
-  - {fileID: 11400000, guid: f774650eecbc87044ae9bb3dedb62731, type: 2}
-  - {fileID: 11400000, guid: ef7402b7423a67742bba8efb34061b11, type: 2}
-  - {fileID: 11400000, guid: 73397920584cbd1428ce8a94dc9e92bb, type: 2}
-  - {fileID: 11400000, guid: 72f9d79fab6b8d2459083437c9ab4b05, type: 2}
-  background: {fileID: 0}
-  actions:
-  - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
-  - {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
-  - {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}
-  - {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-  observableChoices:
-  - {fileID: 11400000, guid: 4df2eb156a2587146ba1e5a39e23cb6c, type: 2}
-  - {fileID: 11400000, guid: 23b4ba9941e0ba74498789313b40f772, type: 2}
-  - {fileID: 11400000, guid: 248cfec788cee1b44b06b7dfa542eba0, type: 2}
-  audio: {fileID: 0}
-  interactableChoices:
-  - {fileID: 11400000, guid: c2fe0c8272ee56242820ac9cd692c6a9, type: 2}
-  - {fileID: 11400000, guid: 04ab77325e7d89e4d95fbe51f075a788, type: 2}
-  travelingCompanions: []
-  allRoomsInGame:
-  - {fileID: 11400000, guid: 706b6a14038955b499f187e045418d6d, type: 2}
-  - {fileID: 11400000, guid: 41aa8f173b5cf487abe6ad6e6de61fb1, type: 2}
-  - {fileID: 11400000, guid: 3286e1265fb7d6241a233c2a258f4d7c, type: 2}
-  - {fileID: 11400000, guid: f83faa7884e83684c8cc6d7da6013844, type: 2}
-  - {fileID: 11400000, guid: 4a3c2ae3917ba42aa992c2985cfc036d, type: 2}
-  - {fileID: 11400000, guid: 5087a9b8ca4054b40817dc60a9ea1738, type: 2}
-  - {fileID: 11400000, guid: 05f90a73357d43c4baad43c508158983, type: 2}
-  - {fileID: 11400000, guid: b7c0e35f021744710b76a66ca3e42f56, type: 2}
-  - {fileID: 11400000, guid: e518f50a2f1524040a411cc9f56696f8, type: 2}
-  - {fileID: 11400000, guid: 3a48eba189f20cf4c8b98f4529c6f9c2, type: 2}
-  - {fileID: 11400000, guid: 5fad144d28c82154fa76911b378e1e1f, type: 2}
-  - {fileID: 11400000, guid: 88bc3b6bb76534e76b685cfa6fcba8f3, type: 2}
-  - {fileID: 11400000, guid: 20b26a4a85dd63e419e9bc30c8401200, type: 2}
-  - {fileID: 11400000, guid: b862231ee3e5bb548b57e557f3a6a18a, type: 2}
-  - {fileID: 11400000, guid: 80e63e22d3f392a4ea5b0e8a8f111567, type: 2}
-  backgroundColor: {fileID: 1695353950}
-  isDaytime: 1
-  processingDelay: 0.005
-  northLabel: {fileID: 0}
-  eastLabel: {fileID: 0}
-  westLabel: {fileID: 0}
-  southLabel: {fileID: 0}
-  volumeManipulation: {fileID: 0}
-  fifthButton: {fileID: 0}
-  actionLog: []
-  exitChoices: []
-  exitNames: []
-  roomNavigation: {fileID: 0}
-  interactionDescriptionsInRoom: []
-  interactableItems: {fileID: 0}
-  isInteracting: 0
-  isObserving: 0
-  isUsing: 0
-  isConversing: 0
-  fire: {fileID: 0}
-  checkpointManager: {fileID: 0}
-  startingActions:
-  - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
-  - {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
-  - {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}
-  - {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
---- !u!4 &1138714465
+  currentColor: purple
+  processingDelay: 0.4
+  reticle: {fileID: 2800000, guid: b8407e5a4816c6b49bea233650e5c954, type: 3}
+--- !u!4 &849152657
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138714459}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 733.96234, y: 155.0723, z: -1839.607}
+  m_GameObject: {fileID: 849152655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.4931464, y: 1.7751215, z: 77.156525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210570754
 GameObject:
@@ -536,7 +407,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1522055347
 GameObject:
@@ -580,7 +451,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1525962554
 PrefabInstance:
@@ -672,22 +543,22 @@ PrefabInstance:
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 1138714464}
+      objectReference: {fileID: 0}
     - target: {fileID: 516634131329495591, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 1138714464}
+      objectReference: {fileID: 0}
     - target: {fileID: 516634131616885903, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 1138714464}
+      objectReference: {fileID: 0}
     - target: {fileID: 516634131912074654, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 1138714464}
+      objectReference: {fileID: 0}
     - target: {fileID: 708396256673494348, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_IsActive
@@ -703,6 +574,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4414887960710519955, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4438895336455566582, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -716,7 +592,7 @@ PrefabInstance:
     - target: {fileID: 4797650007323348398, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -102.81949
+      value: -102.81948
       objectReference: {fileID: 0}
     - target: {fileID: 4797650007323348399, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
@@ -860,12 +736,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a174499d254c204785136d2b80ceeea, type: 3}
---- !u!95 &1695353950 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4797650006413212123, guid: 9a174499d254c204785136d2b80ceeea,
-    type: 3}
-  m_PrefabInstance: {fileID: 1695353949}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1695353951 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4797650007323348399, guid: 9a174499d254c204785136d2b80ceeea,

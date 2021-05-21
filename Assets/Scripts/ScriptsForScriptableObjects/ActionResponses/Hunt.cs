@@ -6,15 +6,14 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/Hunt")]
 public class Hunt : ActionResponse
 {
-    public override bool DoActionResponse(GameController controller)
+    public override bool DoActionResponse(IController controller)
     {
         if (controller.roomNavigation.currentRoom.roomName == requiredString && requiredString == "north foothills")
         {
             if (controller.checkpointManager.ohmInPosition)
             {
                 controller.roomNavigation.currentRoom.description = "unwise to stay here, the bear could be around, and you do not have a weapon.";
-  //              controller.roomNavigation.currentRoom.roomInvestigationDescription = "unwise to stay here, the bear could be around, and you do not have a weapon.";
-//
+
                 controller.LogStringWithReturn("Ohm is distracting the beast. you plunge forward with your spear. at the last moment, your footfalls alert the bear. " +
                                                "it whirls on you and your spear misses its mark, burying itself in its leg. the wound does not seem to lessen the creature's bloodlust.");
                 List<Interaction> interactions =

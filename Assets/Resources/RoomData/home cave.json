@@ -46,10 +46,10 @@
         {
           "chapter": 4,
           "exits": [{
-            "roomName": "sleep",
-            "keyString": "sleep",
-            "description": "you feel energy for little else but sleep. your normal place next to Tei waits for you."
-          }],
+            "roomName": "outside home",
+            "keyString": "outside",
+            "description": "light filters in from outside"}
+          ],
           "description": "there is a sullen look in the eyes of the others. fear, disappointment, bitterness.",
           "investigationDescription": "the atmosphere of the room is heavy. you feel you should not say anything.",
           "effectTriggerName": ""
