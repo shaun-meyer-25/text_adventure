@@ -47,5 +47,6 @@ public class ContinueScreen : MonoBehaviour
         }
 
         Debug.Log(mode);
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
