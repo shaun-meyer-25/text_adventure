@@ -73,6 +73,9 @@ public class CheckpointManager : MonoBehaviour
             checkpoint = maybeCheckpoint;
             _controller.LogStringWithReturn("you and Ohm successfully flee the vicious bear. it is afternoon now, hunger weighs heavily on you.");
             _controller.allRoomsInGame.Find(o => o.roomName == "north forest").SetInteractableObjectsInRoom(checkpointFourItems.ToArray());
+            _controller.LoadRoomData();
+            _controller.roomNavigation.SetExitLabels(_controller.roomNavigation.currentRoom
+                .GetExits(_controller.checkpointManager.checkpoint));
         }
 
         if (maybeCheckpoint == 5)

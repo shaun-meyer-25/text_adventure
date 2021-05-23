@@ -34,10 +34,7 @@
   },
   {
     "chapter": 3,
-    "exits": [{
-      "roomName": "watering hole",
-      "keyString": "south",
-      "description": "the watering hole lies to the south"}
+    "exits": [
     ],
     "description": "there is a cave bear at the mouth of an opening in the rocks. Ohm signals you to stop. they brandish their spear. it looks like they are forming a plan.",
     "investigationDescription": "the beast glares at you. it takes a step towards you and lets out a low, menacing growl.",

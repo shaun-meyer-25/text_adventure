@@ -14,8 +14,13 @@ public class Hunt : ActionResponse
             {
                 controller.roomNavigation.currentRoom.description = "unwise to stay here, the bear could be around, and you do not have a weapon.";
 
-                controller.LogStringWithReturn("Ohm is distracting the beast. you plunge forward with your spear. at the last moment, your footfalls alert the bear. " +
+                controller.LogStringWithReturn("Ohm is distracting the beast. you plunge forward with your spear, but your footfalls alert the bear. " +
                                                "it whirls on you and your spear misses its mark, burying itself in its leg. the wound does not seem to lessen the creature's bloodlust.");
+
+                // todo - could be more interesting trying to do a thing where your spear gets stuck in the ground, if you try to retrieve it the bear kills you
+                
+                controller.checkpointManager.SetCheckpoint(4);
+                
                 List<Interaction> interactions =
                     new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
                 Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));

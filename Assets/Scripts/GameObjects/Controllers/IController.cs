@@ -120,14 +120,12 @@ public abstract class IController : MonoBehaviour
     
     public void SetDaylight()
     {
-        isDaytime = true;
         backgroundColor.SetTrigger("SetDaytime");
         currentColor = "black";
     }
 
     public void SetNighttime()
     {
-        isDaytime = false;
         backgroundColor.SetTrigger("SetNighttime");
         currentColor = "white";
     }

@@ -121,7 +121,16 @@ public class Room : ScriptableObject
 	
 	public string GetDescription(int checkpoint)
 	{
-		return _roomData.Find(o => o.chapter == checkpoint).description;
+		RoomData r = _roomData.Find(o => o.chapter == checkpoint);
+		if (r != null)
+		{
+			return _roomData.Find(o => o.chapter == checkpoint).description;
+		}
+		else
+		{
+			Debug.Log("no data found for " + roomName + " chapeter " + checkpoint);
+			return "";
+		}
 	}
 
 	public string GetInvestigationDescription(int checkpoint)

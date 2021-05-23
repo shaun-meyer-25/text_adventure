@@ -63,6 +63,12 @@ public class GameController : IController {
 			LogStringWithReturn(
 				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
 		}
+		if (SceneManager.GetActiveScene().name == "Find Orb" && checkpointManager.checkpoint == 6)
+		{
+			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
+			LogStringWithReturn(
+				"you wake to a crashing sound from outside. you feel a strange urge to go outside and investigate.");
+		}
 		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 8)
 		{
 			// todo - let's get this in a text file or something, it sucks to hardcode it in like this

@@ -14,6 +14,7 @@ public class ForagingBerries : ActionResponse
         interaction.textResponse = "they are silent, staring at the ground.";
         
         controller.SetNighttime();
+        controller.isDaytime = false;
         controller.checkpointManager.SetCheckpoint(5);
         return true;
     }
