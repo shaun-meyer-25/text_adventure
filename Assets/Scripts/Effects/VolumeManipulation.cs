@@ -9,7 +9,7 @@ public class VolumeManipulation : MonoBehaviour
 
     private Volume volume;
 
-    private void Start()
+    private void Awake()
     {
         volume = FindObjectOfType<Volume>();
 

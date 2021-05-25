@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class KillBearWithOrbController : IController
 {
-    public float processingDelay = 0.4f;
     public Texture2D reticle;
     
     // Start is called before the first frame update
     void Start()
     {
+        volumeManipulation = gameObject.AddComponent<VolumeManipulation>();
+
         Cursor.SetCursor(reticle, Vector2.zero, CursorMode.Auto);
         displayText.text = "";
         TextProcessing tp = new TextProcessing(this, processingDelay);
-        tp.DisplayText("what is up");
+        //tp.DisplayText("");
+        volumeManipulation.EffectStart(this, "firstOrbEncounter");
     }
 
     public IEnumerator TypeSentence(Dictionary<int, Tuple<string, char>> charactersAndTheirColors )
