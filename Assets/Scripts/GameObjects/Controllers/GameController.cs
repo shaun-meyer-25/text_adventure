@@ -297,11 +297,6 @@ public class GameController : IController {
 		return combinedText;
 	}
 
-	void DelayedSceneLoad()
-	{
-		levelLoader.LoadScene("Thank You");
-	}
-
 	public Text GetTextForButton(string key)
 	{
 		if (key == "0")

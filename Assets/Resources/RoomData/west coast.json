@@ -211,8 +211,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO",
+    "description": "you return to the place that you discovered the orb. the sand blows, it covers the blast area once again.",
+    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home.",
     "effectTriggerName": ""
   },
   {
@@ -229,8 +229,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "you return to the place that you discovered the orb. the sand blows, it covers the blast area once again.",
-    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home.",
+    "description": "you come to the place you found the orb last night. there is no light to be found, not even from the orb you still hold.",
+    "investigationDescription": "standing in this place and recalling last night, you think perhaps... this thing you have found could be used to find Tei.",
     "effectTriggerName": ""
   },
   {
@@ -247,8 +247,8 @@
         "description": "from here, the vast grasslands appear to begin to the east"
       }
     ],
-    "description": "you come to the place you found the orb last night. there is no light to be found, not even from the orb you still hold.",
-    "investigationDescription": "standing in this place and recalling last night, you think perhaps... this thing you have found could be used to find Tei.",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {

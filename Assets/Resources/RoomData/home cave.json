@@ -125,10 +125,10 @@
     "exits": [{
       "roomName": "outside home",
       "keyString": "outside",
-      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+      "description": "light filters in from outside."
     }],
-    "description": "TODO",
-    "investigationDescription": "TODO",
+    "description": "there is reason to celebrate in the cave at last. the atmosphere of fear and tension is gone for now.",
+    "investigationDescription": "everyone is excitable and celebratory.",
     "effectTriggerName": ""
   },
   {
@@ -136,10 +136,10 @@
     "exits": [{
       "roomName": "outside home",
       "keyString": "outside",
-      "description": "light filters in from outside."
+      "description": "it is nighttime. leaving the cave is dangerous, but Tei is out there somewhere."
     }],
-    "description": "there is reason to celebrate in the cave at last. the atmosphere of fear and tension is gone for now.",
-    "investigationDescription": "everyone is excitable and celebratory.",
+    "description": "it is quiet in the cave. the joy from before has left this place.",
+    "investigationDescription": "fear and tension did not stay away long. you must find Tei.",
     "effectTriggerName": ""
   },
   {
@@ -149,8 +149,8 @@
       "keyString": "outside",
       "description": "it is nighttime. leaving the cave is dangerous, but Tei is out there somewhere."
     }],
-    "description": "it is quiet in the cave. the joy from before has left this place.",
-    "investigationDescription": "fear and tension did not stay away long. you must find Tei.",
+    "description": "todo",
+    "investigationDescription": "todo",
     "effectTriggerName": ""
   },
   {

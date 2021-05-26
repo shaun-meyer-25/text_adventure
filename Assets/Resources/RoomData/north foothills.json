@@ -124,8 +124,8 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO",
+    "description": "the rocky ground is harsh upon your feet. the unsure footing could lead to an accident, and brutal death.",
+    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home.",
     "effectTriggerName": ""
   },
   {
@@ -135,8 +135,8 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ],
-    "description": "the rocky ground is harsh upon your feet. the unsure footing could lead to an accident, and brutal death.",
-    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home.",
+    "description": "the rocky ground is harsh upon your feet. the unsure footing could lead to an accident, and it is harder to see in the night.",
+    "investigationDescription": "it is too dark to see more. you need to look for Tei.",
     "effectTriggerName": ""
   },
   {
@@ -146,8 +146,8 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ],
-    "description": "the rocky ground is harsh upon your feet. the unsure footing could lead to an accident, and it is harder to see in the night.",
-    "investigationDescription": "it is too dark to see more. you need to look for Tei.",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {

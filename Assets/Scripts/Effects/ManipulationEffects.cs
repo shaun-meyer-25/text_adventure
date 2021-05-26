@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public static class ManipulationEffects
@@ -56,5 +57,46 @@ public static class ManipulationEffects
         }
         
         return s;
+    }
+    
+    public static string RandomDistortedString()
+    {
+        string distortionCharacters =
+            "̸̴̨̡̧̧̧̧̛̛͉͔̹͈̞͈̪͔̯̫̲̮͍̗͙͕̰̝̗͙̼͕͇͍̦̥̻̞͍̜̦̬͙̯̭̟̫̣͇̙̳̠̠̮̝̩͍͇̻̥̹̜̹̗̳͙͚̦̮͇͉̭͍͚͎̺͍̦̮͕̯̹͖̘̺̱̣͓̝͔̦͎͉̮̠̣̟̥̟̠̳̼̗̳͇͈̬͕̙̰͉̪̣̣̲͎̰̄̀̓̔͂͗̈́͐̍̓̈̈̇̓͐͗̅́̔́̀͋̐̒̋͛̽̈́̐̀͑̄̀̉̑̉̋͌̑̓̈́̍̈́̉͗̉̉̓̀̽͗̿̓̓̌̃͌̃̓͊̈̂̇͛̂̿͐͊̑͂̌͗̓̏̅̓̽͌͋̂̅̄̏͌̑̊͐́̓̒̈̐̾͒̑̋̀̈́̊̀͋̔̉̿͑̀̇͐͛̒̎̓̓̍͐̓̐̌̈́̀̋̃̆̌͐̽̐̄̿̉͊̋̓́͛̐͋̑̾̾̈̅́̽̾͒̐͑̂͑͂̾͌̌͗͌̑́̑̓̒͋͆̅͐̔̕̕̕͘͘̚̕̕͜͜͜͜͠͝͝͝͝͝͝͝͠͠͠͠͝ͅͅͅͅa̴̸̸̡̡̧̢̢̢̨̧̢̛̛̲̯̮̠̖̰͎̱̜̬͚͍̤͉̯͎͓̺̺͉̘̱͎̖̰̟͎̟͈̮̤͔̠̙͍̗͉̬͖̠͈̟̖̣̣̫̯̭͔̝̻̼͍̟̪̭̦̜̹̙͔͓̪̯̹̤̲̘͎̱̖͇̟̬̲̩̞͚̓͑̓̈͑̈̋̒͌̈́̀̅̿̓͒͋̾̽̑̏̌̅̓͂̊͂̽́̓̈́̀͒̾̊͌̒͆̊̿̌̀͛͌̊̏̿̈́͋̋͂̾́͊͒̓͛̌̌͘͘͘͜͜͜͝ͅͅ";
+        int stringLength = Random.Range(0, 15);
+
+        var random = new System.Random();
+        
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz";
+        string undistorted = new string(Enumerable.Repeat(chars, stringLength)
+            .Select(s => s[random.Next(s.Length)]).ToArray());
+
+ /*       string s = "";
+        for (int i = 0; i < stringLength; i++)
+        {
+            string randomWordFromRandomList = "";
+            int rng = Random.Range(0, 100);
+            if (rng < randomStrings.Count)
+            {
+                List<string> temp = new List<string>(randomStrings[rng].Split(' '));
+                for (int j = 0; j < temp.Count; j++)
+                {
+                    if (Random.Range(0, 100) < 20)
+                    {
+                        temp[j] = distortionCharacters.Substring(distortionCharacters.Length - Random.Range(1, 40)) +
+                                  temp[j] + distortionCharacters.Substring(Random.Range(1, 40));
+                    }
+                }
+
+                randomWordFromRandomList = string.Join(" ", temp);
+              
+            }
+
+            s = s + randomWordFromRandomList;
+        }
+        
+        return s; */
+
+        return undistorted;
     }
 }
