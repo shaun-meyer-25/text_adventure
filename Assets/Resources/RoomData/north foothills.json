@@ -34,10 +34,7 @@
   },
   {
     "chapter": 3,
-    "exits": [{
-      "roomName": "watering hole",
-      "keyString": "south",
-      "description": "the watering hole lies to the south"}
+    "exits": [
     ],
     "description": "there is a cave bear at the mouth of an opening in the rocks. Ohm signals you to stop. they brandish their spear. it looks like they are forming a plan.",
     "investigationDescription": "the beast glares at you. it takes a step towards you and lets out a low, menacing growl.",
@@ -127,8 +124,8 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO",
+    "description": "the rocky ground is harsh upon your feet. the unsure footing could lead to an accident, and brutal death.",
+    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home.",
     "effectTriggerName": ""
   },
   {
@@ -138,8 +135,8 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ],
-    "description": "the rocky ground is harsh upon your feet. the unsure footing could lead to an accident, and brutal death.",
-    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home.",
+    "description": "the rocky ground is harsh upon your feet. the unsure footing could lead to an accident, and it is harder to see in the night.",
+    "investigationDescription": "it is too dark to see more. you need to look for Tei.",
     "effectTriggerName": ""
   },
   {
@@ -149,8 +146,8 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ],
-    "description": "the rocky ground is harsh upon your feet. the unsure footing could lead to an accident, and it is harder to see in the night.",
-    "investigationDescription": "it is too dark to see more. you need to look for Tei.",
+    "description": "TODO",
+    "investigationDescription": "TODO",
     "effectTriggerName": ""
   },
   {

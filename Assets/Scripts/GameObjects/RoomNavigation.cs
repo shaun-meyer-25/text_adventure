@@ -62,7 +62,15 @@ public class RoomNavigation : MonoBehaviour {
 				}
 			}
 			currentRoom = controller.allRoomsInGame.Find(o => o.roomName == exitDictionary[directionNoun].roomName);
-			controller.LogStringWithReturn("you go " + directionNoun);
+
+			if (directionNoun == "sleep")
+			{
+				controller.LogStringWithReturn("you go to sleep");
+			}
+			else
+			{
+				controller.LogStringWithReturn("you go " + directionNoun);
+			}
 
 			for (int i = 0; i < controller.travelingCompanions.Count; i++)
 			{
@@ -110,10 +118,12 @@ public class RoomNavigation : MonoBehaviour {
 			controller.checkpointManager.SetCheckpoint(3);
 		}
 
-		if (currentRoom.roomName == "watering hole" && controller.checkpointManager.checkpoint == 3 &&
-		    !controller.interactableItems.nounsInInventory.Contains("spear"))
+		if (currentRoom.roomName == "watering hole" && controller.checkpointManager.checkpoint == 4)
 		{
-			controller.checkpointManager.SetCheckpoint(4);
+			List<Interaction> interactions =
+				new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
+			Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
+			interaction.textResponse = "they have a dark look on their face. 'berries, from woods'. a simple command that describes your failures today.";
 		}
 
 		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 5)

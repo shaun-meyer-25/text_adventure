@@ -5,5 +5,5 @@ using UnityEngine.UI;
 
 public abstract class IOptionButtonHandler : ScriptableObject
 {
-    public abstract void Handle(GameController controller, Text buttonSelection);
+    public abstract void Handle(IController controller, Text buttonSelection);
 }

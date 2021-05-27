@@ -320,8 +320,8 @@
         "description": "coast lies to the west, you can smell the sea from here"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "this stretch of the grasslands, between your home and the coast, is safe. the grass is not as tall here, and the beasts of the plains do not go near the sea.",
+    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home."
   },
   {
     "chapter": 12,
@@ -347,8 +347,8 @@
         "description": "coast lies to the west, you can smell the sea from here"
       }
     ],
-    "description": "this stretch of the grasslands, between your home and the coast, is safe. the grass is not as tall here, and the beasts of the plains do not go near the sea.",
-    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home."
+    "description": "this area of the grasslands is normally safe. you call for Tei and receive no response.",
+    "investigationDescription": "Tei would not be here. must look elsewhere."
   },
   {
     "chapter": 13,
@@ -374,8 +374,8 @@
         "description": "coast lies to the west, you can smell the sea from here"
       }
     ],
-    "description": "this area of the grasslands is normally safe. you call for Tei and receive no response.",
-    "investigationDescription": "Tei would not be here. must look elsewhere."
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 14,

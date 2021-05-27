@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName= "TextAdventure/InputActions/Go")]
 public class Go : ActionChoice {
 	
-	public override void RespondToAction (GameController controller, string[] separatedInputWords)
+	public override void RespondToAction(IController controller, string[] separatedInputWords)
 	{
 		int checkpoint = controller.checkpointManager.checkpoint;
 		if (separatedInputWords.Length == 1) {

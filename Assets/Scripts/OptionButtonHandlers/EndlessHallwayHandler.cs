@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(menuName= "TextAdventure/ButtonHandlers/EndlessHallway")]
-public class EndlessHallwayHandler : IOptionButtonHandler
+/*[CreateAssetMenu(menuName= "TextAdventure/ButtonHandlers/EndlessHallway")]
+/public class EndlessHallwayHandler : IOptionButtonHandler
 {
-    override public void Handle(GameController controller, Text textObject)
+    override public void Handle(IController controller, Text textObject)
     {
         string text = textObject.text;
 
@@ -48,3 +48,4 @@ public class EndlessHallwayHandler : IOptionButtonHandler
         controller.DisplayLoggedText();
     }
 }
+*/

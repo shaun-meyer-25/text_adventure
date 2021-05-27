@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/ForagingBerries")]
 public class ForagingBerries : ActionResponse
 {
-    public override bool DoActionResponse(GameController controller)
+    public override bool DoActionResponse(IController controller)
     {
         List<Interaction> interactions =
             new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
@@ -14,6 +14,7 @@ public class ForagingBerries : ActionResponse
         interaction.textResponse = "they are silent, staring at the ground.";
         
         controller.SetNighttime();
+        controller.isDaytime = false;
         controller.checkpointManager.SetCheckpoint(5);
         return true;
     }

@@ -18,40 +18,6 @@ public class GameController : IController {
 	private List<string> undisplayedSentences = new List<string>();
 	private TextProcessing _textProcessing;
 	
-	public LevelLoader levelLoader;
-	public InteractableObject[] characters;
-	public Image background;
-	public Choice[] actions;
-	public ObserveChoice[] observableChoices;
-	public AudioSource audio;
-	public InteractChoice[] interactableChoices;
-	public List<InteractableObject> travelingCompanions;
-	public List<Room> allRoomsInGame;
-	public Animator backgroundColor;
-	public bool isDaytime;
-	public float processingDelay;
-	public Text northLabel;
-	public Text eastLabel;
-	public Text westLabel;
-	public Text southLabel;
-	public VolumeManipulation volumeManipulation;
-	public OptionButton fifthButton;
-
-	[HideInInspector] public List<string> actionLog = new List<string>();
-	[HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
-	[HideInInspector] public List<string> exitNames = new List<string>();
-	[HideInInspector] public RoomNavigation roomNavigation;
-	[HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string> ();
-	[HideInInspector] public InteractableItems interactableItems;
-	[HideInInspector] public bool isInteracting = false;
-	[HideInInspector] public bool isObserving = false;
-	[HideInInspector] public bool isUsing = false;
-	[HideInInspector] public bool isConversing = false;
-	[HideInInspector] public Fire fire;
-	[HideInInspector] public CheckpointManager checkpointManager;
-	
-	public Choice[] startingActions;
-	
 	void Awake ()
 	{
 		_textProcessing = new TextProcessing(this, processingDelay);
@@ -97,6 +63,12 @@ public class GameController : IController {
 			LogStringWithReturn(
 				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
 		}
+		if (SceneManager.GetActiveScene().name == "Find Orb" && checkpointManager.checkpoint == 6)
+		{
+			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
+			LogStringWithReturn(
+				"you wake to a crashing sound from outside. you feel a strange urge to go outside and investigate.");
+		}
 		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 8)
 		{
 			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
@@ -111,7 +83,7 @@ public class GameController : IController {
 		interactableItems.AddActionResponsesToUseDictionary();
 	}
 
-	public void UpdateRoomChoices(Choice[] choices)
+	public override void UpdateRoomChoices(Choice[] choices)
 	{
 		actions = choices;
 
@@ -157,7 +129,7 @@ public class GameController : IController {
 		exitNames = roomNavigation.currentRoom.exitNames(checkpointManager.checkpoint);
 	}
 
-	public void DisplayLoggedText ()
+	public override void DisplayLoggedText ()
 	{
 		displayText.text = "";
 
@@ -191,18 +163,18 @@ public class GameController : IController {
 		undisplayedSentences.Clear();
 	}
 	
-	public void LogStringWithReturn(string stringToAdd) {
+	public override void LogStringWithReturn(string stringToAdd) {
 		undisplayedSentences.Add(stringToAdd);
 	}
 
-	public void LoadRoomData()
+	public override void LoadRoomData()
 	{
 		ClearCollectionsForNewRoom ();
 		UnpackRoom ();
 		
 	}
 	
-	public void LoadRoomDataAndDisplayRoomText () {
+	public override void LoadRoomDataAndDisplayRoomText () {
 		LoadRoomData();
 
 		string combinedText = "\n";
@@ -224,7 +196,7 @@ public class GameController : IController {
 		PrepareObjectsToTakeOrExamine(roomNavigation.currentRoom);
 	}
 
-	public void PrepareObjectsToTakeOrExamine(Room currentRoom)
+	public override void PrepareObjectsToTakeOrExamine(Room currentRoom)
 	{
 		for (int i = 0; i < currentRoom.InteractableObjectsInRoom.Length; i++)
 		{
@@ -251,7 +223,7 @@ public class GameController : IController {
 		}
 	}
 
-	public string TestVerbDictionaryWithNoun(Dictionary<string, string> verbDictionary, string verb, string noun)
+	public override string TestVerbDictionaryWithNoun(Dictionary<string, string> verbDictionary, string verb, string noun)
 	{
 		if (verbDictionary.ContainsKey(noun))
 		{
@@ -266,42 +238,6 @@ public class GameController : IController {
 		roomNavigation.ClearExits ();
 	}
 
-	public Dictionary<string, string> LoadDictionaryFromFile(string fileName)
-	{
-		TextAsset data = (TextAsset) Resources.Load(fileName);
-		string[] lines = data.text.Split('\n');
-		
-		Dictionary<String, String> dict = new Dictionary<string, string>();
-
-		foreach (string line in lines)
-		{
-			string[] split = line.Split('=');
-			string key = split[0].Trim();
-			string value = split[1].Trim();
-			dict.Add(key, value);
-		}
-		
-		return dict;
-	}
-	
-	public Dictionary<string, List<string>> LoadDictionaryFromCsvFile(string fileName)
-	{
-		TextAsset data = (TextAsset) Resources.Load(fileName);
-		string[] lines = data.text.Split('\n');
-		
-		Dictionary<String, List<String>> dict = new Dictionary<string, List<string>>();
-
-		foreach (string line in lines)
-		{
-			string[] split = line.Split(',');
-			string key = split[0].Trim();
-			List<string> value = split.Skip(1).ToList();
-			dict.Add(key, value);
-		}
-		
-		return dict;
-	}
-
 	public List<string> ActionNames()
 	{
 		List<string> actionNames = new List<string>();
@@ -312,7 +248,7 @@ public class GameController : IController {
 		return actionNames;
 	}
 
-	public List<string> ObservableChoiceNames()
+	public override List<string> ObservableChoiceNames()
 	{
 		List<string> observableChoiceNames = new List<string>();
 		for (int i = 0; i < observableChoices.Length; i++)
@@ -359,30 +295,6 @@ public class GameController : IController {
 		}
 
 		return combinedText;
-	}
-
-	public void SetDaylight()
-	{
-		isDaytime = true;
-		backgroundColor.SetTrigger("SetDaytime");
-		currentColor = "black";
-	}
-
-	public void SetNighttime()
-	{
-		isDaytime = false;
-		backgroundColor.SetTrigger("SetNighttime");
-		currentColor = "white";
-	}
-	
-	public void BearKillsYou()
-	{
-		SceneManager.LoadScene("BearKillsYou");
-	}
-	
-	void DelayedSceneLoad()
-	{
-		levelLoader.LoadScene("Thank You");
 	}
 
 	public Text GetTextForButton(string key)

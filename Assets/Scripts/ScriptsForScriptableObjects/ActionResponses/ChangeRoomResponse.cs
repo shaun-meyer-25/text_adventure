@@ -7,7 +7,7 @@ public class ChangeRoomResponse : ActionResponse
 {
     public Room roomToChangeTo;
 
-    public override bool DoActionResponse(GameController controller)
+    public override bool DoActionResponse(IController controller)
     {
         if (controller.roomNavigation.currentRoom.roomName == requiredString)
         {

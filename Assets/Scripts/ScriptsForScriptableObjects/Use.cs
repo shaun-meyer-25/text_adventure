@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName= "TextAdventure/InputActions/Use")]
 public class Use : ActionChoice
 {
-    public override void RespondToAction(GameController controller, string[] separatedInputWords)
+    public override void RespondToAction(IController controller, string[] separatedInputWords)
     {
         if (separatedInputWords.Length == 1)
         {

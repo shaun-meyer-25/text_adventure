@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/TakeOrb")]
 public class TakeOrb : ActionResponse
 {
-    public override bool DoActionResponse(GameController controller)
+    public override bool DoActionResponse(IController controller)
     {
         
         controller.volumeManipulation.EffectEnd(controller, "firstOrbEncounter");

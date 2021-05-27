@@ -200,8 +200,8 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north. their legs are better suited for it than yours.",
+    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home."
   },
   {
     "chapter": 12,
@@ -217,8 +217,8 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "the foothills that border the forests are treacherous. animals roam here from the watering hole to the north. their legs are better suited for it than yours.",
-    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home."
+    "description": "the rocky footing is especially treacherous in the dark. a broken leg would mean slow death.",
+    "investigationDescription": "you cannot see well enough to navigate the terrain. you should search for Tei."
   },
   {
     "chapter": 13,
@@ -234,8 +234,8 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       }
     ],
-    "description": "the rocky footing is especially treacherous in the dark. a broken leg would mean slow death.",
-    "investigationDescription": "you cannot see well enough to navigate the terrain. you should search for Tei."
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 14,

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/FeedBerries")]
 public class FeedBerries : ActionResponse
 {
-    public override bool DoActionResponse(GameController controller)
+    public override bool DoActionResponse(IController controller)
     {
         if (controller.roomNavigation.currentRoom.roomName == requiredString)
         {

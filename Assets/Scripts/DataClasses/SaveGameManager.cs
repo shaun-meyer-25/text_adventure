@@ -28,10 +28,10 @@ public static class SaveGameManager
         {
             if (controller.allRoomsInGame[i].PeopleInRoom.Length > 0)
             {
-                Debug.Log("room name is " + controller.allRoomsInGame[i].roomName); 
+        //        Debug.Log("room name is " + controller.allRoomsInGame[i].roomName); 
                 for (int j = 0; j < controller.allRoomsInGame[i].PeopleInRoom.Length; j++)
                 {
-                    Debug.Log("the person name is - " + controller.allRoomsInGame[i].PeopleInRoom[j].name);
+          //          Debug.Log("the person name is - " + controller.allRoomsInGame[i].PeopleInRoom[j].name);
                     game.mapOfPeopleToLocation.Add(controller.allRoomsInGame[i].PeopleInRoom[j].name, 
                         controller.allRoomsInGame[i].roomName);
                 }
@@ -74,7 +74,7 @@ public static class SaveGameManager
         }
     }
 
-    public static void PopulateGameData(SaveGame saveGame, GameController controller)
+    public static void PopulateGameData(SaveGame saveGame, IController controller)
     {
         controller.isDaytime = saveGame.isDaylight;
         if (saveGame.isDaylight)
