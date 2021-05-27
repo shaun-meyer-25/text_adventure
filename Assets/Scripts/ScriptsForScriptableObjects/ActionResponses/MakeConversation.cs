@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/MakeConversation")]
 public class MakeConversation : ActionResponse
 {
-    public override bool DoActionResponse(GameController controller)
+    public override bool DoActionResponse(IController controller)
     {
         return true;
     }

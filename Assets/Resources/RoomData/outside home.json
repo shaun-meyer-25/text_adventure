@@ -320,8 +320,8 @@
         "description": "grasslands continue to stretch to the west."
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "nearly home now. relief, excitement fill you. you will show the spoils of a successful hunt.",
+    "investigationDescription": "you are outside of your home. it has been some time since you were here with such hope in you."
   },
   {
     "chapter": 12,
@@ -347,8 +347,8 @@
         "description": "grasslands continue to stretch to the west."
       }
     ],
-    "description": "nearly home now. relief, excitement fill you. you will show the spoils of a successful hunt.",
-    "investigationDescription": "you are outside of your home. it has been some time since you were here with such hope in you."
+    "description": "just outside of home. Tei must have went towards the forest in search of wood.",
+    "investigationDescription": "you cannot track one like you. you search for a trail but see none."
   },
   {
     "chapter": 13,
@@ -374,8 +374,8 @@
         "description": "grasslands continue to stretch to the west."
       }
     ],
-    "description": "just outside of home. Tei must have went towards the forest in search of wood.",
-    "investigationDescription": "you cannot track one like you. you search for a trail but see none."
+    "description": "TODO",
+    "investigationDescription": "TODO"
   },
   {
     "chapter": 14,

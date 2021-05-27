@@ -73,6 +73,9 @@ public class CheckpointManager : MonoBehaviour
             checkpoint = maybeCheckpoint;
             _controller.LogStringWithReturn("you and Ohm successfully flee the vicious bear. it is afternoon now, hunger weighs heavily on you.");
             _controller.allRoomsInGame.Find(o => o.roomName == "north forest").SetInteractableObjectsInRoom(checkpointFourItems.ToArray());
+            _controller.LoadRoomData();
+            _controller.roomNavigation.SetExitLabels(_controller.roomNavigation.currentRoom
+                .GetExits(_controller.checkpointManager.checkpoint));
         }
 
         if (maybeCheckpoint == 5)
@@ -130,28 +133,51 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 11)
         {
             checkpoint = maybeCheckpoint;
+            _controller.interactableItems.nounsInInventory.Add("spear");
+            _controller.interactableItems.nounsInInventory.Add("carcass");
+            _controller.isDaytime = true;
+            _controller.SetDaylight();
+            
+            _controller.interactableItems.AddActionResponsesToUseDictionary();
+            _controller.roomNavigation.currentRoom =
+                _controller.allRoomsInGame.Find(o => o.roomName == "watering hole");
+            _controller.LogStringWithReturn("your vision returns. the bear lies dead with your spear lodged in its heart.");
+            _controller.LogStringWithReturn("Ohm cries out in pain beneath the now dead beast. you help them out from under the carcass.");
+            _controller.LogStringWithReturn("you obtain a bear carcass");
+            _controller.roomNavigation.SetExitLabels(_controller.roomNavigation.currentRoom
+                .GetExits(_controller.checkpointManager.checkpoint));
+            _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Ohm")));
+            Room home = _controller.allRoomsInGame.Find(o => o.roomName == "home cave");
+            Room wateringHole = _controller.allRoomsInGame.Find(o => o.roomName == "watering hole");
+            foreach (var c in _controller.characters)
+            {
+                if (c.noun == "Ohm")
+                {
+                    wateringHole.AddPersonToRoom(c);
+                }
+                else
+                {
+                    home.AddPersonToRoom(c);
+                }
+            }
         }
         
         if (maybeCheckpoint == 12)
-        {
-            checkpoint = maybeCheckpoint;
-            _controller.LoadRoomData();
-            _controller.roomNavigation.SetExitLabels(_controller.roomNavigation.currentRoom
-                .GetExits(_controller.checkpointManager.checkpoint));
-
-        }
-        
-        if (maybeCheckpoint == 13)
         {
             checkpoint = maybeCheckpoint;
             _controller.LogStringWithReturn(
                 "there is joy on the faces of the others as you lay the carcass on the ground. Tei says they will go get more fuel for the fire, to cook with. " +
                 "you skin the bear with the help of the others, which takes until nightfall. there is plenty of meat to cook, " +
                 "but Tei does not return with fuel for the fire. this is troubling.");
-            _controller.LogStringWithReturn("Ohm, though injured, agrees to go looking for Tei with you.");
+            _controller.LogStringWithReturn("you must go look for Tei.");
             _controller.SetNighttime();
             _controller.travelingCompanions.Remove(_controller.characters.First(o => o.noun.Equals("Ohm")));
             _controller.roomNavigation.currentRoom.RemovePersonFromRoom("Tei");
+        }
+        
+        if (maybeCheckpoint == 13)
+        {
+            checkpoint = maybeCheckpoint;
         }
         
         for (int i = 0; i < _controller.characters.Length; i++)

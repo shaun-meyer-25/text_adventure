@@ -5,7 +5,7 @@ using UnityEngine;
 
 public static class ConversationHandler 
 {
-    public static void HandleConversation(GameController controller, string response)
+    public static void HandleConversation(IController controller, string response)
     {
         if (response == "no" && controller.checkpointManager.checkpoint == 8)
         {
@@ -29,7 +29,7 @@ public static class ConversationHandler
         controller.UpdateRoomChoices(controller.startingActions);
     }
 
-    private static void SetOhmInteraction(GameController controller)
+    private static void SetOhmInteraction(IController controller)
     {
         List<Interaction> interactions =
             new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);

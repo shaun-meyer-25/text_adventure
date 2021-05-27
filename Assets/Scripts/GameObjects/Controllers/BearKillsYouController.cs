@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BearKillsYouController : IController
+ public class BearKillsYouController : IController
 {
 
     public float processingDelay = 0.4f;

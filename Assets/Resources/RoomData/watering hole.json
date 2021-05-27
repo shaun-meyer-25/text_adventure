@@ -229,9 +229,24 @@
   {
     "chapter": 11,
     "exits": [
+      {
+        "roomName": "north foothills",
+        "keyString": "north",
+        "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
+      },
+      {
+        "roomName": "south foothills",
+        "keyString": "south",
+        "description": "foothills lie to the south"
+      },
+      {
+        "roomName": "north forest",
+        "keyString": "west",
+        "description": "the younger part of the forest, often good for foraging, lies to the west"
+      }
     ],
     "description": "",
-    "investigationDescription": "your spear protrudes from the bear's mass. it does not slow yet, and has Ohm pinned. they will die if you do not act quickly."
+    "investigationDescription": "the blood of the slain bear soaks the dirt. it tells the tale of your struggle and triumph."
   },
   {
     "chapter": 12,
@@ -252,7 +267,7 @@
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
     ],
-    "description": "you have slain the cave bear. calm is returning again to the tranquil watering hole.",
+    "description": "the site of your triumph is calm now in the darkness.",
     "investigationDescription": "the blood of the slain bear soaks the dirt. it tells the tale of your struggle and triumph."
   },
   {

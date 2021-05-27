@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/OhmAsksToHoldOrb")]
 public class OhmAsksToHoldOrb : ActionResponse
 { 
-    public override bool DoActionResponse(GameController controller)
+    public override bool DoActionResponse(IController controller)
     {
         controller.isConversing = true;
 

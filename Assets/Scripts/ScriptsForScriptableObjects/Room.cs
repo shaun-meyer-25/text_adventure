@@ -41,7 +41,7 @@ public class Room : ScriptableObject
 			return roomData.exits.ToArray();
 		}
 
-		Debug.Log("no exits found for checkpoint " + checkpoint);
+		Debug.Log("no exits found for checkpoint " + checkpoint + " and room " + roomName);
 		return new Exit[] { };
 	}
 	
@@ -61,8 +61,12 @@ public class Room : ScriptableObject
 	{
 		if (roomName == "sleep")
 		{
-			Debug.Log("setting people in sleep room - " + objects.Length);
+			Debug.Log("not setting people in sleep room - " + objects.Length);
+			return;
 		}
+		
+		Debug.Log("setting " + objects.Length + " people in " + roomName);
+
 		peopleInRoom = objects;
 	}
 
@@ -77,8 +81,10 @@ public class Room : ScriptableObject
 	{
 		if (roomName == "sleep")
 		{
-			Debug.Log("setting person in sleep room - " + obj.noun);
+			Debug.Log("not setting person in sleep room - " + obj.noun);
+			return;
 		}
+
 		List<InteractableObject> updatedPeopleInRoom;
 		if (PeopleInRoom == null)
 		{
@@ -101,12 +107,12 @@ public class Room : ScriptableObject
 	{
 		string filePath = "RoomData/" + roomName;
 		TextAsset file = Resources.Load<TextAsset>(filePath);
+		
 		if (file != null)
 		{
 			_roomData = new List<RoomData>(JsonUtility.FromJson<Wrapper<RoomData>>("{\"array\":" + file.text + "}").array);
 		}
-		
-		
+
 		interactableObjectsInRoom = baseInteractableObjectsInRoom.ToArray();
 		peopleInRoom = basePeopleInRoom.ToArray();
 		description = baseDescription;
@@ -115,7 +121,16 @@ public class Room : ScriptableObject
 	
 	public string GetDescription(int checkpoint)
 	{
-		return _roomData.Find(o => o.chapter == checkpoint).description;
+		RoomData r = _roomData.Find(o => o.chapter == checkpoint);
+		if (r != null)
+		{
+			return _roomData.Find(o => o.chapter == checkpoint).description;
+		}
+		else
+		{
+			Debug.Log("no data found for " + roomName + " chapeter " + checkpoint);
+			return "";
+		}
 	}
 
 	public string GetInvestigationDescription(int checkpoint)
@@ -195,6 +210,10 @@ public class Room : ScriptableObject
 
 	public void SetBasePeopleInRoom()
 	{
+		if (roomName == "home cave")
+		{
+			Debug.Log("setting base people in room - " + basePeopleInRoom.Count);
+		}
 		peopleInRoom = basePeopleInRoom.ToArray();
 	}
 }
