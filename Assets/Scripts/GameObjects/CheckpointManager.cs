@@ -41,7 +41,7 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 1)
         {
             checkpoint = maybeCheckpoint;
-            
+
             _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
             _controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(checkpointOneItems.ToArray());
             _controller.LoadRoomData();
@@ -62,7 +62,8 @@ public class CheckpointManager : MonoBehaviour
             List<Interaction> interactions =
                 new List<Interaction>(_controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
             Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
-            ActionResponse response = (ActionResponse) ScriptableObject.CreateInstance<OhmGetInPosition>().SetRequiredString("north foothills");
+            ActionResponse response = (ActionResponse) ScriptableObject.CreateInstance<OhmGetInPosition>()
+                .SetRequiredString("north foothills");
             interaction.SetActionResponse(response);
             // if you just "use" the spear here, you will die. 
             // you first should interact with ohm, ohm will circle around. then you can use the spear 
@@ -71,8 +72,10 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 4)
         {
             checkpoint = maybeCheckpoint;
-            _controller.LogStringWithReturn("you and Ohm successfully flee the vicious bear. it is afternoon now, hunger weighs heavily on you.");
-            _controller.allRoomsInGame.Find(o => o.roomName == "north forest").SetInteractableObjectsInRoom(checkpointFourItems.ToArray());
+            _controller.LogStringWithReturn(
+                "you and Ohm successfully flee the vicious bear. it is afternoon now, hunger weighs heavily on you.");
+            _controller.allRoomsInGame.Find(o => o.roomName == "north forest")
+                .SetInteractableObjectsInRoom(checkpointFourItems.ToArray());
             _controller.LoadRoomData();
             _controller.roomNavigation.SetExitLabels(_controller.roomNavigation.currentRoom
                 .GetExits(_controller.checkpointManager.checkpoint));
@@ -92,7 +95,7 @@ public class CheckpointManager : MonoBehaviour
         {
             checkpoint = maybeCheckpoint;
         }
-        
+
         if (maybeCheckpoint == 8)
         {
             checkpoint = maybeCheckpoint;
@@ -118,10 +121,12 @@ public class CheckpointManager : MonoBehaviour
 
             _controller.interactableItems.nounsInInventory.Add("spear");
             _controller.interactableItems.AddActionResponsesToUseDictionary();
-            _controller.LogStringWithReturn("Ohm pauses for a moment, then turns to the wall to grab the two remaining spears. they hand you one and motion outside.");
-            _controller.LogStringWithReturn("when you meet their eyes, you see a cold determination. you must be victorious.");
+            _controller.LogStringWithReturn(
+                "Ohm pauses for a moment, then turns to the wall to grab the two remaining spears. they hand you one and motion outside.");
+            _controller.LogStringWithReturn(
+                "when you meet their eyes, you see a cold determination. you must be victorious.");
             _controller.LogStringWithReturn("you have obtained a spear.");
-            
+
             _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Ohm")));
         }
 
@@ -129,7 +134,7 @@ public class CheckpointManager : MonoBehaviour
         {
             checkpoint = maybeCheckpoint;
         }
-        
+
         if (maybeCheckpoint == 11)
         {
             checkpoint = maybeCheckpoint;
@@ -137,12 +142,14 @@ public class CheckpointManager : MonoBehaviour
             _controller.interactableItems.nounsInInventory.Add("carcass");
             _controller.isDaytime = true;
             _controller.SetDaylight();
-            
+
             _controller.interactableItems.AddActionResponsesToUseDictionary();
             _controller.roomNavigation.currentRoom =
                 _controller.allRoomsInGame.Find(o => o.roomName == "watering hole");
-            _controller.LogStringWithReturn("your vision returns. the bear lies dead with your spear lodged in its heart.");
-            _controller.LogStringWithReturn("Ohm cries out in pain beneath the now dead beast. you help them out from under the carcass.");
+            _controller.LogStringWithReturn(
+                "your vision returns. the bear lies dead with your spear lodged in its heart.");
+            _controller.LogStringWithReturn(
+                "Ohm cries out in pain beneath the now dead beast. you help them out from under the carcass.");
             _controller.LogStringWithReturn("you obtain a bear carcass");
             _controller.roomNavigation.SetExitLabels(_controller.roomNavigation.currentRoom
                 .GetExits(_controller.checkpointManager.checkpoint));
@@ -161,7 +168,7 @@ public class CheckpointManager : MonoBehaviour
                 }
             }
         }
-        
+
         if (maybeCheckpoint == 12)
         {
             checkpoint = maybeCheckpoint;
@@ -174,13 +181,25 @@ public class CheckpointManager : MonoBehaviour
             _controller.travelingCompanions.Remove(_controller.characters.First(o => o.noun.Equals("Ohm")));
             _controller.roomNavigation.currentRoom.RemovePersonFromRoom("Tei");
         }
-        
+
         if (maybeCheckpoint == 13)
         {
             checkpoint = maybeCheckpoint;
         }
-        
-        for (int i = 0; i < _controller.characters.Length; i++)
+
+        if (maybeCheckpoint == 14)
+        {
+            checkpoint = maybeCheckpoint;
+            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
+            InteractableObject person = new List<InteractableObject>(_controller.characters)
+                .Find(o => o.name == "Nua");
+            List<Interaction> interactions =
+                new List<Interaction>(person.interactions);
+            Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+            interact.actionResponse = ScriptableObject.CreateInstance<OhmAsksToHoldOrb>();
+        }
+
+    for (int i = 0; i < _controller.characters.Length; i++)
         {
             List<Interaction> interactions =
                 new List<Interaction>(_controller.characters[i].interactions);
