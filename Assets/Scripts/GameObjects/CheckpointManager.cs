@@ -196,7 +196,18 @@ public class CheckpointManager : MonoBehaviour
             List<Interaction> interactions =
                 new List<Interaction>(person.interactions);
             Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
-            interact.actionResponse = ScriptableObject.CreateInstance<OhmAsksToHoldOrb>();
+            interact.actionResponse = ScriptableObject.CreateInstance<TakeOrbFromNua>();
+        }
+        
+        if (maybeCheckpoint == 15)
+        {
+            InteractableObject person = new List<InteractableObject>(_controller.characters)
+                .Find(o => o.name == "Nua");
+            List<Interaction> interactions =
+                new List<Interaction>(person.interactions);
+            Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+            interact.actionResponse = null;
+            checkpoint = maybeCheckpoint;
         }
 
     for (int i = 0; i < _controller.characters.Length; i++)
