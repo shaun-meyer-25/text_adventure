@@ -9,7 +9,7 @@ using System.Linq;
 
 public static class SaveGameManager
 {
-    public static void SaveGame(GameController controller)
+    public static void SaveGame(IController controller)
     {
         SaveGame game = new SaveGame();
         game.actionLog = controller.actionLog;

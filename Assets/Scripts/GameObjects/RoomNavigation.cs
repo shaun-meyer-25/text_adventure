@@ -113,7 +113,8 @@ public class RoomNavigation : MonoBehaviour {
 			controller.checkpointManager.SetCheckpoint(2);
 		}
 
-		if (currentRoom.roomName == "north foothills" && controller.checkpointManager.checkpoint == 2 && !controller.checkpointManager.ohmInPosition)
+		if (currentRoom.roomName == "north foothills" && controller.checkpointManager.checkpoint == 2 &&
+		    !controller.checkpointManager.ohmInPosition)
 		{
 			controller.checkpointManager.SetCheckpoint(3);
 		}
@@ -123,7 +124,8 @@ public class RoomNavigation : MonoBehaviour {
 			List<Interaction> interactions =
 				new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
 			Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
-			interaction.textResponse = "they have a dark look on their face. 'berries, from woods'. a simple command that describes your failures today.";
+			interaction.textResponse =
+				"they have a dark look on their face. 'berries, from woods'. a simple command that describes your failures today.";
 		}
 
 		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 5)
@@ -136,13 +138,19 @@ public class RoomNavigation : MonoBehaviour {
 		{
 			// todo - when we call this method this insures that SetCheckpoint is called twice. we need it only called once
 			// it's called the second time in the Start function in GameController
-			controller.checkpointManager.SetCheckpoint(8); 
+			controller.checkpointManager.SetCheckpoint(8);
 			controller.levelLoader.LoadScene("Second Day");
 		}
-		
+
 		if (currentRoom.roomName == "watering hole" && controller.checkpointManager.checkpoint == 9)
 		{
 			controller.checkpointManager.SetCheckpoint(10);
+		}
+
+		if (currentRoom.roomName == "mountains" && controller.checkpointManager.checkpoint == 15)
+		{
+			controller.checkpointManager.SetCheckpoint(16);
+			controller.levelLoader.LoadScene("In Mountains");
 		}
 	}
 

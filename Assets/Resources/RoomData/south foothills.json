@@ -266,10 +266,15 @@
         "roomName": "south forest",
         "keyString": "west",
         "description": "the rocky terrain levels out and gives way to forest to the west"
+      },
+      {
+        "roomName": "mountains",
+        "keyString": "east",
+        "description": "driven by fear and anger, Nua and Onah flee towards the vast mountains to the east"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "Nua and Onah are making their way up the rocky foothills. if you moved fast, you might be able to catch up with them. maybe try to make things better.",
+    "investigationDescription": "Ohm begins calling for them. the wind blows and carries his calls away. they move slowly, carefully up the treacherous foothills."
   },
   {
     "chapter": 16,

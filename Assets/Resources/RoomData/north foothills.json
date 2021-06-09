@@ -168,8 +168,8 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO",
+    "description": "the foothills here are treacherous. you see no sign of Nua and Onah.",
+    "investigationDescription": "there are no signs that Nua and Onah were here.",
     "effectTriggerName": ""
   },
   {

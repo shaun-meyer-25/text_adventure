@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class CheckpointManager : MonoBehaviour
 {
-    private GameController _controller;
+    private IController _controller;
     private LevelLoader _levelLoader;
     private Dictionary<string, List<string>> _characterInteractions;
     
@@ -30,7 +30,7 @@ public class CheckpointManager : MonoBehaviour
 
     void Awake()
         {
-        _controller = GetComponent<GameController>();
+        _controller = GetComponent<IController>();
         _levelLoader = GetComponent<LevelLoader>();
         _characterInteractions = _controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
         }
@@ -201,13 +201,24 @@ public class CheckpointManager : MonoBehaviour
         
         if (maybeCheckpoint == 15)
         {
+            checkpoint = maybeCheckpoint;
             InteractableObject person = new List<InteractableObject>(_controller.characters)
                 .Find(o => o.name == "Nua");
             List<Interaction> interactions =
                 new List<Interaction>(person.interactions);
             Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
             interact.actionResponse = null;
-            checkpoint = maybeCheckpoint;
+
+            Room r = _controller.roomNavigation.currentRoom;
+            _controller.LoadRoomData();
+            _controller.roomNavigation.SetExitLabels(_controller.roomNavigation.currentRoom
+                .GetExits(_controller.checkpointManager.checkpoint));
+            r.RemovePersonFromRoom("Nua");
+            r.RemovePersonFromRoom("Onah");
+            
+            _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Ohm")));
+            _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Tei")));
+
         }
 
     for (int i = 0; i < _controller.characters.Length; i++)

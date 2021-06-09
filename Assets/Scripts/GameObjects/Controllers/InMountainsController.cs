@@ -1,20 +1,15 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Button = UnityEngine.UI.Button;
-using Image = UnityEngine.UI.Image;
 
-public class GameController : IController {
-	
+public class InMountainsController : IController
+{
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
-	private Dictionary<string, string> caveDescription;
-	private Dictionary<string, string> caveInvestigationDescriptions;
 	private List<string> undisplayedSentences = new List<string>();
 	private TextProcessing _textProcessing;
 	
@@ -22,30 +17,10 @@ public class GameController : IController {
 	{
 		_textProcessing = new TextProcessing(this, processingDelay);
 		volumeManipulation = gameObject.AddComponent<VolumeManipulation>();
-		foreach (var text in FindObjectsOfType<Text>())
-		{
-			if (text.name == "NorthExitLabel")
-			{
-				northLabel = text;
-			}
-			if (text.name == "EastExitLabel")
-			{
-				eastLabel = text;
-			}
-			if (text.name == "SouthExitLabel")
-			{
-				southLabel = text;
-			}
-			if (text.name == "WestExitLabel")
-			{
-				westLabel = text;
-			}
-		}
 		levelLoader = FindObjectOfType<LevelLoader>();
 		checkpointManager = GetComponent<CheckpointManager>();
 		interactableItems = GetComponent<InteractableItems> ();
 		roomNavigation = GetComponent<RoomNavigation> ();
-		fire = GetComponent<Fire>();
 		isDaytime = true;
 	}
 
@@ -55,33 +30,6 @@ public class GameController : IController {
 		checkpointManager.SetCheckpoint(StaticDataHolder.instance.Checkpoint);
 		displayText.text = "";
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
-		caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
-		caveInvestigationDescriptions = LoadDictionaryFromFile("homeCaveInvestigationDescriptions");
-		if (SceneManager.GetActiveScene().name == "Main" && checkpointManager.checkpoint == 0)
-		{
-			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
-			LogStringWithReturn(
-				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
-		}
-		if (SceneManager.GetActiveScene().name == "Find Orb" && checkpointManager.checkpoint == 6)
-		{
-			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
-			LogStringWithReturn(
-				"you wake to a crashing sound from outside. you feel a strange urge to go outside and investigate.");
-		}
-		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 8)
-		{
-			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
-			LogStringWithReturn(
-				"you awake slowly. you sit up, and see that the others have woken up before you. they seem to have noticed the orb that you kept in your hands.");
-		}
-		if (SceneManager.GetActiveScene().name == "Third Day" && checkpointManager.checkpoint == 14)
-		{
-			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
-			LogStringWithReturn(
-				"you are shaken from your nightmares. you reach for the orb. it is not there.");
-		}
-
 		LoadRoomDataAndDisplayRoomText ();
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
@@ -306,28 +254,6 @@ public class GameController : IController {
 		return combinedText;
 	}
 
-	public Text GetTextForButton(string key)
-	{
-		if (key == "0")
-		{
-			return northLabel;
-		}
-		else if (key == "1")
-		{
-			return eastLabel;
-		}
-		else if (key == "2")
-		{
-			return southLabel;
-		}
-		else if (key == "3")
-		{
-			return westLabel;
-		}
-
-		throw new Exception("we don't have a preferred key for this");
-	}
-	
 	public IEnumerator TypeSentence(Dictionary<int, Tuple<string, char>> charactersAndTheirColors )
 	{
 		for (int i = 0; i < charactersAndTheirColors.Count; i++)
