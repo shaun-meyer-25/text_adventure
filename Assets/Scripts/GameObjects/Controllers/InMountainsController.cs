@@ -229,29 +229,7 @@ public class InMountainsController : IController
 
 	private string DescribeTravelingCompanions(string combinedText)
 	{
-		InteractableObject[] peopleInRoom = roomNavigation.currentRoom.PeopleInRoom;
-		if (peopleInRoom.Length == 1)
-		{
-			combinedText = peopleInRoom[0].keyword + " is traveling with you";
-		} else if (peopleInRoom.Length == 2)
-		{
-			combinedText = peopleInRoom[0].keyword + " and " + peopleInRoom[1].keyword + " are traveling with you";
-		} else if (peopleInRoom.Length > 2)
-		{
-			for (int i = 0; i < peopleInRoom.Length; i++)
-			{
-				if (i == peopleInRoom.Length - 1)
-				{
-					combinedText += " and " + peopleInRoom[i].keyword + " are traveling with you";
-				}
-				else
-				{
-					combinedText += peopleInRoom[i].keyword + ", ";
-				}
-			}
-		}
-
-		return combinedText;
+		return "";
 	}
 
 	public IEnumerator TypeSentence(Dictionary<int, Tuple<string, char>> charactersAndTheirColors )

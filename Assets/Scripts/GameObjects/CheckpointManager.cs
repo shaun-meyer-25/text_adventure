@@ -221,6 +221,27 @@ public class CheckpointManager : MonoBehaviour
 
         }
 
+        if (maybeCheckpoint == 16)
+        {
+            InteractableObject person = new List<InteractableObject>(_controller.characters)
+                .Find(o => o.name == "Ohm");
+            _controller.travelingCompanions.Add(person);
+            List<Interaction> interactions =
+                new List<Interaction>(person.interactions);
+            Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+            OhmFalls so = ScriptableObject.CreateInstance<OhmFalls>();
+            so.requiredString = "mountains2";
+            interact.actionResponse = so;
+            checkpoint = maybeCheckpoint;
+        }
+
+        if (maybeCheckpoint == 17)
+        {
+            checkpoint = maybeCheckpoint;
+            _controller.LoadRoomData();
+
+        }
+
     for (int i = 0; i < _controller.characters.Length; i++)
         {
             List<Interaction> interactions =

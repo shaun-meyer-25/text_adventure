@@ -1,0 +1,14 @@
+[
+
+  {
+    "chapter": 17,
+    "exits": [{
+      "roomName": "mountains4",
+      "keyString": "forward",
+      "description": "<color=purple>the cave ahead. surely they went in there.</color>"}
+    ],
+    "description": "<color=purple>they must have hid in one of the caves.</color>the storm is raging. so much water, running like blood, <color=purple> you have done well, NOW, THE CAVE</color>blood and water running down the stones from the head",
+    "investigationDescription": "<color=purple>DELAY NO</color>snapped off the leg, trapped and screaming<color=purple>LONGER. THE CAVE.</color>",
+    "effectTriggerName": ""
+  }
+]

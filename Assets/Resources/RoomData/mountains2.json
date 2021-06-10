@@ -1,0 +1,20 @@
+[
+  {
+    "chapter": 16,
+    "exits": [],
+    "description": "you make your way up, slowly, carefully.\n\na cry from behind you. you turn. instinctively you clutch the orb.\n\ntime slows down. Ohm is slipping, grasping for help.",
+    "investigationDescription": "",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 17,
+    "exits": [{
+      "roomName": "mountains3",
+      "keyString": "forward",
+      "description": "<color=purple>keep moving.</color>"}
+    ],
+    "description": "",
+    "investigationDescription": "<color=purple>do not waste t</color> Ohm's blood runs <color=purple>ime. keep moving.</color> down the rocks <color=purple> but he is fine</color>",
+    "effectTriggerName": ""
+  }
+]

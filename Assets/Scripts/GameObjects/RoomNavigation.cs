@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Object = System.Object;
 
@@ -12,14 +13,16 @@ public class RoomNavigation : MonoBehaviour {
 	
 	public Room currentRoom;
 
-	private GameController controller;
+	private IController controller;
 
 	Dictionary<string, Room> exitDictionary = new Dictionary<string, Room>();
 	void Awake() {
-		controller = GetComponent<GameController> ();
+		controller = GetComponent<IController> ();
 	}
 
 	public void UnpackExitsInRoom() { 
+		Debug.Log(currentRoom.roomName);
+		Debug.Log(controller);
 		for (int i = 0; i < currentRoom.GetExits(controller.checkpointManager.checkpoint).Length; i++)
 		{
 			string roomName = currentRoom.GetExits(controller.checkpointManager.checkpoint)[i].roomName;
@@ -36,11 +39,6 @@ public class RoomNavigation : MonoBehaviour {
 
 	public bool AttemptToChangeRooms(string directionNoun) {
 		if (exitDictionary.ContainsKey(directionNoun)) {
-/*			if (currentRoom.roomName != "home cave")
-			{
-				currentRoom.SetBasePeopleInRoom();
-			}
-*/
 			for (int i = 0; i < controller.travelingCompanions.Count; i++)
 			{
 				currentRoom.RemovePersonFromRoom(controller.travelingCompanions[i].name);
@@ -157,6 +155,7 @@ public class RoomNavigation : MonoBehaviour {
 	public void SetExitLabels(Exit[] choices)
 	{
 		List<Exit> listOfExits = new List<Exit>(choices);
+		if (SceneManager.GetActiveScene().name == "In Mountains") return;
 		for (int i = 0; i < 4; i++) {
 			if (i == 0)
 			{

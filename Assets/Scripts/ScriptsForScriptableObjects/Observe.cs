@@ -42,7 +42,8 @@ public class Observe : ActionChoice
                 {
                     joinedInteractionDescriptions += "\n" + controller.roomNavigation.currentRoom.GetExits(controller.checkpointManager.checkpoint) [i].description + "\n";
                 }
-                controller.LogStringWithReturn(room.GetInvestigationDescription(controller.checkpointManager.checkpoint) + "\n" + joinedInteractionDescriptions);
+                controller.LogStringWithReturn(room.GetInvestigationDescription(controller.checkpointManager.checkpoint) + 
+                                               "\n" + joinedInteractionDescriptions);
                 controller.isObserving = false;
                 controller.UpdateRoomChoices(controller.startingActions);
             }

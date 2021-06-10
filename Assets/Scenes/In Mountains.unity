@@ -370,6 +370,7 @@ GameObject:
   - component: {fileID: 772335135}
   - component: {fileID: 772335137}
   - component: {fileID: 772335138}
+  - component: {fileID: 772335139}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -397,17 +398,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
   - {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}
   levelLoader: {fileID: 1552006334}
-  characters: []
+  characters:
+  - {fileID: 11400000, guid: ef7402b7423a67742bba8efb34061b11, type: 2}
   background: {fileID: 0}
-  observableChoices: []
+  observableChoices:
+  - {fileID: 11400000, guid: 23b4ba9941e0ba74498789313b40f772, type: 2}
+  - {fileID: 11400000, guid: 248cfec788cee1b44b06b7dfa542eba0, type: 2}
   audio: {fileID: 0}
-  interactableChoices: []
+  interactableChoices:
+  - {fileID: 11400000, guid: c2fe0c8272ee56242820ac9cd692c6a9, type: 2}
+  - {fileID: 11400000, guid: 04ab77325e7d89e4d95fbe51f075a788, type: 2}
   travelingCompanions: []
   allRoomsInGame:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: bd27bf34962d89445bb44a0056ab1171, type: 2}
+  - {fileID: 11400000, guid: 3cfaa70f345f67946a9bfe059e7201b2, type: 2}
+  - {fileID: 11400000, guid: d7c5738c20cef98448a30199c48e57ac, type: 2}
+  - {fileID: 11400000, guid: ebe00c37ba8de914e9ac0c2de9cb6399, type: 2}
   backgroundColor: {fileID: 0}
   isDaytime: 0
-  processingDelay: 0
+  processingDelay: 0.02
   northLabel: {fileID: 0}
   eastLabel: {fileID: 0}
   westLabel: {fileID: 0}
@@ -426,7 +435,11 @@ MonoBehaviour:
   interactionDescriptionsInRoom: []
   fire: {fileID: 0}
   checkpointManager: {fileID: 0}
-  startingActions: []
+  startingActions:
+  - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
+  - {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
+  - {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
+  - {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}
 --- !u!4 &772335136
 Transform:
   m_ObjectHideFlags: 0
@@ -471,7 +484,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f043b3d59d924524ab7fcc1195f20d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRoom: {fileID: 0}
+  currentRoom: {fileID: 11400000, guid: bd27bf34962d89445bb44a0056ab1171, type: 2}
+--- !u!114 &772335139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772335134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c313ef354246694994f57d276f9c36b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usableItemList: []
+  nounsInRoom: []
+  nounsInInventory:
+  - orb
 --- !u!1001 &1090646338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -558,26 +587,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 471618610246604944, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 516634129961562375, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 772335135}
     - target: {fileID: 516634131329495591, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 772335135}
     - target: {fileID: 516634131616885903, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 772335135}
     - target: {fileID: 516634131912074654, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 772335135}
     - target: {fileID: 708396256673494348, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_IsActive
@@ -587,6 +621,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: EvilButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598040375253437076, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992076184341756047, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4414887960710519955, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
@@ -747,6 +791,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622504030496432727, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8791480085981821234, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
