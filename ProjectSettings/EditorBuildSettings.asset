@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KillBearWithOrb.unity
     guid: 1575a34cb6945a749bcfead4b57c93b1
+  - enabled: 1
+    path: Assets/Scenes/Third Day.unity
+    guid: 5c63c1780e6eafa4b81a47c3f5347459
+  - enabled: 1
+    path: Assets/Scenes/In Mountains.unity
+    guid: 2faf23665b3a2e948bacc0414c5d0483
   m_configObjects: {}

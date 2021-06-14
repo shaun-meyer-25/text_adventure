@@ -302,9 +302,7 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    ]
   },
   {
     "chapter": 14,
@@ -344,7 +342,9 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the woods are far too easy to get lost in. Nua and Onah will not be found here.",
+    "investigationDescription": "there are no signs that Nua and Onah were here."
   },
   {
     "chapter": 16,

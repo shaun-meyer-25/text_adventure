@@ -157,7 +157,7 @@
     "chapter": 14,
     "exits": [],
     "description": "",
-    "investigationDescription": "Nua rolls the orb around on the floor as if it were a toy. \n\n<color=purple>YOU SHOULD RETRIEVE IT.</color>",
+    "investigationDescription": "Nua rolls the orb around on the floor as if it were a toy. \n\n<color=purple>TAKE IT FROM THEM.</color>",
     "effectTriggerName": ""
   },
   {
@@ -165,10 +165,10 @@
     "exits": [{
       "roomName": "outside home",
       "keyString": "outside",
-      "description": "it is nighttime. leaving the cave is dangerous<color=purple>, but it must be done</color>"
+      "description": "Nua and Onah fled out the entrance. you may be able to catch them, track them."
     }],
-    "description": "TODO",
-    "investigationDescription": "TODO",
+    "description": "a familiar feeling envelops you. a room that is emptier than it should be.",
+    "investigationDescription": "the ones that remain here show their shock on their faces.",
     "effectTriggerName": ""
   },
   {

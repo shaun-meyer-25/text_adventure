@@ -9,13 +9,13 @@ using System.Linq;
 
 public static class SaveGameManager
 {
-    public static void SaveGame(GameController controller)
+    public static void SaveGame(IController controller)
     {
         SaveGame game = new SaveGame();
         game.actionLog = controller.actionLog;
         game.checkpointReached = controller.checkpointManager.checkpoint;
         game.currentScene = SceneManager.GetActiveScene().name;
-        game.fireLevel = controller.fire.fireLevel;
+        //game.fireLevel = controller.fire.fireLevel;
         game.nounsInInventory = controller.interactableItems.nounsInInventory;
         game.travelingCompanions = controller.travelingCompanions.Select(o => o.name).ToList();
         game.currentRoom = controller.roomNavigation.currentRoom.roomName;

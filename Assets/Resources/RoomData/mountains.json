@@ -1,0 +1,13 @@
+[
+  {
+    "chapter": 16,
+    "exits": [{
+      "roomName": "mountains2",
+      "keyString": "forward",
+      "description": "they are not too much farther ahead. further up into the mountains now."}
+    ],
+    "description": "the rain pours down on the already treacherous stones. Nua clutches to Onah's side above you, further into the mountains. they have stopped, but they seem afraid.",
+    "investigationDescription": "it will be difficult to get back down, it is steeper than it looks from the ground. Onah and Nua have stopped. will they come back with you, or are they simply afraid to go further?",
+    "effectTriggerName": ""
+  }
+]

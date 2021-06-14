@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Object = System.Object;
 
@@ -12,14 +13,16 @@ public class RoomNavigation : MonoBehaviour {
 	
 	public Room currentRoom;
 
-	private GameController controller;
+	private IController controller;
 
 	Dictionary<string, Room> exitDictionary = new Dictionary<string, Room>();
 	void Awake() {
-		controller = GetComponent<GameController> ();
+		controller = GetComponent<IController> ();
 	}
 
 	public void UnpackExitsInRoom() { 
+		Debug.Log(currentRoom.roomName);
+		Debug.Log(controller);
 		for (int i = 0; i < currentRoom.GetExits(controller.checkpointManager.checkpoint).Length; i++)
 		{
 			string roomName = currentRoom.GetExits(controller.checkpointManager.checkpoint)[i].roomName;
@@ -36,11 +39,6 @@ public class RoomNavigation : MonoBehaviour {
 
 	public bool AttemptToChangeRooms(string directionNoun) {
 		if (exitDictionary.ContainsKey(directionNoun)) {
-/*			if (currentRoom.roomName != "home cave")
-			{
-				currentRoom.SetBasePeopleInRoom();
-			}
-*/
 			for (int i = 0; i < controller.travelingCompanions.Count; i++)
 			{
 				currentRoom.RemovePersonFromRoom(controller.travelingCompanions[i].name);
@@ -113,7 +111,8 @@ public class RoomNavigation : MonoBehaviour {
 			controller.checkpointManager.SetCheckpoint(2);
 		}
 
-		if (currentRoom.roomName == "north foothills" && controller.checkpointManager.checkpoint == 2 && !controller.checkpointManager.ohmInPosition)
+		if (currentRoom.roomName == "north foothills" && controller.checkpointManager.checkpoint == 2 &&
+		    !controller.checkpointManager.ohmInPosition)
 		{
 			controller.checkpointManager.SetCheckpoint(3);
 		}
@@ -123,7 +122,8 @@ public class RoomNavigation : MonoBehaviour {
 			List<Interaction> interactions =
 				new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
 			Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
-			interaction.textResponse = "they have a dark look on their face. 'berries, from woods'. a simple command that describes your failures today.";
+			interaction.textResponse =
+				"they have a dark look on their face. 'berries, from woods'. a simple command that describes your failures today.";
 		}
 
 		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 5)
@@ -136,19 +136,26 @@ public class RoomNavigation : MonoBehaviour {
 		{
 			// todo - when we call this method this insures that SetCheckpoint is called twice. we need it only called once
 			// it's called the second time in the Start function in GameController
-			controller.checkpointManager.SetCheckpoint(8); 
+			controller.checkpointManager.SetCheckpoint(8);
 			controller.levelLoader.LoadScene("Second Day");
 		}
-		
+
 		if (currentRoom.roomName == "watering hole" && controller.checkpointManager.checkpoint == 9)
 		{
 			controller.checkpointManager.SetCheckpoint(10);
+		}
+
+		if (currentRoom.roomName == "mountains" && controller.checkpointManager.checkpoint == 15)
+		{
+			controller.checkpointManager.SetCheckpoint(16);
+			controller.levelLoader.LoadScene("In Mountains");
 		}
 	}
 
 	public void SetExitLabels(Exit[] choices)
 	{
 		List<Exit> listOfExits = new List<Exit>(choices);
+		if (SceneManager.GetActiveScene().name == "In Mountains") return;
 		for (int i = 0; i < 4; i++) {
 			if (i == 0)
 			{
