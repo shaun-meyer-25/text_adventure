@@ -204,6 +204,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EvilButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1152446275243301162, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: Controller
+      value: 
+      objectReference: {fileID: 1347101014}
     - target: {fileID: 4414887960710519955, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchorMax.x
