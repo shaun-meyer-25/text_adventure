@@ -24,7 +24,7 @@
       }
     ],
   "description": "you are just outside of your home. the others still slumber inside.",
-  "investigationDescription": "your home is familiar now after many moons of living here. was it luck or something else that brought you all here in your time of need?"
+  "investigationDescription": "your home is familiar now after many nights of living here. was it luck or something else that brought you all here in your time of need?"
   },
   {
     "chapter": 1,
@@ -51,7 +51,7 @@
       }
     ],
     "description": "you are just outside of your home. the day is bright and full of promise.",
-    "investigationDescription": "your home is familiar now after many moons of living here, but you will not find food here."
+    "investigationDescription": "your home is familiar now after many nights of living here, but you will not find food here."
   },
   {
     "chapter": 2,
@@ -78,7 +78,7 @@
       }
     ],
     "description": "you are just outside of your home. the day is bright and full of promise.",
-    "investigationDescription": "your home is familiar now after many moons of living here, but you will not find food here."
+    "investigationDescription": "your home is familiar now after many nights of living here, but you will not find food here."
   },
   {
     "chapter": 3,
@@ -105,7 +105,7 @@
       }
     ],
     "description": "you are just outside of your home. the day is bright and full of promise.",
-    "investigationDescription": "your home is familiar now after many moons of living here, but you will not find food here."
+    "investigationDescription": "your home is familiar now after many nights of living here, but you will not find food here."
   },
   {
     "chapter": 4,
@@ -132,7 +132,7 @@
       }
     ],
     "description": "you are just outside of your home. you do not look forward to sharing word of your failed hunt with the others.",
-    "investigationDescription": "your home is familiar now after many moons of living here, but you will not find food here."
+    "investigationDescription": "your home is familiar now after many nights of living here, but you will not find food here."
   },
   {
     "chapter": 5,
@@ -213,7 +213,7 @@
       }
     ],
     "description": "you are just outside of your home. you feel a bit strange for leaving so far from home in the middle of the night, but you are glad to be back safely.",
-    "investigationDescription": "the entrance to your cave is shadowed by the small tree that stands outside, cast by the moon's light."
+    "investigationDescription": "the entrance to your cave is shadowed by the small tree that stands outside."
   },
   {
     "chapter": 8,
