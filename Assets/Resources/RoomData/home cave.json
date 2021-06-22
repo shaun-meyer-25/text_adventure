@@ -145,12 +145,12 @@
   {
     "chapter": 13,
     "exits": [{
-      "roomName": "outside home",
-      "keyString": "outside",
-      "description": "it is nighttime. leaving the cave is dangerous, but Tei is out there somewhere."
+      "roomName": "sleep",
+      "keyString": "sleep",
+      "description": "a great loss avoided, a successful hunt. you are exhausted. \n\nyour head swims with strange thoughts."
     }],
-    "description": "todo",
-    "investigationDescription": "todo",
+    "description": "once again there is much relief in the room. excitement has staved off sleep momentarily.",
+    "investigationDescription": "you breathe easily. you thought you may not see Tei again. <color=purple>you could not have done it alone. you would be lying in the dark with your throat open and gnawed by the insects of the forest.</color> all are at ease.",
     "effectTriggerName": ""
   },
   {

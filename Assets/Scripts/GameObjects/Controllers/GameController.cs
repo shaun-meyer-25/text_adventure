@@ -75,6 +75,12 @@ public class GameController : IController {
 			LogStringWithReturn(
 				"you awake slowly. you sit up, and see that the others have woken up before you. they seem to have noticed the orb that you kept in your hands.");
 		}
+		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 13)
+		{
+			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
+			LogStringWithReturn(
+				"with the sight of the orb showing you the path, Ohm and you find Tei and help them out of the forest. they are hurt but will survive. you make your way back to the cave.");
+		}
 		if (SceneManager.GetActiveScene().name == "Third Day" && checkpointManager.checkpoint == 14)
 		{
 			// todo - let's get this in a text file or something, it sucks to hardcode it in like this

@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/KillBearWithOrb.unity
     guid: 1575a34cb6945a749bcfead4b57c93b1
   - enabled: 1
+    path: Assets/Scenes/Find Tei Maze.unity
+    guid: 4ac1e727bcd95ff47a30074cff495e5f
+  - enabled: 1
     path: Assets/Scenes/Third Day.unity
     guid: 5c63c1780e6eafa4b81a47c3f5347459
   - enabled: 1
