@@ -18,6 +18,7 @@ public class CheckpointManager : MonoBehaviour
     // Checkpoint 3 flags
     public bool ohmInPosition = false;
 
+    public InteractableObject treeBranch;
     public List<InteractableObject> checkpointOneItems;
     public List<InteractableObject> checkpointFourItems;
     public List<InteractableObject> checkpointFiveItems;
@@ -34,7 +35,7 @@ public class CheckpointManager : MonoBehaviour
         _levelLoader = GetComponent<LevelLoader>();
         _characterInteractions = _controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
         }
-
+    
     public void SetCheckpoint(int maybeCheckpoint)
     {
         int previousCheckpoint = checkpoint;

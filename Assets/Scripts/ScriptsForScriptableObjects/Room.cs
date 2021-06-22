@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -15,8 +16,6 @@ public class Room : ScriptableObject
 	[TextArea]
 	public string roomInvestigationDescription;
 	public string roomName;
-	
-	[SerializeField] private List<InteractableObject> baseInteractableObjectsInRoom;
 	
 	private InteractableObject[] interactableObjectsInRoom;
 	public InteractableObject[] InteractableObjectsInRoom
@@ -112,8 +111,7 @@ public class Room : ScriptableObject
 		{
 			_roomData = new List<RoomData>(JsonUtility.FromJson<Wrapper<RoomData>>("{\"array\":" + file.text + "}").array);
 		}
-
-		interactableObjectsInRoom = baseInteractableObjectsInRoom.ToArray();
+		
 		peopleInRoom = basePeopleInRoom.ToArray();
 		description = baseDescription;
 		roomInvestigationDescription = baseInvestigationDescription;

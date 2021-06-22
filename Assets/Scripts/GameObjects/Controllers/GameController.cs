@@ -62,6 +62,8 @@ public class GameController : IController {
 			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
 			LogStringWithReturn(
 				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
+			allRoomsInGame.Find(o => o.roomName == "south forest")
+					.SetInteractableObjectsInRoom(new [] { checkpointManager.treeBranch });
 		}
 		if (SceneManager.GetActiveScene().name == "Find Orb" && checkpointManager.checkpoint == 6)
 		{

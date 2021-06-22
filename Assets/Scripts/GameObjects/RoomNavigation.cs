@@ -20,9 +20,7 @@ public class RoomNavigation : MonoBehaviour {
 		controller = GetComponent<IController> ();
 	}
 
-	public void UnpackExitsInRoom() { 
-		Debug.Log(currentRoom.roomName);
-		Debug.Log(controller);
+	public void UnpackExitsInRoom() {
 		for (int i = 0; i < currentRoom.GetExits(controller.checkpointManager.checkpoint).Length; i++)
 		{
 			string roomName = currentRoom.GetExits(controller.checkpointManager.checkpoint)[i].roomName;
