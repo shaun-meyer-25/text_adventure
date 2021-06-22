@@ -185,6 +185,7 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 13)
         {
             checkpoint = maybeCheckpoint;
+            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
         }
 
         if (maybeCheckpoint == 14)
@@ -217,8 +218,6 @@ public class CheckpointManager : MonoBehaviour
             r.RemovePersonFromRoom("Onah");
             
             _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Ohm")));
-            _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Tei")));
-
         }
 
         if (maybeCheckpoint == 16)

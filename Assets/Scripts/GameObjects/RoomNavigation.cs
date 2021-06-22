@@ -157,7 +157,7 @@ public class RoomNavigation : MonoBehaviour {
 			controller.levelLoader.LoadScene("Third Day");
 		}
 		
-		if (currentRoom.roomName == "mountains" && controller.checkpointManager.checkpoint == 15)
+		if (currentRoom.roomName == "mountain transition" && controller.checkpointManager.checkpoint == 15)
 		{
 			controller.checkpointManager.SetCheckpoint(16);
 			controller.levelLoader.LoadScene("In Mountains");

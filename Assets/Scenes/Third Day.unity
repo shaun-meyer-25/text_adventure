@@ -780,7 +780,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 20b26a4a85dd63e419e9bc30c8401200, type: 2}
   - {fileID: 11400000, guid: b862231ee3e5bb548b57e557f3a6a18a, type: 2}
   - {fileID: 11400000, guid: 80e63e22d3f392a4ea5b0e8a8f111567, type: 2}
-  - {fileID: 11400000, guid: bd27bf34962d89445bb44a0056ab1171, type: 2}
+  - {fileID: 11400000, guid: 5843ef2a53ebb0645893126f03fe5176, type: 2}
   backgroundColor: {fileID: 122787896}
   isDaytime: 1
   processingDelay: 0.005
