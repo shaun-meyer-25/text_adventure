@@ -704,7 +704,7 @@ PrefabInstance:
     - target: {fileID: 708396256673494348, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4414887960710519955, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
@@ -18501,6 +18501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ohmInPosition: 0
+  treeBranch: {fileID: 0}
   checkpointOneItems: []
   checkpointFourItems: []
   checkpointFiveItems: []

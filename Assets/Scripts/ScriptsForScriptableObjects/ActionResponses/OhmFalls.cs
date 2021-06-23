@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "TextAdventure/ActionResponses/OhmFalls")]
@@ -19,6 +20,14 @@ public class OhmFalls : ActionResponse
             controller.UpdateRoomChoices(controller.startingActions);
             controller.isInteracting = false;
             controller.checkpointManager.SetCheckpoint(17);
+
+            InteractableObject ohm = controller.characters.First(o => o.noun.Equals("Ohm"));
+            controller.travelingCompanions.Remove(ohm);
+            List<Interaction> interactions =
+                new List<Interaction>(ohm.interactions);
+            Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
+            interaction.textResponse = "they lie still on the rocks. their eyes do not see you. <color=purple>they will be fine. leave them for now.</color>";
+            interaction.actionResponse = null;
             return true;
         }
         else

@@ -17,7 +17,7 @@ public class Room : ScriptableObject
 	public string roomInvestigationDescription;
 	public string roomName;
 	
-	private InteractableObject[] interactableObjectsInRoom;
+	private InteractableObject[] interactableObjectsInRoom = new InteractableObject[]{};
 	public InteractableObject[] InteractableObjectsInRoom
 	{
 		get { return interactableObjectsInRoom; }
