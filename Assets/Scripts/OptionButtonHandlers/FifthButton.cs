@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FifthButton : MonoBehaviour
 {
+
+    public IController Controller;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,17 @@ public class FifthButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("you clicked on the scary button");
+        if (Controller.checkpointManager.checkpoint == 10 &&
+            Controller.roomNavigation.currentRoom.roomName == "watering hole")
+        {
+            Controller.levelLoader.LoadScene("KillBearWithOrb");
+        }
+        else
+        {
+            Controller.LogStringWithReturn("the orb pulses slightly.");
+            Controller.DisplayLoggedText();
+        }
+        
+        
     }
 }

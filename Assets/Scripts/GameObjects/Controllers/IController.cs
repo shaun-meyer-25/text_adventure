@@ -26,7 +26,7 @@ public abstract class IController : MonoBehaviour
     public Text westLabel;
     public Text southLabel;
     public VolumeManipulation volumeManipulation;
-    public OptionButton fifthButton;
+    public GameObject fifthButton;
     
     [HideInInspector] public List<string> exitNames = new List<string>();
     [HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();

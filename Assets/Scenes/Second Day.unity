@@ -209,6 +209,11 @@ PrefabInstance:
       propertyPath: Controller
       value: 
       objectReference: {fileID: 1347101014}
+    - target: {fileID: 3484288918915872397, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4414887960710519955, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -491,6 +496,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &694522528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3484288918915872397, guid: 9a174499d254c204785136d2b80ceeea,
+    type: 3}
+  m_PrefabInstance: {fileID: 122787895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &694522529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7577475644770270086, guid: 9a174499d254c204785136d2b80ceeea,
@@ -784,7 +795,7 @@ MonoBehaviour:
   westLabel: {fileID: 0}
   southLabel: {fileID: 0}
   volumeManipulation: {fileID: 0}
-  fifthButton: {fileID: 0}
+  fifthButton: {fileID: 694522528}
   exitNames: []
   exitChoices: []
   isInteracting: 0
@@ -1088,3 +1099,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7024756614da6ba46b783ccb3eaec0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Controller: {fileID: 0}
