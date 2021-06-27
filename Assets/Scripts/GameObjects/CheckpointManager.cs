@@ -144,6 +144,7 @@ public class CheckpointManager : MonoBehaviour
             _controller.isDaytime = true;
             _controller.SetDaylight();
 
+            _controller.fifthButton.gameObject.SetActive(true);
             _controller.interactableItems.AddActionResponsesToUseDictionary();
             _controller.roomNavigation.currentRoom =
                 _controller.allRoomsInGame.Find(o => o.roomName == "watering hole");
@@ -168,6 +169,8 @@ public class CheckpointManager : MonoBehaviour
                     home.AddPersonToRoom(c);
                 }
             }
+
+            StartCoroutine(InitialGrowthAnimationChain());
         }
 
         if (maybeCheckpoint == 12)
@@ -259,6 +262,33 @@ public class CheckpointManager : MonoBehaviour
         {
             SaveGameManager.SaveGame(_controller);
         }
+    }
+    
+    /*
+     * public static class ManipulationEffects
+{
+    public static IEnumerator MessWithBackground(GameController controller)
+    {
+        List<Color> colors = new List<Color>() {new Color(128, 0, 128), Color.red, Color.white, Color.red, Color.black};
+        float timeRemaining = 0.5f;
+        float interval = 0.05f;
+
+        while (timeRemaining > 0)
+        {
+            controller.background.color = colors[(int) (timeRemaining * 10) % 5];
+            timeRemaining -= interval;
+            yield return new WaitForSeconds(interval);
+        }
+		
+        controller.background.color = Color.black;
+    }
+     */
+
+    public IEnumerator InitialGrowthAnimationChain()
+    {
+        _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow1");
+        yield return new WaitForSeconds(2.5f);
+        _controller.useButtonAnimator.SetTrigger("Use-Grow1");
     }
 }
 

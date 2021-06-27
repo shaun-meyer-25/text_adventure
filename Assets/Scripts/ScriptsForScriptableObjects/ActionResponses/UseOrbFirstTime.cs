@@ -13,10 +13,8 @@ public class UseOrbFirstTime : ActionResponse
             controller.checkpointManager.checkpoint == 10)
         {
             controller.fifthButton.gameObject.SetActive(true);
-            controller.LogStringWithReturn("you remove the orb from your pouch. time seems to slow around you. <color=purple>you should use it, it will give you the strength to do what needs to be done.</color>.");
+            controller.LogStringWithReturn("<color=purple>it senses your need. it ought to be used.</color>");
             // todo - pulse purple single time
-            Text textObject = controller.fifthButton.GetComponentInChildren<Text>();
-            textObject.text = "ORB";
             return true;
 
         }
