@@ -268,7 +268,7 @@
         "description": "the rocky terrain levels out and gives way to forest to the west"
       },
       {
-        "roomName": "mountains",
+        "roomName": "mountain transition",
         "keyString": "east",
         "description": "driven by fear and anger, Nua and Onah flee towards the vast mountains to the east"
       }

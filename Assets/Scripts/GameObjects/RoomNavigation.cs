@@ -20,9 +20,7 @@ public class RoomNavigation : MonoBehaviour {
 		controller = GetComponent<IController> ();
 	}
 
-	public void UnpackExitsInRoom() { 
-		Debug.Log(currentRoom.roomName);
-		Debug.Log(controller);
+	public void UnpackExitsInRoom() {
 		for (int i = 0; i < currentRoom.GetExits(controller.checkpointManager.checkpoint).Length; i++)
 		{
 			string roomName = currentRoom.GetExits(controller.checkpointManager.checkpoint)[i].roomName;
@@ -145,7 +143,19 @@ public class RoomNavigation : MonoBehaviour {
 			controller.checkpointManager.SetCheckpoint(10);
 		}
 
-		if (currentRoom.roomName == "mountains" && controller.checkpointManager.checkpoint == 15)
+		if (currentRoom.roomName == "south forest" && controller.checkpointManager.checkpoint == 12)
+		{
+			controller.checkpointManager.SetCheckpoint(13);
+			controller.levelLoader.LoadScene("Find Tei Maze");
+		}
+		
+		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 13)
+		{
+			controller.checkpointManager.SetCheckpoint(14);
+			controller.levelLoader.LoadScene("Third Day");
+		}
+		
+		if (currentRoom.roomName == "mountain transition" && controller.checkpointManager.checkpoint == 15)
 		{
 			controller.checkpointManager.SetCheckpoint(16);
 			controller.levelLoader.LoadScene("In Mountains");

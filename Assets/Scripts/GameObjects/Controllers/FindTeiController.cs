@@ -16,6 +16,7 @@ public class FindTeiController : IController
     // Start is called before the first frame update
     void Start()
     {
+        checkpointManager = GetComponent<CheckpointManager>();
         levelLoader = FindObjectOfType<LevelLoader>();
         volumeManipulation = gameObject.AddComponent<VolumeManipulation>();
 

@@ -18,6 +18,7 @@ public class CheckpointManager : MonoBehaviour
     // Checkpoint 3 flags
     public bool ohmInPosition = false;
 
+    public InteractableObject treeBranch;
     public List<InteractableObject> checkpointOneItems;
     public List<InteractableObject> checkpointFourItems;
     public List<InteractableObject> checkpointFiveItems;
@@ -34,7 +35,7 @@ public class CheckpointManager : MonoBehaviour
         _levelLoader = GetComponent<LevelLoader>();
         _characterInteractions = _controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
         }
-
+    
     public void SetCheckpoint(int maybeCheckpoint)
     {
         int previousCheckpoint = checkpoint;
@@ -143,6 +144,7 @@ public class CheckpointManager : MonoBehaviour
             _controller.isDaytime = true;
             _controller.SetDaylight();
 
+            _controller.fifthButton.gameObject.SetActive(true);
             _controller.interactableItems.AddActionResponsesToUseDictionary();
             _controller.roomNavigation.currentRoom =
                 _controller.allRoomsInGame.Find(o => o.roomName == "watering hole");
@@ -167,6 +169,8 @@ public class CheckpointManager : MonoBehaviour
                     home.AddPersonToRoom(c);
                 }
             }
+
+            StartCoroutine(InitialGrowthAnimationChain());
         }
 
         if (maybeCheckpoint == 12)
@@ -185,6 +189,7 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 13)
         {
             checkpoint = maybeCheckpoint;
+            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
         }
 
         if (maybeCheckpoint == 14)
@@ -217,8 +222,6 @@ public class CheckpointManager : MonoBehaviour
             r.RemovePersonFromRoom("Onah");
             
             _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Ohm")));
-            _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Tei")));
-
         }
 
         if (maybeCheckpoint == 16)
@@ -259,6 +262,33 @@ public class CheckpointManager : MonoBehaviour
         {
             SaveGameManager.SaveGame(_controller);
         }
+    }
+    
+    /*
+     * public static class ManipulationEffects
+{
+    public static IEnumerator MessWithBackground(GameController controller)
+    {
+        List<Color> colors = new List<Color>() {new Color(128, 0, 128), Color.red, Color.white, Color.red, Color.black};
+        float timeRemaining = 0.5f;
+        float interval = 0.05f;
+
+        while (timeRemaining > 0)
+        {
+            controller.background.color = colors[(int) (timeRemaining * 10) % 5];
+            timeRemaining -= interval;
+            yield return new WaitForSeconds(interval);
+        }
+		
+        controller.background.color = Color.black;
+    }
+     */
+
+    public IEnumerator InitialGrowthAnimationChain()
+    {
+        _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow1");
+        yield return new WaitForSeconds(2.5f);
+        _controller.useButtonAnimator.SetTrigger("Use-Grow1");
     }
 }
 
