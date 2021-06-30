@@ -27,9 +27,16 @@ public class PlayerMovement : MonoBehaviour
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
         rbody.MovePosition(newPos);
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.collider);
+        Beast beast = other.GetComponentInParent<Beast>();
+        beast.ChasePlayer(this.gameObject);
+
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("pm trigger exit");
     }
 }
