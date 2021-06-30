@@ -30,4 +30,9 @@ public class Beast : MonoBehaviour
         _isChasing = true;
         _prey = obj;
     }
+
+    public void StopChase()
+    {
+        _isChasing = false;
+    }
 }

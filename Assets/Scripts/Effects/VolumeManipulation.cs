@@ -25,6 +25,17 @@ public class VolumeManipulation : MonoBehaviour
              c.active = true; 
              StartCoroutine("Pulse", bloom);
          }
+         else if (requiredString == "screenWipe")
+         {
+             VolumeComponent c = volume.profile.components.Find(o => o.name == "Bloom(Clone)");
+             Bloom bloom = (Bloom) c;
+             ChromaticAberration ca = 
+                 (ChromaticAberration) volume.profile.components.Find(o => o.name == "Chromatic Aberration(Clone)");
+             Vignette v = (Vignette) volume.profile.components.Find(o => o.name == "Vignette(Clone)");
+             StopCoroutine("Pulse");
+             StartCoroutine(ResetLevel(controller, bloom));
+             
+         }
 
          if (requiredString == "caveBearAround")
          {
@@ -55,6 +66,25 @@ public class VolumeManipulation : MonoBehaviour
          bloom.active = false;
      }
 
+     public IEnumerator ResetLevel(IController controller, Bloom bloom, Vignette v, ChromaticAbberation ca)
+     {
+         ca.active = true;
+         v.active = true;
+         float seconds = 2f;
+         bloom.intensity.value = 450f;
+         while (seconds > 0) 
+         {
+             bloom.intensity.value -= 30.0f;
+             //controller.audio.volume += .001f;
+             seconds -= Time.deltaTime;
+             yield return null;
+         }
+//         controller.audio.Stop();
+         ca.active = false;
+         v.active = false;
+         StartCoroutine("Pulse", bloom);
+     }
+     
      public void EffectEnd(IController controller, string requiredString)
      {
          if (requiredString == "firstOrbEncounter")

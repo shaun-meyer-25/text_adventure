@@ -71,9 +71,15 @@ public class FindTeiController : IController
     public void ResetLevel()
     {
         // flash screen purple or some shit with a sound effect
+
+        volumeManipulation.EffectStart(this, "screenWipe");
+        Beast1.transform.position = _beast1Start;
+        Beast2.transform.position = _beast2Start;
+        Beast3.transform.position = _beast3Start;
+        Player.transform.position = _playerStart;
         
-        // reset player position
-        // reset all beast positions
-        // reset beasts to not hunting anymore
+        Beast1.StopChase();
+        Beast2.StopChase();
+        Beast3.StopChase();
     }
 }
