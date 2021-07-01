@@ -30,10 +30,10 @@ public class VolumeManipulation : MonoBehaviour
              VolumeComponent c = volume.profile.components.Find(o => o.name == "Bloom(Clone)");
              Bloom bloom = (Bloom) c;
              ChromaticAberration ca = 
-                 (ChromaticAberration) volume.profile.components.Find(o => o.name == "Chromatic Aberration(Clone)");
+                 (ChromaticAberration) volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
              Vignette v = (Vignette) volume.profile.components.Find(o => o.name == "Vignette(Clone)");
              StopCoroutine("Pulse");
-             StartCoroutine(ResetLevel(controller, bloom));
+             StartCoroutine(ResetLevel(controller, bloom, v, ca));
              
          }
 
@@ -66,22 +66,28 @@ public class VolumeManipulation : MonoBehaviour
          bloom.active = false;
      }
 
-     public IEnumerator ResetLevel(IController controller, Bloom bloom, Vignette v, ChromaticAbberation ca)
+     public IEnumerator ResetLevel(IController controller, Bloom bloom, Vignette v, ChromaticAberration ca)
      {
+         controller.light.intensity = 2.0f;
          ca.active = true;
          v.active = true;
          float seconds = 2f;
          bloom.intensity.value = 450f;
-         while (seconds > 0) 
+         int count = 0;
+         while (seconds > 0)
          {
-             bloom.intensity.value -= 30.0f;
+
+             bloom.intensity.value -= .8f;
+             controller.light.intensity -= .0035f;
              //controller.audio.volume += .001f;
              seconds -= Time.deltaTime;
+             count += 1;
              yield return null;
          }
 //         controller.audio.Stop();
          ca.active = false;
          v.active = false;
+         controller.light.intensity = 0f;
          StartCoroutine("Pulse", bloom);
      }
      

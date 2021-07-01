@@ -844,7 +844,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 2
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.34548557, g: 0.24630654, b: 0.38679248, a: 1}
+  m_Color: {r: 0.9622642, g: 0.28595585, b: 0.3359439, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
@@ -18524,7 +18524,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.42
+  m_Intensity: 0
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -18744,6 +18744,7 @@ MonoBehaviour:
   volumeManipulation: {fileID: 0}
   fifthButton: {fileID: 0}
   useButtonAnimator: {fileID: 0}
+  light: {fileID: 1927308740}
   exitNames: []
   exitChoices: []
   isInteracting: 0
