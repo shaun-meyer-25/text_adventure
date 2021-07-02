@@ -9,10 +9,12 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed = 1f;
 
     private Rigidbody2D rbody;
+    private FindTeiController _controller;
 
     private void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
+        _controller = FindObjectOfType<FindTeiController>();
     }
 
     void FixedUpdate()
@@ -27,9 +29,24 @@ public class PlayerMovement : MonoBehaviour
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
         rbody.MovePosition(newPos);
     }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Beast beast = other.GetComponentInParent<Beast>();
+        beast.ChasePlayer(this.gameObject);
+
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log(other.collider);
+        if (other.gameObject.name.Contains("Beast"))
+        {
+            _controller.ResetLevel();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("pm trigger exit");
     }
 }

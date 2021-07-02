@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -28,6 +29,7 @@ public abstract class IController : MonoBehaviour
     public VolumeManipulation volumeManipulation;
     public GameObject fifthButton;
     public Animator useButtonAnimator;
+    public Light2D light;
     
     [HideInInspector] public List<string> exitNames = new List<string>();
     [HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
