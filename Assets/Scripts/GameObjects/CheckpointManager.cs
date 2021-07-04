@@ -35,6 +35,7 @@ public class CheckpointManager : MonoBehaviour
         _levelLoader = GetComponent<LevelLoader>();
         _characterInteractions = _controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
         }
+
     
     public void SetCheckpoint(int maybeCheckpoint)
     {
@@ -189,7 +190,6 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 13)
         {
             checkpoint = maybeCheckpoint;
-            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
         }
 
         if (maybeCheckpoint == 14)
@@ -264,26 +264,6 @@ public class CheckpointManager : MonoBehaviour
         }
     }
     
-    /*
-     * public static class ManipulationEffects
-{
-    public static IEnumerator MessWithBackground(GameController controller)
-    {
-        List<Color> colors = new List<Color>() {new Color(128, 0, 128), Color.red, Color.white, Color.red, Color.black};
-        float timeRemaining = 0.5f;
-        float interval = 0.05f;
-
-        while (timeRemaining > 0)
-        {
-            controller.background.color = colors[(int) (timeRemaining * 10) % 5];
-            timeRemaining -= interval;
-            yield return new WaitForSeconds(interval);
-        }
-		
-        controller.background.color = Color.black;
-    }
-     */
-
     public IEnumerator InitialGrowthAnimationChain()
     {
         _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow1");

@@ -146,7 +146,6 @@ public class RoomNavigation : MonoBehaviour {
 		if (currentRoom.roomName == "south forest" && controller.checkpointManager.checkpoint == 12)
 		{
 			controller.checkpointManager.SetCheckpoint(13);
-			controller.levelLoader.LoadScene("Find Tei Maze");
 		}
 		
 		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 13)

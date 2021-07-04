@@ -81,6 +81,7 @@ public class BearHitboxes : MonoBehaviour
         // Controller.checkpointManager.SetCheckpoint(11); this is being set statically below
         StaticDataHolder.instance.Checkpoint = 11;
         Controller.levelLoader.LoadScene("Second Day");
-        
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
     }
 }

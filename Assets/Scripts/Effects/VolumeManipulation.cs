@@ -25,6 +25,15 @@ public class VolumeManipulation : MonoBehaviour
              c.active = true; 
              StartCoroutine("Pulse", bloom);
          }
+         if (requiredString == "firstOrbUse") {
+             
+             VolumeComponent c = volume.profile.components.Find(o => o.name == "Bloom(Clone)");
+             Bloom bloom = (Bloom) c;
+             ChromaticAberration ca = 
+                 (ChromaticAberration) volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
+             c.active = true; 
+             StartCoroutine(PulseMultiple(bloom, ca));
+         }
          else if (requiredString == "screenWipe")
          {
              VolumeComponent c = volume.profile.components.Find(o => o.name == "Bloom(Clone)");
@@ -51,6 +60,20 @@ public class VolumeManipulation : MonoBehaviour
              yield return null;
          }
      }
+
+
+    public IEnumerator PulseMultiple(Bloom bloom, ChromaticAberration ca)
+    {
+        float seconds = 5;
+
+        while (seconds > 0)
+        {
+            bloom.intensity.value = Mathf.Sin(Time.realtimeSinceStartup * 2.0f) + 1.5f;
+            ca.intensity.value = Mathf.Sin(Time.realtimeSinceStartup);
+            seconds -= Time.deltaTime;
+            yield return null;
+        }
+    }
 
      public IEnumerator SwellThenFizzle(IController controller, Bloom bloom)
      {

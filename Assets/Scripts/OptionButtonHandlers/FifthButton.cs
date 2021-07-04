@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FifthButton : MonoBehaviour
 {
@@ -25,6 +26,12 @@ public class FifthButton : MonoBehaviour
             Controller.roomNavigation.currentRoom.roomName == "watering hole")
         {
             Controller.levelLoader.LoadScene("KillBearWithOrb");
+        } else if (Controller.roomNavigation.currentRoom.roomName == "south forest" &&
+            Controller.checkpointManager.checkpoint == 13)
+        {
+            Controller.LogStringWithReturn("<color=purple>it senses your desperation. let it into your mind, let it show you the way.</color>");
+            Controller.volumeManipulation.EffectStart(Controller, "firstOrbUse");
+            StartCoroutine(ChangeSceneAfter3());
         }
         else
         {
@@ -33,5 +40,11 @@ public class FifthButton : MonoBehaviour
         }
         
         
+    }
+    
+    IEnumerator ChangeSceneAfter3()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Find Tei Maze");
     }
 }
