@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ohmInPosition: 0
+  treeBranch: {fileID: 0}
   checkpointOneItems:
   - {fileID: 11400000, guid: ab615af9443438b49b22d3b1ed7a4d3d, type: 2}
   checkpointFourItems:
@@ -271,6 +272,8 @@ MonoBehaviour:
   southLabel: {fileID: 0}
   volumeManipulation: {fileID: 0}
   fifthButton: {fileID: 0}
+  useButtonAnimator: {fileID: 0}
+  light: {fileID: 0}
   exitNames: []
   exitChoices: []
   isInteracting: 0
@@ -435,6 +438,11 @@ PrefabInstance:
       propertyPath: Controller
       value: 
       objectReference: {fileID: 674355948}
+    - target: {fileID: 3484288918915872397, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4414887960710519955, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchorMax.x

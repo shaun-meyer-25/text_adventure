@@ -327,6 +327,8 @@ MonoBehaviour:
   southLabel: {fileID: 0}
   volumeManipulation: {fileID: 0}
   fifthButton: {fileID: 0}
+  useButtonAnimator: {fileID: 0}
+  light: {fileID: 0}
   exitNames: []
   exitChoices: []
   isInteracting: 0
@@ -699,6 +701,11 @@ PrefabInstance:
       propertyPath: Controller
       value: 
       objectReference: {fileID: 947878756}
+    - target: {fileID: 3484288918915872397, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4414887960710519955, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchorMax.x
