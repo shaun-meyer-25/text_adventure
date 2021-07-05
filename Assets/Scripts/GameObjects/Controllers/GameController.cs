@@ -195,15 +195,26 @@ public class GameController : IController {
 	public override void LoadRoomDataAndDisplayRoomText () {
 		LoadRoomData();
 
-		string combinedText = "\n";
+		string combinedText = "";
+		string travelingCompanions = "";
 		
 		if (!roomNavigation.currentRoom.roomName.Equals("home cave"))
 		{
-			combinedText = DescribeTravelingCompanions(combinedText);
+			travelingCompanions = DescribeTravelingCompanions(combinedText);
 		}
 
 		string joinedInteractionDescriptions = string.Join ("\n", interactionDescriptionsInRoom.ToArray ());
-		combinedText = roomNavigation.currentRoom.GetDescription(checkpointManager.checkpoint) + "\n" + joinedInteractionDescriptions + "\n" + combinedText;
+		combinedText = roomNavigation.currentRoom.GetDescription(checkpointManager.checkpoint);
+		// + "\n" + joinedInteractionDescriptions + "\n" + combinedText;
+		if (joinedInteractionDescriptions != "" && joinedInteractionDescriptions != "\n")
+		{
+			combinedText = joinedInteractionDescriptions + "\n\n" + combinedText;
+		}
+
+		if (travelingCompanions != "")
+		{
+			combinedText = combinedText + "\n\n" + travelingCompanions;
+		}
 		
 		LogStringWithReturn (combinedText);
 	}
