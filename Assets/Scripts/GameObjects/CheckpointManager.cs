@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 public class CheckpointManager : MonoBehaviour
@@ -170,8 +171,8 @@ public class CheckpointManager : MonoBehaviour
                     home.AddPersonToRoom(c);
                 }
             }
-
-            StartCoroutine(InitialGrowthAnimationChain());
+            FirstGrowth();
+            //StartCoroutine(SecondGrowthAnimationChain());
         }
 
         if (maybeCheckpoint == 12)
@@ -189,7 +190,9 @@ public class CheckpointManager : MonoBehaviour
 
         if (maybeCheckpoint == 13)
         {
+            _controller.fifthButton.SetActive(true);
             checkpoint = maybeCheckpoint;
+            _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow1");
         }
 
         if (maybeCheckpoint == 14)
@@ -263,8 +266,13 @@ public class CheckpointManager : MonoBehaviour
             SaveGameManager.SaveGame(_controller);
         }
     }
+
+    public void FirstGrowth()
+    {
+        _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow0");
+    }
     
-    public IEnumerator InitialGrowthAnimationChain()
+    public IEnumerator SecondGrowthAnimationChain()
     {
         _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow1");
         yield return new WaitForSeconds(2.5f);

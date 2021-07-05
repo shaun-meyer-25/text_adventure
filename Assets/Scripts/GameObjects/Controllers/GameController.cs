@@ -79,10 +79,9 @@ public class GameController : IController {
 		}
 		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 13)
 		{
-			fifthButton.SetActive(true);
 			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
 			LogStringWithReturn(
-				"with the sight of the orb showing you the path, Ohm and you find Tei and help them out of the forest. they are hurt but will survive. you make your way back to the cave.");
+				"with the sight of the orb showing you the path, you find Tei and help them out of the forest. they are hurt but will survive. you make your way back to the cave.");
 			isDaytime = false;
 		}
 		if (SceneManager.GetActiveScene().name == "Third Day" && checkpointManager.checkpoint == 14)
