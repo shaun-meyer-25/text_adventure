@@ -12,12 +12,15 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime;
     public Color color;
+    public GameObject circle;
 
     private Image _image;
+    private Animator _circleAnimator;
 
     private void Start()
     {
         _image = this.GetComponentsInChildren<Image>().First();
+        _circleAnimator = new List<Animator>(this.GetComponentsInChildren<Animator>()).Find(o => o.name == "Circle");
     }
 
     public void LoadScene(string sceneName)
@@ -25,10 +28,15 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(sceneName));
     }
 
+    public void LoadSceneOrb(string sceneName)
+    {
+        // todo - maybe have a circle appear on screen and widen while we amp up the bloom, as if we're being drawn into the orb?
+        circle.SetActive(true);
+    }
+    
+
     IEnumerator LoadLevel(string sceneName)
     {
-        // todo - figure out how to change transition color without that weird bug where it does nothing
-     //   _image.color = color;
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);

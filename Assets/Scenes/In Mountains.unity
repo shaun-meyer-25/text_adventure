@@ -422,7 +422,9 @@ MonoBehaviour:
   westLabel: {fileID: 0}
   southLabel: {fileID: 0}
   volumeManipulation: {fileID: 0}
-  fifthButton: {fileID: 1256737191}
+  fifthButton: {fileID: 0}
+  useButtonAnimator: {fileID: 0}
+  light: {fileID: 0}
   exitNames: []
   exitChoices: []
   isInteracting: 0
@@ -467,6 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ohmInPosition: 0
+  treeBranch: {fileID: 0}
   checkpointOneItems: []
   checkpointFourItems: []
   checkpointFiveItems: []
@@ -802,6 +805,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8597541459221446642, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Name
+      value: Animations
+      objectReference: {fileID: 0}
     - target: {fileID: 8791480085981821234, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: _handler
@@ -840,18 +848,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a174499d254c204785136d2b80ceeea, type: 3}
---- !u!114 &1256737191 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8791480085981821234, guid: 9a174499d254c204785136d2b80ceeea,
-    type: 3}
-  m_PrefabInstance: {fileID: 1256737190}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb3a773c04f564959b0454f12e5dcf75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1256737194 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4797650007323348399, guid: 9a174499d254c204785136d2b80ceeea,

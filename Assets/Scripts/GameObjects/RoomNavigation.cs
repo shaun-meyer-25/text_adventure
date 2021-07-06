@@ -106,6 +106,7 @@ public class RoomNavigation : MonoBehaviour {
 		    controller.interactableItems.nounsInInventory.Contains("spear") &&
 		    controller.checkpointManager.checkpoint == 1)
 		{
+			controller.travelingCompanions.Add(controller.characters.First(o => o.noun.Equals("Ohm")));
 			controller.checkpointManager.SetCheckpoint(2);
 		}
 
