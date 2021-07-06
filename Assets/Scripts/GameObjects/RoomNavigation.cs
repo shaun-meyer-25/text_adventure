@@ -121,7 +121,7 @@ public class RoomNavigation : MonoBehaviour {
 				new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
 			Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
 			interaction.textResponse =
-				"they have a dark look on their face. 'berries, from woods'. a simple command that describes your failures today.";
+				"they have a dark look on their face. they forcefully point to the west, to the forest to forage. a simple command that describes your failures today.";
 		}
 
 		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 5)
