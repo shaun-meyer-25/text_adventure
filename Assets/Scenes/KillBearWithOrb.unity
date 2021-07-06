@@ -627,6 +627,8 @@ MonoBehaviour:
   southLabel: {fileID: 0}
   volumeManipulation: {fileID: 0}
   fifthButton: {fileID: 0}
+  useButtonAnimator: {fileID: 0}
+  light: {fileID: 0}
   exitNames: []
   exitChoices: []
   isInteracting: 0
@@ -898,28 +900,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}
+      propertyPath: color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
+        type: 3}
       propertyPath: color.b
-      value: 0
+      value: 0.81568635
       objectReference: {fileID: 0}
     - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}
       propertyPath: color.g
-      value: 0
+      value: 0.2784314
       objectReference: {fileID: 0}
     - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}
       propertyPath: color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
-        type: 3}
-      propertyPath: transitionTime
-      value: 2.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 8310759918348801478, guid: 1f89e043bbe15be48bb202499e7912bd,
-        type: 3}
-      propertyPath: m_Alpha
-      value: 0
+      value: 0.6745098
       objectReference: {fileID: 0}
     - target: {fileID: 8310759919502474737, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}

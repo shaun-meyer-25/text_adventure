@@ -14,13 +14,35 @@ public class LevelLoader : MonoBehaviour
     public Color color;
     public GameObject circle;
 
+    private bool _orbGrowing = false;
+    private bool _orbShrinking = false;
+    private float _intensity;
     private Image _image;
-    private Animator _circleAnimator;
+    private Material _mat;
+    private static readonly int Fade = Shader.PropertyToID("_Fade");
+    private static readonly int Start1 = Animator.StringToHash("Start");
 
     private void Start()
     {
         _image = this.GetComponentsInChildren<Image>().First();
-        _circleAnimator = new List<Animator>(this.GetComponentsInChildren<Animator>()).Find(o => o.name == "Circle");
+        _image.color = color;
+        _mat = circle.GetComponent<SpriteRenderer>().material;
+    }
+
+    private void Update()
+    {
+        if (_orbGrowing)
+        {
+            _intensity += .002f;
+            _mat.SetFloat(Fade, _intensity);
+        }
+
+        if (_orbShrinking)
+        {
+            _intensity -= .002f;
+            _mat.SetFloat(Fade, _intensity);
+        }
+        
     }
 
     public void LoadScene(string sceneName)
@@ -30,14 +52,37 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadSceneOrb(string sceneName)
     {
-        // todo - maybe have a circle appear on screen and widen while we amp up the bloom, as if we're being drawn into the orb?
         circle.SetActive(true);
+        _orbGrowing = true;
+        StartCoroutine(LoadLevelOrb(sceneName));
+    }
+
+    public void StartSceneOrb()
+    {
+        circle.SetActive(true);
+        _intensity = 1f;
+        _mat.SetFloat(Fade, _intensity);
+        _orbShrinking = true;
+        StartCoroutine(StartingSceneWithOrb());
+    }
+
+    IEnumerator StartingSceneWithOrb()
+    {
+        yield return new WaitForSeconds(2);
+        _orbShrinking = false;
+        circle.SetActive(false);
+    }
+
+    IEnumerator LoadLevelOrb(string sceneName)
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
     
 
     IEnumerator LoadLevel(string sceneName)
     {
-        transition.SetTrigger("Start");
+        transition.SetTrigger(Start1);
 
         yield return new WaitForSeconds(transitionTime);
 

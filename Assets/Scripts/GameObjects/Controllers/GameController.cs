@@ -77,6 +77,10 @@ public class GameController : IController {
 			LogStringWithReturn(
 				"you awake slowly. you sit up, and see that the others have woken up before you. they seem to have noticed the orb that you kept in your hands.");
 		}
+		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 11)
+		{
+			levelLoader.StartSceneOrb();
+		}
 		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 13)
 		{
 			// todo - let's get this in a text file or something, it sucks to hardcode it in like this

@@ -17,6 +17,12 @@ public class VolumeManipulation : MonoBehaviour
 
     public void EffectStart(IController controller, string requiredString)
      {
+         if (requiredString == "enableBloom")
+         {
+             VolumeComponent c = volume.profile.components.Find(o => o.name == "Bloom(Clone)");
+             Bloom bloom = (Bloom) c;
+             c.active = true; 
+         }
          if (requiredString == "firstOrbEncounter")
          {
              

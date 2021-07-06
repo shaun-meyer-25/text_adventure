@@ -25,7 +25,8 @@ public class FifthButton : MonoBehaviour
         if (Controller.checkpointManager.checkpoint == 10 &&
             Controller.roomNavigation.currentRoom.roomName == "watering hole")
         {
-            Controller.levelLoader.LoadScene("KillBearWithOrb");
+            Controller.volumeManipulation.EffectStart(Controller, "enableBloom");
+            Controller.levelLoader.LoadSceneOrb("KillBearWithOrb");
         } else if (Controller.roomNavigation.currentRoom.roomName == "south forest" &&
             Controller.checkpointManager.checkpoint == 13)
         {

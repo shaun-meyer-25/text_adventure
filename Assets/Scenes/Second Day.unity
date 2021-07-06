@@ -209,6 +209,11 @@ PrefabInstance:
       propertyPath: Controller
       value: 
       objectReference: {fileID: 1347101014}
+    - target: {fileID: 1969282369308271916, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3484288918915872397, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_IsActive
@@ -627,14 +632,52 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1250910687, guid: 1f89e043bbe15be48bb202499e7912bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250910688, guid: 1f89e043bbe15be48bb202499e7912bd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250910688, guid: 1f89e043bbe15be48bb202499e7912bd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250910690, guid: 1f89e043bbe15be48bb202499e7912bd, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5471698
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250910690, guid: 1f89e043bbe15be48bb202499e7912bd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.26067996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250910690, guid: 1f89e043bbe15be48bb202499e7912bd, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5471698
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250910690, guid: 1f89e043bbe15be48bb202499e7912bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0a38903677b28864aaaeac3c52e729a0, type: 2}
     - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}
-      propertyPath: transitionTime
-      value: 2.93
+      propertyPath: color.a
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8310759918348801478, guid: 1f89e043bbe15be48bb202499e7912bd,
+    - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}
-      propertyPath: m_Alpha
+      propertyPath: color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
+        type: 3}
+      propertyPath: color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
+        type: 3}
+      propertyPath: color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8310759919502474737, guid: 1f89e043bbe15be48bb202499e7912bd,
@@ -909,6 +952,7 @@ MonoBehaviour:
   volumeManipulation: {fileID: 0}
   fifthButton: {fileID: 694522528}
   useButtonAnimator: {fileID: 548112587}
+  light: {fileID: 0}
   exitNames: []
   exitChoices: []
   isInteracting: 0
@@ -1097,7 +1141,7 @@ RectTransform:
   m_LocalScale: {x: 550, y: 375, z: 1}
   m_Children: []
   m_Father: {fileID: 694522529}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
