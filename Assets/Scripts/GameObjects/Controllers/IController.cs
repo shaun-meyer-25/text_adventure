@@ -30,7 +30,7 @@ public abstract class IController : MonoBehaviour
     public GameObject fifthButton;
     public Animator useButtonAnimator;
     public Light2D light;
-    
+
     [HideInInspector] public List<string> exitNames = new List<string>();
     [HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();
     [HideInInspector] public bool isInteracting = false;
@@ -40,17 +40,17 @@ public abstract class IController : MonoBehaviour
     [HideInInspector] public RoomNavigation roomNavigation;
     [HideInInspector] public InteractableItems interactableItems;
     [HideInInspector] public List<string> actionLog = new List<string>();
-    [HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string> ();
+    [HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string>();
     [HideInInspector] public Fire fire;
     [HideInInspector] public CheckpointManager checkpointManager;
-    
+
     public Choice[] startingActions;
 
     public virtual void UpdateRoomChoices(Choice[] choices)
     {
-        
+
     }
-    
+
     public virtual List<string> ObservableChoiceNames()
     {
         return null;
@@ -58,7 +58,7 @@ public abstract class IController : MonoBehaviour
 
     public virtual void DisplayLoggedText()
     {
-        
+
     }
 
     public virtual void LogStringWithReturn(string stringToAdd)
@@ -67,7 +67,7 @@ public abstract class IController : MonoBehaviour
 
     public virtual void LoadRoomData()
     {
-        
+
     }
 
     public virtual void LoadRoomDataAndDisplayRoomText()
@@ -77,10 +77,11 @@ public abstract class IController : MonoBehaviour
 
     public virtual void PrepareObjectsToTakeOrExamine(Room currentRoom)
     {
-        
+
     }
 
-    public virtual string TestVerbDictionaryWithNoun(Dictionary<string, string> verbDictionary, string verb, string noun)
+    public virtual string TestVerbDictionaryWithNoun(Dictionary<string, string> verbDictionary, string verb,
+        string noun)
     {
         return "";
     }
@@ -89,7 +90,7 @@ public abstract class IController : MonoBehaviour
     {
         TextAsset data = (TextAsset) Resources.Load(fileName);
         string[] lines = data.text.Split('\n');
-		
+
         Dictionary<string, string> dict = new Dictionary<string, string>();
 
         foreach (string line in lines)
@@ -99,15 +100,15 @@ public abstract class IController : MonoBehaviour
             string value = split[1].Trim();
             dict.Add(key, value);
         }
-		
+
         return dict;
     }
-	
+
     public Dictionary<string, List<string>> LoadDictionaryFromCsvFile(string fileName)
     {
         TextAsset data = (TextAsset) Resources.Load(fileName);
         string[] lines = data.text.Split('\n');
-		
+
         Dictionary<string, List<string>> dict = new Dictionary<string, List<string>>();
 
         foreach (string line in lines)
@@ -117,10 +118,16 @@ public abstract class IController : MonoBehaviour
             List<string> value = split.Skip(1).ToList();
             dict.Add(key, value);
         }
-		
+
         return dict;
     }
-    
+
+    public void SetStorm()
+    {
+        backgroundColor.SetTrigger("SetStorm");
+        currentColor = "black";
+    }
+
     public void SetDaylight()
     {
         backgroundColor.SetTrigger("SetDaytime");

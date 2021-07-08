@@ -844,8 +844,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 2
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.9622642, g: 0.28595585, b: 0.3359439, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.7855669, g: 0.18396229, b: 1, a: 0}
+  m_Intensity: 2.8
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -856,8 +856,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.69
-  m_PointLightOuterRadius: 1.96
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1.55
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -879,8 +879,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}
+      propertyPath: color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
+        type: 3}
       propertyPath: color.b
-      value: 0
+      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}
@@ -890,7 +895,7 @@ PrefabInstance:
     - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}
       propertyPath: color.r
-      value: 0
+      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}

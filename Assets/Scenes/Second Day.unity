@@ -662,6 +662,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0a38903677b28864aaaeac3c52e729a0, type: 2}
     - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}
+      propertyPath: mat
+      value: 
+      objectReference: {fileID: 2100000, guid: 0a38903677b28864aaaeac3c52e729a0, type: 2}
+    - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
+        type: 3}
       propertyPath: color.a
       value: 1
       objectReference: {fileID: 0}

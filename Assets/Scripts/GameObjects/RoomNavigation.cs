@@ -44,10 +44,13 @@ public class RoomNavigation : MonoBehaviour {
 			
 			if (currentRoom.roomName == "home cave")
 			{
-				if (controller.isDaytime && controller.currentColor == "white")
+				if (controller.isDaytime && controller.currentColor == "white" && SceneManager.GetActiveScene().name != "Third Day")
 				{
 					controller.SetDaylight();
-				} 
+				} else if (SceneManager.GetActiveScene().name == "Third Day")
+				{
+					controller.SetStorm();
+				}
 			}
 			else
 			{

@@ -13,19 +13,19 @@ public class LevelLoader : MonoBehaviour
     public float transitionTime;
     public Color color;
     public GameObject circle;
-
+    
+    private Material _mat;
     private bool _orbGrowing = false;
     private bool _orbShrinking = false;
     private float _intensity;
     private Image _image;
-    private Material _mat;
     private static readonly int Fade = Shader.PropertyToID("_Fade");
     private static readonly int Start1 = Animator.StringToHash("Start");
+    private static readonly int Opacity = Shader.PropertyToID("_Opacity");
 
     private void Start()
     {
-        _image = this.GetComponentsInChildren<Image>().First();
-        _image.color = color;
+
         _mat = circle.GetComponent<SpriteRenderer>().material;
     }
 
@@ -41,8 +41,13 @@ public class LevelLoader : MonoBehaviour
         {
             _intensity -= .002f;
             _mat.SetFloat(Fade, _intensity);
+
+            if (_intensity <= 0)
+            {
+                _orbShrinking = false;
+                _mat.SetFloat(Opacity, 0);
+            }
         }
-        
     }
 
     public void LoadScene(string sceneName)
@@ -52,25 +57,17 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadSceneOrb(string sceneName)
     {
-        circle.SetActive(true);
         _orbGrowing = true;
+        _mat.SetFloat(Opacity, 1);
         StartCoroutine(LoadLevelOrb(sceneName));
     }
 
     public void StartSceneOrb()
     {
-        circle.SetActive(true);
         _intensity = 1f;
         _mat.SetFloat(Fade, _intensity);
+        _mat.SetFloat(Opacity, 1);
         _orbShrinking = true;
-        StartCoroutine(StartingSceneWithOrb());
-    }
-
-    IEnumerator StartingSceneWithOrb()
-    {
-        yield return new WaitForSeconds(2);
-        _orbShrinking = false;
-        circle.SetActive(false);
     }
 
     IEnumerator LoadLevelOrb(string sceneName)
@@ -88,6 +85,9 @@ public class LevelLoader : MonoBehaviour
 
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
-    
-    
+
+    private void OnDestroy()
+    {
+        Destroy(_mat);
+    }
 }

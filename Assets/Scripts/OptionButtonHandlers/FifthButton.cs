@@ -31,8 +31,8 @@ public class FifthButton : MonoBehaviour
             Controller.checkpointManager.checkpoint == 13)
         {
             Controller.LogStringWithReturn("<color=purple>it senses your desperation. let it into your mind, let it show you the way.</color>");
-            Controller.volumeManipulation.EffectStart(Controller, "firstOrbUse");
-            StartCoroutine(ChangeSceneAfter3());
+            Controller.volumeManipulation.EffectStart(Controller, "enableBloom");
+            Controller.levelLoader.LoadSceneOrb("Find Tei Maze");
         }
         else
         {
