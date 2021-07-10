@@ -30,6 +30,9 @@ public abstract class IController : MonoBehaviour
     public GameObject fifthButton;
     public Animator useButtonAnimator;
     public Light2D light;
+    public bool isFourthButtonDisabled = false;
+    public bool isThirdButtonDisabled = false;
+    public bool isSecondButtonDisabled = false;
 
     [HideInInspector] public List<string> exitNames = new List<string>();
     [HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();

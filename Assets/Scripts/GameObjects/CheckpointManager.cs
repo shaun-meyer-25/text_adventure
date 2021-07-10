@@ -233,6 +233,7 @@ public class CheckpointManager : MonoBehaviour
         {
             InteractableObject person = new List<InteractableObject>(_controller.characters)
                 .Find(o => o.name == "Ohm");
+            _controller.roomNavigation.currentRoom.AddPersonToRoom(person);
             _controller.travelingCompanions.Add(person);
             List<Interaction> interactions =
                 new List<Interaction>(person.interactions);
@@ -272,13 +273,6 @@ public class CheckpointManager : MonoBehaviour
     public void FirstGrowth()
     {
         _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow0");
-    }
-    
-    public IEnumerator SecondGrowthAnimationChain()
-    {
-        _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow1");
-        yield return new WaitForSeconds(2.5f);
-        _controller.useButtonAnimator.SetTrigger("Use-Grow1");
     }
 }
 

@@ -425,6 +425,9 @@ MonoBehaviour:
   fifthButton: {fileID: 0}
   useButtonAnimator: {fileID: 0}
   light: {fileID: 0}
+  isFourthButtonDisabled: 1
+  isThirdButtonDisabled: 0
+  isSecondButtonDisabled: 0
   exitNames: []
   exitChoices: []
   isInteracting: 0

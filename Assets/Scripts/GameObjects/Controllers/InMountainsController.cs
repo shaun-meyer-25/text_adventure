@@ -75,7 +75,15 @@ public class InMountainsController : IController
 				textObject.text = null;
 				button.GetComponent<Button>().interactable = false;
 			}
-
+			
+			if (i == 3 && isFourthButtonDisabled)
+			{
+				button.GetComponent<Button>().interactable = false;
+			}
+			if (i == 2 && isThirdButtonDisabled)
+			{
+				button.GetComponent<Button>().interactable = false;
+			}
 		}
 
 		// We want the game controller to be the source of truth on what the player's options are

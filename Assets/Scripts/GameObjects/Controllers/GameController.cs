@@ -141,6 +141,11 @@ public class GameController : IController {
 				textObject.text = null;
 				button.GetComponent<Button>().interactable = false;
 			}
+			
+			if (i == 3 && isFourthButtonDisabled)
+			{
+				button.GetComponent<Button>().interactable = false;
+			}
 
 		}
 
