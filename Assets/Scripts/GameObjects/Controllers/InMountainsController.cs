@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InMountainsController : IController
 {
+	public bool SecondButtonUnclicked;
+	
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
 	private List<string> undisplayedSentences = new List<string>();

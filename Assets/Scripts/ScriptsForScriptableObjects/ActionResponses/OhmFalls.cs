@@ -10,6 +10,7 @@ public class OhmFalls : ActionResponse
     {
         if (controller.roomNavigation.currentRoom.roomName == requiredString)
         {
+            InMountainsController mc = (InMountainsController) controller;
             controller.processingDelay = 0.09f;
             controller.LogStringWithReturn(
                 "<color=purple>THEY ARE REACHING FOR THE ORB</color> you shove their hand away. they fall backwards. a shout, a look of shock, disbelief in their eyes. then a loud crack, an explosion of red on the rocks.");
