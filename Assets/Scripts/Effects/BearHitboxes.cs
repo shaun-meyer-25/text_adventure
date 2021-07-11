@@ -80,7 +80,7 @@ public class BearHitboxes : MonoBehaviour
         yield return new WaitForSeconds(5);
         // Controller.checkpointManager.SetCheckpoint(11); this is being set statically below
         StaticDataHolder.instance.Checkpoint = 11;
-        Controller.levelLoader.LoadScene("Second Day");
+        Controller.levelLoader.LoadScene("Second Day Afternoon");
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
     }

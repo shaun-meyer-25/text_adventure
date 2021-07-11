@@ -358,6 +358,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718919832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4797650006413212121, guid: 9a174499d254c204785136d2b80ceeea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1256737190}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &772335134
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayText: {fileID: 1256737194}
-  currentColor: 
+  currentColor: black
   actions:
   - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}
   - {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
@@ -400,7 +412,7 @@ MonoBehaviour:
   levelLoader: {fileID: 1552006334}
   characters:
   - {fileID: 11400000, guid: ef7402b7423a67742bba8efb34061b11, type: 2}
-  background: {fileID: 0}
+  background: {fileID: 718919832}
   observableChoices:
   - {fileID: 11400000, guid: 23b4ba9941e0ba74498789313b40f772, type: 2}
   - {fileID: 11400000, guid: 248cfec788cee1b44b06b7dfa542eba0, type: 2}
@@ -428,6 +440,7 @@ MonoBehaviour:
   isFourthButtonDisabled: 1
   isThirdButtonDisabled: 1
   isSecondButtonDisabled: 0
+  buttonWrapAnimator: {fileID: 1703782577}
   exitNames: []
   exitChoices: []
   isInteracting: 0
@@ -662,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7024756614da6ba46b783ccb3eaec0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Controller: {fileID: 0}
+  Controller: {fileID: 772335135}
 --- !u!60 &941257267
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -767,6 +780,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1250910688, guid: 1f89e043bbe15be48bb202499e7912bd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250910688, guid: 1f89e043bbe15be48bb202499e7912bd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 568221874131162872, guid: 1f89e043bbe15be48bb202499e7912bd,
         type: 3}
       propertyPath: transitionTime
@@ -910,6 +931,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797650006413212121, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.24528301
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797650006413212121, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.24528301
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797650006413212121, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.24528301
       objectReference: {fileID: 0}
     - target: {fileID: 4797650007323348398, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
@@ -1194,7 +1230,7 @@ GameObject:
   - component: {fileID: 1703782577}
   - component: {fileID: 1703782576}
   m_Layer: 0
-  m_Name: ThirdButtonAnim
+  m_Name: ButtonWrapAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

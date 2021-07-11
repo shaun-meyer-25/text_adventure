@@ -16,6 +16,5 @@ MonoBehaviour:
   baseInvestigationDescription: 
   description: 
   roomInvestigationDescription: 
-  roomName: mountain transition
-  baseInteractableObjectsInRoom: []
+  roomName: mountains
   basePeopleInRoom: []

@@ -63,6 +63,11 @@ public class VolumeManipulation : MonoBehaviour
              StartCoroutine(ResetLevel(controller, bloom, v, ca));
              
          }
+         else if (requiredString == "enterFinalCave")
+         {
+             controller.background.color = Color.black;
+             controller.currentColor = "white";
+         }
 
          if (requiredString == "caveBearAround")
          {

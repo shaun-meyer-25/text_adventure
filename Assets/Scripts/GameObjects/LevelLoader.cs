@@ -70,6 +70,24 @@ public class LevelLoader : MonoBehaviour
         _orbShrinking = true;
     }
 
+    public void FakeLevelLoadOrb()
+    {
+        _orbGrowing = true;
+        _mat.SetFloat(Opacity, 1);
+        StartCoroutine(FakeLevelLoadOrbEnum());
+    }
+
+    IEnumerator FakeLevelLoadOrbEnum()
+    {
+        while (_intensity <= 1)
+        {
+            yield return null;
+        }
+
+        _orbGrowing = false;
+        _orbShrinking = true;
+    }
+    
     IEnumerator LoadLevelOrb(string sceneName)
     {
         yield return new WaitForSeconds(2);

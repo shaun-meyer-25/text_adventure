@@ -34,6 +34,27 @@ public class FifthButton : MonoBehaviour
             Controller.volumeManipulation.EffectStart(Controller, "enableBloom");
             Controller.levelLoader.LoadSceneOrb("Find Tei Maze");
         }
+        else if (Controller.roomNavigation.currentRoom.roomName == "mountains2" &&
+                 Controller.checkpointManager.checkpoint == 16)
+        {
+            Controller.levelLoader.FakeLevelLoadOrb();
+            List<ConversationChoice> choices = new List<ConversationChoice>();
+
+            Controller.isConversing = true;
+            ConversationChoice yes = ScriptableObject.CreateInstance<ConversationChoice>();
+            yes.keyword = "yes";
+            ConversationChoice no = ScriptableObject.CreateInstance<ConversationChoice>();
+            no.keyword = "no";
+        
+            choices.Add(no); 
+            choices.Add(yes);
+
+            Controller.LogStringWithReturn("grab Ohm's hand?");
+            Controller.DisplayLoggedText();
+            
+            //ConversationChoice 
+            Controller.UpdateRoomChoices(choices.ToArray());
+        }
         else
         {
             Controller.LogStringWithReturn("the orb pulses slightly.");

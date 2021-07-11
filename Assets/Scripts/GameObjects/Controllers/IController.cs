@@ -33,6 +33,7 @@ public abstract class IController : MonoBehaviour
     public bool isFourthButtonDisabled = false;
     public bool isThirdButtonDisabled = false;
     public bool isSecondButtonDisabled = false;
+    public Animator buttonWrapAnimator;
 
     [HideInInspector] public List<string> exitNames = new List<string>();
     [HideInInspector] public List<ExitChoice> exitChoices = new List<ExitChoice>();

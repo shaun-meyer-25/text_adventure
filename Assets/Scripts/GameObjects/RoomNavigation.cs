@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -158,10 +159,11 @@ public class RoomNavigation : MonoBehaviour {
 			controller.levelLoader.LoadScene("Third Day");
 		}
 		
-		if (currentRoom.roomName == "mountain transition" && controller.checkpointManager.checkpoint == 15)
+		if (currentRoom.roomName == "mountains" && controller.checkpointManager.checkpoint == 15)
 		{
 			controller.checkpointManager.SetCheckpoint(16);
 			controller.levelLoader.LoadScene("In Mountains");
+			throw new Exception("stop scene");
 		}
 	}
 
