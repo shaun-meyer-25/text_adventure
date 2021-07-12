@@ -22,11 +22,11 @@ public static class ManipulationEffects
         controller.background.color = Color.black;
     }
 
-    public static string RandomDistortedString(GameController controller)
+    public static string RandomDistortedString(IController controller)
     {
         string distortionCharacters =
             "̸̴̨̡̧̧̧̧̛̛͉͔̹͈̞͈̪͔̯̫̲̮͍̗͙͕̰̝̗͙̼͕͇͍̦̥̻̞͍̜̦̬͙̯̭̟̫̣͇̙̳̠̠̮̝̩͍͇̻̥̹̜̹̗̳͙͚̦̮͇͉̭͍͚͎̺͍̦̮͕̯̹͖̘̺̱̣͓̝͔̦͎͉̮̠̣̟̥̟̠̳̼̗̳͇͈̬͕̙̰͉̪̣̣̲͎̰̄̀̓̔͂͗̈́͐̍̓̈̈̇̓͐͗̅́̔́̀͋̐̒̋͛̽̈́̐̀͑̄̀̉̑̉̋͌̑̓̈́̍̈́̉͗̉̉̓̀̽͗̿̓̓̌̃͌̃̓͊̈̂̇͛̂̿͐͊̑͂̌͗̓̏̅̓̽͌͋̂̅̄̏͌̑̊͐́̓̒̈̐̾͒̑̋̀̈́̊̀͋̔̉̿͑̀̇͐͛̒̎̓̓̍͐̓̐̌̈́̀̋̃̆̌͐̽̐̄̿̉͊̋̓́͛̐͋̑̾̾̈̅́̽̾͒̐͑̂͑͂̾͌̌͗͌̑́̑̓̒͋͆̅͐̔̕̕̕͘͘̚̕̕͜͜͜͜͠͝͝͝͝͝͝͝͠͠͠͠͝ͅͅͅͅa̴̸̸̡̡̧̢̢̢̨̧̢̛̛̲̯̮̠̖̰͎̱̜̬͚͍̤͉̯͎͓̺̺͉̘̱͎̖̰̟͎̟͈̮̤͔̠̙͍̗͉̬͖̠͈̟̖̣̣̫̯̭͔̝̻̼͍̟̪̭̦̜̹̙͔͓̪̯̹̤̲̘͎̱̖͇̟̬̲̩̞͚̓͑̓̈͑̈̋̒͌̈́̀̅̿̓͒͋̾̽̑̏̌̅̓͂̊͂̽́̓̈́̀͒̾̊͌̒͆̊̿̌̀͛͌̊̏̿̈́͋̋͂̾́͊͒̓͛̌̌͘͘͘͜͜͜͝ͅͅ";
-        int stringLength = Random.Range(8, 58);
+        int stringLength = 200;
         Dictionary<string, List<string>> dOne = controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
         Dictionary<string, string> dTwo = controller.LoadDictionaryFromFile("homeCaveDescriptions");
         List<string> randomStrings = dTwo.Values.ToList();
@@ -59,6 +59,33 @@ public static class ManipulationEffects
         return s;
     }
     
+    public static string RandomString(IController controller)
+    {
+        int stringLength = 200;
+        Dictionary<string, List<string>> dOne = controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
+        Dictionary<string, string> dTwo = controller.LoadDictionaryFromFile("homeCaveDescriptions");
+        List<string> randomStrings = dTwo.Values.ToList();
+        randomStrings.AddRange(dOne.Values.SelectMany(x => x).ToList());
+        
+        string s = "";
+        for (int i = 0; i < stringLength; i++)
+        {
+            string randomWordFromRandomList = "";
+            int rng = Random.Range(0, 100);
+            if (rng < randomStrings.Count)
+            {
+                List<string> temp = new List<string>(randomStrings[rng].Split(' '));
+
+                randomWordFromRandomList = string.Join(" ", temp);
+              
+            }
+
+            s = s + randomWordFromRandomList;
+        }
+        
+        return s;
+    }
+    
     public static string RandomDistortedString()
     {
         string distortionCharacters =
@@ -71,32 +98,20 @@ public static class ManipulationEffects
         string undistorted = new string(Enumerable.Repeat(chars, stringLength)
             .Select(s => s[random.Next(s.Length)]).ToArray());
 
- /*       string s = "";
-        for (int i = 0; i < stringLength; i++)
-        {
-            string randomWordFromRandomList = "";
-            int rng = Random.Range(0, 100);
-            if (rng < randomStrings.Count)
-            {
-                List<string> temp = new List<string>(randomStrings[rng].Split(' '));
-                for (int j = 0; j < temp.Count; j++)
-                {
-                    if (Random.Range(0, 100) < 20)
-                    {
-                        temp[j] = distortionCharacters.Substring(distortionCharacters.Length - Random.Range(1, 40)) +
-                                  temp[j] + distortionCharacters.Substring(Random.Range(1, 40));
-                    }
-                }
+        return undistorted;
+    }
 
-                randomWordFromRandomList = string.Join(" ", temp);
-              
-            }
+    public static string LongRandomWords()
+    {
+        string distortionCharacters =
+            "̸̴̨̡̧̧̧̧̛̛͉͔̹͈̞͈̪͔̯̫̲̮͍̗͙͕̰̝̗͙̼͕͇͍̦̥̻̞͍̜̦̬͙̯̭̟̫̣͇̙̳̠̠̮̝̩͍͇̻̥̹̜̹̗̳͙͚̦̮͇͉̭͍͚͎̺͍̦̮͕̯̹͖̘̺̱̣͓̝͔̦͎͉̮̠̣̟̥̟̠̳̼̗̳͇͈̬͕̙̰͉̪̣̣̲͎̰̄̀̓̔͂͗̈́͐̍̓̈̈̇̓͐͗̅́̔́̀͋̐̒̋͛̽̈́̐̀͑̄̀̉̑̉̋͌̑̓̈́̍̈́̉͗̉̉̓̀̽͗̿̓̓̌̃͌̃̓͊̈̂̇͛̂̿͐͊̑͂̌͗̓̏̅̓̽͌͋̂̅̄̏͌̑̊͐́̓̒̈̐̾͒̑̋̀̈́̊̀͋̔̉̿͑̀̇͐͛̒̎̓̓̍͐̓̐̌̈́̀̋̃̆̌͐̽̐̄̿̉͊̋̓́͛̐͋̑̾̾̈̅́̽̾͒̐͑̂͑͂̾͌̌͗͌̑́̑̓̒͋͆̅͐̔̕̕̕͘͘̚̕̕͜͜͜͜͠͝͝͝͝͝͝͝͠͠͠͠͝ͅͅͅͅa̴̸̸̡̡̧̢̢̢̨̧̢̛̛̲̯̮̠̖̰͎̱̜̬͚͍̤͉̯͎͓̺̺͉̘̱͎̖̰̟͎̟͈̮̤͔̠̙͍̗͉̬͖̠͈̟̖̣̣̫̯̭͔̝̻̼͍̟̪̭̦̜̹̙͔͓̪̯̹̤̲̘͎̱̖͇̟̬̲̩̞͚̓͑̓̈͑̈̋̒͌̈́̀̅̿̓͒͋̾̽̑̏̌̅̓͂̊͂̽́̓̈́̀͒̾̊͌̒͆̊̿̌̀͛͌̊̏̿̈́͋̋͂̾́͊͒̓͛̌̌͘͘͘͜͜͜͝ͅͅ";
+        int stringLength = 200;
 
-            s = s + randomWordFromRandomList;
-        }
-        
-        return s; */
+        var random = new System.Random();
 
+        const string chars = "ABCDE JKL OPQRS UVW Z01  45678 abcde ghij lm opqrstuv   yz";
+        string undistorted = new string(Enumerable.Repeat(chars, stringLength)
+            .Select(s => s[random.Next(s.Length)]).ToArray());
         return undistorted;
     }
 }
