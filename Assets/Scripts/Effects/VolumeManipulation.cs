@@ -15,6 +15,33 @@ public class VolumeManipulation : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        Bloom b = (Bloom) volume.profile.components.Find(o => o.name == "Bloom(Clone)");
+        ChromaticAberration ca = (ChromaticAberration) volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
+        LensDistortion ld = (LensDistortion) volume.profile.components.Find(o => o.name == "LensDistortion(Clone)");
+        Vignette v = (Vignette) volume.profile.components.Find(o => o.name == "Vignette(Clone)");
+        b.active = false;
+        ca.active = false;
+        ld.active = false;
+        v.active = false;
+    }
+
+    public void EnableEffect(string s)
+    {
+        if (s == "Lens Distortion")
+        {
+            LensDistortion ld = (LensDistortion) volume.profile.components.Find(o => o.name == "LensDistortion(Clone)");
+            ld.active = true;
+        }
+
+        if (s == "Chromatic Aberration")
+        {
+            ChromaticAberration ca = (ChromaticAberration) volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
+            ca.active = true;
+        }
+    }
+
     public void EffectStart(IController controller, string requiredString)
      {
          if (requiredString == "enableBloom")
@@ -39,6 +66,14 @@ public class VolumeManipulation : MonoBehaviour
                  (ChromaticAberration) volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
              c.active = true; 
              StartCoroutine(PulseMultiple(bloom, ca));
+         }
+
+         if (requiredString == "fallingNightmare")
+         {
+             MountainNightmareController cont = (MountainNightmareController) controller;
+             cont.FallingText();
+             LensDistortion ld = (LensDistortion) volume.profile.components.Find(o => o.name == "LensDistortion(Clone)");
+             StartCoroutine(FallingNightmare(ld));
          }
 
          if (requiredString == "respondToNua")
@@ -75,6 +110,17 @@ public class VolumeManipulation : MonoBehaviour
          }
      }
 
+    public IEnumerator FallingNightmare(LensDistortion ld)
+    {
+        float offset = 0;
+        while (offset >= -40)
+        {
+            offset -= 1f;
+            ld.center.Override(new Vector2(-.2f, offset));
+            yield return null;
+        }
+    }
+    
      public IEnumerator Pulse(Bloom bloom)
      {
          while (true)

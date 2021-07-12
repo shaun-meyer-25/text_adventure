@@ -342,6 +342,109 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50110094}
   m_CullTransparentMesh: 1
+--- !u!1 &120141406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 120141409}
+  - component: {fileID: 120141408}
+  - component: {fileID: 120141407}
+  m_Layer: 0
+  m_Name: Stranger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &120141407
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120141406}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc272926c05fe3149809eb2233168677, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &120141408
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120141406}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 4528569261525907327, guid: 1fc8105fa24ae064faf8af82bd8b31dc,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.86, y: 0.56}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &120141409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120141406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.54, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &123000624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1183,11 +1286,6 @@ MonoBehaviour:
   fire: {fileID: 0}
   checkpointManager: {fileID: 0}
   startingActions: []
-  m1a: {fileID: 0}
-  m1b: {fileID: 0}
-  m1c: {fileID: 0}
-  m1d: {fileID: 0}
-  m1e: {fileID: 0}
   CloseMountainTexts:
   - {fileID: 1948974069}
   - {fileID: 452966338}
@@ -1209,6 +1307,8 @@ MonoBehaviour:
   - {fileID: 1516487728}
   - {fileID: 719869480}
   - {fileID: 1338019882}
+  cameraTextbox: {fileID: 1270238019}
+  stranger: {fileID: 120141409}
 --- !u!4 &729400642
 Transform:
   m_ObjectHideFlags: 0
@@ -1357,6 +1457,7 @@ GameObject:
   - component: {fileID: 1270238020}
   - component: {fileID: 1270238022}
   - component: {fileID: 1270238021}
+  - component: {fileID: 1270238023}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1380,8 +1481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -219.03}
+  m_SizeDelta: {x: 420.72, y: 882.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270238021
 MonoBehaviour:
@@ -1415,8 +1516,23 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: you are falling
+    m_LineSpacing: 1.14
+  m_Text: "<color=purple>you are falling.\n\n\n\n\n\n\nthey took the orb from you.\n\n\n\n\nyou
+    know you can not survive without it it will they will not allow you to stay they
+    will not allow you to stay to stay to survive the \u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034Ahunger
+    in your gut in your bloo\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034Ad
+    on the stones blood on\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034A
+    the stones blood\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034A
+    on your hands the snapping bones a leg caug\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034Aht
+    snapping scr\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034Aeaming
+    the sky the unforgiving eye above the bi\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034Ards
+    that feast upon the f\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034Alesh
+    will not allow y\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034Ao\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034Au
+    to live will never know what you did they kno\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034Aw
+    you\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034A
+    could\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034A
+    have\u0305\u0350\u0314\u0330a\u0334\u0343\u0351\u0343\u0308\u0321\u0332\u032F\u0321\u032E\u0320\u0316\u0330\u0327\u034E\u0331\u031C\u032C\u035A\u034D\u0324\u0349\u035C\u032F\u0322\u0338\u0351\u0308\u030B\u0312\u034C\u0308\u0341\u0300\u0305\u033F\u0313\u0352\u034B\u033E\u033D\u0311\u031B\u0358\u030F\u030C\u0305\u0343\u0342\u030A\u0342\u0358\u033D\u0301\u0313\u0344\u034E\u0353\u033A\u033A\u0349\u0318\u0331\u034E\u0316\u0330\u031F\u034E\u031F\u0322\u0348\u032E\u0324\u0322\u0354\u0328\u0320\u0319\u034D\u0317\u035C\u0340\u0352\u033E\u030A\u034C\u0312\u0346\u030A\u0349\u032C\u0356\u0345\u0320\u0348\u0327\u0322\u031F\u0316\u0323\u0323\u032B\u032F\u032D\u0354\u0345\u031D\u033B\u033C\u034D\u031F\u032A\u032D\u0326\u031C\u0338\u033F\u030C\u0300\u035B\u034C\u0358\u030A\u030F\u033F\u035D\u0344\u034B\u030B\u0342\u033E\u031B\u0341\u034A
+    done more to keep them alive </color>"
 --- !u!222 &1270238022
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1425,6 +1541,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270238019}
   m_CullTransparentMesh: 1
+--- !u!95 &1270238023
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270238019}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d1775ffc4d64164e967535b3305c770, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1289368887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,6 +1730,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0366cae66a2954c8820d121c9b95b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1440410920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1440410921}
+  - component: {fileID: 1440410923}
+  - component: {fileID: 1440410922}
+  m_Layer: 6
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1440410921
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440410920}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172286123}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -24, y: -209}
+  m_SizeDelta: {x: 413.67, y: 82.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1440410922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440410920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 2877d1ccec6e23d46b0b0ab7a3dae890, type: 3}
+    m_FontSize: 19
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: <color=purple>a figure approaches you</color>
+--- !u!222 &1440410923
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440410920}
+  m_CullTransparentMesh: 1
 --- !u!1 &1481014846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,6 +2061,11 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 516634129965361106, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Text
+      value: interact
+      objectReference: {fileID: 0}
     - target: {fileID: 516634131329495591, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
@@ -1857,6 +2076,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 533.7
       objectReference: {fileID: 0}
+    - target: {fileID: 516634131616885903, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: _handler
+      value: 
+      objectReference: {fileID: 11400000, guid: 619545e13946b6c4a854f75fa32f5db9,
+        type: 2}
     - target: {fileID: 516634131616885903, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
@@ -1955,6 +2180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4797650007323348399, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
+      propertyPath: m_Text
+      value: <color=purple>a figure stands in front of you along the path.</color>
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797650007323348399, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
       propertyPath: m_FontData.m_BestFit
       value: 0
       objectReference: {fileID: 0}
@@ -1972,6 +2202,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797650007418987571, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4797650007418987726, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
@@ -2087,6 +2322,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926140768305538169, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5622504030496432727, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
@@ -2394,7 +2634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1a7fd1cdc469c4b844092d6472a85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Checkpoint: 0
+  Checkpoint: 14
 --- !u!4 &1903823890
 Transform:
   m_ObjectHideFlags: 0
