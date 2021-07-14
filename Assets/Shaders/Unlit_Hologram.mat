@@ -24,10 +24,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Amount: 1
+    - _Amount: 0
     - _Amplitude: 1
-    - _CutoutThresh: 0.502
-    - _Distance: 1
+    - _CutoutThresh: 1
+    - _Distance: 3
     - _Speed: 1
     - _Transparency: 0.5
     m_Colors:

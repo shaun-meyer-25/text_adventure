@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 public class CheckpointManager : MonoBehaviour
@@ -35,6 +36,7 @@ public class CheckpointManager : MonoBehaviour
         _levelLoader = GetComponent<LevelLoader>();
         _characterInteractions = _controller.LoadDictionaryFromCsvFile("characterInteractionDescriptions");
         }
+
     
     public void SetCheckpoint(int maybeCheckpoint)
     {
@@ -52,6 +54,8 @@ public class CheckpointManager : MonoBehaviour
         {
             checkpoint = maybeCheckpoint;
             _controller.travelingCompanions.Add(_controller.characters.First(o => o.noun.Equals("Ohm")));
+            _controller.roomNavigation.currentRoom.AddPersonToRoom(
+                _controller.characters.First(o => o.noun.Equals("Ohm")));
             // this is kind of a smell, as we are running the checkpoint after room change so the cleanup code isn't run like it should
             _controller.allRoomsInGame.Find(o => o.roomName == "home cave").RemovePersonFromRoom("Ohm");
         }
@@ -169,8 +173,8 @@ public class CheckpointManager : MonoBehaviour
                     home.AddPersonToRoom(c);
                 }
             }
-
-            StartCoroutine(InitialGrowthAnimationChain());
+            FirstGrowth();
+            //StartCoroutine(SecondGrowthAnimationChain());
         }
 
         if (maybeCheckpoint == 12)
@@ -188,8 +192,9 @@ public class CheckpointManager : MonoBehaviour
 
         if (maybeCheckpoint == 13)
         {
+            _controller.fifthButton.SetActive(true);
             checkpoint = maybeCheckpoint;
-            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
+            _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow1");
         }
 
         if (maybeCheckpoint == 14)
@@ -228,6 +233,7 @@ public class CheckpointManager : MonoBehaviour
         {
             InteractableObject person = new List<InteractableObject>(_controller.characters)
                 .Find(o => o.name == "Ohm");
+            _controller.roomNavigation.currentRoom.AddPersonToRoom(person);
             _controller.travelingCompanions.Add(person);
             List<Interaction> interactions =
                 new List<Interaction>(person.interactions);
@@ -263,32 +269,10 @@ public class CheckpointManager : MonoBehaviour
             SaveGameManager.SaveGame(_controller);
         }
     }
-    
-    /*
-     * public static class ManipulationEffects
-{
-    public static IEnumerator MessWithBackground(GameController controller)
-    {
-        List<Color> colors = new List<Color>() {new Color(128, 0, 128), Color.red, Color.white, Color.red, Color.black};
-        float timeRemaining = 0.5f;
-        float interval = 0.05f;
 
-        while (timeRemaining > 0)
-        {
-            controller.background.color = colors[(int) (timeRemaining * 10) % 5];
-            timeRemaining -= interval;
-            yield return new WaitForSeconds(interval);
-        }
-		
-        controller.background.color = Color.black;
-    }
-     */
-
-    public IEnumerator InitialGrowthAnimationChain()
+    public void FirstGrowth()
     {
-        _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow1");
-        yield return new WaitForSeconds(2.5f);
-        _controller.useButtonAnimator.SetTrigger("Use-Grow1");
+        _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow0");
     }
 }
 

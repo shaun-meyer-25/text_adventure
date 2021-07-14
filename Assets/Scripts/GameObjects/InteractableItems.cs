@@ -12,11 +12,11 @@ public class InteractableItems : MonoBehaviour
     [HideInInspector] public List<string> nounsInRoom = new List<string>();
 
     private Dictionary<string, ActionResponse> useDictionary = new Dictionary<string, ActionResponse>();
-    private GameController controller;
+    private IController controller;
 
     void Awake()
     {
-        controller = GetComponent<GameController>();
+        controller = GetComponent<IController>();
     }
     public List<string> nounsInInventory = new List<string>();
     

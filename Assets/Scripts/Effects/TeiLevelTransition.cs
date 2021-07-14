@@ -25,7 +25,7 @@ public class TeiLevelTransition : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
             StaticDataHolder.instance.Checkpoint = 13;
-            controller.levelLoader.LoadScene("Second Day");
+            controller.levelLoader.LoadScene("Second Day Evening");
         }
     }
 }

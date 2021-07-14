@@ -140,12 +140,12 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "grasslands to the north"
       },
       {
         "roomName": "south forest",
         "keyString": "east",
-        "description": ""
+        "description": "forest to the east"
       },
       {
         "roomName": "home cave",
@@ -155,7 +155,7 @@
       {
         "roomName": "west grasslands",
         "keyString": "west",
-        "description": "grasslands continue to stretch to the west."
+        "description": "grasslands continue to stretch to the west"
       }
     ],
     "description": "you are just outside of your home. you feel a bitter twist in your gut, a mix of hunger and shame.",
@@ -194,12 +194,12 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "grasslands to the north"
       },
       {
         "roomName": "south forest",
         "keyString": "east",
-        "description": ""
+        "description": "forest to the east"
       },
       {
         "roomName": "home cave",
@@ -221,12 +221,12 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "grasslands to the north"
       },
       {
         "roomName": "south forest",
         "keyString": "east",
-        "description": ""
+        "description": "forest to the east"
       },
       {
         "roomName": "home cave",
@@ -248,17 +248,17 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "grasslands to the north"
       },
       {
         "roomName": "<color=red>south forest</color>",
         "keyString": "east",
-        "description": ""
+        "description": "forest to the east. the bear's scent somehow drifts on the wind."
       },
       {
         "roomName": "home cave",
         "keyString": "home",
-        "description": "you are just outside of your home cave"
+        "description": "you are just outside of your home cave."
       },
       {
         "roomName": "west grasslands",
@@ -275,12 +275,12 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "grasslands to the north"
       },
       {
         "roomName": "south forest",
         "keyString": "east",
-        "description": ""
+        "description": "forest to the east"
       },
       {
         "roomName": "home cave",
@@ -302,12 +302,12 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "grasslands to the north"
       },
       {
         "roomName": "south forest",
         "keyString": "east",
-        "description": ""
+        "description": "forest to the east"
       },
       {
         "roomName": "home cave",
@@ -329,12 +329,12 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "grasslands to the north"
       },
       {
         "roomName": "south forest",
         "keyString": "east",
-        "description": ""
+        "description": "forest to the east"
       },
       {
         "roomName": "home cave",
@@ -356,12 +356,12 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "grasslands to the north"
       },
       {
         "roomName": "south forest",
         "keyString": "east",
-        "description": ""
+        "description": "forest to the east"
       },
       {
         "roomName": "home cave",
@@ -383,12 +383,12 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "grasslands to the north"
       },
       {
         "roomName": "south forest",
         "keyString": "east",
-        "description": ""
+        "description": "forest to the east"
       },
       {
         "roomName": "home cave",
@@ -410,12 +410,12 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "grasslands to the north"
       },
       {
         "roomName": "south forest",
         "keyString": "east",
-        "description": ""
+        "description": "forest to the east"
       },
       {
         "roomName": "home cave",
@@ -437,12 +437,12 @@
       {
         "roomName": "north grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "grasslands to the north"
       },
       {
         "roomName": "south forest",
         "keyString": "east",
-        "description": ""
+        "description": "forest to the east"
       },
       {
         "roomName": "home cave",

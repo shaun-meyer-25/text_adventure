@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BearKillsYou.unity
     guid: 44c042ef112da2843a7a125b9c0ac424
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Thank You.unity
     guid: d7f8ee08010bfb347ae71cb7c56b81c5
   - enabled: 1
@@ -30,12 +30,21 @@ EditorBuildSettings:
     path: Assets/Scenes/KillBearWithOrb.unity
     guid: 1575a34cb6945a749bcfead4b57c93b1
   - enabled: 1
+    path: Assets/Scenes/Second Day Afternoon.unity
+    guid: 8d28f52cb39905049843a2d5e3c6142f
+  - enabled: 1
     path: Assets/Scenes/Find Tei Maze.unity
     guid: 4ac1e727bcd95ff47a30074cff495e5f
+  - enabled: 1
+    path: Assets/Scenes/Second Day Evening.unity
+    guid: f648cea801860b746b9ee723f1cc3c23
   - enabled: 1
     path: Assets/Scenes/Third Day.unity
     guid: 5c63c1780e6eafa4b81a47c3f5347459
   - enabled: 1
     path: Assets/Scenes/In Mountains.unity
     guid: 2faf23665b3a2e948bacc0414c5d0483
+  - enabled: 1
+    path: Assets/Scenes/Nightmare.unity
+    guid: da04d3d32fcc2e047bb290a91eeb5ed4
   m_configObjects: {}

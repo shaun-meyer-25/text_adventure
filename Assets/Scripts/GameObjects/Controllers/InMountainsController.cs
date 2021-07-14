@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InMountainsController : IController
 {
+	public bool SecondButtonUnclicked;
+	
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
 	private List<string> undisplayedSentences = new List<string>();
@@ -75,7 +76,19 @@ public class InMountainsController : IController
 				textObject.text = null;
 				button.GetComponent<Button>().interactable = false;
 			}
-
+			
+			if (i == 3 && isFourthButtonDisabled)
+			{
+				button.GetComponent<Button>().interactable = false;
+			}
+			if (i == 2 && isThirdButtonDisabled)
+			{
+				button.GetComponent<Button>().interactable = false;
+			}
+			if (i == 1 && isSecondButtonDisabled)
+			{
+				button.GetComponent<Button>().interactable = false;
+			}
 		}
 
 		// We want the game controller to be the source of truth on what the player's options are

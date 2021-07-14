@@ -77,11 +77,16 @@ public class GameController : IController {
 			LogStringWithReturn(
 				"you awake slowly. you sit up, and see that the others have woken up before you. they seem to have noticed the orb that you kept in your hands.");
 		}
+		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 11)
+		{
+			levelLoader.StartSceneOrb();
+		}
 		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 13)
 		{
+			levelLoader.StartSceneOrb();
 			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
 			LogStringWithReturn(
-				"with the sight of the orb showing you the path, Ohm and you find Tei and help them out of the forest. they are hurt but will survive. you make your way back to the cave.");
+				"with the sight of the orb showing you the path, you find Tei and help them out of the forest. they are hurt but will survive. you make your way back to the cave.");
 			isDaytime = false;
 		}
 		if (SceneManager.GetActiveScene().name == "Third Day" && checkpointManager.checkpoint == 14)
@@ -134,6 +139,11 @@ public class GameController : IController {
 			else
 			{
 				textObject.text = null;
+				button.GetComponent<Button>().interactable = false;
+			}
+			
+			if (i == 3 && isFourthButtonDisabled)
+			{
 				button.GetComponent<Button>().interactable = false;
 			}
 
@@ -195,15 +205,26 @@ public class GameController : IController {
 	public override void LoadRoomDataAndDisplayRoomText () {
 		LoadRoomData();
 
-		string combinedText = "\n";
+		string combinedText = "";
+		string travelingCompanions = "";
 		
 		if (!roomNavigation.currentRoom.roomName.Equals("home cave"))
 		{
-			combinedText = DescribeTravelingCompanions(combinedText);
+			travelingCompanions = DescribeTravelingCompanions(combinedText);
 		}
 
 		string joinedInteractionDescriptions = string.Join ("\n", interactionDescriptionsInRoom.ToArray ());
-		combinedText = roomNavigation.currentRoom.GetDescription(checkpointManager.checkpoint) + "\n" + joinedInteractionDescriptions + "\n" + combinedText;
+		combinedText = roomNavigation.currentRoom.GetDescription(checkpointManager.checkpoint);
+		// + "\n" + joinedInteractionDescriptions + "\n" + combinedText;
+		if (joinedInteractionDescriptions != "" && joinedInteractionDescriptions != "\n")
+		{
+			combinedText = joinedInteractionDescriptions + "\n\n" + combinedText;
+		}
+
+		if (travelingCompanions != "")
+		{
+			combinedText = combinedText + "\n\n" + travelingCompanions;
+		}
 		
 		LogStringWithReturn (combinedText);
 	}

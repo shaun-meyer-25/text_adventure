@@ -12,12 +12,42 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime;
     public Color color;
-
+    public GameObject circle;
+    
+    private Material _mat;
+    private bool _orbGrowing = false;
+    private bool _orbShrinking = false;
+    private float _intensity;
     private Image _image;
+    private static readonly int Fade = Shader.PropertyToID("_Fade");
+    private static readonly int Start1 = Animator.StringToHash("Start");
+    private static readonly int Opacity = Shader.PropertyToID("_Opacity");
 
     private void Start()
     {
-        _image = this.GetComponentsInChildren<Image>().First();
+
+        _mat = circle.GetComponent<SpriteRenderer>().material;
+    }
+
+    private void Update()
+    {
+        if (_orbGrowing)
+        {
+            _intensity += .002f;
+            _mat.SetFloat(Fade, _intensity);
+        }
+
+        if (_orbShrinking)
+        {
+            _intensity -= .002f;
+            _mat.SetFloat(Fade, _intensity);
+
+            if (_intensity <= 0)
+            {
+                _orbShrinking = false;
+                _mat.SetFloat(Opacity, 0);
+            }
+        }
     }
 
     public void LoadScene(string sceneName)
@@ -25,16 +55,57 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(sceneName));
     }
 
+    public void LoadSceneOrb(string sceneName)
+    {
+        _orbGrowing = true;
+        _mat.SetFloat(Opacity, 1);
+        StartCoroutine(LoadLevelOrb(sceneName));
+    }
+
+    public void StartSceneOrb()
+    {
+        _intensity = 1f;
+        _mat.SetFloat(Fade, _intensity);
+        _mat.SetFloat(Opacity, 1);
+        _orbShrinking = true;
+    }
+
+    public void FakeLevelLoadOrb()
+    {
+        _orbGrowing = true;
+        _mat.SetFloat(Opacity, 1);
+        StartCoroutine(FakeLevelLoadOrbEnum());
+    }
+
+    IEnumerator FakeLevelLoadOrbEnum()
+    {
+        while (_intensity <= 1)
+        {
+            yield return null;
+        }
+
+        _orbGrowing = false;
+        _orbShrinking = true;
+    }
+    
+    IEnumerator LoadLevelOrb(string sceneName)
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+    
+
     IEnumerator LoadLevel(string sceneName)
     {
-        // todo - figure out how to change transition color without that weird bug where it does nothing
-     //   _image.color = color;
-        transition.SetTrigger("Start");
+        transition.SetTrigger(Start1);
 
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
-    
-    
+
+    private void OnDestroy()
+    {
+        Destroy(_mat);
+    }
 }

@@ -288,24 +288,9 @@
   {
     "chapter": 13,
     "exits": [
-      {
-        "roomName": "north forest",
-        "keyString": "north",
-        "description": "the forest continues to the north"
-      },
-      {
-        "roomName": "south foothills",
-        "keyString": "east",
-        "description": "the forest thins as the ground gets higher and rockier to the east"
-      },
-      {
-        "roomName": "outside home",
-        "keyString": "west",
-        "description": "home lies outside of the woods to the west"
-      }
     ],
-    "description": "",
-    "investigationDescription": ""
+    "description": "you see no sign of Tei on the outskirts of the old woods. they must be here somewhere. desperation claws at your mind.",
+    "investigationDescription": "darkness peers out at you from the depths of the woods. surely Tei would not have gone in there...? <color=purple>the orb responds to your desperation.</color>"
   },
   {
     "chapter": 14,

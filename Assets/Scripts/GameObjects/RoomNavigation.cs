@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -44,10 +45,13 @@ public class RoomNavigation : MonoBehaviour {
 			
 			if (currentRoom.roomName == "home cave")
 			{
-				if (controller.isDaytime && controller.currentColor == "white")
+				if (controller.isDaytime && controller.currentColor == "white" && SceneManager.GetActiveScene().name != "Third Day")
 				{
 					controller.SetDaylight();
-				} 
+				} else if (SceneManager.GetActiveScene().name == "Third Day")
+				{
+					controller.SetStorm();
+				}
 			}
 			else
 			{
@@ -106,6 +110,7 @@ public class RoomNavigation : MonoBehaviour {
 		    controller.interactableItems.nounsInInventory.Contains("spear") &&
 		    controller.checkpointManager.checkpoint == 1)
 		{
+			controller.travelingCompanions.Add(controller.characters.First(o => o.noun.Equals("Ohm")));
 			controller.checkpointManager.SetCheckpoint(2);
 		}
 
@@ -121,7 +126,7 @@ public class RoomNavigation : MonoBehaviour {
 				new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
 			Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
 			interaction.textResponse =
-				"they have a dark look on their face. 'berries, from woods'. a simple command that describes your failures today.";
+				"they have a dark look on their face. they forcefully point to the west, to the forest to forage. a simple command that describes your failures today.";
 		}
 
 		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 5)
@@ -146,19 +151,19 @@ public class RoomNavigation : MonoBehaviour {
 		if (currentRoom.roomName == "south forest" && controller.checkpointManager.checkpoint == 12)
 		{
 			controller.checkpointManager.SetCheckpoint(13);
-			controller.levelLoader.LoadScene("Find Tei Maze");
 		}
 		
 		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 13)
 		{
 			controller.checkpointManager.SetCheckpoint(14);
-			controller.levelLoader.LoadScene("Third Day");
+			controller.levelLoader.LoadScene("Nightmare");
 		}
 		
-		if (currentRoom.roomName == "mountain transition" && controller.checkpointManager.checkpoint == 15)
+		if (currentRoom.roomName == "mountains" && controller.checkpointManager.checkpoint == 15)
 		{
 			controller.checkpointManager.SetCheckpoint(16);
 			controller.levelLoader.LoadScene("In Mountains");
+			throw new Exception("stop scene");
 		}
 	}
 
