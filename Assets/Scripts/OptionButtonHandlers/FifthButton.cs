@@ -27,7 +27,7 @@ public class FifthButton : MonoBehaviour
         {
             Controller.volumeManipulation.EffectStart(Controller, "enableBloom");
             Controller.levelLoader.LoadSceneOrb("KillBearWithOrb");
-        } else if (Controller.roomNavigation.currentRoom.roomName == "south forest" &&
+        } else if (Controller.roomNavigation.currentRoom.roomName == "old forest" &&
             Controller.checkpointManager.checkpoint == 13)
         {
             Controller.LogStringWithReturn("<color=purple>it senses your desperation. let it into your mind, let it show you the way.</color>");

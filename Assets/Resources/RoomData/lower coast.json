@@ -3,12 +3,12 @@
     "chapter": 0,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -21,12 +21,12 @@
     "chapter": 1,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -39,12 +39,12 @@
     "chapter": 2,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -57,12 +57,12 @@
     "chapter": 3,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -75,12 +75,12 @@
     "chapter": 4,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -93,12 +93,12 @@
     "chapter": 5,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": ""
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": ""
       }
@@ -111,12 +111,12 @@
     "chapter": 6,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": ""
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": ""
       }
@@ -129,12 +129,12 @@
     "chapter": 7,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -147,12 +147,12 @@
     "chapter": 8,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -165,12 +165,12 @@
     "chapter": 9,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -183,12 +183,12 @@
     "chapter": 10,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -201,12 +201,12 @@
     "chapter": 11,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -219,12 +219,12 @@
     "chapter": 12,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -237,12 +237,12 @@
     "chapter": 13,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -255,12 +255,12 @@
     "chapter": 14,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -273,12 +273,12 @@
     "chapter": 15,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -291,12 +291,12 @@
     "chapter": 16,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -309,12 +309,12 @@
     "chapter": 17,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }
@@ -327,12 +327,12 @@
     "chapter": 18,
     "exits": [
       {
-        "roomName": "northwest coast",
+        "roomName": "upper coast",
         "keyString": "north",
         "description": "the coast continues to the north"
       },
       {
-        "roomName": "west grasslands",
+        "roomName": "coastal grasslands",
         "keyString": "east",
         "description": "from here, the vast grasslands appear to begin to the east"
       }

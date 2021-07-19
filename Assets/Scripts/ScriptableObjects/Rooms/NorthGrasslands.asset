@@ -20,7 +20,7 @@ MonoBehaviour:
     home lies to the south.
 
     grasslands to the west.'
-  roomName: north grasslands
+  roomName: forest grasslands
   exits:
   - keyString: east
     exitDescription: forest to the east.

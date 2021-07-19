@@ -17,7 +17,7 @@ MonoBehaviour:
     home to the east.
 
     coast to the south and west.'
-  roomName: west grasslands
+  roomName: coastal grasslands
   exits:
   - keyString: north
     exitDescription: grasslands to the north.

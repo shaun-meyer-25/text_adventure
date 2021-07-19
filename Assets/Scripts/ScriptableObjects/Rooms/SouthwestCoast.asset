@@ -15,7 +15,7 @@ MonoBehaviour:
   roomInvestigationDescription: 'grasslands to the north.
 
     the sea surrounds you on the east, south, and west.'
-  roomName: southwest coast
+  roomName: peninsula
   exits:
   - keyString: north
     exitDescription: grasslands to the north.
