@@ -93,7 +93,7 @@ public class GameController : IController {
 		{
 			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
 			LogStringWithReturn(
-				"you are shaken from your nightmares. you reach for the orb. it is not there.");
+				"you are shaken from your nightmares. you reach for the orb. Tei's hand is there instead. you look up at them.");
 		}
 
 		LoadRoomDataAndDisplayRoomText ();

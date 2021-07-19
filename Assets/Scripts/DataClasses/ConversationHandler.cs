@@ -54,6 +54,24 @@ public static class ConversationHandler
             controller.checkpointManager.SetCheckpoint(17);
 
         }
+        
+        if (response == "no" && controller.checkpointManager.checkpoint == 14)
+        {
+            controller.LogStringWithReturn("Ohm looks at you strangely, but does not protest.");
+            SetOhmInteraction(controller);
+            
+            controller.checkpointManager.SetCheckpoint(9);
+        }
+
+        if (response == "yes" && controller.checkpointManager.checkpoint == 14)
+        {
+            controller.volumeManipulation.EffectStart(controller, "firstOrbEncounter");
+            controller.LogStringWithReturn("<color=purple>you refuse to hand it to them</color>");
+            controller.LogStringWithReturn("Ohm looks at you strangely, but does not protest.");
+            SetOhmInteraction(controller);
+            
+            controller.checkpointManager.SetCheckpoint(9);
+        }
 
         controller.isConversing = false;
         controller.UpdateRoomChoices(controller.startingActions);

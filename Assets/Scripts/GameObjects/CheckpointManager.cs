@@ -200,13 +200,21 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 14)
         {
             checkpoint = maybeCheckpoint;
-            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
+/*            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
             InteractableObject person = new List<InteractableObject>(_controller.characters)
                 .Find(o => o.name == "Nua");
             List<Interaction> interactions =
                 new List<Interaction>(person.interactions);
             Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
             interact.actionResponse = ScriptableObject.CreateInstance<TakeOrbFromNua>();
+  */          
+            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
+            InteractableObject person = new List<InteractableObject>(_controller.characters)
+                .Find(o => o.name == "Tei");
+            List<Interaction> interactions =
+                new List<Interaction>(person.interactions);
+            Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+            interact.actionResponse = ScriptableObject.CreateInstance<TeiInvitesOutside>();
         }
         
         if (maybeCheckpoint == 15)
