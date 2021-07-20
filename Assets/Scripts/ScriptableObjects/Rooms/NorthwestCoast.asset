@@ -22,7 +22,7 @@ MonoBehaviour:
 
     the sea
     lies to the west.'
-  roomName: northwest coast
+  roomName: upper coast
   exits:
   - keyString: east
     exitDescription: grasslands to the east.

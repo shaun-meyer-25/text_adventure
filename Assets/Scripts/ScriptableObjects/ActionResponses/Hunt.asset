@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f270c01c3f70580468cd6a10ba138963, type: 3}
   m_Name: Hunt
   m_EditorClassIdentifier: 
-  requiredString: north foothills
+  requiredString: upper foothills

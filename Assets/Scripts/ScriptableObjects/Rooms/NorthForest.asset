@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: forest. it is dark here. many things could be lurking in shadow.
   roomInvestigationDescription: a shog'goth. it fucking kills you. game over bitch.
-  roomName: north forest
+  roomName: young forest
   exits:
   - keyString: east
     exitDescription: watering hole to the east.

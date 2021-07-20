@@ -19,7 +19,7 @@ MonoBehaviour:
     to the east and south, cannot pass.
 
     forest to the west.'
-  roomName: south foothills
+  roomName: lower foothills
   exits:
   - keyString: north
     exitDescription: watering hole to the north.

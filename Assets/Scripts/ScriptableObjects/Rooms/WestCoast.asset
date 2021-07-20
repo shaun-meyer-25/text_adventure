@@ -19,7 +19,7 @@ MonoBehaviour:
     east.
 
     the sea lies to the west and south.'
-  roomName: west coast
+  roomName: lower coast
   exits:
   - keyString: north
     exitDescription: coast to the north.

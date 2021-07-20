@@ -8,7 +8,7 @@ public class Hunt : ActionResponse
 {
     public override bool DoActionResponse(IController controller)
     {
-        if (controller.roomNavigation.currentRoom.roomName == requiredString && requiredString == "north foothills")
+        if (controller.roomNavigation.currentRoom.roomName == requiredString && requiredString == "upper foothills")
         {
             if (controller.checkpointManager.ohmInPosition)
             {

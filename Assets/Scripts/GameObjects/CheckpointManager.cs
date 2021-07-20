@@ -68,7 +68,7 @@ public class CheckpointManager : MonoBehaviour
                 new List<Interaction>(_controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
             Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
             ActionResponse response = (ActionResponse) ScriptableObject.CreateInstance<OhmGetInPosition>()
-                .SetRequiredString("north foothills");
+                .SetRequiredString("upper foothills");
             interaction.SetActionResponse(response);
             // if you just "use" the spear here, you will die. 
             // you first should interact with ohm, ohm will circle around. then you can use the spear 
@@ -79,7 +79,7 @@ public class CheckpointManager : MonoBehaviour
             checkpoint = maybeCheckpoint;
             _controller.LogStringWithReturn(
                 "you and Ohm successfully flee the vicious bear. it is afternoon now, hunger weighs heavily on you.");
-            _controller.allRoomsInGame.Find(o => o.roomName == "north forest")
+            _controller.allRoomsInGame.Find(o => o.roomName == "young forest")
                 .SetInteractableObjectsInRoom(checkpointFourItems.ToArray());
             _controller.LoadRoomData();
             _controller.roomNavigation.SetExitLabels(_controller.roomNavigation.currentRoom
