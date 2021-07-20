@@ -21,7 +21,7 @@ MonoBehaviour:
     to the south, cannot pass.
 
     home to the west.'
-  roomName: south forest
+  roomName: old forest
   exits:
   - keyString: north
     exitDescription: forests to the north.

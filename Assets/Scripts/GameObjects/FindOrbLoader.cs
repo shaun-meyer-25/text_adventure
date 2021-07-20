@@ -9,7 +9,7 @@ public class FindOrbLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Room orbLandingSite = GameController.allRoomsInGame.Find(o => o.roomName == "west coast");
+        Room orbLandingSite = GameController.allRoomsInGame.Find(o => o.roomName == "lower coast");
 
         orbLandingSite.SetInteractableObjectsInRoom(GameController.checkpointManager.checkpointFiveItems.ToArray());
     }

@@ -3,12 +3,12 @@
     "chapter": 0,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -25,12 +25,12 @@
     "chapter": 1,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -47,12 +47,12 @@
     "chapter": 2,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -69,12 +69,12 @@
     "chapter": 3,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -91,12 +91,12 @@
     "chapter": 4,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -113,12 +113,12 @@
     "chapter": 5,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -135,12 +135,12 @@
     "chapter": 6,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -157,12 +157,12 @@
     "chapter": 7,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -179,12 +179,12 @@
     "chapter": 8,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -201,12 +201,12 @@
     "chapter": 9,
     "exits": [
       {
-        "roomName": "<color=red>north forest</color>",
+        "roomName": "<color=red>young forest</color>",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "<color=red>south foothills</color>",
+        "roomName": "<color=red>lower foothills</color>",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -223,12 +223,12 @@
     "chapter": 10,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -245,12 +245,12 @@
     "chapter": 11,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -267,12 +267,12 @@
     "chapter": 12,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -296,12 +296,12 @@
     "chapter": 14,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -318,12 +318,12 @@
     "chapter": 15,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -340,12 +340,12 @@
     "chapter": 16,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -362,12 +362,12 @@
     "chapter": 17,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },
@@ -384,12 +384,12 @@
     "chapter": 18,
     "exits": [
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "north",
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "east",
         "description": "the forest thins as the ground gets higher and rockier to the east"
       },

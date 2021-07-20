@@ -3,17 +3,17 @@
     "chapter": 0,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -25,17 +25,17 @@
     "chapter": 1,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -47,17 +47,17 @@
     "chapter": 2,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -69,17 +69,17 @@
     "chapter": 3,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -91,17 +91,17 @@
     "chapter": 4,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -113,17 +113,17 @@
     "chapter": 5,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -135,17 +135,17 @@
     "chapter": 6,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -157,17 +157,17 @@
     "chapter": 7,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -179,17 +179,17 @@
     "chapter": 8,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -201,17 +201,17 @@
     "chapter": 9,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -230,17 +230,17 @@
     "chapter": 11,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -252,17 +252,17 @@
     "chapter": 12,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -274,17 +274,17 @@
     "chapter": 13,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -296,17 +296,17 @@
     "chapter": 14,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -318,17 +318,17 @@
     "chapter": 15,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -340,17 +340,17 @@
     "chapter": 16,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -362,17 +362,17 @@
     "chapter": 17,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }
@@ -384,17 +384,17 @@
     "chapter": 18,
     "exits": [
       {
-        "roomName": "north foothills",
+        "roomName": "upper foothills",
         "keyString": "north",
         "description": "north of here is dangerous, between the treacherous terrain of the foothills and the beasts that call them home."
       },
       {
-        "roomName": "south foothills",
+        "roomName": "lower foothills",
         "keyString": "south",
         "description": "foothills lie to the south"
       },
       {
-        "roomName": "north forest",
+        "roomName": "young forest",
         "keyString": "west",
         "description": "the younger part of the forest, often good for foraging, lies to the west"
       }

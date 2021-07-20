@@ -114,7 +114,7 @@ public class RoomNavigation : MonoBehaviour {
 			controller.checkpointManager.SetCheckpoint(2);
 		}
 
-		if (currentRoom.roomName == "north foothills" && controller.checkpointManager.checkpoint == 2 &&
+		if (currentRoom.roomName == "upper foothills" && controller.checkpointManager.checkpoint == 2 &&
 		    !controller.checkpointManager.ohmInPosition)
 		{
 			controller.checkpointManager.SetCheckpoint(3);
@@ -148,7 +148,7 @@ public class RoomNavigation : MonoBehaviour {
 			controller.checkpointManager.SetCheckpoint(10);
 		}
 
-		if (currentRoom.roomName == "south forest" && controller.checkpointManager.checkpoint == 12)
+		if (currentRoom.roomName == "old forest" && controller.checkpointManager.checkpoint == 12)
 		{
 			controller.checkpointManager.SetCheckpoint(13);
 		}

@@ -19,7 +19,7 @@ MonoBehaviour:
     a plan.
   roomInvestigationDescription: the beast glares at you. it takes a step towards
     you and lets out a low, menacing growl.
-  roomName: north foothills
+  roomName: upper foothills
   exits:
   - keyString: south
     exitDescription: watering hole to the south.
