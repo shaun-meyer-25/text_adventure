@@ -10,7 +10,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
@@ -28,7 +28,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
@@ -46,7 +46,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
@@ -64,7 +64,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
@@ -82,7 +82,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "you stand where the land meets the sea. the sand is warm and comfortable beneath your feet.",
@@ -136,11 +136,11 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
-    "description": "there is a large crater in the normally smooth sand. the ground around it glows with vestiges of fire.",
-    "investigationDescription": "the night remains indifferent, oblivious to the strange things that just occurred here. you feel a kinship with the moon as you gaze upon it, as if it is one of your companions. it fills you with a surreal calm.",
+    "description": "there is a large crater in the normally smooth sand. the ground around it glows with remains of celestial fire.",
+    "investigationDescription": "the night remains indifferent, oblivious to the strange things that just occurred here. you feel a kinship with the eye of night as you gaze upon it, as if it is one of your companions. it fills you with a surreal calm.",
     "effectTriggerName": ""
   },
   {
@@ -154,7 +154,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "the crater from the night before lies before you, already being filled by the sand that blows along the coast.",
@@ -172,7 +172,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "this is the wrong direction, the beast is to the east.",
@@ -190,7 +190,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "TODO",
@@ -208,7 +208,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "you return to the place that you discovered the orb. the sand blows, it covers the blast area once again.",
@@ -226,7 +226,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "you come to the place you found the orb last night. there is no light to be found, not even from the orb you still hold.",
@@ -244,7 +244,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "TODO",
@@ -262,7 +262,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "TODO",
@@ -280,7 +280,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "the sea churns in the strong wind. it encroaches upon the sand. threatening to sweep you away.",
@@ -298,7 +298,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "TODO",
@@ -316,7 +316,7 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "TODO",
@@ -334,11 +334,29 @@
       {
         "roomName": "coastal grasslands",
         "keyString": "east",
-        "description": "from here, the vast grasslands appear to begin to the east"
+        "description": "the coast gives way to grasslands to the east"
       }
     ],
     "description": "TODO",
     "investigationDescription": "TODO",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 20,
+    "exits": [
+      {
+        "roomName": "upper coast",
+        "keyString": "north",
+        "description": "the coast continues to the north"
+      },
+      {
+        "roomName": "coastal grasslands",
+        "keyString": "east",
+        "description": "the coast gives way to grasslands to the east"
+      }
+    ],
+    "description": "the sea is restless, as are you. Tei's presence is a comfort beside you.",
+    "investigationDescription": "Tei kneels down in the sand, looking for something but not finding it. this is not the place they were leading you.",
     "effectTriggerName": ""
   }
 ]

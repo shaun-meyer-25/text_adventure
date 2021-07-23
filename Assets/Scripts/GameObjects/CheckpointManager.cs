@@ -200,14 +200,7 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 14)
         {
             checkpoint = maybeCheckpoint;
-/*            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
-            InteractableObject person = new List<InteractableObject>(_controller.characters)
-                .Find(o => o.name == "Nua");
-            List<Interaction> interactions =
-                new List<Interaction>(person.interactions);
-            Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
-            interact.actionResponse = ScriptableObject.CreateInstance<TakeOrbFromNua>();
-  */          
+      
             _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
             InteractableObject person = new List<InteractableObject>(_controller.characters)
                 .Find(o => o.name == "Tei");
@@ -259,6 +252,12 @@ public class CheckpointManager : MonoBehaviour
 
         }
 
+        if (maybeCheckpoint == 20)
+        {
+            checkpoint = maybeCheckpoint;
+            _controller.LoadRoomData();
+        }
+
     for (int i = 0; i < _controller.characters.Length; i++)
         {
             List<Interaction> interactions =
@@ -278,6 +277,39 @@ public class CheckpointManager : MonoBehaviour
         }
     }
 
+    public void SetBadEndingCourse()
+    {
+        string o = "they are woken by the sounds of Nua's laughter.";
+        string t =
+            "they seem worried. afraid?";
+        string n =
+            "you spot the orb. Nua rolls it around on the ground. back and forth between their hands. <color=purple>it is not theirs to hold. IT IS YOURS.</color>";
+        string ona = "they show gratitude for your work yesterday. they are joyful as they point to Nua.";
+        Interaction nua = new List<Interaction>(new List<InteractableObject>(_controller.characters)
+            .Find(o => o.name == "Nua").interactions).Find(o => o.action.keyword.Equals("interact"));
+        Interaction onah =  new List<Interaction>(new List<InteractableObject>(_controller.characters)
+            .Find(o => o.name == "Onah").interactions).Find(o => o.action.keyword.Equals("interact"));
+        Interaction tei =  new List<Interaction>(new List<InteractableObject>(_controller.characters)
+            .Find(o => o.name == "Tei").interactions).Find(o => o.action.keyword.Equals("interact"));
+        Interaction ohm =  new List<Interaction>(new List<InteractableObject>(_controller.characters)
+            .Find(o => o.name == "Ohm").interactions).Find(o => o.action.keyword.Equals("interact"));
+        
+        nua.actionResponse = ScriptableObject.CreateInstance<TakeOrbFromNua>();
+        tei.actionResponse = null;
+
+        nua.textResponse = n;
+        onah.textResponse = ona;
+        tei.textResponse = t;
+        ohm.textResponse = o;
+        
+        _controller.LogStringWithReturn("Tei takes a step away from you. you have surprised them with your refusal.");
+    }
+
+    public void SetGoodEndingCourse()
+    {
+        _controller.checkpointManager.SetCheckpoint(20);
+    }
+    
     public void FirstGrowth()
     {
         _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow0");

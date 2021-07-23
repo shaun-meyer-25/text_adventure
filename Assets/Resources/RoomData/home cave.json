@@ -203,5 +203,16 @@
     "description": "TODO",
     "investigationDescription": "TODO",
     "effectTriggerName": ""
+  },
+  {
+    "chapter": 20,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "a duller light than normal filters in from outside. you can hear a wind blowing across the mouth of the cave."
+    }],
+    "description": "",
+    "investigationDescription": "you still don't see the orb, but Tei wants your attention. you have decided to follow them.",
+    "effectTriggerName": ""
   }
 ]

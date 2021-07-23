@@ -57,20 +57,15 @@ public static class ConversationHandler
         
         if (response == "no" && controller.checkpointManager.checkpoint == 14)
         {
-            controller.LogStringWithReturn("Ohm looks at you strangely, but does not protest.");
-            SetOhmInteraction(controller);
-            
-            controller.checkpointManager.SetCheckpoint(9);
+            controller.checkpointManager.SetBadEndingCourse();
+
         }
 
         if (response == "yes" && controller.checkpointManager.checkpoint == 14)
         {
-            controller.volumeManipulation.EffectStart(controller, "firstOrbEncounter");
-            controller.LogStringWithReturn("<color=purple>you refuse to hand it to them</color>");
-            controller.LogStringWithReturn("Ohm looks at you strangely, but does not protest.");
-            SetOhmInteraction(controller);
+            controller.travelingCompanions.Add(controller.characters.First(o => o.noun.Equals("Tei")));
             
-            controller.checkpointManager.SetCheckpoint(9);
+            controller.checkpointManager.SetCheckpoint(20);
         }
 
         controller.isConversing = false;
