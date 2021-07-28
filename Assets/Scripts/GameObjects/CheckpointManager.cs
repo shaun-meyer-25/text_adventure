@@ -24,6 +24,7 @@ public class CheckpointManager : MonoBehaviour
     public List<InteractableObject> checkpointFourItems;
     public List<InteractableObject> checkpointFiveItems;
     public InteractableObject checkpointNineBear;
+    public InteractableObject shell;
     [HideInInspector] public int checkpoint;
 
     private void OnEnable()
@@ -254,8 +255,16 @@ public class CheckpointManager : MonoBehaviour
 
         if (maybeCheckpoint == 20)
         {
+            InteractableObject person = new List<InteractableObject>(_controller.characters)
+                .Find(o => o.name == "Tei");
+            new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact")).actionResponse =
+                null;
             checkpoint = maybeCheckpoint;
+            _controller.allRoomsInGame.Find(o => o.roomName == "peninsula")
+                .SetInteractableObjectsInRoom(new InteractableObject[] {shell});
             _controller.LoadRoomData();
+            
+            _controller.LogStringWithReturn("Tei leads you toward the cave's opening.");
         }
 
     for (int i = 0; i < _controller.characters.Length; i++)

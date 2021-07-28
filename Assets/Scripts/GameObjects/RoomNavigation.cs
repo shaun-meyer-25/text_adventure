@@ -165,6 +165,11 @@ public class RoomNavigation : MonoBehaviour {
 			controller.levelLoader.LoadScene("In Mountains");
 			throw new Exception("stop scene");
 		}
+
+		if (currentRoom.roomName == "outside home" && controller.checkpointManager.checkpoint == 20)
+		{
+			
+		}
 	}
 
 	public void SetExitLabels(Exit[] choices)
