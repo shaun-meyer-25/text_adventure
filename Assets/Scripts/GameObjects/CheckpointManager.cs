@@ -257,8 +257,9 @@ public class CheckpointManager : MonoBehaviour
         {
             InteractableObject person = new List<InteractableObject>(_controller.characters)
                 .Find(o => o.name == "Tei");
-            new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact")).actionResponse =
-                null;
+            Interaction interaction =
+                new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact"));
+            interaction.actionResponse = null;
             checkpoint = maybeCheckpoint;
             _controller.allRoomsInGame.Find(o => o.roomName == "peninsula")
                 .SetInteractableObjectsInRoom(new InteractableObject[] {shell});
@@ -280,7 +281,7 @@ public class CheckpointManager : MonoBehaviour
             }
         }
 
-        if (maybeCheckpoint - previousCheckpoint == 1)
+        if (maybeCheckpoint - previousCheckpoint >= 1)
         {
             SaveGameManager.SaveGame(_controller);
         }
