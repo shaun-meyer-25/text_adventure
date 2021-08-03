@@ -14,14 +14,16 @@ public class TetrisPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Debug.Log("hello");
             // Modify position
             transform.position += new Vector3(-1, 0, 0);
        
             // See if valid
             if (isValidPos())
                 // It's valid. Update grid.
-                updateGrid();
+                updateGrid(-1);
             else
                 // It's not valid. revert.
                 transform.position += new Vector3(1, 0, 0);
@@ -35,7 +37,7 @@ public class TetrisPlayer : MonoBehaviour
             // See if valid
             if (isValidPos())
                 // It's valid. Update grid.
-                updateGrid();
+                updateGrid(1);
             else
                 // It's not valid. revert.
                 transform.position += new Vector3(-1, 0, 0);
@@ -49,8 +51,7 @@ public class TetrisPlayer : MonoBehaviour
         try
             {
                 if (!Playfield.insideBorder(v)) return false;
-                if (Playfield.grid[(int) v.x + 4, (int) v.y + 3] != null &&
-                    Playfield.grid[(int) v.x + 4, (int) v.y + 3].parent != transform) return false;
+                if (Playfield.grid[(int) v.x + 4, (int) v.y + 3] != null) return false;
             }
             catch (IndexOutOfRangeException e)
             {
@@ -59,16 +60,23 @@ public class TetrisPlayer : MonoBehaviour
         return true;
     }
 
-    private void updateGrid()
+    private void updateGrid(int direction)
     {
-        for (int y = -3; y < Playfield.h - 3; ++y) 
-        for (int x = -4; x < Playfield.w - 4; ++x) 
-            if (Playfield.grid[x + 4, y + 3] != null)
-                if (Playfield.grid[x + 4, y + 3] == transform)
-                    Playfield.grid[x + 4, y + 3] = null;
-        
         Vector2 v = Playfield.roundVec2(transform.position);
 
-        Playfield.grid[(int) v.x + 4, (int) v.y + 3] = transform;
+        int adjustedX = (int) v.x + 4;
+        int adjustedY = (int) v.y + 3;
+
+        // todo  -we arent deleting the previous one right. i think we had it right before.
+        try
+        {
+            Playfield.grid[adjustedX, adjustedY] = transform;
+            if (Playfield.grid[adjustedX + direction, adjustedY] == transform)
+                Playfield.grid[adjustedX + direction, adjustedY] = null;
+        }
+        catch (IndexOutOfRangeException e)
+        {
+            Debug.Log(v);
+        }
     }
 }

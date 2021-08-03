@@ -111,9 +111,11 @@ public class Group : MonoBehaviour
 
             try
             {
+                int adjustedX = (int) v.x + 4;
+                int adjustedY = (int) v.y + 3;
                 if (!Playfield.insideBorder(v)) return false;
-                if (Playfield.grid[(int) v.x + 4, (int) v.y + 3] != null &&
-                    Playfield.grid[(int) v.x + 4, (int) v.y + 3].parent != transform) return false;
+                if (Playfield.grid[adjustedX, adjustedY] != null &&
+                    Playfield.grid[adjustedX, adjustedY].parent != transform) return false;
             }
             catch (IndexOutOfRangeException e)
             {
