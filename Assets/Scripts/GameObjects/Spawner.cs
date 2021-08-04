@@ -25,4 +25,9 @@ public class Spawner : MonoBehaviour
     {
         
     }
+
+    public void GameWon()
+    {
+        enabled = false;
+    }
 }

@@ -5,18 +5,55 @@ using UnityEngine;
 
 public class TetrisPlayer : MonoBehaviour
 {
+    public TetrisController Controller;
+    
+    private Spawner _spawner;
+    private static readonly int Fade = Shader.PropertyToID("_Fade");
+    private List<GameObject> blocksAtEnd = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
+        _spawner = FindObjectOfType<Spawner>();
         
     }
 
+    public IEnumerator DissolveBlocks()
+    {
+        float fade = 1f;
+
+        while (fade >= 0)
+        {
+            foreach (var block in blocksAtEnd)
+            {
+                block.GetComponent<SpriteRenderer>().material.SetFloat(Fade, fade);
+            }
+
+            fade -= .01f;
+            yield return null;
+        }
+    }
+    
     // Update is called once per frame
     void Update()
     {
+        if (IsCompletelySurrounded())
+        {
+            Destroy(_spawner);
+            for (int y = -3; y < Playfield.h - 3; ++y) 
+            for (int x = -4; x < Playfield.w - 4; ++x)
+                if (Playfield.grid[x + 4, y + 3] != null)
+                {
+                    blocksAtEnd.Add(Playfield.grid[x + 4, y + 3].gameObject);
+                }
+
+            StartCoroutine(DissolveBlocks());
+            Controller.LogStringWithReturn("you did it.");
+            Controller.DisplayLoggedText();
+        }
+        
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Debug.Log("hello");
             // Modify position
             transform.position += new Vector3(-1, 0, 0);
        
@@ -43,6 +80,26 @@ public class TetrisPlayer : MonoBehaviour
                 transform.position += new Vector3(-1, 0, 0);
         }
     }
+
+    bool IsCompletelySurrounded()
+    {
+        Vector2 v = Playfield.roundVec2(transform.position);
+        int adjustedX = (int) v.x + 4;
+        int adjustedY = (int) v.y + 3;
+
+        Vector2 left = new Vector2(adjustedX - 1, adjustedY);
+        Vector2 right = new Vector2(adjustedX + 1, adjustedY);
+
+        if (
+            (!Playfield.insideBorder(left) || Playfield.grid[adjustedX - 1, adjustedY] != null) &&
+            (!Playfield.insideBorder(right) || Playfield.grid[adjustedX + 1, adjustedY] != null) &&
+            Playfield.grid[adjustedX, adjustedY + 1] != null
+        )
+        {
+            return true;
+        }
+        return false;
+    }
     
     bool isValidPos()
     {
@@ -67,12 +124,16 @@ public class TetrisPlayer : MonoBehaviour
         int adjustedX = (int) v.x + 4;
         int adjustedY = (int) v.y + 3;
 
-        // todo  -we arent deleting the previous one right. i think we had it right before.
         try
         {
+            for (int y = -3; y < Playfield.h - 3; ++y) 
+            for (int x = -4; x < Playfield.w - 4; ++x) 
+                if (Playfield.grid[x + 4, y + 3] != null)
+                    if (Playfield.grid[x + 4, y + 3] == transform)
+                        Playfield.grid[x + 4, y + 3] = null;
+            
             Playfield.grid[adjustedX, adjustedY] = transform;
-            if (Playfield.grid[adjustedX + direction, adjustedY] == transform)
-                Playfield.grid[adjustedX + direction, adjustedY] = null;
+
         }
         catch (IndexOutOfRangeException e)
         {

@@ -90,7 +90,7 @@ public class Group : MonoBehaviour
             //Playfield.deleteFullRows();
 
             // Spawn next Group
-            _spawner.SpawnNext();
+            if (_spawner != null)  _spawner.SpawnNext();
 
             // Disable script
             enabled = false;
@@ -114,6 +114,19 @@ public class Group : MonoBehaviour
                 int adjustedX = (int) v.x + 4;
                 int adjustedY = (int) v.y + 3;
                 if (!Playfield.insideBorder(v)) return false;
+                if (Playfield.grid[adjustedX, adjustedY] != null && Playfield.grid[adjustedX, adjustedY]
+                    .name == "Player")
+                {
+                    foreach (Transform c in transform)
+                    {
+                        if (!Playfield.insideBorder(Playfield.roundVec2(c.position)))
+                        {
+                            return false;
+                        }
+                    }
+                    Destroy(Playfield.grid[adjustedX, adjustedY].gameObject);
+                    return true;
+                }
                 if (Playfield.grid[adjustedX, adjustedY] != null &&
                     Playfield.grid[adjustedX, adjustedY].parent != transform) return false;
             }

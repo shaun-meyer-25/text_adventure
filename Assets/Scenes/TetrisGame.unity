@@ -301,6 +301,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1250910687, guid: 1f89e043bbe15be48bb202499e7912bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1250910688, guid: 1f89e043bbe15be48bb202499e7912bd, type: 3}
       propertyPath: m_LocalScale.x
       value: 30
@@ -608,8 +612,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442355905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -3, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalPosition: {x: 0.49, y: -3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -626,6 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8067902d38b124f4c845c170977dc63b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Controller: {fileID: 1017133658}
 --- !u!1 &634625161
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634625161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -0.3306481, z: -100.74031}
+  m_LocalPosition: {x: -0.7, y: -0.3306481, z: -100.74031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 136524723}
@@ -769,6 +774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1017133657}
+  - component: {fileID: 1017133658}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -790,6 +796,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1017133658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017133656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39e43b9d8e8e904ebd25331e6e2c747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: {fileID: 0}
+  currentColor: 
+  actions: []
+  levelLoader: {fileID: 0}
+  characters: []
+  background: {fileID: 0}
+  observableChoices: []
+  audio: {fileID: 0}
+  interactableChoices: []
+  travelingCompanions: []
+  allRoomsInGame: []
+  backgroundColor: {fileID: 0}
+  isDaytime: 0
+  processingDelay: 0
+  northLabel: {fileID: 0}
+  eastLabel: {fileID: 0}
+  westLabel: {fileID: 0}
+  southLabel: {fileID: 0}
+  volumeManipulation: {fileID: 0}
+  fifthButton: {fileID: 0}
+  useButtonAnimator: {fileID: 0}
+  light: {fileID: 0}
+  isFourthButtonDisabled: 0
+  isThirdButtonDisabled: 0
+  isSecondButtonDisabled: 0
+  buttonWrapAnimator: {fileID: 0}
+  exitNames: []
+  exitChoices: []
+  isInteracting: 0
+  isObserving: 0
+  isUsing: 0
+  isConversing: 0
+  roomNavigation: {fileID: 0}
+  interactableItems: {fileID: 0}
+  actionLog: []
+  interactionDescriptionsInRoom: []
+  fire: {fileID: 0}
+  checkpointManager: {fileID: 0}
+  startingActions: []
 --- !u!1 &1357833863
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ Material:
     m_Floats:
     - _Fade: 1
     - _MovementRate: 0.5
-    - _Opacity: 0
+    - _Opacity: 1
     - _Scale: 117.17
     m_Colors:
     - Color_7aa5e2fd393c49169b29408a27e4e3e6: {r: 1, g: 1, b: 1, a: 0}
