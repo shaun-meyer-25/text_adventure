@@ -2,9 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TetrisController : IController
 {
+    public List<SpriteRenderer> UISprites;
+    public List<Image> UIImages;
+
     private List<string> undisplayedSentences = new List<string>();
     private TextProcessing _textProcessing;
     

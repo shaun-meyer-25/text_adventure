@@ -35,10 +35,32 @@ public class TetrisPlayer : MonoBehaviour
         }
     }
 
+    public IEnumerator FadeUI()
+    {
+        float opacity = 1f;
+
+        while (opacity >= 0)
+        {
+            foreach (SpriteRenderer r in Controller.UISprites)
+            {
+                r.material.SetFloat("_Opacity", opacity);
+            }
+            
+            foreach (Image i in Controller.UIImages)
+            {
+                i.material.SetFloat("_Opacity", opacity);
+            }
+            yield return null;
+            opacity -= .005f;
+        }
+    }
+
     void Ending()
     {
         StartCoroutine(DissolveBlocks());
-        Controller.LogStringWithReturn("you did it.");
+        Controller.LogStringWithReturn("<color=purple>you have done well. the orb is where it is meant to be. it will be safe here. " +
+                                       "it will be found in another age by one who can achieve even greater things with it than you ever could. your contribution " +
+                                       "is noted.</color>");
         Controller.DisplayLoggedText();
     }
     
