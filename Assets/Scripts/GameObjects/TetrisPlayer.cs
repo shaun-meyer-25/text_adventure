@@ -10,12 +10,13 @@ public class TetrisPlayer : MonoBehaviour
     private Spawner _spawner;
     private static readonly int Fade = Shader.PropertyToID("_Fade");
     private List<GameObject> blocksAtEnd = new List<GameObject>();
-
+    private bool endingTriggered;
+    
     // Start is called before the first frame update
     void Start()
     {
         _spawner = FindObjectOfType<Spawner>();
-        
+        endingTriggered = false;
     }
 
     public IEnumerator DissolveBlocks()
@@ -33,11 +34,18 @@ public class TetrisPlayer : MonoBehaviour
             yield return null;
         }
     }
+
+    void Ending()
+    {
+        StartCoroutine(DissolveBlocks());
+        Controller.LogStringWithReturn("you did it.");
+        Controller.DisplayLoggedText();
+    }
     
     // Update is called once per frame
     void Update()
     {
-        if (IsCompletelySurrounded())
+        if (IsCompletelySurrounded() && !endingTriggered)
         {
             Destroy(_spawner);
             for (int y = -3; y < Playfield.h - 3; ++y) 
@@ -47,9 +55,8 @@ public class TetrisPlayer : MonoBehaviour
                     blocksAtEnd.Add(Playfield.grid[x + 4, y + 3].gameObject);
                 }
 
-            StartCoroutine(DissolveBlocks());
-            Controller.LogStringWithReturn("you did it.");
-            Controller.DisplayLoggedText();
+            endingTriggered = true;
+            Ending();
         }
         
         if (Input.GetKeyDown(KeyCode.LeftArrow))
