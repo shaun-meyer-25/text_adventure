@@ -37,7 +37,7 @@ public class FindTeiController : IController
 
         volumeManipulation.EffectStart(this, "firstOrbEncounter");
 
-        _textProcessing.DisplayText("you will need to find them quickly.");
+       // _textProcessing.DisplayText("you will need to find them quickly.");
     }
 
     public IEnumerator TypeSentence(Dictionary<int, Tuple<string, char>> charactersAndTheirColors )

@@ -170,7 +170,7 @@ public class RoomNavigation : MonoBehaviour {
 	public void SetExitLabels(Exit[] choices)
 	{
 		List<Exit> listOfExits = new List<Exit>(choices);
-		if (SceneManager.GetActiveScene().name == "In Mountains") return;
+		if (SceneManager.GetActiveScene().name == "In Mountains" || SceneManager.GetActiveScene().name == "TetrisGame") return;
 		for (int i = 0; i < 4; i++) {
 			if (i == 0)
 			{
