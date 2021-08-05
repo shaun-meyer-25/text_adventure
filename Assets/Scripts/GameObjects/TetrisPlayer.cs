@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TetrisPlayer : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class TetrisPlayer : MonoBehaviour
                 block.GetComponent<SpriteRenderer>().material.SetFloat(Fade, fade);
             }
 
-            fade -= .01f;
+            fade -= .0005f;
             yield return null;
         }
     }
@@ -51,17 +52,19 @@ public class TetrisPlayer : MonoBehaviour
                 i.material.SetFloat("_Opacity", opacity);
             }
             yield return null;
-            opacity -= .005f;
+            opacity -= .0005f;
         }
     }
 
     void Ending()
     {
         StartCoroutine(DissolveBlocks());
+        
         Controller.LogStringWithReturn("<color=purple>you have done well. the orb is where it is meant to be. it will be safe here. " +
                                        "it will be found in another age by one who can achieve even greater things with it than you ever could. your contribution " +
                                        "is noted.</color>");
         Controller.DisplayLoggedText();
+        StartCoroutine(FadeUI());
     }
     
     // Update is called once per frame
