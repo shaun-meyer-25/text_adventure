@@ -633,6 +633,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4797650007418987571, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4797650007418987726, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_Camera
@@ -18750,6 +18755,10 @@ MonoBehaviour:
   fifthButton: {fileID: 0}
   useButtonAnimator: {fileID: 0}
   light: {fileID: 1927308740}
+  isFourthButtonDisabled: 0
+  isThirdButtonDisabled: 0
+  isSecondButtonDisabled: 0
+  buttonWrapAnimator: {fileID: 0}
   exitNames: []
   exitChoices: []
   isInteracting: 0

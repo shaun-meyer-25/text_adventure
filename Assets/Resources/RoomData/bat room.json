@@ -1,0 +1,13 @@
+[
+  {
+    "chapter": 21,
+    "exits": [{
+      "roomName": "forking path",
+      "keyString": "back",
+      "description": "the only exit seems to be the way you came."}
+    ],
+    "description": "todo",
+    "investigationDescription": "todo",
+    "effectTriggerName": ""
+  }
+]

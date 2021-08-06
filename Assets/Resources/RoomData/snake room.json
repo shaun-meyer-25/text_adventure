@@ -1,0 +1,28 @@
+[
+  {
+    "chapter": 21,
+    "exits": [{
+      "roomName": "forking path",
+      "keyString": "back",
+      "description": "the only exit seems to be the way you came."}
+    ],
+    "description": "todo",
+    "investigationDescription": "todo",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 22,
+    "exits": [{
+      "roomName": "forking path",
+      "keyString": "back",
+      "description": "the only exit seems to be the way you came."},
+      {
+        "roomName": "ohm encounter",
+        "keyString": "forward",
+        "description": "you manage to move the stone just far enough to be able to squeeze past. a faint glow, the color of the Orb comes from beyond."}
+    ],
+    "description": "todo",
+    "investigationDescription": "todo",
+    "effectTriggerName": ""
+  }
+]
