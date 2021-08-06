@@ -251,16 +251,26 @@ public class CheckpointManager : MonoBehaviour
 
         }
 
-    for (int i = 0; i < _controller.characters.Length; i++)
+        if (maybeCheckpoint == 21)
         {
-            List<Interaction> interactions =
-                new List<Interaction>(_controller.characters[i].interactions);
-            Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+            checkpoint = maybeCheckpoint;
+            _controller.LoadRoomData();
+        }
 
-            if (maybeCheckpoint > 0 && _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1] != "x")
+        if (maybeCheckpoint < 21)
+        {
+            for (int i = 0; i < _controller.characters.Length; i++)
             {
-                interact.textResponse =
-                    _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1];
+                List<Interaction> interactions =
+                    new List<Interaction>(_controller.characters[i].interactions);
+                Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+
+                if (maybeCheckpoint > 0 &&
+                    _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1] != "x")
+                {
+                    interact.textResponse =
+                        _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1];
+                }
             }
         }
 

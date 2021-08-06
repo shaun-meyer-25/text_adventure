@@ -14,8 +14,8 @@
         "keyString": "back",
         "description": "you can hear the faint drone of the wind from outside of the cave."}
     ],
-    "description": "todo",
-    "investigationDescription": "todo",
+    "description": "moving further into the cave, the path forks to the left and right.",
+    "investigationDescription": "there is no sign of which way Ohm went. it is getting much darker.",
     "effectTriggerName": ""
   }
 ]
