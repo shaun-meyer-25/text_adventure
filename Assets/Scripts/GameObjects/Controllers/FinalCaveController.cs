@@ -9,6 +9,7 @@ public class FinalCaveController : IController
 {
 	public ParticleSystem Particles;
 	public bool BatsStirring;
+	public Bats Bats;
 
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;

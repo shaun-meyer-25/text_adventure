@@ -9,15 +9,23 @@ public class Bats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(LightUpEyes());
+     //   StartCoroutine(LightUpEyes());
     }
 
-    IEnumerator LightUpEyes()
+    public IEnumerator LightUpEyes()
     {
         foreach (var obj in Eyes)
         {
             obj.SetActive(true);
             yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    public void ShutEyes()
+    {
+        foreach (var obj in Eyes)
+        {
+            obj.SetActive(false);
         }
     }
     

@@ -6,9 +6,22 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName= "TextAdventure/ButtonHandlers/FinalCaveHandler")]
 public class FinalCaveHandler : IOptionButtonHandler
 {
-    override public void Handle(IController controller, Text textObject)
+    override public void Handle(IController icontroller, Text textObject)
     {
+
+	    FinalCaveController controller = (FinalCaveController) icontroller;
 	    string text = textObject.text;
+
+	    if (text == "surroundings" && !controller.BatsStirring &&
+	        controller.roomNavigation.currentRoom.roomName == "bat room")
+	    {
+		    controller.StartCoroutine(controller.Bats.LightUpEyes());
+	    }
+
+	    if (text == "back" && !controller.BatsStirring && controller.roomNavigation.currentRoom.roomName == "bat room")
+	    {
+		    controller.Bats.ShutEyes();
+	    }
 
 	    // todo - we could make exitnames part of an isExiting flag like for interacting or observing, and move this block in with "go"
 	    if (controller.exitNames.Contains(text))
