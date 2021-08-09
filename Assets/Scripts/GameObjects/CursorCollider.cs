@@ -21,9 +21,10 @@ public class CursorCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Bats" && Controller.roomNavigation.currentRoom.roomName == "bat room")
+        if (other.name == "Bats" && Controller.roomNavigation.currentRoom.roomName == "bat room" && Controller.BatsWatching)
         {
-            Debug.Log("BATS ");
+            Debug.Log("BATS");
+            Controller.BatsFlyingStart();
         }
     }
 }

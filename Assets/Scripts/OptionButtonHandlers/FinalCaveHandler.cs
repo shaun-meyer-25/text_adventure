@@ -15,12 +15,19 @@ public class FinalCaveHandler : IOptionButtonHandler
 	    if (text == "surroundings" && !controller.BatsStirring &&
 	        controller.roomNavigation.currentRoom.roomName == "bat room")
 	    {
-		    controller.StartCoroutine(controller.Bats.LightUpEyes());
+		    controller.BatsWatching = true;
+		    controller.Bats.StartEyes();
 	    }
 
 	    if (text == "back" && !controller.BatsStirring && controller.roomNavigation.currentRoom.roomName == "bat room")
 	    {
+		    controller.BatsWatching = false;
 		    controller.Bats.ShutEyes();
+	    }
+
+	    if (text == "left" && controller.BatsStirring)
+	    {
+		    controller.BatsFlyingStart();
 	    }
 
 	    // todo - we could make exitnames part of an isExiting flag like for interacting or observing, and move this block in with "go"

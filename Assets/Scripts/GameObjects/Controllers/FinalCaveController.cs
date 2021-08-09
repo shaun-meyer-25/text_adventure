@@ -3,13 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
+using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.UI;
 
 public class FinalCaveController : IController
 {
 	public ParticleSystem Particles;
 	public bool BatsStirring;
+	public bool BatsWatching;
 	public Bats Bats;
+	public Light2D Torch;
+	public InteractableObject Droppings;
 
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
@@ -42,6 +47,25 @@ public class FinalCaveController : IController
 		var emission = Particles.emission;
 		emission.enabled = false;
 
+	}
+	
+	public void BatsFlyingStart()
+	{
+		Bats.HaltEyes();
+		var emission = Particles.emission;
+		emission.enabled = true;
+		Bats.ShutEyes();
+		BatsWatching = false;
+		BatsStirring = true;
+		roomNavigation.currentRoom.AddObjectToRoom(Droppings);
+		LoadRoomData();
+		
+	}
+
+	public void BatsFlyingStop()
+	{
+		var emission = Particles.emission;
+		emission.enabled = false;
 	}
 	
 	public override void UpdateRoomChoices(Choice[] choices)

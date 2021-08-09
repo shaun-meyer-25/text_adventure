@@ -12,6 +12,16 @@ public class Bats : MonoBehaviour
      //   StartCoroutine(LightUpEyes());
     }
 
+    public void HaltEyes()
+    {
+        StopCoroutine("LightUpEyes");
+    }
+
+    public void StartEyes()
+    {
+        StartCoroutine("LightUpEyes");
+    }
+    
     public IEnumerator LightUpEyes()
     {
         foreach (var obj in Eyes)

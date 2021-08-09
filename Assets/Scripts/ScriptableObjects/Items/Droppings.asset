@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f298cada63767b546855f8107b945bfa, type: 3}
+  m_Name: Droppings
+  m_EditorClassIdentifier: 
+  keyword: droppings
+  noun: droppings
+  description: the floor is lined with dried droppings from the flying creatures.
+  interactions:
+  - action: {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
+    textResponse: the texture of the dried droppings is similar to the dry fuel you
+      use for your fires.
+    baseActionResponse: {fileID: 0}
+    actionResponse: {fileID: 0}
+  - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
+    textResponse: you obtain the bat droppings.
+    baseActionResponse: {fileID: 0}
+    actionResponse: {fileID: 0}
+  - action: {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}
+    textResponse: 
+    baseActionResponse: {fileID: 11400000, guid: c2c2eb9dfce0d7542a5d840002849ec7,
+      type: 2}
+    actionResponse: {fileID: 0}
