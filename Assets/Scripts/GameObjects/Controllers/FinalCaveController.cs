@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class FinalCaveController : IController
 {
+	public ParticleSystem Particles;
+	public bool BatsStirring;
+
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
 	private List<string> undisplayedSentences = new List<string>();
@@ -34,8 +37,12 @@ public class FinalCaveController : IController
 		DisplayLoggedText (); 
 		UpdateRoomChoices (actions);
 		interactableItems.AddActionResponsesToUseDictionary();
-	}
 
+		var emission = Particles.emission;
+		emission.enabled = false;
+
+	}
+	
 	public override void UpdateRoomChoices(Choice[] choices)
 	{
 		actions = choices;

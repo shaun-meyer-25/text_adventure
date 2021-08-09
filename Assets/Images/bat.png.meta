@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: a6e0770bfc59b36469c56509bce2c9fb
+guid: 316b92064e57e5e42a16ab6c6e4843a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -195859822891073121
-    second: snakes_0
+      213: -697763020151794088
+    second: bat_0
   - first:
-      213: -2334395075258715898
-    second: snakes_1
+      213: -8072220183094876539
+    second: bat_1
   - first:
-      213: 1026813267307767067
-    second: snakes_2
+      213: 6263388890442168103
+    second: bat_2
   - first:
-      213: 1160356383516547490
-    second: snakes_3
+      213: 8615373810413218145
+    second: bat_3
+  - first:
+      213: 7801246764459682756
+    second: bat_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,11 +102,35 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: snakes_0
+      name: bat_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f918ece578a284df0800000000000000
-      internalID: -195859822891073121
+      spriteID: 856d276ea3c0156f0800000000000000
+      internalID: -697763020151794088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: snakes_1
+      name: bat_1
       rect:
         serializedVersion: 2
         x: 50
@@ -138,14 +165,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60178c51c009a9fd0800000000000000
-      internalID: -2334395075258715898
+      spriteID: 58624ed0386b9ff80800000000000000
+      internalID: -8072220183094876539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: snakes_2
+      name: bat_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 50
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727fee0d2070ce650800000000000000
+      internalID: 6263388890442168103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 50
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16922e895d4ff8770800000000000000
+      internalID: 8615373810413218145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_4
       rect:
         serializedVersion: 2
         x: 0
@@ -159,29 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b15a980f939ff3e00800000000000000
-      internalID: 1026813267307767067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: snakes_3
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 0
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a95c54abf96a1010800000000000000
-      internalID: 1160356383516547490
+      spriteID: 4cbe8c87998934c60800000000000000
+      internalID: 7801246764459682756
       vertices: []
       indices: 
       edges: []
