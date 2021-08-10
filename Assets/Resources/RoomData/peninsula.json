@@ -7,7 +7,7 @@
       "description": "the grasslands lie to the north."}
     ],
     "description": "the land juts out into the sea here, you can go no further.",
-    "investigationDescription": "walking out to the edge of this peninsula, surrounded on all sides by the sea, you can't help but think of a large wave crashing over the sand and sweeping you away."
+    "investigationDescription": "you have walked out to where the land meets the sea. it surrounds you on all sides. broken shells lie in the sand. you and Tei spend time here, feeling the comfort of each other's presence."
   },
   {
     "chapter": 1,
@@ -17,7 +17,7 @@
       "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
     ],
     "description": "the land juts out into the sea here, you can go no further.",
-    "investigationDescription": "walking out to the edge of this peninsula, surrounded on all sides by the sea, you can't help but think of a large wave crashing over the sand and sweeping you away."
+    "investigationDescription": "you have walked out to where the land meets the sea. it surrounds you on all sides. broken shells lie in the sand. you and Tei spend time here, feeling the comfort of each other's presence."
   },
   {
     "chapter": 2,
@@ -27,7 +27,7 @@
       "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
     ],
     "description": "the land juts out into the sea here, you can go no further.",
-    "investigationDescription": "walking out to the edge of this peninsula, surrounded on all sides by the sea, you can't help but think of a large wave crashing over the sand and sweeping you away."
+    "investigationDescription": "you have walked out to where the land meets the sea. it surrounds you on all sides. broken shells lie in the sand. you and Tei spend time here, feeling the comfort of each other's presence."
   },
   {
     "chapter": 3,
@@ -37,7 +37,7 @@
       "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
     ],
     "description": "the land juts out into the sea here, you can go no further.",
-    "investigationDescription": "walking out to the edge of this peninsula, surrounded on all sides by the sea, you can't help but think of a large wave crashing over the sand and sweeping you away."
+    "investigationDescription": "you have walked out to where the land meets the sea. it surrounds you on all sides. broken shells lie in the sand. you and Tei spend time here, feeling the comfort of each other's presence."
   },
   {
     "chapter": 4,
@@ -47,7 +47,7 @@
       "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
     ],
     "description": "the land juts out into the sea here, you can go no further.",
-    "investigationDescription": "walking out to the edge of this peninsula, surrounded on all sides by the sea, you can't help but think of a large wave crashing over the sand and sweeping you away."
+    "investigationDescription": "you have walked out to where the land meets the sea. it surrounds you on all sides. broken shells lie in the sand. you and Tei spend time here, feeling the comfort of each other's presence."
   },
   {
     "chapter": 5,
@@ -67,7 +67,7 @@
       "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
     ],
     "description": "the land juts out into the sea here, you can go no further.",
-    "investigationDescription": "the moon illuminates the sea, but the sea is restless, as if something has disturbed its slumber."
+    "investigationDescription": "the eye of night illuminates the sea, but the sea is restless, as if something has disturbed its slumber."
   },
   {
     "chapter": 7,
@@ -77,7 +77,7 @@
       "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
     ],
     "description": "the land juts out into the sea here, you can go no further.",
-    "investigationDescription": "the moon illuminates the sea, but the sea is restless, as if something has disturbed its slumber."
+    "investigationDescription": "the eye of night illuminates the sea, but the sea is restless, as if something has disturbed its slumber."
   },
   {
     "chapter": 8,
@@ -163,8 +163,8 @@
     "chapter": 16,
     "exits": [{
       "roomName": "coastal grasslands",
-      "keyString": "north",
-      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north.",
+      "keyString": "north"}
     ],
     "description": "TODO",
     "investigationDescription": "TODO"
@@ -188,5 +188,15 @@
     ],
     "description": "TODO",
     "investigationDescription": "TODO"
+  },
+  {
+    "chapter": 20,
+    "exits": [{
+      "roomName": "coastal grasslands",
+      "keyString": "north",
+      "description": "the land juts out into the sea here, you can go no further. the grasslands lie to the north."}
+    ],
+    "description": "Tei sits on the sand. it is just you and them, surrounded by the sea. \n\nyou can feel your desire for the orb itching at the back of your mind.",
+    "investigationDescription": "you can still see some of the footprints from the last time you were here with Tei. despite the chill in the wind, the orb at the back of your mind, you feel comfort."
   }
 ]

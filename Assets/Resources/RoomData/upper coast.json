@@ -122,7 +122,7 @@
       }
     ],
     "description": "you stand where the land meets the sea. a glow comes from the south.",
-    "investigationDescription": "the moon is in the sky now, illuminating the sea. a brighter glow comes from south of you."
+    "investigationDescription": "the eye of night is in the sky now, illuminating the sea. a brighter glow comes from south of you."
   },
   {
     "chapter": 7,
@@ -139,7 +139,7 @@
       }
     ],
     "description": "you stand where the land meets the sea. the sand is cold beneath your feet. what was inviting during the day rejects your presence at night.",
-    "investigationDescription": "the moon illuminates the vast sea. you have rarely gazed upon the moon on the broken surface of the ocean. it puzzles and intrigues you."
+    "investigationDescription": "the eye of night illuminates the vast sea. you have rarely gazed upon the moon on the broken surface of the ocean. it puzzles and intrigues you."
   },
   {
     "chapter": 8,
@@ -328,5 +328,22 @@
     ],
     "description": "TODO",
     "investigationDescription": "TODO"
+  },
+  {
+    "chapter": 20,
+    "exits": [
+      {
+        "roomName": "open grasslands",
+        "keyString": "east",
+        "description": "the coast meets the grasslands to the east"
+      },
+      {
+        "roomName": "lower coast",
+        "keyString": "south",
+        "description": "the coast continues to the south"
+      }
+    ],
+    "description": "the coast is rockier here. the sea is restless and the rocks slick.",
+    "investigationDescription": "Tei stares at the sea for a moment, but this is not where they wanted to lead you to."
   }
 ]

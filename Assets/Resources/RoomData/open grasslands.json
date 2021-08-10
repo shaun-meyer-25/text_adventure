@@ -128,7 +128,7 @@
         "description": "the coast is to the west, smelling of sea."
       }
     ],
-    "description": "the moon has yet to come out and illuminate the ground. the plains are eerie at this time of night.",
+    "description": "the eye of night has yet to come out and illuminate the ground. the plains are eerie at this time of night.",
     "investigationDescription": "your heart beats a little faster as you imagine the beasts that hunt these plains at night. you see nothing, but something in your mind tells you to leave."
   },
   {
@@ -150,7 +150,7 @@
         "description": "the coast is to the west, smelling of sea."
       }
     ],
-    "description": "the moon illuminates the grasslands around you. the vastness of the plains stretching north makes you aware of how alone you are.",
+    "description": "the eye of night illuminates the grasslands around you. the vastness of the plains stretching north makes you aware of how alone you are.",
     "investigationDescription": "your heart beats a little faster as you imagine the beasts that hunt these plains at night. without a companion, nobody would bear witness to your death. you see nothing, but something in your mind tells you to leave."
   },
   {
@@ -172,7 +172,7 @@
         "description": "the coast is to the west, smelling of sea."
       }
     ],
-    "description": "the moon illuminates the grasslands around you. the vastness of the plains stretching north makes you aware of how alone you are.",
+    "description": "the eye of night illuminates the grasslands around you. the vastness of the plains stretching north makes you aware of how alone you are.",
     "investigationDescription": "your heart beats a little faster as you imagine the beasts that hunt these plains at night. without a companion, nobody would bear witness to your death. you see nothing, but something in your mind tells you to leave."
   },
   {
@@ -416,5 +416,27 @@
     ],
     "description": "TODO",
     "investigationDescription": "TODO"
+  },
+  {
+    "chapter": 20,
+    "exits": [
+      {
+        "roomName": "wooded grasslands",
+        "keyString": "east",
+        "description": "the plains that meet the forest stretch to the east"
+      },
+      {
+        "roomName": "coastal grasslands",
+        "keyString": "south",
+        "description": "the plains continue to the south as well, bordering the coast"
+      },
+      {
+        "roomName": "upper coast",
+        "keyString": "west",
+        "description": "the coast is to the west, smelling of sea."
+      }
+    ],
+    "description": "a restless wind blows across the plain. it sends a chill across your skin.",
+    "investigationDescription": "Tei looks puzzled. this is not where they were trying to lead you."
   }
 ]

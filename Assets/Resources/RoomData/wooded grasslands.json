@@ -417,5 +417,22 @@
     ],
     "description": "TODO",
     "investigationDescription": "TODO"
+  },
+  {
+    "chapter": 20,
+    "exits": [
+      {
+        "roomName": "outside home",
+        "keyString": "south",
+        "description": "home lies to the south"
+      },
+      {
+        "roomName": "open grasslands",
+        "keyString": "west",
+        "description": "the grasslands continue to the west"
+      }
+    ],
+    "description": "a restless wind blows across the plain. it sends a chill across your skin.",
+    "investigationDescription": "Tei seems uncomfortable this close to the forest. the memory of being cornered by a beast still seems to haunt them. they will not go to the east, where the forest lies."
   }
 ]

@@ -54,6 +54,19 @@ public static class ConversationHandler
             controller.checkpointManager.SetCheckpoint(17);
 
         }
+        
+        if (response == "no" && controller.checkpointManager.checkpoint == 14)
+        {
+            controller.checkpointManager.SetBadEndingCourse();
+
+        }
+
+        if (response == "yes" && controller.checkpointManager.checkpoint == 14)
+        {
+            controller.travelingCompanions.Add(controller.characters.First(o => o.noun.Equals("Tei")));
+            
+            controller.checkpointManager.SetCheckpoint(20);
+        }
 
         controller.isConversing = false;
         controller.UpdateRoomChoices(controller.startingActions);

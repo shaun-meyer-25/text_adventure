@@ -165,6 +165,15 @@ public class RoomNavigation : MonoBehaviour {
 			controller.levelLoader.LoadScene("In Mountains");
 			throw new Exception("stop scene");
 		}
+
+		if (currentRoom.roomName == "outside home" && controller.checkpointManager.checkpoint == 20)
+		{
+			InteractableObject person = new List<InteractableObject>(controller.characters)
+				.Find(o => o.name == "Tei");
+			Interaction interaction =
+				new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact"));
+			interaction.textResponse = "Tei has a brightness in their eyes as they go with you towards your usual place.";
+		}
 	}
 
 	public void SetExitLabels(Exit[] choices)
