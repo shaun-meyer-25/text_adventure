@@ -15,6 +15,7 @@ public class FinalCaveController : IController
 	public Bats Bats;
 	public Light2D Torch;
 	public InteractableObject Droppings;
+	public List<SnakeSpawner> SnakeSpawners;
 
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
@@ -47,6 +48,10 @@ public class FinalCaveController : IController
 		var emission = Particles.emission;
 		emission.enabled = false;
 
+		foreach (var VARIABLE in SnakeSpawners)
+		{
+			VARIABLE.SpawnSnake();
+		}
 	}
 	
 	public void BatsFlyingStart()
@@ -66,6 +71,16 @@ public class FinalCaveController : IController
 	{
 		var emission = Particles.emission;
 		emission.enabled = false;
+	}
+
+	public void RandomSnakeSpawnStart()
+	{
+		// todo
+	}
+
+	public void RandomSnakeSpawnStop()
+	{
+		// todo 
 	}
 	
 	public override void UpdateRoomChoices(Choice[] choices)

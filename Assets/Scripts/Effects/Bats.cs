@@ -5,12 +5,6 @@ using UnityEngine;
 public class Bats : MonoBehaviour
 {
     public List<GameObject> Eyes;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-     //   StartCoroutine(LightUpEyes());
-    }
 
     public void HaltEyes()
     {

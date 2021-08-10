@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Snakes : MonoBehaviour
 {
-    public float Speed = 1.6f;
+    public float XSpeed;
+    public float YSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class Snakes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += new Vector3(Speed * Time.deltaTime, Speed * Time.deltaTime, 0);
+        this.transform.position += new Vector3(XSpeed * Time.deltaTime, YSpeed * Time.deltaTime, 0);
 
     }
 }
