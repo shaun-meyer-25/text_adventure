@@ -9059,7 +9059,7 @@ MonoBehaviour:
   BatsStirring: 0
   BatsWatching: 0
   Bats: {fileID: 205455180}
-  Torch: {fileID: 2008499829}
+  Torch: {fileID: 0}
   Droppings: {fileID: 11400000, guid: ac6ebb975421939429327276c4c6ad81, type: 2}
   SnakeSpawners:
   - {fileID: 540109395}

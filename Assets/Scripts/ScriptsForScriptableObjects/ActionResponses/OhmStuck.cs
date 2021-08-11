@@ -22,6 +22,8 @@ public class OhmStuck : ActionResponse
         controller.LogStringWithReturn("Ohm responds to your footfalls. they reach their free hand out, grasping at the air between you. they cannot see you.");
         List<ConversationChoice> choices = new List<ConversationChoice>();
 
+        controller.isInteracting = false;
+
         controller.isConversing = true;
         ConversationChoice yes = ScriptableObject.CreateInstance<ConversationChoice>();
         yes.keyword = "yes";

@@ -22,7 +22,7 @@ MonoBehaviour:
     baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-    textResponse: you obtain the bat droppings.
+    textResponse: you obtain the dried droppings.
     baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}
   - action: {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}
