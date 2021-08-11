@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fc7cf5db359646d6bf6e9ed1f7077dd, type: 3}
-  m_Name: OhmEncounter
+  m_Script: {fileID: 11500000, guid: 4f48b67269fa40a49a7f5e57136ef006, type: 3}
+  m_Name: MoveStone
   m_EditorClassIdentifier: 
-  baseDescription: 
-  baseInvestigationDescription: 
-  description: 
-  roomInvestigationDescription: 
-  roomName: ohm encounter
-  basePeopleInRoom: []
+  requiredString: 

@@ -19,10 +19,25 @@ public class FinalCaveHandler : IOptionButtonHandler
 		    controller.Bats.StartEyes();
 	    }
 
+	    if (text == "right")
+	    {
+		    controller.RandomSnakeSpawnStart();
+	    }
+
+	    if ((text == "back" || text == "forward") && controller.roomNavigation.currentRoom.roomName == "snake room")
+	    {
+		    controller.RandomSnakeSpawnStop();
+	    }
+	    
 	    if (text == "back" && !controller.BatsStirring && controller.roomNavigation.currentRoom.roomName == "bat room")
 	    {
 		    controller.BatsWatching = false;
 		    controller.Bats.ShutEyes();
+	    }
+	    
+	    if (text == "back" && controller.BatsStirring && controller.roomNavigation.currentRoom.roomName == "bat room")
+	    {
+		    controller.BatsFlyingStop();
 	    }
 
 	    if (text == "left" && controller.BatsStirring)

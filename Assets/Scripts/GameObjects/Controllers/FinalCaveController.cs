@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class FinalCaveController : IController
 {
@@ -16,6 +17,7 @@ public class FinalCaveController : IController
 	public Light2D Torch;
 	public InteractableObject Droppings;
 	public List<SnakeSpawner> SnakeSpawners;
+	public bool HigherSnakeSpawnRateActive;
 
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
@@ -47,11 +49,6 @@ public class FinalCaveController : IController
 
 		var emission = Particles.emission;
 		emission.enabled = false;
-
-		foreach (var VARIABLE in SnakeSpawners)
-		{
-			VARIABLE.SpawnSnake();
-		}
 	}
 	
 	public void BatsFlyingStart()
@@ -62,7 +59,11 @@ public class FinalCaveController : IController
 		Bats.ShutEyes();
 		BatsWatching = false;
 		BatsStirring = true;
-		roomNavigation.currentRoom.AddObjectToRoom(Droppings);
+		if (roomNavigation.currentRoom.roomName == "bat room")
+		{
+			roomNavigation.currentRoom.AddObjectToRoom(Droppings);
+		}
+
 		LoadRoomData();
 		
 	}
@@ -75,12 +76,40 @@ public class FinalCaveController : IController
 
 	public void RandomSnakeSpawnStart()
 	{
-		// todo
+		if (HigherSnakeSpawnRateActive)
+		{
+			StartCoroutine("HigherSnakeSpawn");
+		}
+		else
+		{
+			StartCoroutine("AverageSnakeSpawn");
+		}
 	}
 
 	public void RandomSnakeSpawnStop()
 	{
-		// todo 
+		StopCoroutine("AverageSnakeSpawn");
+		StopCoroutine("HigherSnakeSpawn");
+	}
+
+	IEnumerator AverageSnakeSpawn()
+	{
+		while (true)
+		{
+			int rng = UnityEngine.Random.Range(0, 15);
+			SnakeSpawners[rng].SpawnSnake();
+			yield return new WaitForSeconds(.5f);
+		}
+	}
+	
+	IEnumerator HigherSnakeSpawn()
+	{
+		while (true)
+		{
+			int rng = UnityEngine.Random.Range(0, 15);
+			SnakeSpawners[rng].SpawnSnake();
+			yield return new WaitForSeconds(.2f);
+		}
 	}
 	
 	public override void UpdateRoomChoices(Choice[] choices)

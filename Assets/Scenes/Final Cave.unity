@@ -6495,7 +6495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5158397100f7dab4b96b5d1e66d3307b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ZRotation: -135
+  ZRotation: 190.3
   XSpeed: 1
   YSpeed: -4.5
   snakePrefab: {fileID: 5553268914721042555, guid: 2ecf906d0f91c394f965be16c011da0a,
@@ -7927,8 +7927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZRotation: -70
-  XSpeed: 0
-  YSpeed: 0
+  XSpeed: 4.66
+  YSpeed: 1.54
   snakePrefab: {fileID: 5553268914721042555, guid: 2ecf906d0f91c394f965be16c011da0a,
     type: 3}
 --- !u!1 &880377794 stripped
@@ -8192,7 +8192,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.86
+  m_Intensity: 0
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -9005,7 +9005,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}
   - {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
   levelLoader: {fileID: 176042998}
-  characters: []
+  characters:
+  - {fileID: 11400000, guid: ef7402b7423a67742bba8efb34061b11, type: 2}
   background: {fileID: 0}
   observableChoices:
   - {fileID: 11400000, guid: 4df2eb156a2587146ba1e5a39e23cb6c, type: 2}
@@ -9077,6 +9078,7 @@ MonoBehaviour:
   - {fileID: 1686289851}
   - {fileID: 288524722}
   - {fileID: 1245682718}
+  HigherSnakeSpawnRateActive: 0
 --- !u!4 &1777755979
 Transform:
   m_ObjectHideFlags: 0
@@ -9105,6 +9107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usableItemList:
   - {fileID: 11400000, guid: ac6ebb975421939429327276c4c6ad81, type: 2}
+  interactableOnly:
+  - {fileID: 11400000, guid: 016954a26b3e2f24eb073355a010a5af, type: 2}
   nounsInRoom: []
   nounsInInventory: []
 --- !u!114 &1777755981
@@ -9138,6 +9142,8 @@ MonoBehaviour:
   checkpointFourItems: []
   checkpointFiveItems: []
   checkpointNineBear: {fileID: 0}
+  checkpointTwentyStone: {fileID: 11400000, guid: 016954a26b3e2f24eb073355a010a5af,
+    type: 2}
   checkpoint: 0
 --- !u!1001 &1799061273
 PrefabInstance:

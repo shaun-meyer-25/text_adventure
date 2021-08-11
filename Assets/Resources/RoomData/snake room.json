@@ -7,7 +7,7 @@
       "description": "the only exit seems to be the way you came."}
     ],
     "description": "as you go deeper into the cave, you begin to hear hissing. as you go deeper, the hissing becomes louder. as you move your torch around, you see wriggling forms slipping in and out of the light.",
-    "investigationDescription": "with the faint torchlight, you can see a large boulder at the back of the room. a faint light shows through a crack in the wall next to it.",
+    "investigationDescription": "with the faint torchlight, you can see a large boulder at the back of the room. the wriggling forms have vicious looking fangs. avoid them.",
     "effectTriggerName": ""
   },
   {
@@ -21,8 +21,8 @@
         "keyString": "forward",
         "description": "you manage to move the stone just far enough to be able to squeeze past. a faint glow, the color of the Orb comes from beyond."}
     ],
-    "description": "todo",
-    "investigationDescription": "todo",
+    "description": "the wriggling beasts move about quickly. the hissing is louder now.",
+    "investigationDescription": "the stone could have been moved more quickly by someone stronger than you. perhaps Ohm lies beyond. with the orb.",
     "effectTriggerName": ""
   }
 ]

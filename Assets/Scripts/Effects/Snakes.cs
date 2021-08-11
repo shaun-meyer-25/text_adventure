@@ -9,7 +9,7 @@ public class Snakes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        StartCoroutine(KillAfter5());
     }
 
     // Update is called once per frame
@@ -17,5 +17,11 @@ public class Snakes : MonoBehaviour
     {
         this.transform.position += new Vector3(XSpeed * Time.deltaTime, YSpeed * Time.deltaTime, 0);
 
+    }
+
+    IEnumerator KillAfter5()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(transform.gameObject);
     }
 }

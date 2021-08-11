@@ -24,6 +24,7 @@ public class CheckpointManager : MonoBehaviour
     public List<InteractableObject> checkpointFourItems;
     public List<InteractableObject> checkpointFiveItems;
     public InteractableObject checkpointNineBear;
+    public InteractableObject checkpointTwentyStone;
     [HideInInspector] public int checkpoint;
 
     private void OnEnable()
@@ -253,6 +254,24 @@ public class CheckpointManager : MonoBehaviour
 
         if (maybeCheckpoint == 21)
         {
+            checkpoint = maybeCheckpoint;
+            Room r = _controller.allRoomsInGame.Find(o => o.roomName == "snake room");
+            r.SetInteractableObjectsInRoom(new[] {checkpointTwentyStone});
+            _controller.LoadRoomData();
+        }
+        
+        if (maybeCheckpoint == 22)
+        {
+            Room r = _controller.allRoomsInGame.Find(o => o.roomName == "ohm encounter");
+            InteractableObject ohm = new List<InteractableObject>(_controller.characters)
+                .Find(o => o.name == "Ohm");
+            r.AddPersonToRoom(ohm);
+            List<Interaction> interactions =
+                new List<Interaction>(ohm.interactions);
+            Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+            OhmStuck so = ScriptableObject.CreateInstance<OhmStuck>();
+            interact.actionResponse = so;
+            
             checkpoint = maybeCheckpoint;
             _controller.LoadRoomData();
         }
