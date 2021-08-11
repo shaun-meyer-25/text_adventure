@@ -157,7 +157,7 @@
     "chapter": 14,
     "exits": [],
     "description": "",
-    "investigationDescription": "Nua rolls the orb around on the floor as if it were a toy. \n\n<color=purple>TAKE IT FROM THEM.</color>",
+    "investigationDescription": "you do not see the orb. you try to look further for it but Tei demands your attention.",
     "effectTriggerName": ""
   },
   {
@@ -202,6 +202,17 @@
     }],
     "description": "TODO",
     "investigationDescription": "TODO",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 20,
+    "exits": [{
+      "roomName": "outside home",
+      "keyString": "outside",
+      "description": "a duller light than normal filters in from outside. you can hear a wind blowing across the mouth of the cave."
+    }],
+    "description": "",
+    "investigationDescription": "you still don't see the orb, but Tei wants your attention. you have decided to follow them.",
     "effectTriggerName": ""
   }
 ]

@@ -511,5 +511,27 @@
     ],
     "description": "TODO",
     "investigationDescription": "TODO"
+  },
+  {
+    "chapter": 20,
+    "exits": [
+      {
+        "roomName": "wooded grasslands",
+        "keyString": "north",
+        "description": "grasslands to the north"
+      },
+      {
+        "roomName": "home cave",
+        "keyString": "home",
+        "description": "you are just outside of your home cave"
+      },
+      {
+        "roomName": "coastal grasslands",
+        "keyString": "west",
+        "description": "grasslands continue to stretch to the west."
+      }
+    ],
+    "description": "the wind stirs just outside of your cave. you can just see a darker sky in the west.",
+    "investigationDescription": "Tei wants to go to your usual place. they will not go east, frightened by the forest from last night."
   }
 ]

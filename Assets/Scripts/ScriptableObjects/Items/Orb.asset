@@ -18,7 +18,7 @@ MonoBehaviour:
     the earth. you feel something strange inside of you as you gaze upon it. '
   interactions:
   - action: {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
-    textResponse: 'the orb glows the color of a late sun reflected off the sea. you
+    textResponse: 'the orb glows the color of a late sky reflected off the sea. you
       gaze upon it, and the light pulses slightly. you try to look away but your
       eyes are pulled back to it.
 

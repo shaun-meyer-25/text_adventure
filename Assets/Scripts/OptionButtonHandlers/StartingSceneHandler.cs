@@ -67,6 +67,7 @@ public class StartingSceneHandler : IOptionButtonHandler
 		    {
 			    var choice = controller.actions[i];
 
+			    Debug.Log(choice.keyword);
 			    if (choice.keyword == text)
 			    {
 				    ActionChoice actionChoice = (ActionChoice) choice;

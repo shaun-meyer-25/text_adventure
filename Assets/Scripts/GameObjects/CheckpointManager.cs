@@ -25,6 +25,7 @@ public class CheckpointManager : MonoBehaviour
     public List<InteractableObject> checkpointFiveItems;
     public InteractableObject checkpointNineBear;
     public InteractableObject checkpointTwentyStone;
+    public InteractableObject shell;
     [HideInInspector] public int checkpoint;
 
     private void OnEnable()
@@ -201,13 +202,14 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 14)
         {
             checkpoint = maybeCheckpoint;
+      
             _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
             InteractableObject person = new List<InteractableObject>(_controller.characters)
-                .Find(o => o.name == "Nua");
+                .Find(o => o.name == "Tei");
             List<Interaction> interactions =
                 new List<Interaction>(person.interactions);
             Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
-            interact.actionResponse = ScriptableObject.CreateInstance<TakeOrbFromNua>();
+            interact.actionResponse = ScriptableObject.CreateInstance<TeiInvitesOutside>();
         }
         
         if (maybeCheckpoint == 15)
@@ -251,6 +253,21 @@ public class CheckpointManager : MonoBehaviour
             _controller.LoadRoomData();
 
         }
+        
+        if (maybeCheckpoint == 20)
+        {
+            InteractableObject person = new List<InteractableObject>(_controller.characters)
+                .Find(o => o.name == "Tei");
+            Interaction interaction =
+                new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact"));
+            interaction.actionResponse = null;
+            checkpoint = maybeCheckpoint;
+            _controller.allRoomsInGame.Find(o => o.roomName == "peninsula")
+                .SetInteractableObjectsInRoom(new InteractableObject[] {shell});
+            _controller.LoadRoomData();
+            
+            _controller.LogStringWithReturn("Tei leads you toward the cave's opening.");
+        }
 
         if (maybeCheckpoint == 21)
         {
@@ -293,12 +310,45 @@ public class CheckpointManager : MonoBehaviour
             }
         }
 
-        if (maybeCheckpoint - previousCheckpoint == 1)
+        if (maybeCheckpoint - previousCheckpoint >= 1)
         {
             SaveGameManager.SaveGame(_controller);
         }
     }
 
+    public void SetBadEndingCourse()
+    {
+        string o = "they are woken by the sounds of Nua's laughter.";
+        string t =
+            "they seem worried. afraid?";
+        string n =
+            "you spot the orb. Nua rolls it around on the ground. back and forth between their hands. <color=purple>it is not theirs to hold. IT IS YOURS.</color>";
+        string ona = "they show gratitude for your work yesterday. they are joyful as they point to Nua.";
+        Interaction nua = new List<Interaction>(new List<InteractableObject>(_controller.characters)
+            .Find(o => o.name == "Nua").interactions).Find(o => o.action.keyword.Equals("interact"));
+        Interaction onah =  new List<Interaction>(new List<InteractableObject>(_controller.characters)
+            .Find(o => o.name == "Onah").interactions).Find(o => o.action.keyword.Equals("interact"));
+        Interaction tei =  new List<Interaction>(new List<InteractableObject>(_controller.characters)
+            .Find(o => o.name == "Tei").interactions).Find(o => o.action.keyword.Equals("interact"));
+        Interaction ohm =  new List<Interaction>(new List<InteractableObject>(_controller.characters)
+            .Find(o => o.name == "Ohm").interactions).Find(o => o.action.keyword.Equals("interact"));
+        
+        nua.actionResponse = ScriptableObject.CreateInstance<TakeOrbFromNua>();
+        tei.actionResponse = null;
+
+        nua.textResponse = n;
+        onah.textResponse = ona;
+        tei.textResponse = t;
+        ohm.textResponse = o;
+        
+        _controller.LogStringWithReturn("Tei takes a step away from you. you have surprised them with your refusal.");
+    }
+
+    public void SetGoodEndingCourse()
+    {
+        _controller.checkpointManager.SetCheckpoint(20);
+    }
+    
     public void FirstGrowth()
     {
         _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow0");

@@ -275,17 +275,17 @@
       {
         "roomName": "open grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "the plains stretch to the north"
       },
       {
         "roomName": "outside home",
         "keyString": "east",
-        "description": ""
+        "description": "home lies just to the east"
       },
       {
         "roomName": "peninsula",
         "keyString": "south",
-        "description": ""
+        "description": "a small mass of land juts out into the sea to the south"
       },
       {
         "roomName": "lower coast",
@@ -302,17 +302,17 @@
       {
         "roomName": "open grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "the plains stretch to the north"
       },
       {
         "roomName": "outside home",
         "keyString": "east",
-        "description": ""
+        "description": "home lies just to the east"
       },
       {
         "roomName": "peninsula",
         "keyString": "south",
-        "description": ""
+        "description": "a small mass of land juts out into the sea to the south"
       },
       {
         "roomName": "lower coast",
@@ -329,17 +329,17 @@
       {
         "roomName": "open grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "the plains stretch to the north"
       },
       {
         "roomName": "outside home",
         "keyString": "east",
-        "description": ""
+        "description": "home lies just to the east"
       },
       {
         "roomName": "peninsula",
         "keyString": "south",
-        "description": ""
+        "description": "a small mass of land juts out into the sea to the south"
       },
       {
         "roomName": "lower coast",
@@ -356,17 +356,17 @@
       {
         "roomName": "open grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "the plains stretch to the north"
       },
       {
         "roomName": "outside home",
         "keyString": "east",
-        "description": ""
+        "description": "home lies just to the east"
       },
       {
         "roomName": "peninsula",
         "keyString": "south",
-        "description": ""
+        "description": "a small mass of land juts out into the sea to the south"
       },
       {
         "roomName": "lower coast",
@@ -383,17 +383,17 @@
       {
         "roomName": "open grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "the plains stretch to the north"
       },
       {
         "roomName": "outside home",
         "keyString": "east",
-        "description": ""
+        "description": "home lies just to the east"
       },
       {
         "roomName": "peninsula",
         "keyString": "south",
-        "description": ""
+        "description": "a small mass of land juts out into the sea to the south"
       },
       {
         "roomName": "lower coast",
@@ -410,17 +410,17 @@
       {
         "roomName": "open grasslands",
         "keyString": "north",
-        "description": ""
+        "description": "the plains stretch to the north"
       },
       {
         "roomName": "outside home",
         "keyString": "east",
-        "description": ""
+        "description": "home lies just to the east"
       },
       {
         "roomName": "peninsula",
         "keyString": "south",
-        "description": ""
+        "description": "a small mass of land juts out into the sea to the south"
       },
       {
         "roomName": "lower coast",
@@ -511,5 +511,32 @@
     ],
     "description": "TODO",
     "investigationDescription": "TODO"
+  },
+  {
+    "chapter": 20,
+    "exits": [
+      {
+        "roomName": "open grasslands",
+        "keyString": "north",
+        "description": "the plains stretch to the north"
+      },
+      {
+        "roomName": "outside home",
+        "keyString": "east",
+        "description": "home lies just to the east"
+      },
+      {
+        "roomName": "peninsula",
+        "keyString": "south",
+        "description": "a small mass of land juts out into the sea to the south"
+      },
+      {
+        "roomName": "lower coast",
+        "keyString": "west",
+        "description": "coast lies to the west, you can smell the sea from here"
+      }
+    ],
+    "description": "a restless wind blows in from the sea. the sky to the west looks dark. a storm is coming.",
+    "investigationDescription": "Tei walks with you. they wish for you to join them at your usual place."
   }
 ]
