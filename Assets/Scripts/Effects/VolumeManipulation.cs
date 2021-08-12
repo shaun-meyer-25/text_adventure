@@ -102,6 +102,13 @@ public class VolumeManipulation : MonoBehaviour
          {
              controller.background.color = Color.black;
              controller.currentColor = "white";
+         } 
+         else if (requiredString == "ohmFinal")
+         {
+             FinalCaveController fc = (FinalCaveController) controller;
+             // get light 
+             // turn light a shade of purple such that we can actually see the text 
+             // profit
          }
 
          if (requiredString == "caveBearAround")

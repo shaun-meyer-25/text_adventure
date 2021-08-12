@@ -34,6 +34,7 @@ public class OhmStuck : ActionResponse
         choices.Add(yes);
 
         controller.LogStringWithReturn("grab Ohm's hand?");
+        controller.UpdateRoomChoices(choices.ToArray());
         controller.DisplayLoggedText();
         return true;
     }
