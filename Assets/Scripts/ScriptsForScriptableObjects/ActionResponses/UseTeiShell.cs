@@ -31,6 +31,7 @@ public class UseTeiShell : ActionResponse
             // this runs about 60 seconds. at around the 40 second mark you are outside. we should cancel the orb light
             FinalCaveController fc = (FinalCaveController) controller;
             fc.DisabledButtons = true;
+            fc.UpdateRoomChoices(fc.startingActions);
             fc.StartCoroutine(fc.GoodEndingWon());
             return true;
         }
