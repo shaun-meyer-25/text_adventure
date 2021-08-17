@@ -24,6 +24,7 @@ public class CheckpointManager : MonoBehaviour
     public List<InteractableObject> checkpointFourItems;
     public List<InteractableObject> checkpointFiveItems;
     public InteractableObject checkpointNineBear;
+    public InteractableObject checkpointTwentyStone;
     public InteractableObject shell;
     [HideInInspector] public int checkpoint;
 
@@ -252,7 +253,7 @@ public class CheckpointManager : MonoBehaviour
             _controller.LoadRoomData();
 
         }
-
+        
         if (maybeCheckpoint == 20)
         {
             InteractableObject person = new List<InteractableObject>(_controller.characters)
@@ -268,16 +269,45 @@ public class CheckpointManager : MonoBehaviour
             _controller.LogStringWithReturn("Tei leads you toward the cave's opening.");
         }
 
-    for (int i = 0; i < _controller.characters.Length; i++)
+        if (maybeCheckpoint == 21)
         {
+            checkpoint = maybeCheckpoint;
+            Room r = _controller.allRoomsInGame.Find(o => o.roomName == "snake room");
+            r.SetInteractableObjectsInRoom(new[] {checkpointTwentyStone});
+            _controller.LoadRoomData();
+        }
+        
+        if (maybeCheckpoint == 22)
+        {
+            Room r = _controller.allRoomsInGame.Find(o => o.roomName == "ohm encounter");
+            InteractableObject ohm = new List<InteractableObject>(_controller.characters)
+                .Find(o => o.name == "Ohm");
+            r.AddPersonToRoom(ohm);
             List<Interaction> interactions =
-                new List<Interaction>(_controller.characters[i].interactions);
+                new List<Interaction>(ohm.interactions);
             Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+            interact.textResponse = "";
+            OhmStuck so = ScriptableObject.CreateInstance<OhmStuck>();
+            interact.actionResponse = so;
+            
+            checkpoint = maybeCheckpoint;
+            _controller.LoadRoomData();
+        }
 
-            if (maybeCheckpoint > 0 && _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1] != "x")
+        if (maybeCheckpoint < 21)
+        {
+            for (int i = 0; i < _controller.characters.Length; i++)
             {
-                interact.textResponse =
-                    _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1];
+                List<Interaction> interactions =
+                    new List<Interaction>(_controller.characters[i].interactions);
+                Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+
+                if (maybeCheckpoint > 0 &&
+                    _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1] != "x")
+                {
+                    interact.textResponse =
+                        _characterInteractions[_controller.characters[i].keyword][maybeCheckpoint - 1];
+                }
             }
         }
 

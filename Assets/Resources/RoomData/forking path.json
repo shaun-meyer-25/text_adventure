@@ -1,0 +1,40 @@
+[
+  {
+    "chapter": 21,
+    "exits": [{
+      "roomName": "bat room",
+      "keyString": "left",
+      "description": "a damp path leads to your left sloping down."},
+      {
+        "roomName": "snake room",
+        "keyString": "right",
+        "description": "a dry path leads to your right sloping up."},
+      {
+        "roomName": "cave entrance",
+        "keyString": "back",
+        "description": "you can hear the faint drone of the wind from outside of the cave."}
+    ],
+    "description": "moving further into the cave, the path forks to the left and right.",
+    "investigationDescription": "there is no sign of which way Ohm went. it is getting much darker.",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 22,
+    "exits": [{
+      "roomName": "bat room",
+      "keyString": "left",
+      "description": "a damp path leads to your left sloping down."},
+      {
+        "roomName": "snake room",
+        "keyString": "right",
+        "description": "a dry path leads to your right sloping up."},
+      {
+        "roomName": "cave entrance",
+        "keyString": "back",
+        "description": "you can hear the faint drone of the wind from outside of the cave."}
+    ],
+    "description": "moving further into the cave, the path forks to the left and right.",
+    "investigationDescription": "there is no sign of which way Ohm went. it is getting much darker.",
+    "effectTriggerName": ""
+  }
+]

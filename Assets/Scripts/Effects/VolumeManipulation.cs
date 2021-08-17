@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class VolumeManipulation : MonoBehaviour
 {
@@ -102,6 +103,27 @@ public class VolumeManipulation : MonoBehaviour
          {
              controller.background.color = Color.black;
              controller.currentColor = "white";
+         } 
+         else if (requiredString == "ohmFinal")
+         {
+             FinalCaveController fc = (FinalCaveController) controller;
+
+             fc.GlobalLight.GetComponent<Animator>().enabled = true;
+             Color color;
+
+             if (ColorUtility.TryParseHtmlString("#FB63FD", out color))
+                 fc.GlobalLight.color = color;
+             // profit 
+         }
+         else if (requiredString == "strangling")
+         {
+             VolumeComponent c = volume.profile.components.Find(o => o.name == "Vignette(Clone)");
+             Vignette vignette = (Vignette) c;
+             vignette.active = true;
+             vignette.color.value = Color.black; 
+
+             StartCoroutine("LosingConsciousness", vignette);
+             StartCoroutine("DyingInOhmsGrip", controller);
          }
 
          if (requiredString == "caveBearAround")
@@ -119,6 +141,24 @@ public class VolumeManipulation : MonoBehaviour
             ld.center.Override(new Vector2(-.2f, offset));
             yield return null;
         }
+    }
+
+    public IEnumerator LosingConsciousness(Vignette v)
+    {
+        // todo - choking sound
+        float intensity = 0f;
+        while (intensity <= 1f)
+        {
+            intensity += .0003f;
+            v.intensity.value = intensity;
+            yield return null;
+        }
+    }
+
+    public IEnumerator DyingInOhmsGrip(IController controller)
+    {
+        yield return new WaitForSeconds(5f);
+        controller.levelLoader.LoadScene("Credits");
     }
     
      public IEnumerator Pulse(Bloom bloom)
@@ -222,6 +262,13 @@ public class VolumeManipulation : MonoBehaviour
              Bloom bloom = (Bloom) c;
              StopCoroutine("Pulse");
              StartCoroutine(SwellThenFizzle(controller, bloom));
+         } else if (requiredString == "strangling")
+         {
+             VolumeComponent c = volume.profile.components.Find(o => o.name == "Vignette(Clone)");
+             Vignette v = (Vignette) c;
+             v.active = false;
+             StopCoroutine("LosingConsciousness");
+             StopCoroutine("DyingInOhmsGrip");
          }
      }
 }

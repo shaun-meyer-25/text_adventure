@@ -6,6 +6,7 @@ using UnityEngine;
 public class InteractableItems : MonoBehaviour
 {
     public List<InteractableObject> usableItemList;
+    public List<InteractableObject> interactableOnly;
     public Dictionary<string, string> examineDictionary = new Dictionary<string, string>();
     public Dictionary<string, string> takeDictionary = new Dictionary<string, string>();
 
@@ -100,6 +101,10 @@ public class InteractableItems : MonoBehaviour
     public Dictionary<string, string> Take(string[] separatedInputWords)
     {
         string noun = separatedInputWords[1];
+        if (interactableOnly.Find(o => o.noun == noun) != null)
+        {
+            return null;
+        }
         if (nounsInRoom.Contains(noun))
         {
             nounsInInventory.Add(noun);

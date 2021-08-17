@@ -80,6 +80,17 @@ public class Interact : ActionChoice
                         interaction.ActionResponse.DoActionResponse(controller);
                     }
                 }
+                else
+                {
+                    InteractableObject obj = controller.interactableItems.interactableOnly
+                        .Find(o => o.noun == separatedInputWords[1]);
+                    Interaction interaction =
+                        new List<Interaction>(obj.interactions).Find(o => o.action.keyword.Equals("interact"));
+                    if (!(interaction.ActionResponse == null))
+                    {
+                        interaction.ActionResponse.DoActionResponse(controller);
+                    }
+                }
 
                 controller.UpdateRoomChoices(controller.startingActions);
                 controller.isInteracting = false;

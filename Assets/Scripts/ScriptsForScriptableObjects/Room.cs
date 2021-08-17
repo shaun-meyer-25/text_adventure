@@ -115,8 +115,13 @@ public class Room : ScriptableObject
 		peopleInRoom = basePeopleInRoom.ToArray();
 		description = baseDescription;
 		roomInvestigationDescription = baseInvestigationDescription;
+
+		if (roomName == "bat room")
+		{
+			interactableObjectsInRoom = new InteractableObject[] { };
+		}
 	}
-	
+
 	public string GetDescription(int checkpoint)
 	{
 		RoomData r = _roomData.Find(o => o.chapter == checkpoint);
