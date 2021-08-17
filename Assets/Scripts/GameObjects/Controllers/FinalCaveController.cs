@@ -18,6 +18,8 @@ public class FinalCaveController : IController
 	public InteractableObject Droppings;
 	public List<SnakeSpawner> SnakeSpawners;
 	public bool HigherSnakeSpawnRateActive;
+	public Texture2D TorchSprite;
+	public Light2D GlobalLight;
 
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
@@ -33,6 +35,7 @@ public class FinalCaveController : IController
 		interactableItems = GetComponent<InteractableItems> ();
 		roomNavigation = GetComponent<RoomNavigation> ();
 		isDaytime = true;
+		Cursor.SetCursor(TorchSprite, Vector2.zero, CursorMode.Auto);
 	}
 
 	void Start ()
@@ -49,6 +52,8 @@ public class FinalCaveController : IController
 
 		var emission = Particles.emission;
 		emission.enabled = false;
+
+		volumeManipulation.EffectStart(this, "strangling");
 	}
 	
 	public void BatsFlyingStart()
@@ -110,6 +115,29 @@ public class FinalCaveController : IController
 			SnakeSpawners[rng].SpawnSnake();
 			yield return new WaitForSeconds(.2f);
 		}
+	}
+
+	public void TriggerEndingSequence()
+	{
+		for (int i = 0; i < NUMBER_OF_OPTIONS; i++)
+		{
+			GameObject button = GameObject.Find("Option" + (i + 1));
+			button.GetComponent<Button>().interactable = false;
+		}
+
+		StartCoroutine(TriggerTheEndingCoroutine());
+	}
+	IEnumerator TriggerTheEndingCoroutine()
+	{
+
+		yield return new WaitForSeconds(45f);
+		
+		for (int i = 0; i < NUMBER_OF_OPTIONS; i++)
+		{
+			GameObject button = GameObject.Find("Option" + (i + 1));
+			button.GetComponent<Button>().interactable = false;
+		}
+		// activate vignette, shrinking 
 	}
 	
 	public override void UpdateRoomChoices(Choice[] choices)

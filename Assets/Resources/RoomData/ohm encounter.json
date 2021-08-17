@@ -4,6 +4,6 @@
     "exits": [],
     "description": "the tunnel gets smaller as you move forward. you walk for a little while, the walls coming closer together. at last, as you can hardly move forward, the walls touching your shoulders, you see Ohm. they are stuck between the two walls.",
     "investigationDescription": "Ohm has moved farther along the passage than you would comfortably be able to. you can see the left side of their body, their head unable to turn, facing away from you.",
-    "effectTriggerName": "firstOrbEncounter"
+    "effectTriggerName": "ohmFinal"
   }
 ]

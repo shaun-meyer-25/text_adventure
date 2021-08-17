@@ -106,9 +106,22 @@ public class VolumeManipulation : MonoBehaviour
          else if (requiredString == "ohmFinal")
          {
              FinalCaveController fc = (FinalCaveController) controller;
-             // get light 
-             // turn light a shade of purple such that we can actually see the text 
-             // profit
+
+             fc.GlobalLight.GetComponent<Animator>().enabled = true;
+             Color color;
+
+             if (ColorUtility.TryParseHtmlString("#FB63FD", out color))
+                 fc.GlobalLight.color = color;
+             // profit 
+         }
+         else if (requiredString == "strangling")
+         {
+             VolumeComponent c = volume.profile.components.Find(o => o.name == "Vignette(Clone)");
+             Vignette vignette = (Vignette) c;
+             vignette.active = true;
+             vignette.color.value = Color.black; 
+
+             StartCoroutine(LosingConsciousness(vignette));
          }
 
          if (requiredString == "caveBearAround")
@@ -124,6 +137,17 @@ public class VolumeManipulation : MonoBehaviour
         {
             offset -= 1f;
             ld.center.Override(new Vector2(-.2f, offset));
+            yield return null;
+        }
+    }
+
+    public IEnumerator LosingConsciousness(Vignette v)
+    {
+        float intensity = 0f;
+        while (intensity <= 1f)
+        {
+            intensity += .0007f;
+            v.intensity.value = intensity;
             yield return null;
         }
     }

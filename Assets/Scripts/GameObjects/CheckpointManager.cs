@@ -286,6 +286,7 @@ public class CheckpointManager : MonoBehaviour
             List<Interaction> interactions =
                 new List<Interaction>(ohm.interactions);
             Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
+            interact.textResponse = "";
             OhmStuck so = ScriptableObject.CreateInstance<OhmStuck>();
             interact.actionResponse = so;
             

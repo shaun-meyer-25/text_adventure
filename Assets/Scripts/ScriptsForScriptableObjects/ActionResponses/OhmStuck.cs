@@ -35,6 +35,8 @@ public class OhmStuck : ActionResponse
 
         controller.LogStringWithReturn("grab Ohm's hand?");
         controller.UpdateRoomChoices(choices.ToArray());
+
+// todo - this is not displaying by letter, it's going all at once
         controller.DisplayLoggedText();
         return true;
     }

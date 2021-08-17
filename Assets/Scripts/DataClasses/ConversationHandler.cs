@@ -82,7 +82,7 @@ public static class ConversationHandler
 			controller.LogStringWithReturn("their grip on your hand tightens to the point of pain. you feel something crunch in your hand.");
 			controller.LogStringWithReturn("there is a scraping sound, several loud cracks. Ohm's head turns, the stone they're pressed against tearing the flesh on their face and breaking the bones.");
 			controller.LogStringWithReturn("a bleeding, mangled face stares as you with eyes glowing the color of the orb. their hand releases yours and quickly wraps around your throat. you struggle to break free from the grip, but it is too tight. you cannot breathe.");
-			
+
         }
 
         controller.isConversing = false;
