@@ -8193,7 +8193,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.54
+  m_Intensity: 0
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -9129,10 +9129,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usableItemList:
   - {fileID: 11400000, guid: ac6ebb975421939429327276c4c6ad81, type: 2}
+  - {fileID: 11400000, guid: fcb676b3963ea4f4dbb72f25d650f78c, type: 2}
   interactableOnly:
   - {fileID: 11400000, guid: 016954a26b3e2f24eb073355a010a5af, type: 2}
   nounsInRoom: []
-  nounsInInventory: []
+  nounsInInventory:
+  - tei's shell
 --- !u!114 &1777755981
 MonoBehaviour:
   m_ObjectHideFlags: 0

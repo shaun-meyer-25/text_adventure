@@ -20,6 +20,7 @@ public class FinalCaveController : IController
 	public bool HigherSnakeSpawnRateActive;
 	public Texture2D TorchSprite;
 	public Light2D GlobalLight;
+	public bool DisabledButtons = false;
 
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
@@ -52,8 +53,6 @@ public class FinalCaveController : IController
 
 		var emission = Particles.emission;
 		emission.enabled = false;
-
-		volumeManipulation.EffectStart(this, "strangling");
 	}
 	
 	public void BatsFlyingStart()
@@ -119,14 +118,33 @@ public class FinalCaveController : IController
 
 	public void TriggerEndingSequence()
 	{
+		DisabledButtons = true;
+		
+		StartCoroutine(TriggerTheEndingCoroutine());
+	}
+	
+	public void TriggerEndingSequenceSecond()
+	{
+		DisabledButtons = true;
+		
+		StartCoroutine(TriggerTheEndingCoroutineSecond());
+	}
+	
+	IEnumerator TriggerTheEndingCoroutineSecond()
+	{
+
+		yield return new WaitForSeconds(33f);
+		
 		for (int i = 0; i < NUMBER_OF_OPTIONS; i++)
 		{
 			GameObject button = GameObject.Find("Option" + (i + 1));
-			button.GetComponent<Button>().interactable = false;
+			button.GetComponent<Button>().interactable = true;
 		}
 
-		StartCoroutine(TriggerTheEndingCoroutine());
+		DisabledButtons = false;
+		volumeManipulation.EffectStart(this, "strangling");
 	}
+	
 	IEnumerator TriggerTheEndingCoroutine()
 	{
 
@@ -135,9 +153,11 @@ public class FinalCaveController : IController
 		for (int i = 0; i < NUMBER_OF_OPTIONS; i++)
 		{
 			GameObject button = GameObject.Find("Option" + (i + 1));
-			button.GetComponent<Button>().interactable = false;
+			button.GetComponent<Button>().interactable = true;
 		}
-		// activate vignette, shrinking 
+
+		DisabledButtons = false;
+		volumeManipulation.EffectStart(this, "strangling");
 	}
 	
 	public override void UpdateRoomChoices(Choice[] choices)
@@ -151,6 +171,8 @@ public class FinalCaveController : IController
 		for (int i = 0; i < NUMBER_OF_OPTIONS; i++) {
 			GameObject button = GameObject.Find("Option" + (i + 1));
 			button.GetComponent<Button>().interactable = true;
+			
+			if (DisabledButtons) button.GetComponent<Button>().interactable = false;
 			
 			Text textObject = button.GetComponentInChildren<Text>();
 
@@ -357,5 +379,11 @@ public class FinalCaveController : IController
 			yield return new WaitForSeconds(processingDelay);
 		}
 
+	}
+
+	public IEnumerator GoodEndingWon()
+	{
+		yield return new WaitForSeconds(70f);
+		levelLoader.LoadScene("Credits");
 	}
 }

@@ -12,14 +12,11 @@
   },
   {
     "chapter": 22,
-    "exits": [{
-      "roomName": "forking path",
-      "keyString": "back",
-      "description": "the only exit seems to be the way you came."},
+    "exits": [
       {
         "roomName": "ohm encounter",
         "keyString": "forward",
-        "description": "you manage to move the stone just far enough to be able to squeeze past. a faint glow, the color of the Orb comes from beyond."}
+        "description": "you manage to move the stone just far enough to be able to squeeze past. a faint glow, the color of the Orb comes from beyond. you must go forward."}
     ],
     "description": "the wriggling beasts move about quickly. the hissing is louder now.",
     "investigationDescription": "the stone could have been moved more quickly by someone stronger than you. perhaps Ohm lies beyond. with the orb.",

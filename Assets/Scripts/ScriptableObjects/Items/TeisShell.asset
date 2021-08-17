@@ -18,5 +18,6 @@ MonoBehaviour:
   interactions:
   - action: {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}
     textResponse: 
-    baseActionResponse: {fileID: 0}
+    baseActionResponse: {fileID: 11400000, guid: 0648b8ddfe87b394f9bc5ccdd7272be7,
+      type: 2}
     actionResponse: {fileID: 0}

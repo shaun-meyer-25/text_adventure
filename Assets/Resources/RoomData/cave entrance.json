@@ -9,5 +9,16 @@
     "description": "you step into the cave. wind echoes through the opening. you see no sign of Ohm.",
     "investigationDescription": "you check the ground for footprints, but there is no disturbance that you can see. there is still some light here. it gets darker further in.",
     "effectTriggerName": ""
+  },
+  {
+    "chapter": 22,
+    "exits": [{
+      "roomName": "forking path",
+      "keyString": "forward",
+      "description": "you came this far. you cannot go back without Ohm. only forward."}
+    ],
+    "description": "wind echoes through the opening. Ohm must be further ahead.",
+    "investigationDescription": "you check the ground for footprints, but there is no disturbance that you can see. there is still some light here. it gets darker further in.",
+    "effectTriggerName": ""
   }
 ]
