@@ -194,6 +194,7 @@ public class CheckpointManager : MonoBehaviour
 
         if (maybeCheckpoint == 13)
         {
+            _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
             _controller.fifthButton.SetActive(true);
             checkpoint = maybeCheckpoint;
             _controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Grow1");
