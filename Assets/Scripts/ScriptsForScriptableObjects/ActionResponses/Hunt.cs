@@ -14,19 +14,17 @@ public class Hunt : ActionResponse
             {
                 controller.roomNavigation.currentRoom.description = "unwise to stay here, the bear could be around, and you do not have a weapon.";
 
-                controller.LogStringWithReturn("Ohm is distracting the beast. you attempt to strike with your spear. your footfalls alert the bear. " +
-                                               "it whirls on you and your spear misses and breaks upon the stone. the beast bellows. Ohm shouts to run, and you do.");
+                controller.levelLoader.LoadScene("FirstBearEncounter");
                 
-                controller.checkpointManager.SetCheckpoint(4);
-                
-                List<Interaction> interactions =
-                    new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
-                Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
-                interaction.textResponse = "Ohm has fled. you should follow.";
+//                List<Interaction> interactions =
+//                    new List<Interaction>(controller.characters.First(o => o.noun.Equals("Ohm")).interactions);
+//                Interaction interaction = interactions.Find(o => o.action.keyword.Equals("interact"));
+//                interaction.textResponse = "Ohm has fled. you should follow.";
             }
             else
             {
-                controller.BearKillsYou();
+                controller.LogStringWithReturn("Ohm signals at you to wait.");
+                return false;
             }
             return true;
 

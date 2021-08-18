@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KillBearWithOrbController : IController
+public class FirstBearEncounterController : IController
 {
     private TextProcessing _textProcessing;
 
@@ -22,7 +22,7 @@ public class KillBearWithOrbController : IController
         displayText.text = "";
         _textProcessing = new TextProcessing(this, processingDelay);
         
-        _textProcessing.DisplayText("you must land a killing blow");
+        _textProcessing.DisplayText("the bear charges towards Ohm. their spear is leveled in defense.");
     }
 
     public IEnumerator TypeSentence(Dictionary<int, Tuple<string, char>> charactersAndTheirColors )

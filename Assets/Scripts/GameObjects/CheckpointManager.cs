@@ -77,15 +77,27 @@ public class CheckpointManager : MonoBehaviour
         }
 
         if (maybeCheckpoint == 4)
-        {
+        {            
             checkpoint = maybeCheckpoint;
+            _controller.isDaytime = true;
+            _controller.SetDaylight();
+            _controller.roomNavigation.currentRoom =
+                _controller.allRoomsInGame.Find(o => o.roomName == "upper foothills");
             _controller.LogStringWithReturn(
-                "you and Ohm successfully flee the vicious bear. it is afternoon now, hunger weighs heavily on you.");
+                "you and Ohm are forced to flee the vicious bear, Ohm fending it back with jabs of their spear. it will go lick its wounds, you will do the same.");
+            _controller.LogStringWithReturn("it is afternoon now, hunger weighs heavily on you.");
             _controller.allRoomsInGame.Find(o => o.roomName == "young forest")
                 .SetInteractableObjectsInRoom(checkpointFourItems.ToArray());
             _controller.LoadRoomData();
             _controller.roomNavigation.SetExitLabels(_controller.roomNavigation.currentRoom
                 .GetExits(_controller.checkpointManager.checkpoint));
+
+            List<InteractableObject> charactersList = new List<InteractableObject>(_controller.characters);
+            InteractableObject ohm = charactersList.Find(o => o.name == "Ohm");
+            charactersList.Remove(ohm);
+            _controller.allRoomsInGame.Find(o => o.roomName == "home cave").SetPeopleInRoom(charactersList.ToArray());
+            _controller.roomNavigation.currentRoom.SetPeopleInRoom(new[] {ohm});
+            _controller.travelingCompanions.Add(ohm);
         }
 
         if (maybeCheckpoint == 5)
@@ -116,8 +128,6 @@ public class CheckpointManager : MonoBehaviour
                     new List<Interaction>(person.interactions);
                 Interaction interact = interactions.Find(o => o.action.keyword.Equals("interact"));
                 interact.actionResponse = ScriptableObject.CreateInstance<OhmAsksToHoldOrb>();
-                Debug.Log("WHEN WE SET CHAPTER 8 ppl The ROOM NAME IS - " +
-                          _controller.roomNavigation.currentRoom.roomName);
                 _controller.roomNavigation.currentRoom.SetPeopleInRoom(_controller.characters);
             }
         }

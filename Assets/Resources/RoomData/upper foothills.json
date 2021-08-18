@@ -47,7 +47,7 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ],
-    "description": "the bear from earlier is nowhere to be seen, but this is still its home. it is not safe.",
+    "description": "the bear is nowhere to be seen, but this is still its home. it is not safe.",
     "investigationDescription": "you see the hollow where the bear lives, visions of its deadly claws flashing through your mind. you dare not get close enough to see if it is still around.",
     "effectTriggerName": ""
   },
