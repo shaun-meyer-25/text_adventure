@@ -5583,6 +5583,11 @@ PrefabInstance:
       propertyPath: Controller
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1278991858333495555, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1598040375253437076, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_IsActive
@@ -9058,6 +9063,7 @@ MonoBehaviour:
   isThirdButtonDisabled: 0
   isSecondButtonDisabled: 0
   buttonWrapAnimator: {fileID: 0}
+  TravelingUI: {fileID: 0}
   exitNames: []
   exitChoices: []
   isInteracting: 0
@@ -9101,6 +9107,7 @@ MonoBehaviour:
   HigherSnakeSpawnRateActive: 0
   TorchSprite: {fileID: 2800000, guid: 343eb69969266654a825e1a4fd8ef36a, type: 3}
   GlobalLight: {fileID: 1135893759}
+  DisabledButtons: 0
 --- !u!4 &1777755979
 Transform:
   m_ObjectHideFlags: 0

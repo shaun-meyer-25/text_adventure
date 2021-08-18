@@ -10,7 +10,7 @@ public class TravelingWithUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        t.color = Color.gray;
     }
 
     // Update is called once per frame
