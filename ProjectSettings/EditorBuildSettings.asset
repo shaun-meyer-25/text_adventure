@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nightmare.unity
     guid: da04d3d32fcc2e047bb290a91eeb5ed4
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 2d188c169329afd41a5021c2bf2d355f
   m_configObjects: {}
