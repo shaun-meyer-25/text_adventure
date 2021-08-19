@@ -264,6 +264,14 @@ public class CheckpointManager : MonoBehaviour
             _controller.LoadRoomData();
 
         }
+
+        if (maybeCheckpoint == 18)
+        {
+            // if ohm held the orb earlier, remove him from the room
+            // i need to write up room descriptions and shit for chapter 21
+            // figure out what room ohm is going to flee to. probably will just flee up the rocks to the east?
+            // how do i return to chapter 14 from here if we are on the bad ending course? 
+        }
         
         if (maybeCheckpoint == 20)
         {

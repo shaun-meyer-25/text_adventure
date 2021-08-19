@@ -172,7 +172,7 @@ public class RoomNavigation : MonoBehaviour {
 				.Find(o => o.name == "Tei");
 			Interaction interaction =
 				new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact"));
-			interaction.textResponse = "Tei has a brightness in their eyes as they go with you towards your usual place.";
+			interaction.textResponse = "Tei has a brightness in their eyes as they go with you towards your usual place. the storm has stopped for now and they seem happy to be out of the cave.";
 		}
 	}
 

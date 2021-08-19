@@ -22,6 +22,7 @@ public class GiveTeiShell : ActionResponse
                 "you feel whole, calm, in a way you have not felt in a long time. maybe you will survive. maybe you will all survive.");
             controller.LogStringWithReturn("you obtain Tei's shell");
             controller.interactableItems.nounsInInventory.Add("tei's shell");
+            StaticDataHolder.instance.NounsInInventory.Add("tei's shell");
             return true;
         }
         
