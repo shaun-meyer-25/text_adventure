@@ -389,9 +389,9 @@
         "description": "the forest continues to the north"
       },
       {
-        "roomName": "lower foothills",
+        "roomName": "<color=purple>lower foothills</color>",
         "keyString": "east",
-        "description": "the forest thins as the ground gets higher and rockier to the east"
+        "description": "the orb calls to you from the east."
       },
       {
         "roomName": "outside home",
@@ -399,7 +399,7 @@
         "description": "home lies outside of the woods to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the old bones of the forest rattle in the wind. it seems as if the forest itself is angry.",
+    "investigationDescription": "they followed the southern edge of the forest. broken twigs, disturbed brush mark the path."
   }
 ]

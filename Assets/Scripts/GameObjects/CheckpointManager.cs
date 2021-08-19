@@ -267,15 +267,22 @@ public class CheckpointManager : MonoBehaviour
 
         if (maybeCheckpoint == 18)
         {
-            if (!StaticDataHolder.instance.ohmHeldOrb)
+         //   VolumeManipulation.EffectStart("wounded");
+            if (_controller.interactableItems.nounsInInventory.Contains("shell"))
             {
-                
-                SetBadEndingCourse();
+                _controller.LogStringWithReturn("your eyes widen, your fists clench. you feel a sharp pain as something in your hand cracks. " +
+                                                "you raise your hand to the dim light to look at it. the broken shards of the shell you found for Tei protrude from your bleeding hand.");
             }
-            // if ohm held the orb earlier, remove him from the room
-            // i need to write up room descriptions and shit for chapter 21
-            // figure out what room ohm is going to flee to. probably will just flee up the rocks to the east?
-            // how do i return to chapter 14 from here if we are on the bad ending course? 
+
+            if (_controller.interactableItems.nounsInInventory.Contains("tei's shell"))
+            {
+                _controller.LogStringWithReturn("your eyes widen, your fists clench. you feel a sharp pain in your hand. you raise your hand to the dim light to look at it. " +
+                                                "the shell that Tei gave you lies in your palm, blood filling the crevices in its perfect form.");
+            }
+            
+            _controller.LogStringWithReturn("you stare in shock at the wound. you hear Nua cry out. you see Ohm fleeing from the cave with the last spear. <color=purple>RECLAIM THE ORB. IT HAS BEEN TAKEN.</color>");
+            _controller.travelingCompanions.Remove(_controller.characters.First(o => o.name == "Tei"));
+            _controller.roomNavigation.currentRoom.RemovePersonFromRoom("Ohm");
         }
         
         if (maybeCheckpoint == 20)

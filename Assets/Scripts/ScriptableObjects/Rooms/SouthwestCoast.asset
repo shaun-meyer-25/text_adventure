@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Name: SouthwestCoast
   m_EditorClassIdentifier: 
   description: the sea surrounds you. it is mighty.
-  roomInvestigationDescription: 'grasslands to the north.
+  roomInvestigationDescription: 'grasslands to the north..
 
     the sea surrounds you on the east, south, and west.'
   roomName: peninsula
   exits:
   - keyString: north
-    exitDescription: grasslands to the north.
+    exitDescription: grasslands to the north..
     valueRoom: {fileID: 11400000, guid: b862231ee3e5bb548b57e557f3a6a18a, type: 2}
   roomActions:
   - {fileID: 11400000, guid: 5f5857d198f314673892981ff431298b, type: 2}

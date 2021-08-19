@@ -5,7 +5,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -28,7 +28,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -50,7 +50,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -72,7 +72,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -94,7 +94,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -116,7 +116,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -138,7 +138,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -160,7 +160,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -182,7 +182,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -204,7 +204,7 @@
       {
         "roomName": "<color=red>young forest</color>",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -226,7 +226,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -248,7 +248,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -270,7 +270,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -292,7 +292,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -314,7 +314,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -336,7 +336,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -358,7 +358,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -380,7 +380,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -402,7 +402,7 @@
       {
         "roomName": "young forest",
         "keyString": "east",
-        "description": "forest to the east"
+        "description": "forest to the east."
       },
       {
         "roomName": "outside home",
@@ -415,8 +415,8 @@
         "description": "the grasslands continue to the west"
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "a restless wind blows across the plain. it sends a chill across your skin.",
+    "investigationDescription": "there are no signs that Ohm was here."
   },
   {
     "chapter": 20,

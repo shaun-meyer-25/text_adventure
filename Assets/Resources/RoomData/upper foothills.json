@@ -201,8 +201,8 @@
       "keyString": "south",
       "description": "the watering hole lies to the south"}
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO",
+    "description": "the foothills here are treacherous. you see no sign of Ohm.",
+    "investigationDescription": "there are no signs that Ohm was here.",
     "effectTriggerName": ""
   }
 ]

@@ -404,6 +404,8 @@
         "keyString": "west",
         "description": "the grasslands begin to the west"
       }
-    ]
+    ],
+    "description": "the woods are far too easy to get lost in. Ohm will not be found here.",
+    "investigationDescription": "there are no signs that Ohm was here."
   }
 ]

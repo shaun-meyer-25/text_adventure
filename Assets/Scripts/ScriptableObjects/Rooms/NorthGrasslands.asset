@@ -15,7 +15,7 @@ MonoBehaviour:
   roomInvestigationDescription: 'endless plains to the north. should not wander too
     far away.
 
-    forest to the east.
+    forest to the east..
 
     home lies to the south.
 
@@ -23,7 +23,7 @@ MonoBehaviour:
   roomName: wooded grasslands
   exits:
   - keyString: east
-    exitDescription: forest to the east.
+    exitDescription: forest to the east..
     valueRoom: {fileID: 11400000, guid: f83faa7884e83684c8cc6d7da6013844, type: 2}
   - keyString: south
     exitDescription: home cave nearby.

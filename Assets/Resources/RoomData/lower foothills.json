@@ -322,9 +322,14 @@
         "roomName": "old forest",
         "keyString": "west",
         "description": "the rocky terrain levels out and gives way to forest to the west"
+      },
+      {
+        "roomName": "<color=purple>mountains</color>",
+        "keyString": "east",
+        "description": "the orb calls to you from the east. from the mountains."
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "Ohm has moved quickly up the rocky foothills. the orb scratches at the inside of your head. it pains you to be apart from it. you must get to Ohm.",
+    "investigationDescription": "Ohm makes eye contact with you from their vantage at the top of the foothills. they turn and run further into the mountains."
   }
 ]

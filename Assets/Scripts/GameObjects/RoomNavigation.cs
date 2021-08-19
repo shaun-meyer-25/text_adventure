@@ -166,7 +166,7 @@ public class RoomNavigation : MonoBehaviour {
 			throw new Exception("stop scene");
 		}
 
-		if (currentRoom.roomName == "outside home" && controller.checkpointManager.checkpoint == 20)
+		if (currentRoom.roomName == "outside home" && controller.checkpointManager.checkpoint == 20 && !HasShell())
 		{
 			InteractableObject person = new List<InteractableObject>(controller.characters)
 				.Find(o => o.name == "Tei");
@@ -174,8 +174,19 @@ public class RoomNavigation : MonoBehaviour {
 				new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact"));
 			interaction.textResponse = "Tei has a brightness in their eyes as they go with you towards your usual place. the storm has stopped for now and they seem happy to be out of the cave.";
 		}
+		
+		if (currentRoom.roomName == "home cave" && controller.checkpointManager.checkpoint == 20 && HasShell())
+		{
+			controller.checkpointManager.SetCheckpoint(18);
+		}
 	}
 
+	private bool HasShell()
+	{
+		return controller.interactableItems.nounsInInventory.Contains("shell") ||
+		        controller.interactableItems.nounsInInventory.Contains("tei's shell");
+	}
+	
 	public void SetExitLabels(Exit[] choices)
 	{
 		List<Exit> listOfExits = new List<Exit>(choices);
