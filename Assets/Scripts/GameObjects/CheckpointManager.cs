@@ -267,6 +267,11 @@ public class CheckpointManager : MonoBehaviour
 
         if (maybeCheckpoint == 18)
         {
+            if (!StaticDataHolder.instance.ohmHeldOrb)
+            {
+                
+                SetBadEndingCourse();
+            }
             // if ohm held the orb earlier, remove him from the room
             // i need to write up room descriptions and shit for chapter 21
             // figure out what room ohm is going to flee to. probably will just flee up the rocks to the east?
@@ -330,7 +335,7 @@ public class CheckpointManager : MonoBehaviour
             }
         }
 
-        if (maybeCheckpoint - previousCheckpoint >= 1)
+        if (maybeCheckpoint - previousCheckpoint != 0)
         {
             SaveGameManager.SaveGame(_controller);
         }
