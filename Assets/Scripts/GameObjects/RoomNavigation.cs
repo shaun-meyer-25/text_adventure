@@ -179,6 +179,14 @@ public class RoomNavigation : MonoBehaviour {
 		{
 			controller.checkpointManager.SetCheckpoint(18);
 		}
+
+		if (currentRoom.roomName == "mountains4" && controller.checkpointManager.checkpoint == 18)
+		{
+			//controller.checkpointManager.SetCheckpoint(21);
+			StaticDataHolder.instance.Checkpoint = 21;
+			controller.levelLoader.LoadScene("Final Cave");
+			throw new Exception("stop scene");
+		}
 	}
 
 	private bool HasShell()

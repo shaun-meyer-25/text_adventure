@@ -9,7 +9,6 @@ public class StaticDataHolder : MonoBehaviour
 
     public int Checkpoint;
     public List<string> NounsInInventory;
-    public bool ohmHeldOrb = false;
 
     void Awake()
     {

@@ -267,6 +267,8 @@ public class CheckpointManager : MonoBehaviour
 
         if (maybeCheckpoint == 18)
         {
+            checkpoint = maybeCheckpoint;
+            _controller.LogStringWithReturn("you enter the cave and see Nua playing with the orb, rolling it back and forth on the ground and laughing.");
          //   VolumeManipulation.EffectStart("wounded");
             if (_controller.interactableItems.nounsInInventory.Contains("shell"))
             {

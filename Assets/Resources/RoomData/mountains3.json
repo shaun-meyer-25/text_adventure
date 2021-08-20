@@ -10,5 +10,16 @@
     "description": "<color=purple>there is a cave ahead. surely they went in there. you must find them.</color> Ohm lies still on the rocks behind you. rain runs over their staring eyes. <color=purple>they will be fine. leave them for now.</color>",
     "investigationDescription": "<color=purple>DELAY NO</color>snapped off the leg, trapped and screaming<color=purple>LONGER. THE CAVE.</color>",
     "effectTriggerName": ""
+  },
+  {
+    "chapter": 18,
+    "exits": [{
+      "roomName": "mountains4",
+      "keyString": "cave",
+      "description": "you arrive at the cave that Ohm entered. you must find them."}
+    ],
+    "description": "<color=purple>they are not far ahead. you can still reclaim the orb. join them.</color>",
+    "investigationDescription": "<color=purple>enter.</color>",
+    "effectTriggerName": ""
   }
 ]

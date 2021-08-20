@@ -16,5 +16,16 @@
     "description": "",
     "investigationDescription": "Ohm lies still on the rocks. their eyes do not see you. <color=purple>they will be fine. leave them for now.</color>",
     "effectTriggerName": ""
+  },
+  {
+    "chapter": 18,
+    "exits": [{
+      "roomName": "mountains3",
+      "keyString": "forward",
+      "description": "Ohm moves forward with a speed you cannot match. you see them dart into a cave up ahead."}
+    ],
+    "description": "",
+    "investigationDescription": "you notice bloody footprints on the stone, washing away in the rain.",
+    "effectTriggerName": ""
   }
 ]
