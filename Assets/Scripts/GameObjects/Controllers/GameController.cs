@@ -213,6 +213,10 @@ public class GameController : IController {
 			travelingCompanions = DescribeTravelingCompanions(combinedText);
 		}
 
+		foreach (var VARIABLE in interactionDescriptionsInRoom)
+		{
+			Debug.Log(VARIABLE);
+		}
 		string joinedInteractionDescriptions = string.Join ("\n", interactionDescriptionsInRoom.ToArray ());
 		combinedText = roomNavigation.currentRoom.GetDescription(checkpointManager.checkpoint);
 		// + "\n" + joinedInteractionDescriptions + "\n" + combinedText;

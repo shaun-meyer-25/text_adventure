@@ -168,8 +168,11 @@ public class InteractableItems : MonoBehaviour
     {
         List<InteractableObject> target =
             new List<InteractableObject>(controller.roomNavigation.currentRoom.InteractableObjectsInRoom);
-        
+        InteractableObject item = target.Find(o => o.noun.Equals(noun));
+
         target.RemoveAll(o => o.noun.Equals(noun));
         controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(target.ToArray());
+
+        controller.interactionDescriptionsInRoom.Remove(item.description);
     }
 }
