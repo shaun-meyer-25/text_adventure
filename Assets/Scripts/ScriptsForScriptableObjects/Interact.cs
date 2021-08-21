@@ -22,7 +22,7 @@ public class Interact : ActionChoice
                 }
                 else
                 {
-                    controller.LogStringWithReturn("you see no objects nearby");
+                    controller.LogStringWithReturn("you see no objects nearby.");
                     controller.UpdateRoomChoices(controller.startingActions);
                     controller.isInteracting = false;
                 }
@@ -37,7 +37,7 @@ public class Interact : ActionChoice
                 }
                 else
                 {
-                    controller.LogStringWithReturn("nobody around yet");
+                    controller.LogStringWithReturn("there is no one around.");
                     controller.UpdateRoomChoices(controller.startingActions);
                     controller.isInteracting = false;
                 }

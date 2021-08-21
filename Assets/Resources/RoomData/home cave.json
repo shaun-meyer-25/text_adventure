@@ -4,7 +4,7 @@
           "exits": [{
             "roomName": "outside home", 
             "keyString": "outside",
-            "description": "light filters in from outside"}
+            "description": "light filters in from outside."}
           ],
           "description": "the fire is low, you should go to the forest and look for wood.",
           "investigationDescription": "the fire is low, you should go to the forest and look for wood.",
@@ -15,7 +15,7 @@
           "exits": [{
             "roomName": "outside home",
             "keyString": "outside",
-            "description": "light filters in from outside"}
+            "description": "light filters in from outside."}
           ],
           "description": "the cave is full of life now. the others in your group are going about their day.",
           "investigationDescription": "the fire illuminates the inside of the cave.",
@@ -26,7 +26,7 @@
           "exits": [{
             "roomName": "outside home",
             "keyString": "outside",
-            "description": "light filters in from outside"}
+            "description": "light filters in from outside."}
           ],
           "description": "the cave is full of life now. the others in your group are going about their day.",
           "investigationDescription": "the fire illuminates the inside of the cave.",
@@ -37,7 +37,7 @@
           "exits": [{
             "roomName": "outside home",
             "keyString": "outside",
-            "description": "light filters in from outside"}
+            "description": "light filters in from outside."}
           ],
           "description": "midday now. someone has rekindled the fire since you left earlier.",
           "investigationDescription": "the fire illuminates the inside of the cave. Tei is at the wall, scratching an image onto the wall with the burnt end of a stick.",
@@ -48,7 +48,7 @@
           "exits": [{
             "roomName": "outside home",
             "keyString": "outside",
-            "description": "light filters in from outside"}
+            "description": "light filters in from outside."}
           ],
           "description": "there is a sullen look in the eyes of the others. fear, disappointment, bitterness.",
           "investigationDescription": "the atmosphere of the room is heavy. you feel you should not say anything.",
@@ -92,7 +92,7 @@
     "exits": [{
       "roomName": "outside home",
       "keyString": "outside",
-      "description": "light filters in from outside"
+      "description": "light filters in from outside."
     }],
     "description": "the others look at you curiously. do they wish for explanation?",
     "investigationDescription": "the others are focused on the orb you now carry in your hand.",
@@ -103,7 +103,7 @@
     "exits": [{
       "roomName": "outside home",
       "keyString": "outside",
-      "description": "light filters in from outside."
+      "description": "light filters in from outside.."
     }],
     "description": "someone has already tended to the fire today. it cracks and burns.",
     "investigationDescription": "the others look at you strangely. the odd looks do not sit well with you.",
@@ -125,7 +125,7 @@
     "exits": [{
       "roomName": "outside home",
       "keyString": "outside",
-      "description": "light filters in from outside."
+      "description": "light filters in from outside.."
     }],
     "description": "there is reason to celebrate in the cave at last. the atmosphere of fear and tension is gone for now.",
     "investigationDescription": "everyone is excitable and celebratory.",
