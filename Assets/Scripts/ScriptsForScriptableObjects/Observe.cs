@@ -36,7 +36,7 @@ public class Observe : ActionChoice
             {
                 Room room = controller.roomNavigation.currentRoom;
                 
-                string joinedInteractionDescriptions = string.Join ("\n", controller.interactionDescriptionsInRoom.ToArray ());
+                string joinedInteractionDescriptions = string.Join ("\n\n", controller.interactionDescriptionsInRoom.ToArray ());
 
                 for (int i = 0; i < room.exitChoices(controller.checkpointManager.checkpoint).Count; i++)
                 {

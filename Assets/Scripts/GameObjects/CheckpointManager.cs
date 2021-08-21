@@ -286,11 +286,11 @@ public class CheckpointManager : MonoBehaviour
 
             if (_controller.interactableItems.nounsInInventory.Contains("tei's shell"))
             {
-                _controller.LogStringWithReturn("your eyes widen, your fists clench. you feel a sharp pain in your hand. you raise your hand to the dim light to look at it. " +
+                _controller.LogStringWithReturn("your eyes widen. your fists clench, but you feel a sharp pain in your hand. you raise your hand to the dim light to look at it. " +
                                                 "the shell that Tei gave you lies in your palm, blood filling the crevices in its perfect form.");
             }
             
-            _controller.LogStringWithReturn("you stare in shock at the wound. you hear Nua cry out. you see Ohm fleeing from the cave. <color=purple>they have taken the orb, they are going somewhere dark. take a torch from the fire. follow them. you can still reclaim what is yours.</color>");
+            _controller.LogStringWithReturn("you stare in shock at the wound. you hear Nua cry out. you see Ohm fleeing from the cave. <color=purple>they have taken the orb. take a torch from the fire, you will need it to follow them. you must reclaim what is yours.</color>");
             _controller.travelingCompanions.Remove(_controller.characters.First(o => o.name == "Tei"));
             _controller.roomNavigation.currentRoom.RemovePersonFromRoom("Ohm");
         }
