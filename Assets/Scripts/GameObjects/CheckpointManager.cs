@@ -26,6 +26,7 @@ public class CheckpointManager : MonoBehaviour
     public InteractableObject checkpointNineBear;
     public InteractableObject checkpointTwentyStone;
     public InteractableObject shell;
+    public InteractableObject torch;
     [HideInInspector] public int checkpoint;
 
     private void OnEnable()
@@ -268,8 +269,15 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 18)
         {
             checkpoint = maybeCheckpoint;
+
+        }
+
+        if (maybeCheckpoint == 19)
+        {
+            checkpoint = maybeCheckpoint;
+            _controller.processingDelay = 0.05f;
             _controller.LogStringWithReturn("you enter the cave and see Nua playing with the orb, rolling it back and forth on the ground and laughing.");
-         //   VolumeManipulation.EffectStart("wounded");
+            //   VolumeManipulation.EffectStart("wounded");
             if (_controller.interactableItems.nounsInInventory.Contains("shell"))
             {
                 _controller.LogStringWithReturn("your eyes widen, your fists clench. you feel a sharp pain as something in your hand cracks. " +
@@ -282,7 +290,7 @@ public class CheckpointManager : MonoBehaviour
                                                 "the shell that Tei gave you lies in your palm, blood filling the crevices in its perfect form.");
             }
             
-            _controller.LogStringWithReturn("you stare in shock at the wound. you hear Nua cry out. you see Ohm fleeing from the cave with the last spear. <color=purple>RECLAIM THE ORB. IT HAS BEEN TAKEN.</color>");
+            _controller.LogStringWithReturn("you stare in shock at the wound. you hear Nua cry out. you see Ohm fleeing from the cave. <color=purple>they have taken the orb, they are going somewhere dark. take a torch from the fire. follow them. you can still reclaim what is yours.</color>");
             _controller.travelingCompanions.Remove(_controller.characters.First(o => o.name == "Tei"));
             _controller.roomNavigation.currentRoom.RemovePersonFromRoom("Ohm");
         }

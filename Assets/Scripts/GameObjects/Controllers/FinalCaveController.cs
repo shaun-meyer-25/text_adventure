@@ -43,11 +43,7 @@ public class FinalCaveController : IController
 	{
 		audio = FindObjectOfType<AudioSource>();
 		checkpointManager.SetCheckpoint(StaticDataHolder.instance.Checkpoint);
-		foreach (var n in StaticDataHolder.instance.NounsInInventory)
-		{
-			Debug.Log("adding item");
-			//interactableItems.nounsInInventory.Add(n);
-		}
+
 		displayText.text = "";
 		LogStringWithReturn("you walk into the entrance of the cave that you saw Ohm enter. it is very dark. you use your torch to see.");
 		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
@@ -58,6 +54,11 @@ public class FinalCaveController : IController
 
 		var emission = Particles.emission;
 		emission.enabled = false;
+
+		if (interactableItems.nounsInInventory.Contains("torch"))
+		{
+			interactableItems.nounsInInventory.Remove("torch");
+		}
 	}
 	
 	public void BatsFlyingStart()

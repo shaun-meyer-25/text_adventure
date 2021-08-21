@@ -200,8 +200,15 @@
       "keyString": "outside",
       "description": "Ohm fled out the entrance. you may be able to catch them, track them."
     }],
-    "description": "a familiar feeling envelops you. a room that is emptier than it should be.",
-    "investigationDescription": "the ones that remain here show their fear on their faces.",
+    "description": "",
+    "investigationDescription": "a familiar feeling envelops you. a room that is emptier than it should be.",
+    "effectTriggerName": ""
+  },
+  {
+    "chapter": 19,
+    "exits": [],
+    "description": "",
+    "investigationDescription": "<color=purple>you must take a torch. darkness ahead.</color>",
     "effectTriggerName": ""
   },
   {

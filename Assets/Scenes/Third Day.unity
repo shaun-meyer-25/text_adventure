@@ -749,6 +749,7 @@ MonoBehaviour:
   checkpointNineBear: {fileID: 11400000, guid: bb721676d96e36145a3be4539150ad59, type: 2}
   checkpointTwentyStone: {fileID: 0}
   shell: {fileID: 11400000, guid: d11e2ffcd18ef2347b1ddf80698fa58f, type: 2}
+  torch: {fileID: 11400000, guid: afa8d8ff0fa72e344999f7111a46bec5, type: 2}
   checkpoint: 0
 --- !u!114 &1347101011
 MonoBehaviour:
@@ -783,6 +784,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bb721676d96e36145a3be4539150ad59, type: 2}
   - {fileID: 11400000, guid: d11e2ffcd18ef2347b1ddf80698fa58f, type: 2}
   - {fileID: 11400000, guid: fcb676b3963ea4f4dbb72f25d650f78c, type: 2}
+  - {fileID: 11400000, guid: afa8d8ff0fa72e344999f7111a46bec5, type: 2}
   interactableOnly: []
   nounsInRoom: []
   nounsInInventory: []

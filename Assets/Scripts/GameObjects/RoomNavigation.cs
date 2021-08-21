@@ -175,9 +175,19 @@ public class RoomNavigation : MonoBehaviour {
 			interaction.textResponse = "Tei has a brightness in their eyes as they go with you towards your usual place. the storm has stopped for now and they seem happy to be out of the cave.";
 		}
 		
+		if (currentRoom.roomName == "peninsula" && controller.checkpointManager.checkpoint == 20 && !HasShell())
+		{
+			InteractableObject person = new List<InteractableObject>(controller.characters)
+				.Find(o => o.name == "Tei");
+			Interaction interaction =
+				new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact"));
+			interaction.textResponse = "";
+		}
+		
 		if (currentRoom.roomName == "home cave" && controller.checkpointManager.checkpoint == 20 && HasShell())
 		{
-			controller.checkpointManager.SetCheckpoint(18);
+			controller.checkpointManager.SetCheckpoint(19);
+			currentRoom.AddObjectToRoom(controller.checkpointManager.torch);
 		}
 
 		if (currentRoom.roomName == "mountains4" && controller.checkpointManager.checkpoint == 18)

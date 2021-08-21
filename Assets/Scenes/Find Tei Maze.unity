@@ -541,6 +541,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1709042832932274984, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3484288918915872397, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_IsActive
@@ -12084,6 +12089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Checkpoint: 13
+  NounsInInventory: []
 --- !u!4 &1124514029
 Transform:
   m_ObjectHideFlags: 0
@@ -18810,6 +18816,8 @@ MonoBehaviour:
   checkpointFourItems: []
   checkpointFiveItems: []
   checkpointNineBear: {fileID: 0}
+  checkpointTwentyStone: {fileID: 0}
+  shell: {fileID: 0}
   checkpoint: 0
 --- !u!1001 &7237151008686639005
 PrefabInstance:
