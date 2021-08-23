@@ -269,7 +269,7 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 18)
         {
             checkpoint = maybeCheckpoint;
-
+            _controller.LoadRoomData();
         }
 
         if (maybeCheckpoint == 19)
@@ -293,6 +293,7 @@ public class CheckpointManager : MonoBehaviour
             _controller.LogStringWithReturn("you stare in shock at the wound. you hear Nua cry out. you see Ohm fleeing from the cave. <color=purple>they have taken the orb. take a torch from the fire, you will need it to follow them. you must reclaim what is yours.</color>");
             _controller.travelingCompanions.Remove(_controller.characters.First(o => o.name == "Tei"));
             _controller.roomNavigation.currentRoom.RemovePersonFromRoom("Ohm");
+            _controller.fifthButton.SetActive(false);
         }
         
         if (maybeCheckpoint == 20)

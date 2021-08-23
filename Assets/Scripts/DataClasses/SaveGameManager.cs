@@ -15,7 +15,6 @@ public static class SaveGameManager
         game.actionLog = controller.actionLog;
         game.checkpointReached = controller.checkpointManager.checkpoint;
         game.currentScene = SceneManager.GetActiveScene().name;
-        //game.fireLevel = controller.fire.fireLevel;
         game.nounsInInventory = controller.interactableItems.nounsInInventory;
         game.travelingCompanions = controller.travelingCompanions.Select(o => o.name).ToList();
         game.currentRoom = controller.roomNavigation.currentRoom.roomName;
@@ -23,20 +22,20 @@ public static class SaveGameManager
         game.currentTextColor = controller.currentColor;
 
         StaticDataHolder.instance.Checkpoint = controller.checkpointManager.checkpoint;
-        /*
+        
         for (int i = 0; i < controller.allRoomsInGame.Count; i++)
         {
             if (controller.allRoomsInGame[i].PeopleInRoom.Length > 0)
             {
-        //        Debug.Log("room name is " + controller.allRoomsInGame[i].roomName); 
+                Debug.Log("room name is " + controller.allRoomsInGame[i].roomName); 
                 for (int j = 0; j < controller.allRoomsInGame[i].PeopleInRoom.Length; j++)
                 {
-          //          Debug.Log("the person name is - " + controller.allRoomsInGame[i].PeopleInRoom[j].name);
+                    Debug.Log("the person name is - " + controller.allRoomsInGame[i].PeopleInRoom[j].name);
                     game.mapOfPeopleToLocation.Add(controller.allRoomsInGame[i].PeopleInRoom[j].name, 
                         controller.allRoomsInGame[i].roomName);
                 }
             }
-        } */
+        } 
 
         for (int i = 0; i < controller.allRoomsInGame.Count; i++)
         {
@@ -69,7 +68,6 @@ public static class SaveGameManager
         else
         {
             Debug.Log("no save file");
-            SceneManager.LoadScene("Main");
             return null;
         }
     }

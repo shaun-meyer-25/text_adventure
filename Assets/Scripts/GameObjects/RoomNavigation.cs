@@ -65,11 +65,11 @@ public class RoomNavigation : MonoBehaviour {
 
 			if (directionNoun == "sleep")
 			{
-				controller.LogStringWithReturn("you go to sleep");
+				controller.LogStringWithReturn("you go to sleep.");
 			}
 			else
 			{
-				controller.LogStringWithReturn("you go " + directionNoun);
+				controller.LogStringWithReturn("you go " + directionNoun + ".");
 			}
 
 			for (int i = 0; i < controller.travelingCompanions.Count; i++)
@@ -148,11 +148,6 @@ public class RoomNavigation : MonoBehaviour {
 			controller.checkpointManager.SetCheckpoint(10);
 		}
 
-		if (currentRoom.roomName == "old forest" && controller.checkpointManager.checkpoint == 12)
-		{
-			controller.checkpointManager.SetCheckpoint(13);
-		}
-		
 		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 13)
 		{
 			controller.checkpointManager.SetCheckpoint(14);

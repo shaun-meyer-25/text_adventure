@@ -17,12 +17,12 @@ MonoBehaviour:
   description: a large tree branch lies on the ground
   interactions:
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-    textResponse: you take the tree branch
+    textResponse: you take the tree branch.
     baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}
   - action: {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
     textResponse: a large tree branch lies on the ground, dry enough to feed the
-      fire
+      fire.
     baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}
   - action: {fileID: 11400000, guid: cb950909bdc30df4786e3400ef29d971, type: 2}

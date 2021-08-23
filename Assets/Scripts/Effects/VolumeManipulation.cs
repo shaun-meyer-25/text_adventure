@@ -66,7 +66,7 @@ public class VolumeManipulation : MonoBehaviour
              ChromaticAberration ca = 
                  (ChromaticAberration) volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
              c.active = true; 
-             StartCoroutine(PulseMultiple(bloom, ca));
+             StartCoroutine(PulseOnce(bloom, ca));
          }
 
          if (requiredString == "fallingNightmare")
@@ -171,9 +171,9 @@ public class VolumeManipulation : MonoBehaviour
      }
 
 
-    public IEnumerator PulseMultiple(Bloom bloom, ChromaticAberration ca)
+    public IEnumerator PulseOnce(Bloom bloom, ChromaticAberration ca)
     {
-        float seconds = 5;
+        float seconds = 1.5f;
 
         while (seconds > 0)
         {
@@ -182,6 +182,9 @@ public class VolumeManipulation : MonoBehaviour
             seconds -= Time.deltaTime;
             yield return null;
         }
+
+        bloom.intensity.value = 0f;
+        ca.intensity.value = 0f;
     }
 
      public IEnumerator SwellThenFizzle(IController controller, Bloom bloom)

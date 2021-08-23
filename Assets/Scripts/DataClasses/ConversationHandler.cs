@@ -18,7 +18,7 @@ public static class ConversationHandler
 
         if (response == "yes" && controller.checkpointManager.checkpoint == 8)
         {
-            controller.volumeManipulation.EffectStart(controller, "firstOrbEncounter");
+            controller.volumeManipulation.EffectStart(controller, "firstOrbUse");
             controller.LogStringWithReturn("<color=purple>you refuse to hand it to them</color>");
             controller.LogStringWithReturn("Ohm looks at you strangely, but does not protest.");
             SetOhmInteraction(controller);

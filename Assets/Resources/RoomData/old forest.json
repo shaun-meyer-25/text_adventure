@@ -266,24 +266,9 @@
   {
     "chapter": 12,
     "exits": [
-      {
-        "roomName": "young forest",
-        "keyString": "north",
-        "description": "the forest continues to the north."
-      },
-      {
-        "roomName": "lower foothills",
-        "keyString": "east",
-        "description": "the forest thins as the ground gets higher and rockier to the east."
-      },
-      {
-        "roomName": "outside home",
-        "keyString": "west",
-        "description": "home lies outside of the woods to the west."
-      }
     ],
-    "description": "the forest here is old, a good place to find dry fuel when you need it. with the light in the sky exactly overhead, you can just make it out through the trees.",
-    "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home."
+    "description": "you see no sign of Tei on the outskirts of the old woods. they must be here somewhere. desperation claws at your mind.",
+    "investigationDescription": "darkness peers out at you from the depths of the woods. surely Tei would not have gone in there...? <color=purple>the orb responds to your desperation.</color>"
   },
   {
     "chapter": 13,

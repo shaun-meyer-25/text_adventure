@@ -40,12 +40,10 @@ public class ContinueScreen : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("OnSceneLoaded: " + scene.name);
-        if (scene.name == "Main")
-        {
-            _controller = (IController) GameObject.FindObjectOfType(typeof(IController));
-            SaveGameManager.PopulateGameData(_saveGame, _controller);
-        }
-
+        
+        _controller = (IController) GameObject.FindObjectOfType(typeof(IController)); 
+        SaveGameManager.PopulateGameData(_saveGame, _controller);
+        
         Debug.Log(mode);
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
