@@ -23,10 +23,14 @@ public class LevelLoader : MonoBehaviour
     private static readonly int Start1 = Animator.StringToHash("Start");
     private static readonly int Opacity = Shader.PropertyToID("_Opacity");
 
+    private void OnEnable()
+    {
+        _mat = circle.GetComponent<SpriteRenderer>().material;
+    }
+
     private void Start()
     {
 
-        _mat = circle.GetComponent<SpriteRenderer>().material;
     }
 
     private void Update()

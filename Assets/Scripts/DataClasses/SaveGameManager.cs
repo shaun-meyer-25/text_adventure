@@ -77,7 +77,14 @@ public static class SaveGameManager
         controller.isDaytime = saveGame.isDaylight;
         if (saveGame.isDaylight)
         {
-            controller.SetDaylight();
+            if (saveGame.currentRoom == "home cave")
+            {
+                controller.SetNighttime();
+            }
+            else
+            {
+                controller.SetDaylight();
+            }
         }
         else
         {

@@ -94,7 +94,7 @@ public class Room : ScriptableObject
 			updatedPeopleInRoom = new List<InteractableObject>(PeopleInRoom);
 		}
 		
-		updatedPeopleInRoom.Add(obj);
+		if (!updatedPeopleInRoom.Contains(obj)) updatedPeopleInRoom.Add(obj);
 		peopleInRoom = updatedPeopleInRoom.ToArray();
 	}
 	

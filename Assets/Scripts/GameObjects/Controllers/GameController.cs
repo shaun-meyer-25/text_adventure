@@ -49,58 +49,72 @@ public class GameController : IController {
 		isDaytime = true;
 	}
 
-	void Start ()
+	void Start()
 	{
-		audio = FindObjectOfType<AudioSource>();
-		checkpointManager.SetCheckpoint(StaticDataHolder.instance.Checkpoint);
-		displayText.text = "";
-		allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
-		caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
-		caveInvestigationDescriptions = LoadDictionaryFromFile("homeCaveInvestigationDescriptions");
-		if (SceneManager.GetActiveScene().name == "Main" && checkpointManager.checkpoint == 0)
+		try
 		{
-			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
-			LogStringWithReturn(
-				"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
-			allRoomsInGame.Find(o => o.roomName == "old forest")
-					.SetInteractableObjectsInRoom(new [] { checkpointManager.treeBranch });
-		}
-		if (SceneManager.GetActiveScene().name == "Find Orb" && checkpointManager.checkpoint == 6)
-		{
-			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
-			LogStringWithReturn(
-				"you wake to a crashing sound from outside. you feel a strange urge to go outside and investigate.");
-		}
-		if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 8)
-		{
-			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
-			LogStringWithReturn(
-				"you awake slowly. you sit up, and see that the others have woken up before you. they seem to have noticed the orb that you kept in your hands.");
-		}
-		if (SceneManager.GetActiveScene().name == "Second Day Afternoon" && checkpointManager.checkpoint == 11)
-		{
-			levelLoader.StartSceneOrb();
-		}
-		if (SceneManager.GetActiveScene().name == "Second Day Evening" && checkpointManager.checkpoint == 13)
-		{
-			levelLoader.StartSceneOrb();
-			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
-			LogStringWithReturn(
-				"with the sight of the orb showing you the path, you find Tei and help them out of the forest. they are hurt but will survive. you make your way back to the cave.");
-			isDaytime = false;
-		}
-		if (SceneManager.GetActiveScene().name == "Third Day" && checkpointManager.checkpoint == 14)
-		{
-			// todo - let's get this in a text file or something, it sucks to hardcode it in like this
-			LogStringWithReturn(
-				"you are shaken from your nightmares. you reach for the orb. Tei's hand is there instead. you look up at them.");
-		}
+			audio = FindObjectOfType<AudioSource>();
+			checkpointManager.SetCheckpoint(StaticDataHolder.instance.Checkpoint);
+			displayText.text = "";
+			allPreferences = LoadDictionaryFromFile("commandPreferredButtons");
+			caveDescription = LoadDictionaryFromFile("homeCaveDescriptions");
+			caveInvestigationDescriptions = LoadDictionaryFromFile("homeCaveInvestigationDescriptions");
+			if (SceneManager.GetActiveScene().name == "Main" && checkpointManager.checkpoint == 0)
+			{
+				// todo - let's get this in a text file or something, it sucks to hardcode it in like this
+				LogStringWithReturn(
+					"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
+				allRoomsInGame.Find(o => o.roomName == "old forest")
+					.SetInteractableObjectsInRoom(new[] {checkpointManager.treeBranch});
+			}
 
-		LoadRoomDataAndDisplayRoomText ();
-		DisplayLoggedText (); 
-		UpdateRoomChoices (actions);
-		roomNavigation.SetExitLabels(roomNavigation.currentRoom.GetExits(checkpointManager.checkpoint));
-		interactableItems.AddActionResponsesToUseDictionary();
+			if (SceneManager.GetActiveScene().name == "Find Orb" && checkpointManager.checkpoint == 6)
+			{
+				// todo - let's get this in a text file or something, it sucks to hardcode it in like this
+				LogStringWithReturn(
+					"you wake to a crashing sound from outside. you feel a strange urge to go outside and investigate.");
+			}
+
+			if (SceneManager.GetActiveScene().name == "Second Day" && checkpointManager.checkpoint == 8)
+			{
+				// todo - let's get this in a text file or something, it sucks to hardcode it in like this
+				LogStringWithReturn(
+					"you awake slowly. you sit up, and see that the others have woken up before you. they seem to have noticed the orb that you kept in your hands.");
+			}
+
+			if (SceneManager.GetActiveScene().name == "Second Day Afternoon" && checkpointManager.checkpoint == 11)
+			{
+				levelLoader.StartSceneOrb();
+			}
+
+			if (SceneManager.GetActiveScene().name == "Second Day Evening" && checkpointManager.checkpoint == 13)
+			{
+				levelLoader.StartSceneOrb();
+				// todo - let's get this in a text file or something, it sucks to hardcode it in like this
+				LogStringWithReturn(
+					"with the sight of the orb showing you the path, you find Tei and help them out of the forest. they are hurt but will survive. you make your way back to the cave.");
+				isDaytime = false;
+			}
+
+			if (SceneManager.GetActiveScene().name == "Third Day" && checkpointManager.checkpoint == 14)
+			{
+				// todo - let's get this in a text file or something, it sucks to hardcode it in like this
+				LogStringWithReturn(
+					"you are shaken from your nightmares. you reach for the orb. Tei's hand is there instead. you look up at them.");
+			}
+
+			LoadRoomDataAndDisplayRoomText();
+			DisplayLoggedText();
+			UpdateRoomChoices(actions);
+			roomNavigation.SetExitLabels(roomNavigation.currentRoom.GetExits(checkpointManager.checkpoint));
+			interactableItems.AddActionResponsesToUseDictionary();
+		}
+		catch (Exception e)
+		{
+			Debug.Log("exception in Start method");
+			Debug.Log(e.Data);
+			Debug.Log(e.ToString());
+		}
 	}
 
 	public override void UpdateRoomChoices(Choice[] choices)
