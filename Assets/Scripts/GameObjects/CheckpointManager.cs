@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CheckpointManager : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class CheckpointManager : MonoBehaviour
     public InteractableObject shell;
     public InteractableObject torch;
     [HideInInspector] public int checkpoint;
+
+    public Sprite Phase1;
+    public Sprite Phase2;
 
     private void OnEnable()
     {
@@ -227,6 +231,14 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 15)
         {
             checkpoint = maybeCheckpoint;
+            _controller.volumeManipulation.EffectStart(_controller, "respondToNua");
+
+            _controller.UpdateRoomChoices(_controller.startingActions);
+            _controller.isInteracting = false;
+            GameObject button = GameObject.Find("Option4");
+            button.GetComponent<Button>().interactable = false;
+            _controller.isFourthButtonDisabled = true;
+            
             InteractableObject person = new List<InteractableObject>(_controller.characters)
                 .Find(o => o.name == "Nua");
             List<Interaction> interactions =
@@ -354,6 +366,11 @@ public class CheckpointManager : MonoBehaviour
         }
 
         if (maybeCheckpoint - previousCheckpoint != 0)
+        {
+            StaticDataHolder.instance.Checkpoint = _controller.checkpointManager.checkpoint;
+        }
+
+        if (maybeCheckpoint - previousCheckpoint != 0 && (maybeCheckpoint == 8 || maybeCheckpoint == 14))
         {
             SaveGameManager.SaveGame(_controller);
         }

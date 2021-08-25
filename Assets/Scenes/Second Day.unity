@@ -853,6 +853,8 @@ MonoBehaviour:
   shell: {fileID: 0}
   torch: {fileID: 0}
   checkpoint: 0
+  Phase1: {fileID: 1616757313310996600, guid: 92432412db15f684a831a6cfab738cda, type: 3}
+  Phase2: {fileID: 0}
 --- !u!114 &1347101011
 MonoBehaviour:
   m_ObjectHideFlags: 0

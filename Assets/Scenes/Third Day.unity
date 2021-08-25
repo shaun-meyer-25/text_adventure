@@ -751,6 +751,8 @@ MonoBehaviour:
   shell: {fileID: 11400000, guid: d11e2ffcd18ef2347b1ddf80698fa58f, type: 2}
   torch: {fileID: 11400000, guid: afa8d8ff0fa72e344999f7111a46bec5, type: 2}
   checkpoint: 0
+  Phase1: {fileID: 6439823863410027124, guid: d629ab3d68686404db9f3eb3d3944dcc, type: 3}
+  Phase2: {fileID: 6363811625289790160, guid: d629ab3d68686404db9f3eb3d3944dcc, type: 3}
 --- !u!114 &1347101011
 MonoBehaviour:
   m_ObjectHideFlags: 0
