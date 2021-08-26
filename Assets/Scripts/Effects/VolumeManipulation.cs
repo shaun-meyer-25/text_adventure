@@ -41,6 +41,12 @@ public class VolumeManipulation : MonoBehaviour
             ChromaticAberration ca = (ChromaticAberration) volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
             ca.active = true;
         }
+        
+        if (s == "Bloom")
+        {
+            Bloom b = (Bloom) volume.profile.components.Find(o => o.name == "Bloom(Clone)");
+            b.active = true;
+        }
     }
 
     public void EffectStart(IController controller, string requiredString)
@@ -115,6 +121,15 @@ public class VolumeManipulation : MonoBehaviour
                  fc.GlobalLight.color = color;
              // profit 
          }
+         
+         else if (requiredString == "badEnding")
+         {
+             BadFinalCaveController c = (BadFinalCaveController) controller;
+             c.DisabledButtons = true;
+
+             StartCoroutine("TriggerBadEndingFinal", controller);
+         }
+
          else if (requiredString == "strangling")
          {
              VolumeComponent c = volume.profile.components.Find(o => o.name == "Vignette(Clone)");
@@ -159,6 +174,13 @@ public class VolumeManipulation : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         controller.levelLoader.LoadScene("Credits");
+    }
+    
+    IEnumerator TriggerBadEndingFinal(IController controller)
+    {
+        yield return new WaitForSeconds(60);
+             
+        EffectStart(controller, "strangling");
     }
     
      public IEnumerator Pulse(Bloom bloom)

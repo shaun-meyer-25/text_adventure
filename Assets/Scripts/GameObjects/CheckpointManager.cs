@@ -348,6 +348,11 @@ public class CheckpointManager : MonoBehaviour
             _controller.LoadRoomData();
         }
 
+        if (maybeCheckpoint == 24)
+        {
+            checkpoint = maybeCheckpoint;
+        }
+        
         if (maybeCheckpoint < 21)
         {
             for (int i = 0; i < _controller.characters.Length; i++)

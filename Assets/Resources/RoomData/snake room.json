@@ -21,5 +21,17 @@
     "description": "the wriggling beasts move about quickly. the hissing is louder now.",
     "investigationDescription": "the stone could have been moved more quickly by someone stronger than you. perhaps Ohm lies beyond. with the orb.",
     "effectTriggerName": ""
+  },
+  {
+    "chapter": 24,
+    "exits": [
+      {
+        "roomName": "ohm encounter",
+        "keyString": "forward",
+        "description": "<color=purple>go</color>"}
+    ],
+    "description": "<color=purple>keep moving.</color>",
+    "investigationDescription": "",
+    "effectTriggerName": ""
   }
 ]

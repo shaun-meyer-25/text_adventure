@@ -20,5 +20,16 @@
     "description": "wind echoes through the opening. Ohm must be further ahead.",
     "investigationDescription": "you check the ground for footprints, but there is no disturbance that you can see. there is still some light here. it gets darker further in.",
     "effectTriggerName": ""
+  },
+  {
+    "chapter": 24,
+    "exits": [{
+      "roomName": "forking path",
+      "keyString": "forward",
+      "description": "you cannot go back alone. only forward."}
+    ],
+    "description": "wind echoes through the opening. they must be further ahead.",
+    "investigationDescription": "it is dark. unsettling. just focus on the orb.",
+    "effectTriggerName": ""
   }
 ]

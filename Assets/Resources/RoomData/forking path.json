@@ -36,5 +36,21 @@
     "description": "moving further into the cave, the path forks to the left and right.",
     "investigationDescription": "there is no sign of which way Ohm went. it is getting much darker.",
     "effectTriggerName": ""
+  },
+  {
+    "chapter": 24,
+    "exits": [
+      {
+        "roomName": "snake room",
+        "keyString": "forward",
+        "description": "a dry path leads to your right sloping up."},
+      {
+        "roomName": "cave entrance",
+        "keyString": "back",
+        "description": "<color=purple>you cannot go back. only forward.</color>"}
+    ],
+    "description": "your mind itches. the darkness... are you afraid? hard to tell now. you feel you are forgetting something. someone?",
+    "investigationDescription": "",
+    "effectTriggerName": ""
   }
 ]

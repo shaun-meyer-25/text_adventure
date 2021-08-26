@@ -212,7 +212,7 @@ public class RoomNavigation : MonoBehaviour {
 	{
 		List<Exit> listOfExits = new List<Exit>(choices);
 		if (SceneManager.GetActiveScene().name == "In Mountains" || SceneManager.GetActiveScene().name == "TetrisGame"
-		|| SceneManager.GetActiveScene().name == "Final Cave") return;
+		|| SceneManager.GetActiveScene().name == "Final Cave" || SceneManager.GetActiveScene().name == "Final Cave Bad") return;
 		for (int i = 0; i < 4; i++) {
 			if (i == 0)
 			{
