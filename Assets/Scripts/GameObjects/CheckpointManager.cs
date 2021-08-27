@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CheckpointManager : MonoBehaviour
 {
@@ -26,7 +27,11 @@ public class CheckpointManager : MonoBehaviour
     public InteractableObject checkpointNineBear;
     public InteractableObject checkpointTwentyStone;
     public InteractableObject shell;
+    public InteractableObject torch;
     [HideInInspector] public int checkpoint;
+
+    public Sprite Phase1;
+    public Sprite Phase2;
 
     private void OnEnable()
     {
@@ -226,6 +231,14 @@ public class CheckpointManager : MonoBehaviour
         if (maybeCheckpoint == 15)
         {
             checkpoint = maybeCheckpoint;
+            _controller.volumeManipulation.EffectStart(_controller, "respondToNua");
+
+            _controller.UpdateRoomChoices(_controller.startingActions);
+            _controller.isInteracting = false;
+            GameObject button = GameObject.Find("Option4");
+            button.GetComponent<Button>().interactable = false;
+            _controller.isFourthButtonDisabled = true;
+            
             InteractableObject person = new List<InteractableObject>(_controller.characters)
                 .Find(o => o.name == "Nua");
             List<Interaction> interactions =
@@ -263,6 +276,36 @@ public class CheckpointManager : MonoBehaviour
             checkpoint = maybeCheckpoint;
             _controller.LoadRoomData();
 
+        }
+
+        if (maybeCheckpoint == 18)
+        {
+            checkpoint = maybeCheckpoint;
+            _controller.LoadRoomData();
+        }
+
+        if (maybeCheckpoint == 19)
+        {
+            checkpoint = maybeCheckpoint;
+            _controller.processingDelay = 0.05f;
+            _controller.LogStringWithReturn("you enter the cave and see Nua playing with the orb, rolling it back and forth on the ground and laughing.");
+            //   VolumeManipulation.EffectStart("wounded");
+            if (_controller.interactableItems.nounsInInventory.Contains("shell"))
+            {
+                _controller.LogStringWithReturn("your eyes widen, your fists clench. you feel a sharp pain as something in your hand cracks. " +
+                                                "you raise your hand to the dim light to look at it. the broken shards of the shell you found for Tei protrude from your bleeding hand.");
+            }
+
+            if (_controller.interactableItems.nounsInInventory.Contains("tei's shell"))
+            {
+                _controller.LogStringWithReturn("your eyes widen. your fists clench, but you feel a sharp pain in your hand. you raise your hand to the dim light to look at it. " +
+                                                "the shell that Tei gave you lies in your palm, blood filling the crevices in its perfect form.");
+            }
+            
+            _controller.LogStringWithReturn("you stare in shock at the wound. you hear Nua cry out. you see Ohm fleeing from the cave. <color=purple>they have taken the orb. take a torch from the fire, you will need it to follow them. you must reclaim what is yours.</color>");
+            _controller.travelingCompanions.Remove(_controller.characters.First(o => o.name == "Tei"));
+            _controller.roomNavigation.currentRoom.RemovePersonFromRoom("Ohm");
+            _controller.fifthButton.SetActive(false);
         }
         
         if (maybeCheckpoint == 20)
@@ -305,6 +348,11 @@ public class CheckpointManager : MonoBehaviour
             _controller.LoadRoomData();
         }
 
+        if (maybeCheckpoint == 24)
+        {
+            checkpoint = maybeCheckpoint;
+        }
+        
         if (maybeCheckpoint < 21)
         {
             for (int i = 0; i < _controller.characters.Length; i++)
@@ -322,7 +370,12 @@ public class CheckpointManager : MonoBehaviour
             }
         }
 
-        if (maybeCheckpoint - previousCheckpoint >= 1)
+        if (maybeCheckpoint - previousCheckpoint != 0)
+        {
+            StaticDataHolder.instance.Checkpoint = _controller.checkpointManager.checkpoint;
+        }
+
+        if (maybeCheckpoint - previousCheckpoint != 0 && (maybeCheckpoint == 8 || maybeCheckpoint == 14))
         {
             SaveGameManager.SaveGame(_controller);
         }

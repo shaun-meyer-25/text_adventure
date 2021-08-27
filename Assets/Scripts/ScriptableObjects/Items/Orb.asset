@@ -37,7 +37,7 @@ MonoBehaviour:
 
 
       <color=purple>but it will protect
-      you</color>'
+      you.</color>'
     baseActionResponse: {fileID: 11400000, guid: f253b1d043e1fb949bec9327cda6fc3f,
       type: 2}
     actionResponse: {fileID: 11400000, guid: f253b1d043e1fb949bec9327cda6fc3f, type: 2}
@@ -45,4 +45,4 @@ MonoBehaviour:
     textResponse: 
     baseActionResponse: {fileID: 11400000, guid: 95d7587d42f9dbf4aa6c904144ef4ad5,
       type: 2}
-    actionResponse: {fileID: 11400000, guid: f253b1d043e1fb949bec9327cda6fc3f, type: 2}
+    actionResponse: {fileID: 11400000, guid: 95d7587d42f9dbf4aa6c904144ef4ad5, type: 2}

@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Checkpoint: 14
+  NounsInInventory: []
 --- !u!4 &114129366
 Transform:
   m_ObjectHideFlags: 0
@@ -746,8 +747,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
   checkpointFiveItems: []
   checkpointNineBear: {fileID: 11400000, guid: bb721676d96e36145a3be4539150ad59, type: 2}
+  checkpointTwentyStone: {fileID: 0}
   shell: {fileID: 11400000, guid: d11e2ffcd18ef2347b1ddf80698fa58f, type: 2}
+  torch: {fileID: 11400000, guid: afa8d8ff0fa72e344999f7111a46bec5, type: 2}
   checkpoint: 0
+  Phase1: {fileID: 6439823863410027124, guid: d629ab3d68686404db9f3eb3d3944dcc, type: 3}
+  Phase2: {fileID: 6363811625289790160, guid: d629ab3d68686404db9f3eb3d3944dcc, type: 3}
 --- !u!114 &1347101011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,6 +786,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bb721676d96e36145a3be4539150ad59, type: 2}
   - {fileID: 11400000, guid: d11e2ffcd18ef2347b1ddf80698fa58f, type: 2}
   - {fileID: 11400000, guid: fcb676b3963ea4f4dbb72f25d650f78c, type: 2}
+  - {fileID: 11400000, guid: afa8d8ff0fa72e344999f7111a46bec5, type: 2}
+  interactableOnly: []
   nounsInRoom: []
   nounsInInventory: []
 --- !u!114 &1347101013
@@ -848,9 +855,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b862231ee3e5bb548b57e557f3a6a18a, type: 2}
   - {fileID: 11400000, guid: 80e63e22d3f392a4ea5b0e8a8f111567, type: 2}
   - {fileID: 11400000, guid: 5843ef2a53ebb0645893126f03fe5176, type: 2}
+  - {fileID: 11400000, guid: bd27bf34962d89445bb44a0056ab1171, type: 2}
+  - {fileID: 11400000, guid: 3cfaa70f345f67946a9bfe059e7201b2, type: 2}
+  - {fileID: 11400000, guid: d7c5738c20cef98448a30199c48e57ac, type: 2}
+  - {fileID: 11400000, guid: ebe00c37ba8de914e9ac0c2de9cb6399, type: 2}
   backgroundColor: {fileID: 122787896}
   isDaytime: 1
-  processingDelay: 0.005
+  processingDelay: 0.03
   northLabel: {fileID: 0}
   eastLabel: {fileID: 0}
   westLabel: {fileID: 0}
@@ -1178,7 +1189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7024756614da6ba46b783ccb3eaec0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Controller: {fileID: 0}
+  Controller: {fileID: 1347101014}
 --- !u!60 &1756122606
 PolygonCollider2D:
   m_ObjectHideFlags: 0

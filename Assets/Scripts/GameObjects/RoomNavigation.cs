@@ -65,11 +65,11 @@ public class RoomNavigation : MonoBehaviour {
 
 			if (directionNoun == "sleep")
 			{
-				controller.LogStringWithReturn("you go to sleep");
+				controller.LogStringWithReturn("you go to sleep.");
 			}
 			else
 			{
-				controller.LogStringWithReturn("you go " + directionNoun);
+				controller.LogStringWithReturn("you go " + directionNoun + ".");
 			}
 
 			for (int i = 0; i < controller.travelingCompanions.Count; i++)
@@ -148,11 +148,6 @@ public class RoomNavigation : MonoBehaviour {
 			controller.checkpointManager.SetCheckpoint(10);
 		}
 
-		if (currentRoom.roomName == "old forest" && controller.checkpointManager.checkpoint == 12)
-		{
-			controller.checkpointManager.SetCheckpoint(13);
-		}
-		
 		if (currentRoom.roomName == "sleep" && controller.checkpointManager.checkpoint == 13)
 		{
 			controller.checkpointManager.SetCheckpoint(14);
@@ -166,21 +161,58 @@ public class RoomNavigation : MonoBehaviour {
 			throw new Exception("stop scene");
 		}
 
-		if (currentRoom.roomName == "outside home" && controller.checkpointManager.checkpoint == 20)
+		if (currentRoom.roomName == "outside home" && controller.checkpointManager.checkpoint == 20 && !HasShell())
 		{
 			InteractableObject person = new List<InteractableObject>(controller.characters)
 				.Find(o => o.name == "Tei");
 			Interaction interaction =
 				new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact"));
-			interaction.textResponse = "Tei has a brightness in their eyes as they go with you towards your usual place.";
+			interaction.textResponse = "Tei has a brightness in their eyes as they go with you towards your usual place. the storm has stopped for now and they seem happy to be out of the cave.";
+		}
+		
+		if (currentRoom.roomName == "peninsula" && controller.checkpointManager.checkpoint == 20 && !HasShell())
+		{
+			InteractableObject person = new List<InteractableObject>(controller.characters)
+				.Find(o => o.name == "Tei");
+			Interaction interaction =
+				new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact"));
+			interaction.textResponse = "";
+		}
+		
+		if (currentRoom.roomName == "home cave" && controller.checkpointManager.checkpoint == 20 && HasShell())
+		{
+			controller.checkpointManager.SetCheckpoint(19);
+			currentRoom.AddObjectToRoom(controller.checkpointManager.torch);
+		}
+
+		if (currentRoom.roomName == "mountains4" && controller.checkpointManager.checkpoint == 17)
+		{
+			//controller.checkpointManager.SetCheckpoint(21);
+			StaticDataHolder.instance.Checkpoint = 24;
+			controller.levelLoader.LoadScene("Final Cave");
+			throw new Exception("stop scene");
+		}
+		
+		if (currentRoom.roomName == "mountains4" && controller.checkpointManager.checkpoint == 18)
+		{
+			//controller.checkpointManager.SetCheckpoint(21);
+			StaticDataHolder.instance.Checkpoint = 21;
+			controller.levelLoader.LoadScene("Final Cave");
+			throw new Exception("stop scene");
 		}
 	}
 
+	private bool HasShell()
+	{
+		return controller.interactableItems.nounsInInventory.Contains("shell") ||
+		        controller.interactableItems.nounsInInventory.Contains("tei's shell");
+	}
+	
 	public void SetExitLabels(Exit[] choices)
 	{
 		List<Exit> listOfExits = new List<Exit>(choices);
 		if (SceneManager.GetActiveScene().name == "In Mountains" || SceneManager.GetActiveScene().name == "TetrisGame"
-		|| SceneManager.GetActiveScene().name == "Final Cave") return;
+		|| SceneManager.GetActiveScene().name == "Final Cave" || SceneManager.GetActiveScene().name == "Final Cave Bad") return;
 		for (int i = 0; i < 4; i++) {
 			if (i == 0)
 			{

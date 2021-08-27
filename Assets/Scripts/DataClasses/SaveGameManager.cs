@@ -15,28 +15,41 @@ public static class SaveGameManager
         game.actionLog = controller.actionLog;
         game.checkpointReached = controller.checkpointManager.checkpoint;
         game.currentScene = SceneManager.GetActiveScene().name;
-        //game.fireLevel = controller.fire.fireLevel;
         game.nounsInInventory = controller.interactableItems.nounsInInventory;
         game.travelingCompanions = controller.travelingCompanions.Select(o => o.name).ToList();
         game.currentRoom = controller.roomNavigation.currentRoom.roomName;
         game.isDaylight = controller.isDaytime;
         game.currentTextColor = controller.currentColor;
-
-        StaticDataHolder.instance.Checkpoint = controller.checkpointManager.checkpoint;
-        /*
+        game.orbButtonActive = controller.fifthButton.activeSelf;
+        if (game.orbButtonActive)
+        {
+            if (controller.checkpointManager.checkpoint < 11)
+            {
+                game.orbButtonPhase = "0";
+            }
+            else if (controller.checkpointManager.checkpoint == 11 || controller.checkpointManager.checkpoint == 12)
+            {
+                game.orbButtonPhase = "1";
+            }
+            else if (controller.checkpointManager.checkpoint == 13 || controller.checkpointManager.checkpoint == 14)
+            {
+                game.orbButtonPhase = "2";
+            }
+        }
+        
         for (int i = 0; i < controller.allRoomsInGame.Count; i++)
         {
             if (controller.allRoomsInGame[i].PeopleInRoom.Length > 0)
             {
-        //        Debug.Log("room name is " + controller.allRoomsInGame[i].roomName); 
+                Debug.Log("room name is " + controller.allRoomsInGame[i].roomName); 
                 for (int j = 0; j < controller.allRoomsInGame[i].PeopleInRoom.Length; j++)
                 {
-          //          Debug.Log("the person name is - " + controller.allRoomsInGame[i].PeopleInRoom[j].name);
+                    Debug.Log("the person name is - " + controller.allRoomsInGame[i].PeopleInRoom[j].name);
                     game.mapOfPeopleToLocation.Add(controller.allRoomsInGame[i].PeopleInRoom[j].name, 
                         controller.allRoomsInGame[i].roomName);
                 }
             }
-        } */
+        } 
 
         for (int i = 0; i < controller.allRoomsInGame.Count; i++)
         {
@@ -69,7 +82,6 @@ public static class SaveGameManager
         else
         {
             Debug.Log("no save file");
-            SceneManager.LoadScene("Main");
             return null;
         }
     }
@@ -79,7 +91,14 @@ public static class SaveGameManager
         controller.isDaytime = saveGame.isDaylight;
         if (saveGame.isDaylight)
         {
-            controller.SetDaylight();
+            if (saveGame.currentRoom == "home cave")
+            {
+                controller.SetNighttime();
+            }
+            else
+            {
+                controller.SetDaylight();
+            }
         }
         else
         {
@@ -124,6 +143,14 @@ public static class SaveGameManager
         controller.interactableItems.nounsInInventory = saveGame.nounsInInventory;
         controller.roomNavigation.currentRoom = controller.allRoomsInGame.Find(o => o.roomName == saveGame.currentRoom);
         controller.interactableItems.AddActionResponsesToUseDictionary();
+        controller.fifthButton.SetActive(saveGame.orbButtonActive);
+
+        if (saveGame.orbButtonActive)
+        {
+            SpriteRenderer sr = controller.fifthButton.GetComponentsInChildren<SpriteRenderer>()
+                .First(o => o.gameObject.name == "Animations");
+          //  sr.sprite = Sprite.
+        }
         
         controller.checkpointManager.SetCheckpoint(saveGame.checkpointReached);
 

@@ -17,10 +17,10 @@ MonoBehaviour:
   description: the carcass of the bear lies on the ground.
   interactions:
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
-    textResponse: you take the bear carcass
+    textResponse: you take the bear carcass.
     baseActionResponse: {fileID: 11400000, guid: f9e9c455021aed54aa5add7ec581c247,
       type: 2}
-    actionResponse: {fileID: 0}
+    actionResponse: {fileID: 11400000, guid: f9e9c455021aed54aa5add7ec581c247, type: 2}
   - action: {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
     textResponse: 'the bear lies dead, its head obliterated by the stone you threw.
       Ohm looks at it in shock, then looks at you. '
@@ -30,4 +30,4 @@ MonoBehaviour:
     textResponse: 
     baseActionResponse: {fileID: 11400000, guid: 6b868caedc8c9fa4ebf58e82c2d70f42,
       type: 2}
-    actionResponse: {fileID: 0}
+    actionResponse: {fileID: 11400000, guid: 6b868caedc8c9fa4ebf58e82c2d70f42, type: 2}

@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Checkpoint: 8
+  NounsInInventory: []
 --- !u!4 &114129366
 Transform:
   m_ObjectHideFlags: 0
@@ -848,7 +849,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
   checkpointFiveItems: []
   checkpointNineBear: {fileID: 11400000, guid: bb721676d96e36145a3be4539150ad59, type: 2}
+  checkpointTwentyStone: {fileID: 0}
+  shell: {fileID: 0}
+  torch: {fileID: 0}
   checkpoint: 0
+  Phase1: {fileID: 1616757313310996600, guid: 92432412db15f684a831a6cfab738cda, type: 3}
+  Phase2: {fileID: 0}
 --- !u!114 &1347101011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,6 +886,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd9bab6544cc8d94b950bada47bc5a37, type: 2}
   - {fileID: 11400000, guid: 781592594b662dc45961bb1b1cafd420, type: 2}
   - {fileID: 11400000, guid: bb721676d96e36145a3be4539150ad59, type: 2}
+  interactableOnly: []
   nounsInRoom: []
   nounsInInventory:
   - orb
@@ -949,7 +956,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 80e63e22d3f392a4ea5b0e8a8f111567, type: 2}
   backgroundColor: {fileID: 122787896}
   isDaytime: 1
-  processingDelay: 0.005
+  processingDelay: 0.03
   northLabel: {fileID: 0}
   eastLabel: {fileID: 0}
   westLabel: {fileID: 0}
@@ -958,6 +965,10 @@ MonoBehaviour:
   fifthButton: {fileID: 694522528}
   useButtonAnimator: {fileID: 548112587}
   light: {fileID: 0}
+  isFourthButtonDisabled: 0
+  isThirdButtonDisabled: 0
+  isSecondButtonDisabled: 0
+  buttonWrapAnimator: {fileID: 0}
   exitNames: []
   exitChoices: []
   isInteracting: 0

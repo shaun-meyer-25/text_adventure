@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: WestGrasslands
   m_EditorClassIdentifier: 
   description: expansive grasslands. might be animals here.
-  roomInvestigationDescription: 'grasslands to the north.
+  roomInvestigationDescription: 'grasslands to the north..
 
     home to the east.
 
@@ -20,7 +20,7 @@ MonoBehaviour:
   roomName: coastal grasslands
   exits:
   - keyString: north
-    exitDescription: grasslands to the north.
+    exitDescription: grasslands to the north..
     valueRoom: {fileID: 11400000, guid: 05f90a73357d43c4baad43c508158983, type: 2}
   - keyString: east
     exitDescription: home to the east.

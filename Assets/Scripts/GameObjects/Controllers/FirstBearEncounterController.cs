@@ -23,6 +23,8 @@ public class FirstBearEncounterController : IController
         _textProcessing = new TextProcessing(this, processingDelay);
         
         _textProcessing.DisplayText("the bear charges towards Ohm. their spear is leveled in defense.");
+        volumeManipulation = gameObject.AddComponent<VolumeManipulation>();
+
     }
 
     public IEnumerator TypeSentence(Dictionary<int, Tuple<string, char>> charactersAndTheirColors )

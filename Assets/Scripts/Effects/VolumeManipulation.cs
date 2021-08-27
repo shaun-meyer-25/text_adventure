@@ -41,6 +41,12 @@ public class VolumeManipulation : MonoBehaviour
             ChromaticAberration ca = (ChromaticAberration) volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
             ca.active = true;
         }
+        
+        if (s == "Bloom")
+        {
+            Bloom b = (Bloom) volume.profile.components.Find(o => o.name == "Bloom(Clone)");
+            b.active = true;
+        }
     }
 
     public void EffectStart(IController controller, string requiredString)
@@ -66,7 +72,7 @@ public class VolumeManipulation : MonoBehaviour
              ChromaticAberration ca = 
                  (ChromaticAberration) volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
              c.active = true; 
-             StartCoroutine(PulseMultiple(bloom, ca));
+             StartCoroutine(PulseOnce(bloom, ca));
          }
 
          if (requiredString == "fallingNightmare")
@@ -115,6 +121,15 @@ public class VolumeManipulation : MonoBehaviour
                  fc.GlobalLight.color = color;
              // profit 
          }
+         
+         else if (requiredString == "badEnding")
+         {
+             BadFinalCaveController c = (BadFinalCaveController) controller;
+             c.DisabledButtons = true;
+
+             StartCoroutine("TriggerBadEndingFinal", controller);
+         }
+
          else if (requiredString == "strangling")
          {
              VolumeComponent c = volume.profile.components.Find(o => o.name == "Vignette(Clone)");
@@ -161,6 +176,13 @@ public class VolumeManipulation : MonoBehaviour
         controller.levelLoader.LoadScene("Credits");
     }
     
+    IEnumerator TriggerBadEndingFinal(IController controller)
+    {
+        yield return new WaitForSeconds(60);
+             
+        EffectStart(controller, "strangling");
+    }
+    
      public IEnumerator Pulse(Bloom bloom)
      {
          while (true)
@@ -171,9 +193,9 @@ public class VolumeManipulation : MonoBehaviour
      }
 
 
-    public IEnumerator PulseMultiple(Bloom bloom, ChromaticAberration ca)
+    public IEnumerator PulseOnce(Bloom bloom, ChromaticAberration ca)
     {
-        float seconds = 5;
+        float seconds = 1.5f;
 
         while (seconds > 0)
         {
@@ -182,6 +204,9 @@ public class VolumeManipulation : MonoBehaviour
             seconds -= Time.deltaTime;
             yield return null;
         }
+
+        bloom.intensity.value = 0f;
+        ca.intensity.value = 0f;
     }
 
      public IEnumerator SwellThenFizzle(IController controller, Bloom bloom)
@@ -220,7 +245,7 @@ public class VolumeManipulation : MonoBehaviour
          
          ca.active = false;
          bloom.active = false;
-         controller.LogStringWithReturn("you wrench the orb out of the young one's hands. they fall hard on the ground as their grasp on it slips.");
+         controller.LogStringWithReturn("your eyes widen, your fists clench. you wrench the orb out of the young one's hands. they fall hard on the ground as their grasp on it slips.");
          controller.LogStringWithReturn("Onah shrieks. they grab Nua by the hand and run out of the cave.");
          controller.LogStringWithReturn(
              "Ohm rises to their feet. they give you a harsh glance, then motion for you to try to follow after. you need to make this right.");

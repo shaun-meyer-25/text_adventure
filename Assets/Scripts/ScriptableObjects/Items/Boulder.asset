@@ -18,11 +18,11 @@ MonoBehaviour:
   interactions:
   - action: {fileID: 11400000, guid: 8008e4c5cc573a34284dcadca2cd4320, type: 2}
     textResponse: you can see that there is a small gap between the wall and the
-      stone. the stone is oddly shaped, and you might be able to roll it over.s
+      stone. the stone is oddly shaped, and you might be able to roll it over.
     baseActionResponse: {fileID: 0}
     actionResponse: {fileID: 0}
   - action: {fileID: 11400000, guid: b5809f44b48ed2b4fb9ee74c74b04fbe, type: 2}
     textResponse: 
     baseActionResponse: {fileID: 11400000, guid: 4ab764867858be84e8521b56fb455f82,
       type: 2}
-    actionResponse: {fileID: 0}
+    actionResponse: {fileID: 11400000, guid: 4ab764867858be84e8521b56fb455f82, type: 2}

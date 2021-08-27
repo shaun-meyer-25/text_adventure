@@ -4,7 +4,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "there is a cave bear at the mouth of an opening in the rocks, you do not approach. it is dangerous here.",
     "investigationDescription": "the beast glares at you. it notices you now. time to leave, while you still can.",
@@ -15,7 +15,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "there is a cave bear at the mouth of an opening in the rocks, you do not approach. it is dangerous here.",
     "investigationDescription": "the beast glares at you. it notices you now. time to leave, while you still can.",
@@ -26,7 +26,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "there is a cave bear at the mouth of an opening in the rocks, you do not approach. it is dangerous here.",
     "investigationDescription": "the beast glares at you. it notices you now. time to leave, while you still can.",
@@ -45,7 +45,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "the bear is nowhere to be seen, but this is still its home. it is not safe.",
     "investigationDescription": "you see the hollow where the bear lives, visions of its deadly claws flashing through your mind. you dare not get close enough to see if it is still around.",
@@ -56,7 +56,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "the beast should be sleeping by now, but the rocky footing is especially treacherous in the dark. a broken leg would mean slow death.",
     "investigationDescription": "you cannot see well enough to navigate the terrain.",
@@ -67,7 +67,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "the beast should be sleeping by now, but the rocky footing is especially treacherous in the dark. a broken leg would mean slow death.",
     "investigationDescription": "you cannot see well enough to navigate the terrain.",
@@ -78,7 +78,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "the beast should be sleeping by now, but the rocky footing is especially treacherous in the dark. a broken leg would mean slow death.",
     "investigationDescription": "you cannot see well enough to navigate the terrain.",
@@ -89,7 +89,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "the rocky ground is harsh upon your feet. the beast must still be slumbering. you do not see it, but you also should not be here alone.",
     "investigationDescription": "best not stay and look around while alone. a charging bear will catch a human in the best of circumstances.",
@@ -100,7 +100,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "the bear is near, you feel you should return to the hunt.",
     "investigationDescription": "you do not feel compelled to look around, it is time for the hunt.",
@@ -111,7 +111,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "TODO",
     "investigationDescription": "TODO",
@@ -122,7 +122,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "the rocky ground is harsh upon your feet. the unsure footing could lead to an accident, and brutal death.",
     "investigationDescription": "you don't have the energy to look around and carry the carcass. you should head home.",
@@ -133,7 +133,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "the rocky ground is harsh upon your feet. the unsure footing could lead to an accident, and it is harder to see in the night.",
     "investigationDescription": "it is too dark to see more. you need to look for Tei.",
@@ -144,7 +144,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "TODO",
     "investigationDescription": "TODO",
@@ -155,7 +155,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "TODO",
     "investigationDescription": "TODO",
@@ -166,7 +166,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "the foothills here are treacherous. you see no sign of Nua and Onah.",
     "investigationDescription": "there are no signs that Nua and Onah were here.",
@@ -177,7 +177,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "TODO",
     "investigationDescription": "TODO",
@@ -188,7 +188,7 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
     "description": "TODO",
     "investigationDescription": "TODO",
@@ -199,10 +199,10 @@
     "exits": [{
       "roomName": "watering hole",
       "keyString": "south",
-      "description": "the watering hole lies to the south"}
+      "description": "the watering hole lies to the south."}
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO",
+    "description": "the foothills here are treacherous. you see no sign of Ohm.",
+    "investigationDescription": "there are no signs that Ohm was here.",
     "effectTriggerName": ""
   }
 ]

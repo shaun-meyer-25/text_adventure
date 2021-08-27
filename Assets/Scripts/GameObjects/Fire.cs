@@ -25,16 +25,16 @@ public class Fire : MonoBehaviour
         if (fireLevel.Equals(FireLevel.Low))
             {
                 fireLevel = FireLevel.Roaring;
-                controller.LogStringWithReturn("The fire is now roaring");
+                controller.LogStringWithReturn("the fire is now roaring.");
                 return true;
         } else if (fireLevel.Equals(FireLevel.Roaring))
             {
-                controller.LogStringWithReturn("The fire does not need to be fed");
+                controller.LogStringWithReturn("the fire does not need to be fed.");
                 return false;
             }
         else
             {
-                controller.LogStringWithReturn("The fire is dead, it must be started");
+                controller.LogStringWithReturn("the fire is dead, it must be started.");
                 return false;
             }
         }

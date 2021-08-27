@@ -87,7 +87,7 @@ public class InteractableItems : MonoBehaviour
         }
         else
         {
-            controller.LogStringWithReturn("you don't have anything right now");
+            controller.LogStringWithReturn("you don't have anything right now.");
         }
     }
     
@@ -142,7 +142,7 @@ public class InteractableItems : MonoBehaviour
                 bool actionResult = useDictionary[nounToUse].DoActionResponse(controller);
                 if (!actionResult)
                 {
-                    controller.LogStringWithReturn("Nothing happens");
+                    controller.LogStringWithReturn("nothing happens.");
                 }
                 else
                 {
@@ -155,12 +155,19 @@ public class InteractableItems : MonoBehaviour
             }
             else
             {
-                controller.LogStringWithReturn("You can't use the " + nounToUse);
+                if (nounToUse == "tei's shell")
+                {
+                    controller.LogStringWithReturn("you can't use tei's shell.");
+                }
+                else
+                {
+                    controller.LogStringWithReturn("you can't use the " + nounToUse + ".");
+                }
             }
         }
         else
         {
-            controller.LogStringWithReturn("There is no " + nounToUse + " in your inventory to use");
+            controller.LogStringWithReturn("there is no " + nounToUse + " in your inventory to use");
         }
     }
     
@@ -168,8 +175,11 @@ public class InteractableItems : MonoBehaviour
     {
         List<InteractableObject> target =
             new List<InteractableObject>(controller.roomNavigation.currentRoom.InteractableObjectsInRoom);
-        
+        InteractableObject item = target.Find(o => o.noun.Equals(noun));
+
         target.RemoveAll(o => o.noun.Equals(noun));
         controller.roomNavigation.currentRoom.SetInteractableObjectsInRoom(target.ToArray());
+
+        controller.interactionDescriptionsInRoom.Remove(item.description);
     }
 }

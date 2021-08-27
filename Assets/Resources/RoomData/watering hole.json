@@ -10,12 +10,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
@@ -32,12 +32,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
@@ -54,12 +54,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
@@ -76,12 +76,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
@@ -98,12 +98,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
@@ -120,12 +120,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions, but the predators of the night know this is an appealing spot for their prey. best not to linger.",
@@ -142,12 +142,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions, but the predators of the night know this is an appealing spot for their prey. best not to linger.",
@@ -164,12 +164,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions, but the predators of the night know this is an appealing spot for their prey. best not to linger.",
@@ -186,16 +186,16 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the watering hole here is the most reliable source of water for your small group of companions. something in your gut stirs being here today.",
+    "investigationDescription": "there is no sign of human or beast around right now. so why do you feel so unsettled?"
   },
   {
     "chapter": 9,
@@ -208,12 +208,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "your senses were correct to lead you here. the bear is hunched over, drinking from the pool of water. it notices you as you approach and bares its teeth at you. Ohm and you stop. they say 'same as yesterday,' and begin circling around the bear.",
@@ -224,7 +224,7 @@
     "exits": [
     ],
     "description": "the bear is hunched over, drinking from the pool of water. it notices you as you approach and bares its teeth at you. Ohm and you stop. they nod and begin circling around the bear.",
-    "investigationDescription": "you can see the blood-matted fur from where you injured it yesterday, but it must have dislodged your spear somehow. it may be weak enough for an easy kill."
+    "investigationDescription": "you can see the fur from where your spears injured it yesterday. it does not seem weakened."
   },
   {
     "chapter": 11,
@@ -237,12 +237,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "",
@@ -259,12 +259,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "the site of your triumph is calm now in the darkness.",
@@ -281,12 +281,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "the watering hole is a dangerous place to be at night. vicious beasts could be in any hidden place to wait for prey.",
@@ -303,12 +303,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "TODO",
@@ -325,12 +325,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "the ground around the watering hole is soft, making tracks show clearly. you do not see the footprints of the others.",
@@ -347,12 +347,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "TODO",
@@ -369,12 +369,12 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
     "description": "TODO",
@@ -391,15 +391,15 @@
       {
         "roomName": "lower foothills",
         "keyString": "south",
-        "description": "foothills lie to the south"
+        "description": "foothills lie to the south."
       },
       {
         "roomName": "young forest",
         "keyString": "west",
-        "description": "the younger part of the forest, often good for foraging, lies to the west"
+        "description": "the younger part of the forest, often good for foraging, lies to the west."
       }
     ],
-    "description": "TODO",
-    "investigationDescription": "TODO"
+    "description": "the ground around the watering hole is soft, making tracks show clearly. you do not see the footprints.",
+    "investigationDescription": "there are no signs that Ohm was here."
   }
 ]

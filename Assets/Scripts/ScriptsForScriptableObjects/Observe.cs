@@ -36,14 +36,14 @@ public class Observe : ActionChoice
             {
                 Room room = controller.roomNavigation.currentRoom;
                 
-                string joinedInteractionDescriptions = string.Join ("\n", controller.interactionDescriptionsInRoom.ToArray ());
+                string joinedInteractionDescriptions = string.Join ("\n\n", controller.interactionDescriptionsInRoom.ToArray ()) + "\n";
 
                 for (int i = 0; i < room.exitChoices(controller.checkpointManager.checkpoint).Count; i++)
                 {
                     joinedInteractionDescriptions += "\n" + controller.roomNavigation.currentRoom.GetExits(controller.checkpointManager.checkpoint) [i].description + "\n";
                 }
                 controller.LogStringWithReturn(room.GetInvestigationDescription(controller.checkpointManager.checkpoint) + 
-                                               "\n" + joinedInteractionDescriptions);
+                                               "\n\n" + joinedInteractionDescriptions);
                 controller.isObserving = false;
                 controller.UpdateRoomChoices(controller.startingActions);
             }

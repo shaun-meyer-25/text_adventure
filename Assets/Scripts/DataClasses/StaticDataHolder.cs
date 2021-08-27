@@ -8,6 +8,7 @@ public class StaticDataHolder : MonoBehaviour
     public static StaticDataHolder instance;
 
     public int Checkpoint;
+    public List<string> NounsInInventory;
 
     void Awake()
     {

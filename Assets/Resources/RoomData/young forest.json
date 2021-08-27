@@ -5,17 +5,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. you are more likely to find food to forage here.",
@@ -28,17 +28,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. you are more likely to find food to forage for here.",
@@ -50,17 +50,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. you are more likely to find food to forage for here.",
@@ -72,17 +72,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. you are more likely to find food to forage for here.",
@@ -94,17 +94,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. you are more likely to find food to forage for here.",
@@ -116,17 +116,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the woods, though sparser here, are still dangerous at night. going too far in would surely leave you lost.",
@@ -138,17 +138,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the woods, though sparser here, are still dangerous at night. going too far in would surely leave you lost.",
@@ -160,17 +160,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the woods, though sparser here, are still dangerous at night. going too far in would surely leave you lost.",
@@ -182,17 +182,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. there is less food here today than there was yesterday, it will need more time to regrow.",
@@ -204,17 +204,17 @@
       {
         "roomName": "<color=red>watering hole</color>",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the smell of the beast is very close now. it must just be east of here, drinking at the watering hole.",
@@ -226,17 +226,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ]
   },
@@ -246,17 +246,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the forest is younger here. fewer old trees, smaller plants, a clearer view of the sky. there is less food here today than there was yesterday, it will need more time to regrow.",
@@ -268,17 +268,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the woods, though sparser here, are still dangerous at night. Tei would not have come this far north looking for wood.",
@@ -290,17 +290,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ]
   },
@@ -310,17 +310,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ]
   },
@@ -330,17 +330,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ],
     "description": "the woods are far too easy to get lost in. Nua and Onah will not be found here.",
@@ -352,17 +352,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ]
   },
@@ -372,17 +372,17 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
     ]
   },
@@ -392,18 +392,20 @@
       {
         "roomName": "watering hole",
         "keyString": "east",
-        "description": "the watering hole lies to the east"
+        "description": "the watering hole lies to the east."
       },
       {
         "roomName": "old forest",
         "keyString": "south",
-        "description": "the forest continues to the south"
+        "description": "the forest continues to the south."
       },
       {
         "roomName": "wooded grasslands",
         "keyString": "west",
-        "description": "the grasslands begin to the west"
+        "description": "the grasslands begin to the west."
       }
-    ]
+    ],
+    "description": "the woods are far too easy to get lost in. Ohm will not be found here.",
+    "investigationDescription": "there are no signs that Ohm was here."
   }
 ]

@@ -5,5 +5,12 @@
     "description": "the tunnel gets smaller as you move forward. you walk for a little while, the walls coming closer together. at last, as you can hardly move forward, the walls touching your shoulders, you see Ohm. they are stuck between the two walls.",
     "investigationDescription": "Ohm has moved farther along the passage than you would comfortably be able to. you can see the left side of their body, their head unable to turn, facing away from you.",
     "effectTriggerName": "ohmFinal"
+  },
+  {
+    "chapter": 24,
+    "exits": [],
+    "description": "the tunnel gets smaller as you move forward. you walk for a little while, the walls coming closer together. <color=purple>keep moving. you are nearly there.</color>. you move forward. it is difficult. something cracks. inside of you? you can't move. you clutch the orb tighter. <color=purple>you have served your purpose. the orb has found its resting place. it will be found in another age by one who can use it for far greater ends. your contribution is noted.</color>",
+    "investigationDescription": "",
+    "effectTriggerName": "badEnding"
   }
 ]

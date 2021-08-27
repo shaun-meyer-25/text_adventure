@@ -16,16 +16,16 @@ MonoBehaviour:
 
     grasslands lie to the north.
 
-    forest to the east.
+    forest to the east..
 
     grasslands to the west.'
   roomName: outside home
   exits:
   - keyString: north
-    exitDescription: grasslands to the north.
+    exitDescription: grasslands to the north..
     valueRoom: {fileID: 11400000, guid: 4a3c2ae3917ba42aa992c2985cfc036d, type: 2}
   - keyString: east
-    exitDescription: forest to the east.
+    exitDescription: forest to the east..
     valueRoom: {fileID: 11400000, guid: 3a48eba189f20cf4c8b98f4529c6f9c2, type: 2}
   - keyString: home
     exitDescription: outside home.

@@ -23,7 +23,7 @@ public class UseTeiShell : ActionResponse
         {
             controller.volumeManipulation.EffectEnd(controller, "strangling");
             controller.LogStringWithReturn("in an act of desperation you take the only thing you're carrying with you and ram it into Ohm's arm. the grip persists. you ram it into their shoulder, their neck.");
-            controller.LogStringWithReturn("Ohm screams in the voice that is no longer theirs. blood runs from their neck and their grip loosens. you run back through the cave the way you came.");
+            controller.LogStringWithReturn("Ohm screams in a voice that is no longer theirs. blood runs from their neck and their grip loosens. you run back through the cave the way you came.");
             controller.LogStringWithReturn("with their howls of rage and pain still echoing through the cave, you move the stone back over to cover the tunnel. you run out of the cave.");
             controller.LogStringWithReturn("Tei is standing at the mouth of the cave. they see Ohm's blood on you and reach for you. you take them in an embrace.");
             controller.LogStringWithReturn("you are safe. you are together. that dreadful thing will never touch your mind again.");
