@@ -36,7 +36,10 @@ public class RoomNavigation : MonoBehaviour {
 		}
 	}
 
-	public bool AttemptToChangeRooms(string directionNoun) {
+	public bool AttemptToChangeRooms(string directionNoun)
+	{
+		string previousRoom = controller.roomNavigation.currentRoom.roomName;
+		
 		if (exitDictionary.ContainsKey(directionNoun)) {
 			for (int i = 0; i < controller.travelingCompanions.Count; i++)
 			{
@@ -82,6 +85,19 @@ public class RoomNavigation : MonoBehaviour {
 			
 			CheckIfCheckpointNeedsSetting();
 
+			if (controller.isDaytime && (previousRoom == "home cave" && currentRoom.roomName == "outside home"))
+			{
+				if (controller.audio != null)
+				{
+					controller.audio.Play();
+				}
+			}
+
+			if (controller.audio != null && controller.audio.isPlaying && currentRoom.roomName == "home cave")
+			{
+				StartCoroutine(FadeAudioSource.StartFade(controller.audio, 1f, 0f));
+			}
+			
 			if (currentRoom.GetEffectTriggerName(controller.checkpointManager.checkpoint) != null &&
 				currentRoom.GetEffectTriggerName(controller.checkpointManager.checkpoint) != "")
 			{
