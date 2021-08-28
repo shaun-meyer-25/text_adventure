@@ -5582,7 +5582,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1777755978}
     - target: {fileID: 1598040375253437076, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_IsActive
@@ -9186,7 +9186,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5a0979b6e4ca5454bb5a932d793645f6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aea37cc8bac543642bab69ba3d395f44, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

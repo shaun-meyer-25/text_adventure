@@ -57,6 +57,7 @@ public class BadFinalCaveController : IController
 
 		volumeManipulation.EnableEffect("Chromatic Aberration");	
 		volumeManipulation.EnableEffect("Bloom");
+		volumeManipulation.EffectStart(this, "chromaticPulse");
 	}
 	
 	public void BatsFlyingStart()

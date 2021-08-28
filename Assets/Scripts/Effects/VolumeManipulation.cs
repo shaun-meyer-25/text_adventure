@@ -140,6 +140,15 @@ public class VolumeManipulation : MonoBehaviour
              StartCoroutine("LosingConsciousness", vignette);
              StartCoroutine("DyingInOhmsGrip", controller);
          }
+         
+         else if (requiredString == "chromaticPulse")
+         {
+             VolumeComponent c = volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
+             ChromaticAberration ca = (ChromaticAberration) c;
+             ca.active = true;
+
+             StartCoroutine("PulseCA", ca);
+         }
 
          if (requiredString == "caveBearAround")
          {
@@ -188,6 +197,15 @@ public class VolumeManipulation : MonoBehaviour
          while (true)
          {
              bloom.intensity.value = Mathf.Sin(Time.realtimeSinceStartup * 2.0f) + 1.5f;
+             yield return null;
+         }
+     }
+     
+     public IEnumerator PulseCA(ChromaticAberration ca)
+     {
+         while (true)
+         {
+             ca.intensity.value = Mathf.Sin(Time.realtimeSinceStartup);
              yield return null;
          }
      }
