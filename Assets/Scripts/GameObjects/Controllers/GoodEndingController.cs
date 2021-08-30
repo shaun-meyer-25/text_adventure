@@ -26,6 +26,8 @@ public class GoodEndingController : IController
 
 	void Start ()
 	{
+		StaticDataHolder.instance.Checkpoint = 14;
+		Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 		audio = GetComponent<AudioSource>();
 
 		displayText.text = "";

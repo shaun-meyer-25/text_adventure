@@ -23,6 +23,7 @@ public class KillBearWithOrbController : IController
         _textProcessing = new TextProcessing(this, processingDelay);
         
         _textProcessing.DisplayText("you must land a killing blow");
+        
     }
 
     public IEnumerator TypeSentence(Dictionary<int, Tuple<string, char>> charactersAndTheirColors )

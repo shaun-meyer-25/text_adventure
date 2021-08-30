@@ -13,7 +13,7 @@ public class GiveTeiShell : ActionResponse
                 .Find(o => o.name == "Tei");
             Interaction interaction =
                 new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact"));
-            interaction.textResponse = "they walk closer to you now. you feel a warmth in contrast to the chill air.";
+            interaction.textResponse = "they walk closer with you now than before, content in your company. you feel a warmth in contrast to the chill air.";
             
             controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Shrink");
 

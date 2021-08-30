@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public Button continueButton;
     public GameObject mainMenu;
     public GameObject newGameConfirm;
+    public GameObject thankYou;
     
     private SaveGame _saveGame;
     private IController _controller;
@@ -38,7 +39,7 @@ public class MainMenu : MonoBehaviour
 
         SceneManager.LoadScene("Main");
     }
-
+    
     public void QuitGame()
     {
         Application.Quit();

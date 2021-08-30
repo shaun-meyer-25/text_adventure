@@ -37,9 +37,18 @@ public class Interact : ActionChoice
                 }
                 else
                 {
-                    controller.LogStringWithReturn("there is no one around.");
-                    controller.UpdateRoomChoices(controller.startingActions);
-                    controller.isInteracting = false;
+                    if (controller.checkpointManager.checkpoint == 0 || controller.checkpointManager.checkpoint == 6)
+                    {
+                        controller.LogStringWithReturn("best not to wake anyone right now.");
+                        controller.UpdateRoomChoices(controller.startingActions);
+                        controller.isInteracting = false;
+                    }
+                    else
+                    {
+                        controller.LogStringWithReturn("there is no one around.");
+                        controller.UpdateRoomChoices(controller.startingActions);
+                        controller.isInteracting = false;
+                    }
                 }
             }
             else if (controller.roomNavigation.currentRoom.CharacterNamesInRoom().Contains(separatedInputWords[1]))

@@ -9217,6 +9217,8 @@ MonoBehaviour:
   TorchSprite: {fileID: 2800000, guid: 343eb69969266654a825e1a4fd8ef36a, type: 3}
   GlobalLight: {fileID: 1135893759}
   DisabledButtons: 0
+  OhmsGrasp: {fileID: 8300000, guid: b0234bb202c5d7748b0ea7d65f527f39, type: 3}
+  OrbDrone: {fileID: 8300000, guid: aea37cc8bac543642bab69ba3d395f44, type: 3}
 --- !u!4 &1777755979
 Transform:
   m_ObjectHideFlags: 0

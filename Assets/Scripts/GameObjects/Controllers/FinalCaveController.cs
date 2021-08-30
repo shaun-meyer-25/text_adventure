@@ -21,6 +21,8 @@ public class FinalCaveController : IController
 	public Texture2D TorchSprite;
 	public Light2D GlobalLight;
 	public bool DisabledButtons = false;
+	public AudioClip OhmsGrasp;
+	public AudioClip OrbDrone;
 
 	private static int NUMBER_OF_OPTIONS = 4;
 	private Dictionary<string, string> allPreferences;
