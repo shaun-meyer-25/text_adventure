@@ -11,7 +11,6 @@ public class MainMenu : MonoBehaviour
     public Button continueButton;
     public GameObject mainMenu;
     public GameObject newGameConfirm;
-    public AudioSource Audio;
     
     private SaveGame _saveGame;
     private IController _controller;
@@ -54,7 +53,6 @@ public class MainMenu : MonoBehaviour
     
     private void Start()
     {
-        Audio = FindObjectOfType<AudioSource>();
         _saveGame = SaveGameManager.LoadGame();
 
         if (_saveGame == null)
@@ -62,7 +60,6 @@ public class MainMenu : MonoBehaviour
             continueButton.GetComponentInChildren<Text>().color = Color.gray;
             continueButton.interactable = false;
         }
-        Audio.Play();
     }
     
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
