@@ -17,8 +17,6 @@ public class SaveGame
     public string currentRoom;
     public string currentTextColor;
     public bool isDaylight;
-    public string orbButtonPhase;
-    public bool orbButtonActive;
 
     public SaveGame()
     {

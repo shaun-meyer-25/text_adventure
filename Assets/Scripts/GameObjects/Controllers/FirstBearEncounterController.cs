@@ -16,6 +16,7 @@ public class FirstBearEncounterController : IController
     // Start is called before the first frame update
     void Start()
     {
+
         levelLoader = FindObjectOfType<LevelLoader>();
 
         Cursor.SetCursor(reticle, Vector2.zero, CursorMode.Auto);

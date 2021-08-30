@@ -20,22 +20,7 @@ public static class SaveGameManager
         game.currentRoom = controller.roomNavigation.currentRoom.roomName;
         game.isDaylight = controller.isDaytime;
         game.currentTextColor = controller.currentColor;
-        game.orbButtonActive = controller.fifthButton.activeSelf;
-        if (game.orbButtonActive)
-        {
-            if (controller.checkpointManager.checkpoint < 11)
-            {
-                game.orbButtonPhase = "0";
-            }
-            else if (controller.checkpointManager.checkpoint == 11 || controller.checkpointManager.checkpoint == 12)
-            {
-                game.orbButtonPhase = "1";
-            }
-            else if (controller.checkpointManager.checkpoint == 13 || controller.checkpointManager.checkpoint == 14)
-            {
-                game.orbButtonPhase = "2";
-            }
-        }
+        
         
         for (int i = 0; i < controller.allRoomsInGame.Count; i++)
         {
@@ -143,15 +128,7 @@ public static class SaveGameManager
         controller.interactableItems.nounsInInventory = saveGame.nounsInInventory;
         controller.roomNavigation.currentRoom = controller.allRoomsInGame.Find(o => o.roomName == saveGame.currentRoom);
         controller.interactableItems.AddActionResponsesToUseDictionary();
-        controller.fifthButton.SetActive(saveGame.orbButtonActive);
 
-        if (saveGame.orbButtonActive)
-        {
-            SpriteRenderer sr = controller.fifthButton.GetComponentsInChildren<SpriteRenderer>()
-                .First(o => o.gameObject.name == "Animations");
-          //  sr.sprite = Sprite.
-        }
-        
         controller.checkpointManager.SetCheckpoint(saveGame.checkpointReached);
 
         List<InteractableObject> travelingCompanions = new List<InteractableObject>();

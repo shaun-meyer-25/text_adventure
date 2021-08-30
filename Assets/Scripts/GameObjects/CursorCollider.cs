@@ -25,6 +25,7 @@ public class CursorCollider : MonoBehaviour
         {
             Debug.Log("BATS");
             Controller.BatsFlyingStart();
+            Controller.audio.Play();
         }
     }
 }

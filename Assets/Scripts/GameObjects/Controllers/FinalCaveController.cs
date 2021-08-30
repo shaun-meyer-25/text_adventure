@@ -41,7 +41,7 @@ public class FinalCaveController : IController
 
 	void Start ()
 	{
-		audio = FindObjectOfType<AudioSource>();
+		audio = GetComponent<AudioSource>();
 		checkpointManager.SetCheckpoint(StaticDataHolder.instance.Checkpoint);
 
 		displayText.text = "";
@@ -389,7 +389,7 @@ public class FinalCaveController : IController
 
 	public IEnumerator GoodEndingWon()
 	{
-		yield return new WaitForSeconds(70f);
-		levelLoader.LoadScene("Credits");
+		yield return new WaitForSeconds(45f);
+		levelLoader.LoadScene("Good Ending");
 	}
 }

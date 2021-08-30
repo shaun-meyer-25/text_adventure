@@ -36,7 +36,10 @@ public class RoomNavigation : MonoBehaviour {
 		}
 	}
 
-	public bool AttemptToChangeRooms(string directionNoun) {
+	public bool AttemptToChangeRooms(string directionNoun)
+	{
+		string previousRoom = controller.roomNavigation.currentRoom.roomName;
+		
 		if (exitDictionary.ContainsKey(directionNoun)) {
 			for (int i = 0; i < controller.travelingCompanions.Count; i++)
 			{
@@ -82,6 +85,8 @@ public class RoomNavigation : MonoBehaviour {
 			
 			CheckIfCheckpointNeedsSetting();
 
+			CheckIfAudioNeedsAdjusting(previousRoom);
+			
 			if (currentRoom.GetEffectTriggerName(controller.checkpointManager.checkpoint) != null &&
 				currentRoom.GetEffectTriggerName(controller.checkpointManager.checkpoint) != "")
 			{
@@ -98,6 +103,84 @@ public class RoomNavigation : MonoBehaviour {
 			controller.LogStringWithReturn("There is no path to the " + directionNoun);
 			return false;
 		}
+	}
+
+	private void CheckIfAudioNeedsAdjusting(string previousRoom)
+	{
+		///// FIRST DAY
+		///
+		/// 
+		if (controller.isDaytime && (previousRoom == "home cave" && currentRoom.roomName == "outside home") && controller.checkpointManager.checkpoint < 5)
+		{
+			if (controller.audio != null)
+			{
+				controller.audio.clip = StaticDataHolder.instance.FirstDaySong;
+				controller.audio.volume = 0.7f;
+				controller.audio.Play();
+			}
+		}
+
+		if (controller.audio != null && controller.audio.isPlaying && currentRoom.roomName == "home cave"  && controller.checkpointManager.checkpoint < 5)
+		{
+			StartCoroutine(FadeAudioSource.StartFade(controller.audio, 1f, 0f));
+		}
+		
+		if (controller.audio != null && controller.audio.isPlaying && currentRoom.roomName == "home cave" && controller.checkpointManager.checkpoint < 2)
+		{
+			StartCoroutine(FadeAudioSource.StartFade(controller.audio, .5f, 0f));
+		}
+
+		if (controller.audio != null && controller.audio.isPlaying && currentRoom.roomName == "home cave" &&
+		    controller.checkpointManager.checkpoint > 0 && controller.checkpointManager.checkpoint < 6)
+		{
+			StartCoroutine(FadeAudioSource.StartFade(controller.audio, .5f, 0f));
+			StartCoroutine(FadeAudioSource.StartNew(controller.audio, 1f, StaticDataHolder.instance.Fire, 0.3f));
+		}
+		
+		
+		////// SECOND DAY
+		///
+		///
+		if (controller.isDaytime && (previousRoom == "home cave" && currentRoom.roomName == "outside home") && controller.checkpointManager.checkpoint >= 8 && controller.checkpointManager.checkpoint < 12)
+		{
+			if (controller.audio != null)
+			{
+				controller.audio.clip = StaticDataHolder.instance.SecondDaySong;
+				controller.audio.volume = 0.3f;
+				controller.audio.Play();
+			}
+		}
+		
+		if (controller.audio != null && controller.audio.isPlaying && currentRoom.roomName == "home cave" && controller.checkpointManager.checkpoint == 12)
+		{
+			StartCoroutine(FadeAudioSource.StartFade(controller.audio, .5f, 0f));
+		}
+
+		
+		if (controller.audio != null && controller.audio.isPlaying && currentRoom.roomName == "home cave" &&
+		    controller.checkpointManager.checkpoint >= 8 && controller.checkpointManager.checkpoint < 12)
+		{
+			StartCoroutine(FadeAudioSource.StartFade(controller.audio, .5f, 0f));
+			StartCoroutine(FadeAudioSource.StartNew(controller.audio, 1f, StaticDataHolder.instance.Fire, 0.3f));
+		}
+
+		////// THIRD DAY
+		///
+		///
+		if (previousRoom == "home cave" && currentRoom.roomName == "outside home" &&
+		    controller.checkpointManager.checkpoint >= 14)
+		{
+			controller.audio.clip = StaticDataHolder.instance.Wind;
+			controller.audio.volume = .1f;
+			controller.audio.Play();
+		}
+
+		if (controller.audio != null && currentRoom.roomName == "home cave" &&
+		    controller.checkpointManager.checkpoint >= 14)
+		{
+			controller.audio.Stop();
+		}
+
 	}
 
 	public void ClearExits() {
@@ -176,7 +259,7 @@ public class RoomNavigation : MonoBehaviour {
 				.Find(o => o.name == "Tei");
 			Interaction interaction =
 				new List<Interaction>(person.interactions).Find(o => o.action.keyword.Equals("interact"));
-			interaction.textResponse = "";
+			interaction.textResponse = "it is good to be here with them, once again.";
 		}
 		
 		if (currentRoom.roomName == "home cave" && controller.checkpointManager.checkpoint == 20 && HasShell())
@@ -189,7 +272,7 @@ public class RoomNavigation : MonoBehaviour {
 		{
 			//controller.checkpointManager.SetCheckpoint(21);
 			StaticDataHolder.instance.Checkpoint = 24;
-			controller.levelLoader.LoadScene("Final Cave");
+			controller.levelLoader.LoadScene("Final Cave Bad");
 			throw new Exception("stop scene");
 		}
 		

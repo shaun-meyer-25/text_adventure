@@ -12,5 +12,12 @@
     "description": "the tunnel gets smaller as you move forward. you walk for a little while, the walls coming closer together. <color=purple>keep moving. you are nearly there.</color>. you move forward. it is difficult. something cracks. inside of you? you can't move. you clutch the orb tighter. <color=purple>you have served your purpose. the orb has found its resting place. it will be found in another age by one who can use it for far greater ends. your contribution is noted.</color>",
     "investigationDescription": "",
     "effectTriggerName": "badEnding"
+  },
+  {
+    "chapter": 25,
+    "exits": [],
+    "description": "must... do... something...",
+    "investigationDescription": "must... do... something...",
+    "effectTriggerName": "ohmFinal"
   }
 ]

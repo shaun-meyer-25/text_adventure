@@ -116,10 +116,10 @@ public class Room : ScriptableObject
 		description = baseDescription;
 		roomInvestigationDescription = baseInvestigationDescription;
 
-		if (roomName == "bat room")
-		{
+		//if (roomName == "bat room")
+		//{
 			interactableObjectsInRoom = new InteractableObject[] { };
-		}
+		//}
 	}
 
 	public string GetDescription(int checkpoint)

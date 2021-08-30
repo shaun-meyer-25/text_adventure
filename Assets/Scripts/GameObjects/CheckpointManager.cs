@@ -103,6 +103,15 @@ public class CheckpointManager : MonoBehaviour
             _controller.allRoomsInGame.Find(o => o.roomName == "home cave").SetPeopleInRoom(charactersList.ToArray());
             _controller.roomNavigation.currentRoom.SetPeopleInRoom(new[] {ohm});
             _controller.travelingCompanions.Add(ohm);
+
+            AudioSource a = _controller.audio;
+
+            if (a != null)
+            {
+                a.clip = StaticDataHolder.instance.Wind;
+                a.Play();
+                a.volume = .07f;
+            }
         }
 
         if (maybeCheckpoint == 5)
@@ -205,6 +214,7 @@ public class CheckpointManager : MonoBehaviour
             _controller.SetNighttime();
             _controller.travelingCompanions.Remove(_controller.characters.First(o => o.noun.Equals("Ohm")));
             _controller.roomNavigation.currentRoom.RemovePersonFromRoom("Tei");
+            StartCoroutine(FadeAudioSource.StartFade(_controller.audio, 5f, 0f));
         }
 
         if (maybeCheckpoint == 13)
@@ -349,6 +359,11 @@ public class CheckpointManager : MonoBehaviour
         }
 
         if (maybeCheckpoint == 24)
+        {
+            checkpoint = maybeCheckpoint;
+        }
+        
+        if (maybeCheckpoint == 25)
         {
             checkpoint = maybeCheckpoint;
         }

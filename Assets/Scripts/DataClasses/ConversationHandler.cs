@@ -8,6 +8,7 @@ public static class ConversationHandler
 {
     public static void HandleConversation(IController controller, string response)
     {
+        bool continuing = false;
         if (response == "no" && controller.checkpointManager.checkpoint == 8)
         {
             controller.LogStringWithReturn("Ohm looks at you strangely, but does not protest.");
@@ -18,6 +19,10 @@ public static class ConversationHandler
 
         if (response == "yes" && controller.checkpointManager.checkpoint == 8)
         {
+            AudioSource audio = StaticDataHolder.instance.gameObject.GetComponent<AudioSource>();
+            audio.clip = StaticDataHolder.instance.Scarything;
+            audio.Play();
+            
             controller.volumeManipulation.EffectStart(controller, "firstOrbUse");
             controller.LogStringWithReturn("<color=purple>you refuse to hand it to them</color>");
             controller.LogStringWithReturn("Ohm looks at you strangely, but does not protest.");
@@ -63,9 +68,47 @@ public static class ConversationHandler
 
         if (response == "yes" && controller.checkpointManager.checkpoint == 14)
         {
+            AudioSource audio = controller.GetComponent<AudioSource>();
+            audio.clip = StaticDataHolder.instance.Scarything;
+            audio.Play();
+            
+            continuing = true;
+            controller.volumeManipulation.EffectStart(controller, "firstOrbEncounter");
+            controller.volumeManipulation.EffectStart(controller, "chromaticPulse");
+            controller.LogStringWithReturn("<color=purple>you can go with them later. you must not be apart from the orb. find it now.</color>");
+            controller.DisplayLoggedText();
+
+            List<ConversationChoice> choices = new List<ConversationChoice>();
+
+            ConversationChoice yes = ScriptableObject.CreateInstance<ConversationChoice>();
+            yes.keyword = "go with Tei";
+            ConversationChoice no = ScriptableObject.CreateInstance<ConversationChoice>();
+            no.keyword = "find orb";
+        
+            choices.Add(yes);
+            choices.Add(no);
+        
+            //ConversationChoice 
+            controller.UpdateRoomChoices(choices.ToArray());
+        }
+        
+        if (response == "go with Tei" && controller.checkpointManager.checkpoint == 14)
+        {
+            controller.volumeManipulation.EffectEnd(controller, "firstOrbEncounter");
+            controller.volumeManipulation.EffectEnd(controller, "chromaticPulse");
             controller.travelingCompanions.Add(controller.characters.First(o => o.noun.Equals("Tei")));
             
             controller.checkpointManager.SetCheckpoint(20);
+        }
+        
+        if (response == "find orb" && controller.checkpointManager.checkpoint == 14)
+        {
+            controller.volumeManipulation.EffectEnd(controller, "chromaticPulse");
+            controller.volumeManipulation.EffectEnd(controller, "orbWon");
+            controller.audio.Stop();
+
+            controller.checkpointManager.SetBadEndingCourse();
+
         }
         
         if (response == "no" && controller.checkpointManager.checkpoint == 22)
@@ -75,6 +118,8 @@ public static class ConversationHandler
             controller.processingDelay = 0.09f;
             controller.LogStringWithReturn("there is a scraping sound, several loud cracks. Ohm's head turns, the stone they're pressed against tearing the flesh on their face and breaking the bones.");
             controller.LogStringWithReturn("a bleeding, mangled face stares at you with eyes glowing the color of the orb. their hand quickly wraps around your throat. you struggle to break free from the grip, but it is too tight. you cannot breathe.");
+            controller.checkpointManager.SetCheckpoint(25);
+
             fc.TriggerEndingSequenceSecond();
 
         }
@@ -89,12 +134,17 @@ public static class ConversationHandler
 			controller.LogStringWithReturn("their grip on your hand tightens to the point of pain. you feel something crunch in your hand.");
 			controller.LogStringWithReturn("there is a scraping sound, several loud cracks. Ohm's head turns, the stone they're pressed against tearing the flesh on their face and breaking the bones.");
 			controller.LogStringWithReturn("a bleeding, mangled face stares at you with eyes glowing the color of the orb. their hand releases yours and quickly wraps around your throat. you struggle to break free from the grip, but it is too tight. you cannot breathe.");
+            controller.checkpointManager.SetCheckpoint(25);
 
             fc.TriggerEndingSequence();
         }
 
-        controller.isConversing = false;
-        controller.UpdateRoomChoices(controller.startingActions);
+        if (continuing == false)
+        {
+            controller.isConversing = false;
+            controller.UpdateRoomChoices(controller.startingActions);
+        }
+
     }
 
     private static void SetOhmInteraction(IController controller)

@@ -19,7 +19,8 @@
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
-    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth."
+    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth.",
+    "effectTriggerName": "cancelVignette"
   },
   {
     "chapter": 1,
@@ -41,7 +42,8 @@
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
-    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth, but you can distinguish the tracks of your prey. it is close now."
+    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth, but you can distinguish the tracks of your prey. it is close now.",
+    "effectTriggerName": "cancelVignette"
   },
   {
     "chapter": 2,
@@ -63,7 +65,8 @@
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
-    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth, but you can distinguish the tracks of your prey. it is close now."
+    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth, but you can distinguish the tracks of your prey. it is close now.",
+    "effectTriggerName": "cancelVignette"
   },
   {
     "chapter": 3,
@@ -85,7 +88,8 @@
       }
     ],
     "description": "the watering hole here is the most reliable source of water for your small group of companions. it is a calm day here.",
-    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth, but you can distinguish the tracks of your prey. it is close now."
+    "investigationDescription": "fewer beasts come here now than when you first came to this land. you see few tracks in the wet earth, but you can distinguish the tracks of your prey. it is close now.",
+    "effectTriggerName": "cancelVignette"
   },
   {
     "chapter": 4,
@@ -224,7 +228,8 @@
     "exits": [
     ],
     "description": "the bear is hunched over, drinking from the pool of water. it notices you as you approach and bares its teeth at you. Ohm and you stop. they nod and begin circling around the bear.",
-    "investigationDescription": "you can see the fur from where your spears injured it yesterday. it does not seem weakened."
+    "investigationDescription": "you can see the fur from where your spears injured it yesterday. it does not seem weakened.",
+    "effectTriggerName": "purpleVignette"
   },
   {
     "chapter": 11,

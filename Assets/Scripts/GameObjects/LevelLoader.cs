@@ -22,6 +22,7 @@ public class LevelLoader : MonoBehaviour
     private static readonly int Fade = Shader.PropertyToID("_Fade");
     private static readonly int Start1 = Animator.StringToHash("Start");
     private static readonly int Opacity = Shader.PropertyToID("_Opacity");
+    private AudioSource _audioSource;
 
     private void OnEnable()
     {
@@ -30,7 +31,7 @@ public class LevelLoader : MonoBehaviour
 
     private void Start()
     {
-
+        _audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -56,11 +57,16 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        if (_audioSource != null)
+        {
+            _audioSource.Stop();
+        }
         StartCoroutine(LoadLevel(sceneName));
     }
 
     public void LoadSceneOrb(string sceneName)
     {
+        _audioSource.Play();
         _orbGrowing = true;
         _mat.SetFloat(Opacity, 1);
         StartCoroutine(LoadLevelOrb(sceneName));
@@ -68,6 +74,8 @@ public class LevelLoader : MonoBehaviour
 
     public void StartSceneOrb()
     {
+        _audioSource.Play();
+
         _intensity = 1f;
         _mat.SetFloat(Fade, _intensity);
         _mat.SetFloat(Opacity, 1);
@@ -76,6 +84,8 @@ public class LevelLoader : MonoBehaviour
 
     public void FakeLevelLoadOrb()
     {
+        _audioSource.Play();
+
         _orbGrowing = true;
         _mat.SetFloat(Opacity, 1);
         StartCoroutine(FakeLevelLoadOrbEnum());
