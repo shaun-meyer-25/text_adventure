@@ -26,11 +26,12 @@ public class LevelLoader : MonoBehaviour
 
     private void OnEnable()
     {
-        _mat = circle.GetComponent<SpriteRenderer>().material;
+        
     }
 
     private void Start()
     {
+        _mat = circle.GetComponent<SpriteRenderer>().material;
         _audioSource = gameObject.GetComponent<AudioSource>();
     }
 
@@ -74,9 +75,33 @@ public class LevelLoader : MonoBehaviour
 
     public void StartSceneOrb()
     {
+        
+        _intensity = 1f;
+
+        StartCoroutine(LoadMat());
+        StartCoroutine(LoadAudio());
+    }
+
+    private IEnumerator LoadAudio()
+    {
+        while (_audioSource == null)
+        {
+            _audioSource = gameObject.GetComponent<AudioSource>();
+            yield return new WaitForSeconds(.1f);
+        }
+        
         _audioSource.Play();
 
-        _intensity = 1f;
+    }
+
+    IEnumerator LoadMat()
+    {
+        while (_mat == null)
+        {
+            _mat = circle.GetComponent<SpriteRenderer>().material;
+            yield return new WaitForSeconds(.1f);
+        }
+        
         _mat.SetFloat(Fade, _intensity);
         _mat.SetFloat(Opacity, 1);
         _orbShrinking = true;

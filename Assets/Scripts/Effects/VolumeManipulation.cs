@@ -53,6 +53,27 @@ public class VolumeManipulation : MonoBehaviour
             b.active = true;
         }
     }
+    
+    public void DisableEffect(string s)
+    {
+        if (s == "Lens Distortion")
+        {
+            LensDistortion ld = (LensDistortion) volume.profile.components.Find(o => o.name == "LensDistortion(Clone)");
+            ld.active = false;
+        }
+
+        if (s == "Chromatic Aberration")
+        {
+            ChromaticAberration ca = (ChromaticAberration) volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
+            ca.active = false;
+        }
+        
+        if (s == "Bloom")
+        {
+            Bloom b = (Bloom) volume.profile.components.Find(o => o.name == "Bloom(Clone)");
+            b.active = false;
+        }
+    }
 
     public void EffectStart(IController controller, string requiredString)
      {
@@ -119,6 +140,9 @@ public class VolumeManipulation : MonoBehaviour
          {
              FinalCaveController fc = (FinalCaveController) controller;
 
+             fc.audio.clip = fc.OrbDrone;
+             fc.audio.volume = 0.2f;
+             fc.audio.Play();
              fc.GlobalLight.GetComponent<Animator>().enabled = true;
              Color color;
 
@@ -237,7 +261,7 @@ public class VolumeManipulation : MonoBehaviour
         float intensity = 0f;
         while (intensity <= 1f)
         {
-            intensity += .0003f;
+            intensity += .0008f;
             v.intensity.value = intensity;
             yield return null;
         }
@@ -245,8 +269,8 @@ public class VolumeManipulation : MonoBehaviour
 
     public IEnumerator DyingInOhmsGrip(IController controller)
     {
-        yield return new WaitForSeconds(5f);
-        controller.levelLoader.LoadScene("Credits");
+        yield return new WaitForSeconds(7f);
+        SceneManager.LoadScene("Credits");
     }
     
     IEnumerator TriggerBadEndingFinal(IController controller)

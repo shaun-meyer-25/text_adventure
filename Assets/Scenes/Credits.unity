@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0070419, y: -707.95}
-  m_SizeDelta: {x: 1104, y: 1480.444}
+  m_AnchoredPosition: {x: 0.0070419, y: -993.062}
+  m_SizeDelta: {x: 1104, y: 2050.668}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &285858562
 Animator:
@@ -212,12 +212,20 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.55
   m_Text: "The End\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWritten,
-    Programmed, Designed by Shaun Meyer\n\n\n\n\n\n\nSpecial Thanks to\n\nThe Dumpsterfire
-    Society\n\nThe Outlanders\n\nThe Strongboys\n\nDemo Testers\n\nMason \nDrew\nJake\nTJ\nPreston\nBrennen\nKeenan\n\n\n\n\n\n\nRami
-    Ismail\n\n\nMy mom\nMy sister\nMy dad\nMy brother\n\nMy cat\n\n\n\nEveryone on
-    Twitter for listening to me complain\n\nDARC Team"
+    Programmed, Designed by \nShaun Meyer\n\nMusic & Pixel Art\nShaun Meyer\n\nBear
+    Animation\n@sarah_vara_art\n\nCredits Song\nMiles St. Lucas\n\nLead Testers\n\nMason
+    Turner\nBrennen Tevis\nJonathan Quist\nShaun Meyer\n\nDemo Testers\n\nMason \nDrew\nJake\nTJ\nPreston\nBrennen\nKeenan\nJacob\n\nLaunch
+    Trailer\nNathan Meyer\n\nAdditional Sound Effects from freesound.org\n\"Short
+    Explosion\" by ProjectsU012\n\"Loopable hum\" by -Patrick-\n\"Ghost Moan\" by
+    Mr_KeybOred\n\"Screech\" by MakoFox\n\nSpecial Thanks to\n\nThe Dumpsterfire
+    Society\nThe Outlanders\nRami Ismail\nMy mom\nMy sister\nMy dad\nMy brother\nMy
+    cat\nDARC Team\nAll my friends and family. I love you all so f****** much. Thank
+    you for everything. \n\nIf you liked this game or any of the assets, or you just
+    want to yell at me, reach out to me @the_cave_ghost on Twitter or visit my website
+    caveghost.games/contact. I look forward to hearing from you. Thank you for playing
+    my weird little game."
 --- !u!222 &285858564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -257,6 +265,147 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &464485598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464485600}
+  - component: {fileID: 464485599}
+  - component: {fileID: 464485601}
+  m_Layer: 0
+  m_Name: CreditsController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &464485599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464485598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac46703333eda34aadf9c0eaa05b06d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FinalSong: {fileID: 8300000, guid: 752c797f52a262e4cb7663021c43f123, type: 3}
+--- !u!4 &464485600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464485598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.4936123, y: -4.2433834, z: -64.79642}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &464485601
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464485598}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &717737596
 PrefabInstance:
   m_ObjectHideFlags: 0
