@@ -38,10 +38,12 @@ public class FinalCaveHandler : IOptionButtonHandler
 	    if (text == "back" && controller.BatsStirring && controller.roomNavigation.currentRoom.roomName == "bat room")
 	    {
 		    controller.BatsFlyingStop();
+		    controller.StartCoroutine(FadeAudioSource.StartFade(controller.audio, .5f, 0f));
 	    }
 
 	    if (text == "left" && controller.BatsStirring)
 	    {
+		    controller.audio.Play();
 		    controller.BatsFlyingStart();
 	    }
 

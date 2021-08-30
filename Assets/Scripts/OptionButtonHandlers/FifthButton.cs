@@ -54,6 +54,14 @@ public class FifthButton : MonoBehaviour
             
             //ConversationChoice 
             Controller.UpdateRoomChoices(choices.ToArray());
+        } else if (Controller.checkpointManager.checkpoint == 20)
+        {
+            Controller.LogStringWithReturn("your mind itches. you can feel the orb pulling almost as a force to come reclaim it.");
+            Controller.DisplayLoggedText();
+        } else if (Controller.checkpointManager.checkpoint == 14)
+        {
+            Controller.LogStringWithReturn("<color=purple>it is somewhere in this room. find it.</color>");
+            Controller.DisplayLoggedText();
         }
         else
         {

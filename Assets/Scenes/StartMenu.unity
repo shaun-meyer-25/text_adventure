@@ -581,6 +581,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Checkpoint: 0
   NounsInInventory: []
+  Wind: {fileID: 8300000, guid: 43f3c1b798fb9324194d27e52cea8591, type: 3}
+  Heartbeat: {fileID: 8300000, guid: 3f41dd491840b5240a955c04b73a772f, type: 3}
+  Fire: {fileID: 8300000, guid: 3882f5a963fbce246a4a32dd0c3875a3, type: 3}
+  FirstDaySong: {fileID: 8300000, guid: a5a675b54b2219944b5967f3e302f022, type: 3}
+  SecondDaySong: {fileID: 8300000, guid: c4fb8ce2b408f604889daeb1675fc477, type: 3}
+  Scarything: {fileID: 8300000, guid: a3082121efb944f448bc6373edf7850f, type: 3}
 --- !u!4 &615877049
 Transform:
   m_ObjectHideFlags: 0

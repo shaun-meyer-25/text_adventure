@@ -11,6 +11,10 @@ public class FeedFire : ActionResponse
         {
             if (controller.checkpointManager.checkpoint == 0)
             {
+                controller.audio.clip = StaticDataHolder.instance.Fire;
+                controller.audio.volume = 0.3f;
+                controller.audio.Play();
+                
                 controller.checkpointManager.SetCheckpoint(1);
                 controller.LogStringWithReturn("you break the tree branch into smaller pieces, tossing them on the fire one at a time. " +
                                                "the noise from this begins to wake the others, who stir and rise to start their days.");

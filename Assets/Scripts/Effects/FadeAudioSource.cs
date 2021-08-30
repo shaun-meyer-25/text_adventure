@@ -20,4 +20,16 @@ public static class FadeAudioSource {
         audioSource.Stop();
         yield break;
     }
+
+    public static IEnumerator StartNew(AudioSource audioSource, float wait, AudioClip newAudio, float newVolume)
+    {
+        yield return new WaitForSeconds(wait);
+        
+        audioSource.clip = newAudio;
+        audioSource.volume = newVolume;
+        audioSource.Play();
+        
+        
+    }
+
 }

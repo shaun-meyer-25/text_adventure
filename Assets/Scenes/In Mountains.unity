@@ -154,6 +154,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Checkpoint: 16
   NounsInInventory: []
+  Wind: {fileID: 0}
+  Heartbeat: {fileID: 0}
+  Fire: {fileID: 0}
+  FirstDaySong: {fileID: 0}
+  SecondDaySong: {fileID: 0}
+  Scarything: {fileID: 0}
 --- !u!4 &292626305
 Transform:
   m_ObjectHideFlags: 0
@@ -541,7 +547,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b5e2f8ae76a26b74688a3939fa9d4d66, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.628
+  m_Volume: 0.059
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -16,11 +16,14 @@ public class CancelButton : MonoBehaviour
     }
 
     void TaskOnClick()
-    { 
-        Controller.isInteracting = false;
-        Controller.isObserving = false;
-        Controller.isUsing = false;
-        Controller.isConversing = false;
-        Controller.UpdateRoomChoices(Controller.startingActions);
+    {
+        if (!Controller.isConversing)
+        {
+            Controller.isInteracting = false;
+            Controller.isObserving = false;
+            Controller.isUsing = false;
+            Controller.isConversing = false;
+            Controller.UpdateRoomChoices(Controller.startingActions);
+        }
     }
 }

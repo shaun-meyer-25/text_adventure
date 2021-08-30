@@ -10,6 +10,11 @@ public class VolumeManipulation : MonoBehaviour
 
     private Volume volume;
 
+    private void Start()
+    {
+        
+    }
+
     private void Awake()
     {
         volume = FindObjectOfType<Volume>();
@@ -150,9 +155,68 @@ public class VolumeManipulation : MonoBehaviour
              StartCoroutine("PulseCA", ca);
          }
 
-         if (requiredString == "caveBearAround")
+         else if (requiredString == "caveBearAround")
          {
-             Debug.Log("todo - caveBearAround");
+             VolumeComponent c = volume.profile.components.Find(o => o.name == "Vignette(Clone)");
+             Vignette v = (Vignette) c;
+             AudioSource audioSource = controller.audio;
+             
+             v.active = true;
+             if (controller.audio != null)
+             {
+                 controller.audio.Stop();
+             }
+
+             if (audioSource != null)
+             {
+                 audioSource.clip = StaticDataHolder.instance.Heartbeat;
+                 audioSource.Play();
+             }
+         }
+         
+         else if (requiredString == "purpleVignette")
+         {
+             VolumeComponent c = volume.profile.components.Find(o => o.name == "Vignette(Clone)");
+             Vignette v = (Vignette) c;
+             AudioSource audioSource = controller.audio;
+
+             Color color;
+             
+             v.active = true;
+             if (ColorUtility.TryParseHtmlString("#551F84", out color))
+                 v.color.value = color;
+             if (controller.audio != null)
+             {
+                 controller.audio.Stop();
+             }
+
+             if (audioSource != null)
+             {
+                 audioSource.clip = StaticDataHolder.instance.Heartbeat;
+                 audioSource.Play();
+             }
+         }
+         
+         if (requiredString == "cancelVignette")
+         {
+             Vignette v = (Vignette) volume.profile.components.Find(o => o.name == "Vignette(Clone)");
+             AudioSource audioSource = controller.audio;
+
+             if (v != null)
+             {
+                 v.active = false;
+             }
+             
+             if (controller.audio != null && controller.audio.clip.name.ToLower() != "acfb_first_day")
+             {
+                 controller.audio.Stop();
+             }
+
+             if (audioSource != null && controller.audio.clip.name.ToLower() != "acfb_first_day")
+             {
+                 audioSource.clip = StaticDataHolder.instance.FirstDaySong;
+                 audioSource.Play();
+             }
          }
      }
 
@@ -252,6 +316,7 @@ public class VolumeManipulation : MonoBehaviour
      
      public IEnumerator RespondToNua(IController controller, Bloom bloom, ChromaticAberration ca)
      {
+         controller.audio.Play();
          float seconds = 3;
          while (seconds > 0) 
          {
@@ -260,13 +325,13 @@ public class VolumeManipulation : MonoBehaviour
              yield return null;
          }
 
-         
+         controller.audio.Stop();
          ca.active = false;
          bloom.active = false;
          controller.LogStringWithReturn("your eyes widen, your fists clench. you wrench the orb out of the young one's hands. they fall hard on the ground as their grasp on it slips.");
          controller.LogStringWithReturn("Onah shrieks. they grab Nua by the hand and run out of the cave.");
          controller.LogStringWithReturn(
-             "Ohm rises to their feet. they give you a harsh glance, then motion for you to try to follow after. you need to make this right.");
+             "Ohm rises to their feet. they give you a wicked glance, then motion for you to try to follow after. you need to make this right.");
          controller.processingDelay = .02f;
          controller.DisplayLoggedText();
          controller.useButtonAnimator.SetTrigger("Use-Grow1");
@@ -312,6 +377,19 @@ public class VolumeManipulation : MonoBehaviour
              v.active = false;
              StopCoroutine("LosingConsciousness");
              StopCoroutine("DyingInOhmsGrip");
+         } else if (requiredString == "chromaticPulse")
+         {
+             VolumeComponent c = volume.profile.components.Find(o => o.name == "ChromaticAberration(Clone)");
+             ChromaticAberration ca = (ChromaticAberration) c;
+
+             ca.active = false;
+             StopCoroutine("PulseCA");
+         } else if (requiredString == "orbWon")
+         {
+             VolumeComponent c = volume.profile.components.Find(o => o.name == "Bloom(Clone)");
+             Bloom bloom = (Bloom) c;
+             StopCoroutine("Pulse");
+             bloom.active = false;
          }
      }
 }
