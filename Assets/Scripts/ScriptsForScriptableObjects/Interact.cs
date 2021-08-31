@@ -37,7 +37,8 @@ public class Interact : ActionChoice
                 }
                 else
                 {
-                    if (controller.checkpointManager.checkpoint == 0 || controller.checkpointManager.checkpoint == 6)
+                    if ((controller.checkpointManager.checkpoint == 0 || controller.checkpointManager.checkpoint == 6 || controller.checkpointManager.checkpoint == 7) 
+                        && controller.roomNavigation.currentRoom.roomName == "home cave")
                     {
                         controller.LogStringWithReturn("best not to wake anyone right now.");
                         controller.UpdateRoomChoices(controller.startingActions);

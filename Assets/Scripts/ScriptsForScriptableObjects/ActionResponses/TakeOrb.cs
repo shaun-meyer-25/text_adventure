@@ -11,6 +11,11 @@ public class TakeOrb : ActionResponse
         
         controller.volumeManipulation.EffectEnd(controller, "firstOrbEncounter");
         controller.checkpointManager.SetCheckpoint(7);
+        SteamAchivements sa = FindObjectOfType<SteamAchivements>();
+        if (sa != null)
+        {
+            sa.SetAchievement("GOT_ORB");
+        }
         return true;
     }
 }

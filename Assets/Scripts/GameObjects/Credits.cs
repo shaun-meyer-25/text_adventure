@@ -12,6 +12,8 @@ public class Credits : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StaticDataHolder.instance.Checkpoint = 14;
+
         _audioSource = GetComponent<AudioSource>();
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         StartCoroutine(StartMusic());

@@ -36,6 +36,11 @@ public class BearHitboxes : MonoBehaviour
 
                 if (isFatal)
                 {
+                    SteamAchivements sa = FindObjectOfType<SteamAchivements>();
+                    if (sa != null)
+                    {
+                        sa.SetAchievement("KILLED_BEAR");
+                    }
                     StartCoroutine(ChangeSceneAfter5());
                 }
                 else

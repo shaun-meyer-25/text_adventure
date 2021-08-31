@@ -24,6 +24,11 @@ public class TeiLevelTransition : MonoBehaviour
         Debug.Log(other.gameObject.name);
         if (other.gameObject.name == "Player")
         {
+            SteamAchivements sa = FindObjectOfType<SteamAchivements>();
+            if (sa != null)
+            {
+                sa.SetAchievement("FOUND_TEI");
+            }
             StaticDataHolder.instance.Checkpoint = 13;
             controller.levelLoader.LoadScene("Second Day Evening");
         }

@@ -153,6 +153,11 @@ public class VolumeManipulation : MonoBehaviour
          
          else if (requiredString == "badEnding")
          {
+             SteamAchivements sa = FindObjectOfType<SteamAchivements>();
+             if (sa != null)
+             {
+                 sa.SetAchievement("SERVANT");
+             }
              BadFinalCaveController c = (BadFinalCaveController) controller;
              c.DisabledButtons = true;
 
@@ -261,7 +266,7 @@ public class VolumeManipulation : MonoBehaviour
         float intensity = 0f;
         while (intensity <= 1f)
         {
-            intensity += .0008f;
+            intensity += .0004f;
             v.intensity.value = intensity;
             yield return null;
         }
@@ -269,7 +274,15 @@ public class VolumeManipulation : MonoBehaviour
 
     public IEnumerator DyingInOhmsGrip(IController controller)
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(10f);
+        if (SceneManager.GetActiveScene().name == "Final Cave")
+        {
+            SteamAchivements sa = FindObjectOfType<SteamAchivements>();
+            if (sa != null)
+            {
+                sa.SetAchievement("MURDERED");
+            }
+        }
         SceneManager.LoadScene("Credits");
     }
     
