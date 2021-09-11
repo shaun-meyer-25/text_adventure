@@ -18,6 +18,12 @@ public class FeedFire : ActionResponse
                 controller.checkpointManager.SetCheckpoint(1);
                 controller.LogStringWithReturn("you break the tree branch into smaller pieces, tossing them on the fire one at a time. " +
                                                "the noise from this begins to wake the others, who stir and rise to start their days.");
+                
+                SteamAchivements sa = FindObjectOfType<SteamAchivements>();
+                if (sa != null)
+                {
+                    sa.SetAchievement("FIRE_STARTED");
+                }
             }
             bool fireWasFed = controller.fire.FeedFire();
             

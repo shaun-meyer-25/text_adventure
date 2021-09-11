@@ -129,7 +129,7 @@ public class LevelLoader : MonoBehaviour
     
     IEnumerator LoadLevelOrb(string sceneName)
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
     

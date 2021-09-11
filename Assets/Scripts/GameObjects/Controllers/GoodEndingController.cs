@@ -26,6 +26,11 @@ public class GoodEndingController : IController
 
 	void Start ()
 	{
+		SteamAchivements sa = FindObjectOfType<SteamAchivements>();
+		if (sa != null)
+		{
+			sa.SetAchievement("SURVIVED");
+		}
 		StaticDataHolder.instance.Checkpoint = 14;
 		Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 		audio = GetComponent<AudioSource>();

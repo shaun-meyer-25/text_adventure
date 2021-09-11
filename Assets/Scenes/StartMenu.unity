@@ -730,7 +730,7 @@ MonoBehaviour:
   Wind: {fileID: 8300000, guid: 43f3c1b798fb9324194d27e52cea8591, type: 3}
   Heartbeat: {fileID: 8300000, guid: 3f41dd491840b5240a955c04b73a772f, type: 3}
   Fire: {fileID: 8300000, guid: 3882f5a963fbce246a4a32dd0c3875a3, type: 3}
-  FirstDaySong: {fileID: 8300000, guid: a5a675b54b2219944b5967f3e302f022, type: 3}
+  FirstDaySong: {fileID: 8300000, guid: d7ca7735b98697845958b7c426eecd58, type: 3}
   SecondDaySong: {fileID: 8300000, guid: c4fb8ce2b408f604889daeb1675fc477, type: 3}
   Scarything: {fileID: 8300000, guid: a3082121efb944f448bc6373edf7850f, type: 3}
 --- !u!4 &615877049
@@ -1723,7 +1723,7 @@ MonoBehaviour:
     95% of this game was made by
     one person. as a solo developer, it can be really hard to meet steam''s 2 hour
     refund threshold without adding a bunch of bland filler content. their generous
-    refund policy is great for encouraging people to try new gamesl, but it can also
+    refund policy is great for encouraging people to try new games, but it can also
     make it very hard for solo devs like me to continue creating. this makes it very
     hard for experimental little projects like this one to continue to exist. so
     if you like this game and want to play more games like this (or, spoiler alert,

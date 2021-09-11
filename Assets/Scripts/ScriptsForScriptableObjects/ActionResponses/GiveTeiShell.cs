@@ -17,6 +17,12 @@ public class GiveTeiShell : ActionResponse
             
             controller.fifthButton.GetComponentInChildren<Animator>().SetTrigger("Shrink");
 
+            SteamAchivements sa = FindObjectOfType<SteamAchivements>();
+            if (sa != null)
+            {
+                sa.SetAchievement("COMPANION");
+            }
+            
             controller.LogStringWithReturn("you give the shell you found to Tei. they give you one they found as well. they take you in an embrace.");
             controller.LogStringWithReturn(
                 "you feel whole, calm, in a way you have not felt in a long time. maybe you will survive. maybe you will all survive.");
