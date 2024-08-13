@@ -6,7 +6,7 @@
             "keyString": "outside",
             "description": "light filters in from outside."}
           ],
-          "description": "the fire is low, you should go to the forest and look for wood.",
+          "description": "The fire is dead. The room is cold.",
           "investigationDescription": "the fire is low, you should go to the forest and look for wood.",
           "effectTriggerName": ""
         },

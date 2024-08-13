@@ -438,7 +438,6 @@ MonoBehaviour:
   isThirdButtonDisabled: 0
   isSecondButtonDisabled: 0
   buttonWrapAnimator: {fileID: 0}
-  TheFire: {fileID: 8300000, guid: 3882f5a963fbce246a4a32dd0c3875a3, type: 3}
   exitNames: []
   exitChoices: []
   isInteracting: 0
@@ -982,21 +981,75 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 471618610246604944, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 516634129961562375, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
       value: 
       objectReference: {fileID: 947878756}
+    - target: {fileID: 516634129961562377, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 516634129965361106, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 74a5091d8707f334b9a5c31ef71a64ba,
+        type: 3}
+    - target: {fileID: 516634130206060227, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 74a5091d8707f334b9a5c31ef71a64ba,
+        type: 3}
+    - target: {fileID: 516634130747554170, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 74a5091d8707f334b9a5c31ef71a64ba,
+        type: 3}
     - target: {fileID: 516634131329495591, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
       value: 
       objectReference: {fileID: 947878756}
+    - target: {fileID: 516634131329495593, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 516634131610991194, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 74a5091d8707f334b9a5c31ef71a64ba,
+        type: 3}
+    - target: {fileID: 516634131616885889, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 516634131616885889, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 516634131616885903, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
       value: 
       objectReference: {fileID: 947878756}
+    - target: {fileID: 516634131912074640, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 516634131912074654, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: controller
@@ -1012,7 +1065,22 @@ PrefabInstance:
       propertyPath: Controller
       value: 
       objectReference: {fileID: 947878756}
+    - target: {fileID: 1598040375253437076, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867517926645455017, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3484288918915872397, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992076184341756047, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1042,6 +1110,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -102.81949
       objectReference: {fileID: 0}
+    - target: {fileID: 4797650007323348399, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 74a5091d8707f334b9a5c31ef71a64ba,
+        type: 3}
     - target: {fileID: 4797650007323348399, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_FontData.m_BestFit
@@ -1177,10 +1251,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5622504030496432727, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833212877969069599, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897734655863602773, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8791480085981821246, guid: 9a174499d254c204785136d2b80ceeea,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -273.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8887667861722743546, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955017982756791102, guid: 9a174499d254c204785136d2b80ceeea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a174499d254c204785136d2b80ceeea, type: 3}

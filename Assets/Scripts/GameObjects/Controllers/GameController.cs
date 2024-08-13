@@ -62,7 +62,8 @@ public class GameController : IController {
 			if (SceneManager.GetActiveScene().name == "Main" && checkpointManager.checkpoint == 0)
 			{
 				LogStringWithReturn(
-					"eyes open. you look around the cave. this is your home. there are many figures laying nearby. the familiar shape next to you makes you feel safe and warm. you reach out and grab their hand. they are still asleep.");
+					"You awake from a vivid nightmare. Ancient people, in a dark place. Blood, life, violence, love, hate. And a glow. A horrible glow." +
+					"\n\nThe other side of your bed, conspicuously empty.");
 				allRoomsInGame.Find(o => o.roomName == "old forest")
 					.SetInteractableObjectsInRoom(new[] {checkpointManager.treeBranch});
 			}

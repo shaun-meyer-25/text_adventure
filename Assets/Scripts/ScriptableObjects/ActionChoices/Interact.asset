@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad4fad3760be7342a91d424076486b8, type: 3}
   m_Name: Interact
   m_EditorClassIdentifier: 
-  keyword: interact
+  keyword: Interact
