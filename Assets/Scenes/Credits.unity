@@ -216,17 +216,13 @@ MonoBehaviour:
   m_Text: "The End\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWritten,
     Programmed, Designed by \nShaun Meyer\n\nLandscape and Achievement Art\n@blackened_pages\n\nMusic
     & Pixel Art\nShaun Meyer\n\nBear Animation\n@sarah_vara_art\n\nCredits Song\nMiles
-    St. Lucas\n\nLead Testers\n\nMason Turner\nBrennen Tevis\nJonathan Quist\nShaun
-    Meyer\n\nDemo Testers\n\nMason \nDrew\nJake\nTJ\nPreston\nBrennen\nKeenan\nJacob\n\nLaunch
+    St. Lucas\n\nLead Testers\n\nMaisie Turner\nBrennen Tevis\nJonathan Quist\nShaun
+    Meyer\n\nDemo Testers\n\nMaisie \nDrew\nJake\nTJ\nPreston\nBrennen\nKeenan\nJacob\n\nLaunch
     Trailer\nNathan Meyer\n\nAdditional Sound Effects from freesound.org\n\"Short
     Explosion\" by ProjectsU012\n\"Loopable hum\" by -Patrick-\n\"Ghost Moan\" by
     Mr_KeybOred\n\"Screech\" by MakoFox\n\nSpecial Thanks to\n\nThe Dumpsterfire
     Society\nThe Outlanders\nRami Ismail\nMy mom\nMy sister\nMy dad\nMy brother\nMy
-    cat\nDARC Team\nAll my friends and family. I love you all so f****** much. Thank
-    you for everything. \n\nIf you liked this game or any of the assets, or you just
-    want to yell at me, reach out to me @the_cave_ghost on Twitter or visit my website
-    caveghost.games/contact. I look forward to hearing from you. Thank you for playing
-    my weird little game."
+    cat\nDARC Team\n\n@the_cave_ghost on Twitter"
 --- !u!222 &285858564
 CanvasRenderer:
   m_ObjectHideFlags: 0

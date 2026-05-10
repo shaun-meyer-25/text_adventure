@@ -83,7 +83,7 @@ public class RoomNavigation : MonoBehaviour {
 				}
 			}
 			
-			CheckIfCheckpointNeedsSetting();
+			if (CheckIfCheckpointNeedsSetting()) return true;
 
 			CheckIfAudioNeedsAdjusting(previousRoom);
 			
@@ -187,7 +187,7 @@ public class RoomNavigation : MonoBehaviour {
 		exitDictionary.Clear();
 	}
 
-	private void CheckIfCheckpointNeedsSetting()
+	private bool CheckIfCheckpointNeedsSetting()
 	{
 		if (currentRoom.roomName == "outside home" &&
 		    controller.interactableItems.nounsInInventory.Contains("spear") &&
@@ -241,7 +241,7 @@ public class RoomNavigation : MonoBehaviour {
 		{
 			controller.checkpointManager.SetCheckpoint(16);
 			controller.levelLoader.LoadScene("In Mountains");
-			throw new Exception("stop scene");
+			return true;
 		}
 
 		if (currentRoom.roomName == "outside home" && controller.checkpointManager.checkpoint == 20 && !HasShell())
@@ -273,7 +273,7 @@ public class RoomNavigation : MonoBehaviour {
 			//controller.checkpointManager.SetCheckpoint(21);
 			StaticDataHolder.instance.Checkpoint = 24;
 			controller.levelLoader.LoadScene("Final Cave Bad");
-			throw new Exception("stop scene");
+			return true;
 		}
 		
 		if (currentRoom.roomName == "mountains4" && controller.checkpointManager.checkpoint == 18)
@@ -281,8 +281,9 @@ public class RoomNavigation : MonoBehaviour {
 			//controller.checkpointManager.SetCheckpoint(21);
 			StaticDataHolder.instance.Checkpoint = 21;
 			controller.levelLoader.LoadScene("Final Cave");
-			throw new Exception("stop scene");
+			return true;
 		}
+		return false;
 	}
 
 	private bool HasShell()
